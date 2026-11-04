@@ -16,10 +16,11 @@ def run(*args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('themes', nargs='*', choices=['Template','NeonCircuit','Orbit'])
-    themes = parser.parse_args().themes or ['Template','NeonCircuit','Orbit']
+    parser.add_argument('themes', nargs='*', choices=['Template','NeonCircuit','Orbit','OrbitCrystal'])
+    requested = parser.parse_args().themes
+    themes = requested or ['Template','NeonCircuit','Orbit','OrbitCrystal']
     projects = themes.copy()
-    if len(themes) == 3 and (ROOT/'AnalogStickLab'/'scene.rml').exists():
+    if not requested and (ROOT/'AnalogStickLab'/'scene.rml').exists():
         projects.append('AnalogStickLab')
     for name in projects:
         run('rive',ROOT/name,'--verify')
@@ -34,7 +35,7 @@ def main():
         members={'info.json':project/'info.json','rive.json':project/'rive.json',name+'.riv':project/'build'/f'{name}.riv'}
         for asset in ['portrait.pdf','landscape.pdf']:
             members[asset]=project/'build'/asset
-        if name == 'Orbit':
+        if name in ['Orbit','OrbitCrystal']:
             members['stick.pdf'] = project/'build'/'stick.pdf'
         shutil.copy2(project/'build'/f'{name}.riv',ROOT/'Dist'/f'{name}.riv')
         target=ROOT/'Dist'/f'{name}.deltaskin'
