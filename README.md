@@ -154,6 +154,8 @@ Verified locally:
 
 - Full Delta Debug device build with Xcode 27.2 (27B52), iOS 27.2 SDK,
   and code signing disabled.
+- Full Delta simulator build and launch on an iPhone 18 Pro running iOS 27.0,
+  with the NES diagnostic ROM and Neon Circuit selected for both orientations.
 - DeltaCore device build and standalone preview simulator build.
 - Production parser/archive tests for both sample packages, old skins, invalid
   metadata/assets, unsupported traits and normalized stick values.
@@ -169,3 +171,7 @@ build passes with Xcode 27.2. Xcode 26.5 failed in the app icon asset catalog,
 and Xcode 27.0 lacks the required UIKit APIs. The standalone preview also
 builds with Xcode 26.5. Physical-device latency, thermals and power consumption
 still need device testing before graduating the feature.
+
+To select Xcode for a command without changing the system-wide default, prefix
+`xcodebuild` and `xcrun simctl` commands with
+`DEVELOPER_DIR=/Applications/Xcode-27.2.0.app/Contents/Developer`.
