@@ -5479,7 +5479,7 @@
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:1631" />
             </Fill>
         </Shape>
-        <Node x="116" y="378" name="z / transparent cap" id="0:1632">
+        <Node x="346" y="42" name="z / transparent cap" id="0:1632">
             <Text x="0" y="-1" name="Z" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1633">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1634">
                     <Fill name="Paint" id="0:1635">
@@ -5502,7 +5502,7 @@
                 </Fill>
             </Shape>
         </Node>
-        <Node x="116" y="378" opacity="0.08" name="z / socket LED" id="0:1647">
+        <Node x="346" y="42" opacity="0.08" name="z / socket LED" id="0:1647">
             <Shape x="0" y="0" name="Panel" id="0:1648">
                 <Rectangle width="56" height="26" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:1649" />
                 <Stroke name="Paint" thickness="1.2" id="0:1650">
@@ -5559,13 +5559,13 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="116" y="383.94" name="z / contact pad" id="0:1736">
+        <Shape x="346" y="47.94" name="z / contact pad" id="0:1736">
             <Rectangle width="11.44" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1737" />
             <Fill name="Paint" id="0:1738">
                 <SolidColor name="Color" colorValue="FF73F2D0" id="0:1739" />
             </Fill>
         </Shape>
-        <Shape x="116" y="378" name="Exposed switch socket" id="0:1740">
+        <Shape x="346" y="42" name="Exposed switch socket" id="0:1740">
             <Rectangle width="59" height="29" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:1741" />
             <Fill name="Paint" id="0:1742">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:1743" />
@@ -5672,7 +5672,7 @@
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:1861" />
             </Fill>
         </Shape>
-        <Node x="40" y="378" name="menu / transparent cap" id="0:1862">
+        <Node x="195" y="108" name="menu / transparent cap" id="0:1862">
             <Text x="0" y="-1" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1863">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1864">
                     <Fill name="Paint" id="0:1865">
@@ -5682,12 +5682,12 @@
                 <TextValueRun styleId="0:1864" text="MENU" name="Text" id="0:1867" />
             </Text>
             <Shape x="0" y="0" name="Clear paddle rim" id="0:1868">
-                <Rectangle width="38" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1869" />
+                <Rectangle width="42" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1869" />
                 <Stroke name="Paint" thickness="0.75" id="0:1870">
                     <SolidColor name="Color" colorValue="7197A6B4" id="0:1871" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1872">
-                    <LinearGradient startX="-7.6000000000000005" startY="-11.4" endX="9.5" endY="19.0" name="Clear polycarbonate" id="0:1873">
+                    <LinearGradient startX="-8.4" startY="-12.6" endX="10.5" endY="21.0" name="Clear polycarbonate" id="0:1873">
                         <GradientStop colorValue="54A4ABB4" position="0.0" id="0:1874" />
                         <GradientStop colorValue="0D737D88" position="0.5" id="0:1875" />
                         <GradientStop colorValue="1E56616E" position="1.0" id="0:1876" />
@@ -5695,9 +5695,9 @@
                 </Fill>
             </Shape>
         </Node>
-        <Node x="40" y="378" opacity="0.08" name="menu / socket LED" id="0:1877">
+        <Node x="195" y="108" opacity="0.08" name="menu / socket LED" id="0:1877">
             <Shape x="0" y="0" name="Panel" id="0:1878">
-                <Rectangle width="42" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1879" />
+                <Rectangle width="46" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1879" />
                 <Stroke name="Paint" thickness="1.2" id="0:1880">
                     <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1881" />
                 </Stroke>
@@ -5752,14 +5752,14 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="40" y="382.32" name="menu / contact pad" id="0:1966">
-            <Rectangle width="8.36" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1967" />
+        <Shape x="195" y="112.32" name="menu / contact pad" id="0:1966">
+            <Rectangle width="9.24" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1967" />
             <Fill name="Paint" id="0:1968">
                 <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1969" />
             </Fill>
         </Shape>
-        <Shape x="40" y="378" name="Exposed switch socket" id="0:1970">
-            <Rectangle width="45" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1971" />
+        <Shape x="195" y="108" name="Exposed switch socket" id="0:1970">
+            <Rectangle width="49" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1971" />
             <Fill name="Paint" id="0:1972">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:1973" />
             </Fill>
@@ -7028,10 +7028,10 @@
         <Node name="Z / signal" opacity="0" id="0:3742">
             <Shape name="Moving data packet" id="0:3743">
                 <PointsPath isClosed="false" name="Routed path" id="0:3744">
-                    <StraightVertex x="116" y="378" radius="3" id="0:3745" />
-                    <StraightVertex x="174" y="378" radius="3" id="0:3746" />
-                    <StraightVertex x="174" y="107" radius="3" id="0:3747" />
-                    <StraightVertex x="187" y="82" radius="3" id="0:3748" />
+                    <StraightVertex x="346" y="42" radius="3" id="0:3745" />
+                    <StraightVertex x="242" y="42" radius="3" id="0:3746" />
+                    <StraightVertex x="242" y="107" radius="3" id="0:3747" />
+                    <StraightVertex x="203" y="82" radius="3" id="0:3748" />
                     <StraightVertex x="195" y="69" radius="3" id="0:3749" />
                     <StraightVertex x="195" y="5" radius="3" id="0:3750" />
                 </PointsPath>
@@ -7043,10 +7043,10 @@
             <Node opacity="0.2" name="Powered copper" id="0:3754">
                 <Shape name="Copper trace" id="0:3755">
                     <PointsPath isClosed="false" name="Routed path" id="0:3756">
-                        <StraightVertex x="116" y="378" radius="3" id="0:3757" />
-                        <StraightVertex x="174" y="378" radius="3" id="0:3758" />
-                        <StraightVertex x="174" y="107" radius="3" id="0:3759" />
-                        <StraightVertex x="187" y="82" radius="3" id="0:3760" />
+                        <StraightVertex x="346" y="42" radius="3" id="0:3757" />
+                        <StraightVertex x="242" y="42" radius="3" id="0:3758" />
+                        <StraightVertex x="242" y="107" radius="3" id="0:3759" />
+                        <StraightVertex x="203" y="82" radius="3" id="0:3760" />
                         <StraightVertex x="195" y="69" radius="3" id="0:3761" />
                         <StraightVertex x="195" y="5" radius="3" id="0:3762" />
                     </PointsPath>
@@ -7058,10 +7058,10 @@
         </Node>
         <Shape name="Z / unpowered route" id="0:3765">
             <PointsPath isClosed="false" name="Routed path" id="0:3766">
-                <StraightVertex x="116" y="378" radius="3" id="0:3767" />
-                <StraightVertex x="174" y="378" radius="3" id="0:3768" />
-                <StraightVertex x="174" y="107" radius="3" id="0:3769" />
-                <StraightVertex x="187" y="82" radius="3" id="0:3770" />
+                <StraightVertex x="346" y="42" radius="3" id="0:3767" />
+                <StraightVertex x="242" y="42" radius="3" id="0:3768" />
+                <StraightVertex x="242" y="107" radius="3" id="0:3769" />
+                <StraightVertex x="203" y="82" radius="3" id="0:3770" />
                 <StraightVertex x="195" y="69" radius="3" id="0:3771" />
                 <StraightVertex x="195" y="5" radius="3" id="0:3772" />
             </PointsPath>
@@ -13530,7 +13530,7 @@
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:6686" />
             </Fill>
         </Shape>
-        <Node x="111" y="375" name="z / transparent cap" id="0:6687">
+        <Node x="782" y="31" name="z / transparent cap" id="0:6687">
             <Text x="0" y="-1" name="Z" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6688">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6689">
                     <Fill name="Paint" id="0:6690">
@@ -13553,7 +13553,7 @@
                 </Fill>
             </Shape>
         </Node>
-        <Node x="111" y="375" opacity="0.08" name="z / socket LED" id="0:6702">
+        <Node x="782" y="31" opacity="0.08" name="z / socket LED" id="0:6702">
             <Shape x="0" y="0" name="Panel" id="0:6703">
                 <Rectangle width="56" height="26" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:6704" />
                 <Stroke name="Paint" thickness="1.2" id="0:6705">
@@ -13610,19 +13610,19 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="111" y="380.94" name="z / contact pad" id="0:6791">
+        <Shape x="782" y="36.94" name="z / contact pad" id="0:6791">
             <Rectangle width="11.44" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6792" />
             <Fill name="Paint" id="0:6793">
                 <SolidColor name="Color" colorValue="FF73F2D0" id="0:6794" />
             </Fill>
         </Shape>
-        <Shape x="111" y="375" name="Exposed switch socket" id="0:6795">
+        <Shape x="782" y="31" name="Exposed switch socket" id="0:6795">
             <Rectangle width="59" height="29" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:6796" />
             <Fill name="Paint" id="0:6797">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:6798" />
             </Fill>
         </Shape>
-        <Node x="422" y="18" name="start / transparent cap" id="0:6799">
+        <Node x="422" y="44" name="start / transparent cap" id="0:6799">
             <Text x="0" y="-1" name="START" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6800">
                 <TextStylePaint fontSize="7" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6801">
                     <Fill name="Paint" id="0:6802">
@@ -13651,7 +13651,7 @@
                 </Stroke>
             </Shape>
         </Node>
-        <Node x="422" y="18" opacity="0.08" name="start / socket LED" id="0:6818">
+        <Node x="422" y="44" opacity="0.08" name="start / socket LED" id="0:6818">
             <Shape x="0" y="0" name="Ring" id="0:6819">
                 <Ellipse width="33" height="33" name="Path" id="0:6820" />
                 <Stroke name="Paint" thickness="1.3" id="0:6821">
@@ -13711,19 +13711,19 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="422" y="25.560000000000002" name="start / contact pad" id="0:6909">
+        <Shape x="422" y="51.56" name="start / contact pad" id="0:6909">
             <Rectangle width="6.16" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6910" />
             <Fill name="Paint" id="0:6911">
                 <SolidColor name="Color" colorValue="FFFF5C64" id="0:6912" />
             </Fill>
         </Shape>
-        <Shape x="422" y="18" name="Exposed switch socket" id="0:6913">
+        <Shape x="422" y="44" name="Exposed switch socket" id="0:6913">
             <Ellipse width="37" height="37" name="Path" id="0:6914" />
             <Fill name="Paint" id="0:6915">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:6916" />
             </Fill>
         </Shape>
-        <Node x="40" y="375" name="menu / transparent cap" id="0:6917">
+        <Node x="422" y="13" name="menu / transparent cap" id="0:6917">
             <Text x="0" y="-1" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6918">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6919">
                     <Fill name="Paint" id="0:6920">
@@ -13733,12 +13733,12 @@
                 <TextValueRun styleId="0:6919" text="MENU" name="Text" id="0:6922" />
             </Text>
             <Shape x="0" y="0" name="Clear paddle rim" id="0:6923">
-                <Rectangle width="38" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:6924" />
+                <Rectangle width="42" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:6924" />
                 <Stroke name="Paint" thickness="0.75" id="0:6925">
                     <SolidColor name="Color" colorValue="7197A6B4" id="0:6926" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6927">
-                    <LinearGradient startX="-7.6000000000000005" startY="-11.4" endX="9.5" endY="19.0" name="Clear polycarbonate" id="0:6928">
+                    <LinearGradient startX="-8.4" startY="-12.6" endX="10.5" endY="21.0" name="Clear polycarbonate" id="0:6928">
                         <GradientStop colorValue="54A4ABB4" position="0.0" id="0:6929" />
                         <GradientStop colorValue="0D737D88" position="0.5" id="0:6930" />
                         <GradientStop colorValue="1E56616E" position="1.0" id="0:6931" />
@@ -13746,9 +13746,9 @@
                 </Fill>
             </Shape>
         </Node>
-        <Node x="40" y="375" opacity="0.08" name="menu / socket LED" id="0:6932">
+        <Node x="422" y="13" opacity="0.08" name="menu / socket LED" id="0:6932">
             <Shape x="0" y="0" name="Panel" id="0:6933">
-                <Rectangle width="42" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:6934" />
+                <Rectangle width="46" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:6934" />
                 <Stroke name="Paint" thickness="1.2" id="0:6935">
                     <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6936" />
                 </Stroke>
@@ -13803,14 +13803,14 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="40" y="379.32" name="menu / contact pad" id="0:7021">
-            <Rectangle width="8.36" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:7022" />
+        <Shape x="422" y="17.32" name="menu / contact pad" id="0:7021">
+            <Rectangle width="9.24" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:7022" />
             <Fill name="Paint" id="0:7023">
                 <SolidColor name="Color" colorValue="FFCCD0D5" id="0:7024" />
             </Fill>
         </Shape>
-        <Shape x="40" y="375" name="Exposed switch socket" id="0:7025">
-            <Rectangle width="45" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:7026" />
+        <Shape x="422" y="13" name="Exposed switch socket" id="0:7025">
+            <Rectangle width="49" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:7026" />
             <Fill name="Paint" id="0:7027">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:7028" />
             </Fill>
@@ -13853,8 +13853,8 @@
                 <SolidColor name="Color" colorValue="167B848E" id="0:7054" />
             </Stroke>
         </Shape>
-        <Shape x="422.0" y="20" name="Clear shell / edge" id="0:7055">
-            <Rectangle width="81" height="36" originX="0.5" originY="0.5" cornerRadiusTL="16" cornerRadiusTR="16" cornerRadiusBL="16" cornerRadiusBR="16" name="Path" id="0:7056" />
+        <Shape x="422.0" y="33" name="Clear shell / edge" id="0:7055">
+            <Rectangle width="81" height="66" originX="0.5" originY="0.5" cornerRadiusTL="16" cornerRadiusTR="16" cornerRadiusBL="16" cornerRadiusBR="16" name="Path" id="0:7056" />
             <Stroke name="Paint" thickness="0.8" id="0:7057">
                 <SolidColor name="Color" colorValue="158C939B" id="0:7058" />
             </Stroke>
@@ -13866,8 +13866,8 @@
                 </LinearGradient>
             </Fill>
         </Shape>
-        <Shape x="422.0" y="20" name="Inner shell refraction" id="0:7064">
-            <Rectangle width="77" height="32" originX="0.5" originY="0.5" cornerRadiusTL="14" cornerRadiusTR="14" cornerRadiusBL="14" cornerRadiusBR="14" name="Path" id="0:7065" />
+        <Shape x="422.0" y="33" name="Inner shell refraction" id="0:7064">
+            <Rectangle width="77" height="62" originX="0.5" originY="0.5" cornerRadiusTL="14" cornerRadiusTR="14" cornerRadiusBL="14" cornerRadiusBR="14" name="Path" id="0:7065" />
             <Stroke name="Paint" thickness="0.5" id="0:7066">
                 <SolidColor name="Color" colorValue="167B848E" id="0:7067" />
             </Stroke>
@@ -15311,11 +15311,11 @@
         <Node name="Z / signal" opacity="0" id="0:8944">
             <Shape name="Moving data packet" id="0:8945">
                 <PointsPath isClosed="false" name="Routed path" id="0:8946">
-                    <StraightVertex x="111" y="375" radius="3" id="0:8947" />
-                    <StraightVertex x="161" y="375" radius="3" id="0:8948" />
-                    <StraightVertex x="161" y="208" radius="3" id="0:8949" />
-                    <StraightVertex x="180" y="189" radius="3" id="0:8950" />
-                    <StraightVertex x="217" y="189" radius="3" id="0:8951" />
+                    <StraightVertex x="782" y="31" radius="3" id="0:8947" />
+                    <StraightVertex x="680" y="31" radius="3" id="0:8948" />
+                    <StraightVertex x="680" y="208" radius="3" id="0:8949" />
+                    <StraightVertex x="664" y="189" radius="3" id="0:8950" />
+                    <StraightVertex x="627" y="189" radius="3" id="0:8951" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:8952">
                     <SolidColor colorValue="FF73F2D0" id="0:8953" />
@@ -15325,11 +15325,11 @@
             <Node opacity="0.2" name="Powered copper" id="0:8955">
                 <Shape name="Copper trace" id="0:8956">
                     <PointsPath isClosed="false" name="Routed path" id="0:8957">
-                        <StraightVertex x="111" y="375" radius="3" id="0:8958" />
-                        <StraightVertex x="161" y="375" radius="3" id="0:8959" />
-                        <StraightVertex x="161" y="208" radius="3" id="0:8960" />
-                        <StraightVertex x="180" y="189" radius="3" id="0:8961" />
-                        <StraightVertex x="217" y="189" radius="3" id="0:8962" />
+                        <StraightVertex x="782" y="31" radius="3" id="0:8958" />
+                        <StraightVertex x="680" y="31" radius="3" id="0:8959" />
+                        <StraightVertex x="680" y="208" radius="3" id="0:8960" />
+                        <StraightVertex x="664" y="189" radius="3" id="0:8961" />
+                        <StraightVertex x="627" y="189" radius="3" id="0:8962" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:8963">
                         <SolidColor colorValue="FF73F2D0" id="0:8964" />
@@ -15339,11 +15339,11 @@
         </Node>
         <Shape name="Z / unpowered route" id="0:8965">
             <PointsPath isClosed="false" name="Routed path" id="0:8966">
-                <StraightVertex x="111" y="375" radius="3" id="0:8967" />
-                <StraightVertex x="161" y="375" radius="3" id="0:8968" />
-                <StraightVertex x="161" y="208" radius="3" id="0:8969" />
-                <StraightVertex x="180" y="189" radius="3" id="0:8970" />
-                <StraightVertex x="217" y="189" radius="3" id="0:8971" />
+                <StraightVertex x="782" y="31" radius="3" id="0:8967" />
+                <StraightVertex x="680" y="31" radius="3" id="0:8968" />
+                <StraightVertex x="680" y="208" radius="3" id="0:8969" />
+                <StraightVertex x="664" y="189" radius="3" id="0:8970" />
+                <StraightVertex x="627" y="189" radius="3" id="0:8971" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:8972">
                 <SolidColor colorValue="FF29464E" id="0:8973" />
@@ -15403,7 +15403,7 @@
             </KeyedObject>
         </LinearAnimation>
         <Node opacity="0.06" name="z / display input LED" id="0:9070">
-            <Shape x="216" y="194.0" name="Panel" id="0:9071">
+            <Shape x="628" y="194.0" name="Panel" id="0:9071">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:9072" />
                 <Fill name="Paint" id="0:9073">
                     <SolidColor name="Color" colorValue="FF73F2D0" id="0:9074" />
@@ -15434,8 +15434,8 @@
         <Node name="START / signal" opacity="0" id="0:9141">
             <Shape name="Moving data packet" id="0:9142">
                 <PointsPath isClosed="false" name="Routed path" id="0:9143">
-                    <StraightVertex x="422" y="18" radius="3" id="0:9144" />
-                    <StraightVertex x="422" y="39" radius="3" id="0:9145" />
+                    <StraightVertex x="422" y="44" radius="3" id="0:9144" />
+                    <StraightVertex x="422" y="71" radius="3" id="0:9145" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:9146">
                     <SolidColor colorValue="FFFF5C64" id="0:9147" />
@@ -15445,8 +15445,8 @@
             <Node opacity="0.2" name="Powered copper" id="0:9149">
                 <Shape name="Copper trace" id="0:9150">
                     <PointsPath isClosed="false" name="Routed path" id="0:9151">
-                        <StraightVertex x="422" y="18" radius="3" id="0:9152" />
-                        <StraightVertex x="422" y="39" radius="3" id="0:9153" />
+                        <StraightVertex x="422" y="44" radius="3" id="0:9152" />
+                        <StraightVertex x="422" y="71" radius="3" id="0:9153" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:9154">
                         <SolidColor colorValue="FFFF5C64" id="0:9155" />
@@ -15456,8 +15456,8 @@
         </Node>
         <Shape name="START / unpowered route" id="0:9156">
             <PointsPath isClosed="false" name="Routed path" id="0:9157">
-                <StraightVertex x="422" y="18" radius="3" id="0:9158" />
-                <StraightVertex x="422" y="39" radius="3" id="0:9159" />
+                <StraightVertex x="422" y="44" radius="3" id="0:9158" />
+                <StraightVertex x="422" y="71" radius="3" id="0:9159" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9160">
                 <SolidColor colorValue="FF29464E" id="0:9161" />

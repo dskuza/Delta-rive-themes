@@ -33,6 +33,8 @@ files:
   red Start and neutral gray controls. Low-opacity fills retain the see-through
   material, with brighter colors supplied by the socket LEDs and signal pulses.
   Theme names appear in the skin picker only; the controller artwork is unbranded.
+  Menu sits above Start, and Z sits above R, in both phone orientations. Landscape
+  reserves a taller central header for Menu/Start and places the game screen below it.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for its system.

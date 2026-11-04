@@ -231,19 +231,19 @@ class Crystal(Orbit):
                  for d,dx,dy in [('Up',0,-29),('Down',0,29),('Left',-29,0),('Right',29,0)]]
         buttons += [('a',267,258,56,56,BLUE,'A',True),('b',227,206,46,46,GREEN,'B',True),
                     ('l',44,78,60,20,ICE,'L',False),('r',346,78,60,20,ICE,'R',False),
-                    ('z',116,378,52,22,MINT,'Z',False),('start',195,141,34,34,RED,'START',True),
-                    ('menu',40,378,38,16,ICE,'MENU',False)] if portrait else [
+                    ('z',346,42,52,22,MINT,'Z',False),('start',195,141,34,34,RED,'START',True),
+                    ('menu',195,108,42,16,ICE,'MENU',False)] if portrait else [
                     ('a',735,260,56,56,BLUE,'A',True),('b',687,204,46,46,GREEN,'B',True),
                     ('l',55,65,60,20,ICE,'L',False),('r',782,65,60,20,ICE,'R',False),
-                    ('z',111,375,52,22,MINT,'Z',False),('start',422,18,28,28,RED,'START',True),
-                    ('menu',40,375,38,16,ICE,'MENU',False)]
+                    ('z',782,31,52,22,MINT,'Z',False),('start',422,44,28,28,RED,'START',True),
+                    ('menu',422,13,42,16,ICE,'MENU',False)]
         for button in buttons:
             items.append(self.button(a,sm,*button))
         # Glass floats above all routed copper, chips and board details.
         panels=[(195,200,382,392)] if portrait else [(102,195,196,382),(742,195,196,382)]
         for px,py,pw,ph in panels:
             self.glass(a,px,py,pw,ph,20)
-        self.glass(a,w/2,20,81,36,16) if not portrait else None
+        self.glass(a,w/2,33,81,66,16) if not portrait else None
         chip=(195,69) if portrait else (180,189)
         self.chip(a,*chip)
         self.text(a,211,8,'DISPLAY',4.5,'FF789AA5') if portrait else None
@@ -268,7 +268,7 @@ class Crystal(Orbit):
                         (chip[0]+(8 if bx>200 else -8),chip[1]+13),chip,(195,5)]
             else:
                 if name=='start':
-                    points=[(bx,by),(422,39)]
+                    points=[(bx,by),(422,71)]
                 else:
                     target=(180,189) if bx<422 else (664,189)
                     lane=(161+index%4*4) if bx<422 else (680+index%4*4)
@@ -305,7 +305,7 @@ class Crystal(Orbit):
         self.circuits[orientation]=dict(panels=panels,traces=traces)
         rep=dict(assets=dict(resizable=orientation+'.pdf'),mappingSize=dict(width=w,height=h),items=items)
         if not portrait:
-            rep['screens']=[dict(outputFrame=dict(x=218,y=40,width=408,height=306))]
+            rep['screens']=[dict(outputFrame=dict(x=218,y=72,width=408,height=306))]
         return rep
 
 

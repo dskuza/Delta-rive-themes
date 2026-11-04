@@ -76,7 +76,8 @@ for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
                 // Do not paint over the emulator's screen.
                 context.fill(CGRect(x:0,y:0,width:210,height:h))
                 context.fill(CGRect(x:w-210,y:0,width:210,height:h))
-                context.fill(CGRect(x:210,y:h-34,width:w-420,height:34))
+                if isCrystal { context.fill(CGRect(x:w/2-40.5,y:0,width:81,height:66)) }
+                else { context.fill(CGRect(x:210,y:h-34,width:w-420,height:34)) }
                 if !isCrystal { label(context,name == "Orbit" ? "ORBIT / N64" : "NEON / NES",25,40) }
             }
             if isCrystal
