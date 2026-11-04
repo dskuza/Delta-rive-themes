@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "representations": {
+    "iphone-standard-portrait": {
+      "file": "NeonCircuit.riv",
+      "artboard": "Portrait",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "sticks": [
+        {
+          "up": "up",
+          "down": "down",
+          "left": "left",
+          "right": "right",
+          "x": "stickX",
+          "y": "stickY",
+          "active": "stickActive"
+        }
+      ],
+      "reduceMotion": "reduceMotion"
+    },
+    "iphone-standard-landscape": {
+      "file": "NeonCircuit.riv",
+      "artboard": "Landscape",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "sticks": [
+        {
+          "up": "up",
+          "down": "down",
+          "left": "left",
+          "right": "right",
+          "x": "stickX",
+          "y": "stickY",
+          "active": "stickActive"
+        }
+      ],
+      "reduceMotion": "reduceMotion"
+    },
+    "iphone-edgeToEdge-portrait": {
+      "file": "NeonCircuit.riv",
+      "artboard": "Portrait",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "sticks": [
+        {
+          "up": "up",
+          "down": "down",
+          "left": "left",
+          "right": "right",
+          "x": "stickX",
+          "y": "stickY",
+          "active": "stickActive"
+        }
+      ],
+      "reduceMotion": "reduceMotion"
+    },
+    "iphone-edgeToEdge-landscape": {
+      "file": "NeonCircuit.riv",
+      "artboard": "Landscape",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "sticks": [
+        {
+          "up": "up",
+          "down": "down",
+          "left": "left",
+          "right": "right",
+          "x": "stickX",
+          "y": "stickY",
+          "active": "stickActive"
+        }
+      ],
+      "reduceMotion": "reduceMotion"
+    }
+  }
+}
