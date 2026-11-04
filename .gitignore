@@ -1,0 +1,44 @@
+# Generated exports. Keep authoring .riv files outside Dist eligible for Git.
+/Dist/
+
+# Rive compilation, Swift/Python tools, and Xcode build products.
+build/
+.build/
+DerivedData/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Per-user Xcode state. Shared projects, schemes and dependency locks stay tracked.
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+*.xccheckout
+*.xcscmblueprint
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcresult/
+
+# Local renders and recordings belong here, rather than beside source artwork.
+/Captures/
+/Recordings/
+/tmp/
+*.log
+
+# Machine-specific configuration and credentials.
+.env
+.env.*
+!.env.example
+.rive-local.json
+
+# macOS metadata and editor temporary files.
+.DS_Store
+._*
+.AppleDouble/
+*~
+*.swp
+*.swo
