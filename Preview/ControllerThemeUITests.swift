@@ -111,10 +111,10 @@ final class ControllerThemeUITests: XCTestCase
         XCTAssertTrue(status.waitForExistence(timeout: 30))
         self.waitForText("Rive | idle", in: status)
         let controller = app.descendants(matching: .any)["controller"]
-        let center = self.point(106, 180, width: 390, height: 400, in: controller)
+        let center = self.point(116, 284, width: 390, height: 400, in: controller)
         // A small physical drag must stay analog, rather than jumping to 1.
         center.press(forDuration: 0.1,
-                     thenDragTo: self.point(114, 172, width: 390, height: 400, in: controller),
+                     thenDragTo: self.point(124, 276, width: 390, height: 400, in: controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
         self.waitForText("Rive | idle", in: status)
         let values = (status.value as? String ?? "").split(separator: " ")
@@ -126,7 +126,7 @@ final class ControllerThemeUITests: XCTestCase
             XCTAssertLessThan(peak ?? 1, 0.7)
         }
         center.press(forDuration: 0.1,
-                     thenDragTo: self.point(65, 221, width: 390, height: 400, in: controller),
+                     thenDragTo: self.point(75, 325, width: 390, height: 400, in: controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
         self.waitForText("Rive | idle", in: status)
         for axis in ["analogStickLeft", "analogStickDown"]
@@ -135,10 +135,10 @@ final class ControllerThemeUITests: XCTestCase
         }
 
         let controls: [(String, CGFloat, CGFloat)] = [
-            ("up",90,298), ("down",90,350), ("left",64,324), ("right",116,324),
-            ("a",323,262), ("b",253,298), ("cUp",307,132), ("cDown",307,198),
-            ("cLeft",274,165), ("cRight",340,165), ("l",44,83), ("r",346,83),
-            ("z",194,88), ("start",199,356), ("menu",40,378)
+            ("up",78,113), ("down",78,165), ("left",52,139), ("right",104,139),
+            ("a",267,258), ("b",227,206), ("cUp",317,121), ("cDown",317,179),
+            ("cLeft",288,150), ("cRight",346,150), ("l",44,78), ("r",346,78),
+            ("z",116,378), ("start",195,141), ("menu",40,378)
         ]
         for (name, x, y) in controls
         {
@@ -150,7 +150,7 @@ final class ControllerThemeUITests: XCTestCase
         app.buttons["Animate"].tap()
         self.waitForText("Static | idle", in: status)
         center.press(forDuration: 0.1,
-                     thenDragTo: self.point(140,180,width:390,height:400,in:controller),
+                     thenDragTo: self.point(150,284,width:390,height:400,in:controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
         self.waitForText("Static | idle", in: status)
         XCTAssertTrue((status.value as? String ?? "").contains("analogStickRightPeak=1.000"))
@@ -159,7 +159,7 @@ final class ControllerThemeUITests: XCTestCase
         self.waitForText("Rive | idle", in: status)
         XCUIDevice.shared.orientation = .landscapeLeft
         self.waitForText("Rive | idle", in: status)
-        self.point(779,241,width:844,height:390,in:controller).tap()
+        self.point(735,260,width:844,height:390,in:controller).tap()
         self.waitForText("a:2/2", in: status)
         XCUIDevice.shared.press(.home)
         app.activate()
