@@ -85,6 +85,12 @@ The production renderer, native-input UI tests and emulator preview remain in
 Delta at `Extras/RiveControllerPreview`. See Delta's `Docs/RiveDevelopment.md`.
 Theme compilation and pixel tests here do not need the Delta checkout.
 
+## AI-assisted theme development
+
+Start with [SKILLS.md](SKILLS.md) for the provider-neutral authoring skill,
+including the view-model contract, data bindings, custom layout guidance, and
+verification workflow. Existing visual styles and default layouts are optional.
+
 ## Authoring and rebuilding
 
 Requirements: macOS with Metal, Xcode command-line tools, Python 3 and Rive CLI 1.8.0+.
@@ -225,12 +231,10 @@ loads, caches a worker per scene, checks the selected skin/traits before attachi
 pauses on inactivity, and retains static artwork until initialization succeeds.
 
 Changes to the Rive runtime are pinned at **6.29.0**. The companion DeltaCore
-changes are on branch `codex/rive-controller-rendering`; publish that branch and
-make its commits available before sharing the parent repository's submodule
-reference with another checkout.
-N64 homebrew compatibility is on N64DeltaCore's `codex/orbit-homebrew-support`
-branch and its nested Mupen64Plus core's `codex/mimi-homebrew-compatibility`
-branch. Publish those companion branches as well before sharing their references.
+changes are published on `dskuza/DeltaCore`’s `rive` branch and pinned by
+`dskuza/Delta`’s `rive` branch. Run `./Tools/setup.sh` to initialize that fork
+and recover the exact N64 homebrew compatibility commits from Delta’s bundled
+Git recovery bundles. See the companion `Docs/RiveDevelopment.md` for details.
 
 Verified locally:
 
