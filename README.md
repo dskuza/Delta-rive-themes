@@ -14,8 +14,8 @@ files:
 - `NeonCircuit.deltaskin`: graphite panels, feathered LED glows, a native NES
   D-pad, independent directional lights and reduced-motion press states.
 - `CrystalNES.deltaskin`: the clear circuit-board style adapted to NES, with
-  lightly red-tinted A/B caps, a larger digital cross, Select/Start, and Menu above
-  Start. Independent red LED and signal-path effects support diagonal and
+  lightly red-tinted A/B caps, a larger digital cross, and Menu centered above the
+  Select/Start pair. Independent red LED and signal-path effects support diagonal and
   simultaneous input, with steady routes for Reduced Motion. Artwork stays
   unbranded, with safe-area layout and native vector fallback in both orientations.
 - `Orbit.deltaskin`: a continuous N64 analog stick with a moving cap and feathered

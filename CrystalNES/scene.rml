@@ -2257,7 +2257,7 @@
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:917" />
             </Fill>
         </Shape>
-        <Node x="229" y="191" name="menu / transparent cap" id="0:918">
+        <Node x="199" y="191" name="menu / transparent cap" id="0:918">
             <Text x="0" y="-1" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:919">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:920">
                     <Fill name="Paint" id="0:921">
@@ -2280,7 +2280,7 @@
                 </Fill>
             </Shape>
         </Node>
-        <Node x="229" y="191" opacity="0.08" name="menu / socket LED" id="0:933">
+        <Node x="199" y="191" opacity="0.08" name="menu / socket LED" id="0:933">
             <Shape x="0" y="0" name="Panel" id="0:934">
                 <Rectangle width="46" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:935" />
                 <Stroke name="Paint" thickness="1.2" id="0:936">
@@ -2337,13 +2337,13 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="229" y="195.32" name="menu / contact pad" id="0:1022">
+        <Shape x="199" y="195.32" name="menu / contact pad" id="0:1022">
             <Rectangle width="9.24" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1023" />
             <Fill name="Paint" id="0:1024">
                 <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1025" />
             </Fill>
         </Shape>
-        <Shape x="229" y="191" name="Exposed switch socket" id="0:1026">
+        <Shape x="199" y="191" name="Exposed switch socket" id="0:1026">
             <Rectangle width="49" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1027" />
             <Fill name="Paint" id="0:1028">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:1029" />
@@ -5634,7 +5634,7 @@
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:3040" />
             </Fill>
         </Shape>
-        <Node x="454" y="13" name="menu / transparent cap" id="0:3041">
+        <Node x="422" y="13" name="menu / transparent cap" id="0:3041">
             <Text x="0" y="-1" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:3042">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:3043">
                     <Fill name="Paint" id="0:3044">
@@ -5657,7 +5657,7 @@
                 </Fill>
             </Shape>
         </Node>
-        <Node x="454" y="13" opacity="0.08" name="menu / socket LED" id="0:3056">
+        <Node x="422" y="13" opacity="0.08" name="menu / socket LED" id="0:3056">
             <Shape x="0" y="0" name="Panel" id="0:3057">
                 <Rectangle width="46" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:3058" />
                 <Stroke name="Paint" thickness="1.2" id="0:3059">
@@ -5714,13 +5714,13 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Shape x="454" y="17.32" name="menu / contact pad" id="0:3145">
+        <Shape x="422" y="17.32" name="menu / contact pad" id="0:3145">
             <Rectangle width="9.24" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:3146" />
             <Fill name="Paint" id="0:3147">
                 <SolidColor name="Color" colorValue="FFCCD0D5" id="0:3148" />
             </Fill>
         </Shape>
-        <Shape x="454" y="13" name="Exposed switch socket" id="0:3149">
+        <Shape x="422" y="13" name="Exposed switch socket" id="0:3149">
             <Rectangle width="49" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:3150" />
             <Fill name="Paint" id="0:3151">
                 <SolidColor name="Color" colorValue="FF0B1B24" id="0:3152" />

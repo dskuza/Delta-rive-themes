@@ -38,10 +38,10 @@ class CrystalNES(Crystal):
         items=[self.digital_pad(a,sm,dx,dy,scale)]
         buttons=[('b',269,140,56,56,RED,'B',True),('a',337,140,56,56,RED,'A',True),
                  ('select',169,226,46,18,ICE,'SELECT',False),('start',229,226,46,18,ICE,'START',False),
-                 ('menu',229,191,42,16,ICE,'MENU',False)] if portrait else [
+                 ('menu',199,191,42,16,ICE,'MENU',False)] if portrait else [
                  ('b',690,205,56,56,RED,'B',True),('a',777,205,56,56,RED,'A',True),
                  ('select',390,46,48,18,ICE,'SELECT',False),('start',454,46,48,18,ICE,'START',False),
-                 ('menu',454,13,42,16,ICE,'MENU',False)]
+                 ('menu',422,13,42,16,ICE,'MENU',False)]
         for button in buttons:
             items.append(self.button(a,sm,*button))
         panels=[(195,135,382,262)] if portrait else [(102,195,196,382),(742,195,196,382)]

@@ -119,7 +119,7 @@ final class ControllerThemeUITests: XCTestCase
         let controller = app.descendants(matching: .any)["controller"]
         let controls: [(String,CGFloat,CGFloat)] = [
             ("up",83,110), ("down",83,180), ("left",48,145), ("right",118,145),
-            ("b",269,140), ("a",337,140), ("select",169,226), ("start",229,226), ("menu",229,191)
+            ("b",269,140), ("a",337,140), ("select",169,226), ("start",229,226), ("menu",199,191)
         ]
         for (name,x,y) in controls
         {
@@ -148,7 +148,7 @@ final class ControllerThemeUITests: XCTestCase
             self.waitForValue("safeAreaContainsController=true", in: status)
             for (name,x,y,count) in [("a",777.0,205.0,index+3),("b",690.0,205.0,index+2),
                                      ("select",390.0,46.0,index+2),("start",454.0,46.0,index+2),
-                                     ("menu",454.0,13.0,index+2)]
+                                     ("menu",422.0,13.0,index+2)]
             {
                 self.point(x,y,width:844,height:390,in:controller).tap()
                 self.waitForValue("\(name):\(count)/\(count)", in: status)
