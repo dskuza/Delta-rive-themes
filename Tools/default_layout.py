@@ -1,17 +1,14 @@
-"""Read the bundled Delta phone layouts as the placement reference for Crystal.
+"""Read the saved Delta phone layouts as the placement reference for Crystal.
 
 The default edge-to-edge portrait artwork includes 34 points for the home
 indicator. UIKit supplies that inset for these safe-area-aware themes instead.
 """
 import json
-import zipfile
 from generate_themes import ROOT
 
 
 def layout_for(system, orientation):
-    archive = ROOT.parents[1]/'Cores'/f'{system}DeltaCore'/f'{system}DeltaCore'/'Controller Skin'/'Standard.deltaskin'
-    with zipfile.ZipFile(archive) as skin:
-        rep = json.loads(skin.read('info.json'))['representations']['iphone']['edgeToEdge'][orientation]
+    rep = json.loads((ROOT/'Assets/DefaultLayouts.json').read_text())[system][orientation]
     width = 390 if orientation == 'portrait' else 844
     scale = width / rep['mappingSize']['width']
     height = round((rep['mappingSize']['height'] - (34 if orientation == 'portrait' else 0)) * scale)

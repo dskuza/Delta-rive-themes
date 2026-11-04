@@ -44,7 +44,8 @@ files:
   Both Z regions send the same N64 input and illuminate together. Native touch
   handling unions held inputs, so lifting one Z leaves it held by the other.
   Landscape places Menu above the game screen and Start below it.
-  `Tools/default_layout.py` reads the bundled default archives so the reference
+  `Tools/default_layout.py` reads `Assets/DefaultLayouts.json`, a saved reference
+  from Delta’s bundled default phone skins, so the reference
   positions are explicit; UIKit supplies the notch and home indicator insets.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
@@ -54,45 +55,35 @@ artboard renders with lit A and D-pad LEDs, including the analog cap.
 Turn the feature off to compare the
 native vector fallback. Existing skins need no changes.
 
-Import `../NESInputTest/input-test.nes` as the game. Its display shows the inputs
+Import `../Delta/Extras/NESInputTest/input-test.nes` as the game. Its display shows the inputs
 actually received by the NES emulator, press/release counts in hexadecimal
 (wrapping after FF), and a dot moved by directional input. The NES themes use a proper digital
 D-pad with cardinal and diagonal input. `AnalogStickLab.riv` is a separate
 animation reference for future systems with analog sticks; it is not part of
 the NES controller skins. Orbit is the complete N64 example built from that idea.
 
-For N64, import `../N64InputTest/mimi-6126231.z64`, select **Orbit N64** for
+For N64, import `../Delta/Extras/N64InputTest/mimi-6126231.z64`, select **Orbit N64** for
 portrait and landscape (or select **Orbit: Crystal**), and open mimi's **live range** view using the D-pad and A.
 Drag Orbit's stick to compare actual emulated X/Y movement with its vector cap
 and glow. Small movements retain fractional values; releasing returns to center.
-mimi's provenance, checksum and credits are in `../N64InputTest/README.md`.
+mimi's provenance, checksum and credits are in `../Delta/Extras/N64InputTest/README.md`.
 
-## Standalone preview
+## App integration and preview
 
-Open `Preview/RiveControllerPreview.xcodeproj` and run **RiveControllerPreview**
-on an iOS 17.4+ simulator. It uses the production loader, renderer, DeltaCore and
-NESDeltaCore/N64DeltaCore, and bundles both diagnostic ROMs and all five skins. No Delta account,
-Rive login, or commercial ROM is needed. The **Themes** menu selects the theme,
-toggles animation, and runs a simultaneous-input demonstration.
-Choose **Orbit N64** to open mimi, or launch with the `--orbit` argument.
-Choose **Orbit: Crystal**, or launch with `--crystal`, for the transparent version.
-Choose **Crystal NES**, or launch with `--crystal-nes`, for its NES counterpart.
+The app and integration harness live in [dskuza/Delta](https://github.com/dskuza/Delta/tree/rive)
+on its `rive` branch. Its DeltaCore submodule uses [dskuza/DeltaCore](https://github.com/dskuza/DeltaCore/tree/rive).
+Keep the repositories as siblings, or pass explicit paths to their tools:
 
-The preview uses DeltaCore's Metal video option for bitmap cores. On simulators,
-DeltaCore also resolves OpenGL core frames before presenting them with Metal;
-this avoids a legacy OpenGL drawable crash when rotating N64. The extra frame
-copy applies only to simulator OpenGL cores, not physical devices.
-
-From the repository root:
-
-```sh
-xcodebuild -project Extras/RiveControllerThemes/Preview/RiveControllerPreview.xcodeproj \
-  -scheme RiveControllerPreview -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
-  CODE_SIGNING_ALLOWED=NO test
+```text
+workspace/
+  Delta/                # rive
+  Delta-rive-themes/    # main
 ```
 
-The preview project can be regenerated with `ruby Preview/create_project.rb`
-(requires the `xcodeproj` Ruby gem installed with CocoaPods).
+Run `python3 Tools/setup.py` to connect the checkouts and resolve dependencies.
+The production renderer, native-input UI tests and emulator preview remain in
+Delta at `Extras/RiveControllerPreview`. See Delta's `Docs/RiveDevelopment.md`.
+Theme compilation and pixel tests here do not need the Delta checkout.
 
 ## Authoring and rebuilding
 
@@ -100,9 +91,9 @@ Requirements: macOS with Metal, Xcode command-line tools, Python 3 and Rive CLI 
 The ROM additionally needs `cc65` (`brew install cc65`).
 
 ```sh
-python3 Extras/NESInputTest/build.py
-python3 Extras/RiveControllerThemes/Tools/build_themes.py
-python3 Extras/RiveControllerThemes/Tests/run_tests.py
+python3 ../Delta/Extras/NESInputTest/build.py
+python3 Tools/build_themes.py
+python3 ../Delta/Extras/RiveControllerTests/run_tests.py --themes .
 ```
 
 `scene.rml` and `rive.yaml` are editable Rive authoring sources. The scenes contain
@@ -119,17 +110,17 @@ The fallback PDFs preserve a transparent landscape game aperture.
 Orbit's coordinate source is `Tools/generate_orbit.py`. To rebuild only Orbit:
 
 ```sh
-python3 Extras/RiveControllerThemes/Tools/generate_orbit.py
-python3 Extras/RiveControllerThemes/Tools/build_themes.py Orbit
+python3 Tools/generate_orbit.py
+python3 Tools/build_themes.py Orbit
 ```
 
 Crystal's source is `Tools/generate_crystal.py`. Its generated `circuit-layout.json`
 also supplies the native fallback's traces. To rebuild and check its actual rendered effects:
 
 ```sh
-python3 Extras/RiveControllerThemes/Tools/generate_crystal.py
-python3 Extras/RiveControllerThemes/Tools/build_themes.py OrbitCrystal
-python3 Extras/RiveControllerThemes/Tests/render_crystal.py
+python3 Tools/generate_crystal.py
+python3 Tools/build_themes.py OrbitCrystal
+python3 Tests/render_crystal.py
 ```
 
 Crystal uses Rive Joysticks to scrub two bone-position pose timelines, a translation
@@ -142,16 +133,16 @@ The NES counterpart reuses Crystal's material, button and signal authoring helpe
 with its own digital controls and layout. It has no analog bindings:
 
 ```sh
-python3 Extras/RiveControllerThemes/Tools/generate_crystal_nes.py
-python3 Extras/RiveControllerThemes/Tools/build_themes.py CrystalNES
-python3 Extras/RiveControllerThemes/Tests/render_crystal.py CrystalNES
+python3 Tools/generate_crystal_nes.py
+python3 Tools/build_themes.py CrystalNES
+python3 Tests/render_crystal.py CrystalNES
 ```
 
 Examples of local visual checks:
 
 ```sh
-rive Extras/RiveControllerThemes/NeonCircuit --verify
-rive Extras/RiveControllerThemes/NeonCircuit --artboard=Portrait \
+rive NeonCircuit --verify
+rive NeonCircuit --artboard=Portrait \
   --data=aPressed=true --data=bPressed=true \
   --data=upPressed=true --data=rightPressed=true \
   --advance=20 --screenshot=/tmp/neon-active.png
@@ -285,3 +276,24 @@ from the same artboards it packages. Delta uses these images in both skin picker
 independently of whether animation is enabled. Older skins, missing images and
 unreadable previews retain the native fallback. Preview extraction stays in memory
 and checks the filename, PNG header, file size and decoded dimensions.
+
+## Generated files
+
+`Dist/`, per-theme `build/` folders, caches, recordings and local settings are
+ignored by Git. Run `python3 Tools/build_themes.py` to recreate all importable
+skins and their previews. Built files remain available locally for testing and
+release distribution; source `.riv` files outside `Dist/` remain eligible for Git.
+
+Use `python3 Tools/import_simulator.py --device booted --restart` to import built
+packages into an installed Delta simulator app. Add `--build` to rebuild first.
+The command uses Delta's normal skin importer; it does not edit the database.
+
+## License and history
+
+Theme sources and tools retain Delta's GPLv3 license; see `COPYING`. Space
+Grotesk retains its SIL Open Font License in `Assets/OFL.txt`. The layout
+reference contains placement metadata derived from Delta's bundled skins.
+The repository history was extracted from Delta's `Extras/RiveControllerThemes`
+with `git subtree split`, retaining the original theme authors and commit messages.
+App-only preview and archive tests moved back to Delta; their history remains
+available here before the repository split.

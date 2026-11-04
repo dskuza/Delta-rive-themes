@@ -1,0 +1,484 @@
+{
+  "NES": {
+    "portrait": {
+      "mappingSize": {
+        "width": 320,
+        "height": 274
+      },
+      "items": [
+        {
+          "inputs": {
+            "up": "up",
+            "down": "down",
+            "left": "left",
+            "right": "right"
+          },
+          "frame": {
+            "x": 22,
+            "y": 55,
+            "width": 121,
+            "height": 121
+          }
+        },
+        {
+          "inputs": [
+            "a"
+          ],
+          "frame": {
+            "x": 242,
+            "y": 84,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "b"
+          ],
+          "frame": {
+            "x": 171,
+            "y": 84,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "start"
+          ],
+          "frame": {
+            "x": 174,
+            "y": 204,
+            "width": 37,
+            "height": 13
+          }
+        },
+        {
+          "inputs": [
+            "select"
+          ],
+          "frame": {
+            "x": 109,
+            "y": 204,
+            "width": 37,
+            "height": 13
+          }
+        },
+        {
+          "inputs": [
+            "menu"
+          ],
+          "frame": {
+            "x": 280,
+            "y": 44,
+            "width": 18,
+            "height": 18
+          }
+        }
+      ]
+    },
+    "landscape": {
+      "mappingSize": {
+        "width": 812,
+        "height": 375
+      },
+      "items": [
+        {
+          "inputs": {
+            "up": "up",
+            "down": "down",
+            "left": "left",
+            "right": "right"
+          },
+          "frame": {
+            "x": 30,
+            "y": 207,
+            "width": 153,
+            "height": 153
+          }
+        },
+        {
+          "inputs": [
+            "a"
+          ],
+          "frame": {
+            "x": 708,
+            "y": 221,
+            "width": 74,
+            "height": 74
+          }
+        },
+        {
+          "inputs": [
+            "b"
+          ],
+          "frame": {
+            "x": 643,
+            "y": 286,
+            "width": 74,
+            "height": 74
+          }
+        },
+        {
+          "inputs": [
+            "start"
+          ],
+          "frame": {
+            "x": 416,
+            "y": 334,
+            "width": 73,
+            "height": 26
+          }
+        },
+        {
+          "inputs": [
+            "select"
+          ],
+          "frame": {
+            "x": 323,
+            "y": 334,
+            "width": 73,
+            "height": 26
+          }
+        },
+        {
+          "inputs": [
+            "menu"
+          ],
+          "frame": {
+            "x": 370,
+            "y": 15,
+            "width": 73,
+            "height": 26
+          }
+        }
+      ]
+    }
+  },
+  "N64": {
+    "portrait": {
+      "mappingSize": {
+        "width": 320,
+        "height": 362
+      },
+      "items": [
+        {
+          "inputs": {
+            "up": "analogStickUp",
+            "down": "analogStickDown",
+            "left": "analogStickLeft",
+            "right": "analogStickRight"
+          },
+          "frame": {
+            "x": 39,
+            "y": 77,
+            "width": 71,
+            "height": 71
+          },
+          "thumbstick": {
+            "name": "thumbstick_portrait.pdf",
+            "width": 85,
+            "height": 87
+          }
+        },
+        {
+          "inputs": {
+            "up": "up",
+            "down": "down",
+            "left": "left",
+            "right": "right"
+          },
+          "frame": {
+            "x": 17,
+            "y": 195,
+            "width": 120,
+            "height": 120
+          }
+        },
+        {
+          "inputs": [
+            "a"
+          ],
+          "frame": {
+            "x": 247,
+            "y": 122,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "b"
+          ],
+          "frame": {
+            "x": 171,
+            "y": 98,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "z"
+          ],
+          "frame": {
+            "x": 229,
+            "y": 50,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "l"
+          ],
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "width": 95,
+            "height": 30
+          }
+        },
+        {
+          "inputs": [
+            "r"
+          ],
+          "frame": {
+            "x": 225,
+            "y": 0,
+            "width": 95,
+            "height": 30
+          }
+        },
+        {
+          "inputs": [
+            "start"
+          ],
+          "frame": {
+            "x": 144,
+            "y": 179,
+            "width": 32,
+            "height": 32
+          }
+        },
+        {
+          "inputs": [
+            "menu"
+          ],
+          "frame": {
+            "x": 150,
+            "y": 34,
+            "width": 18,
+            "height": 18
+          }
+        },
+        {
+          "inputs": [
+            "cUp"
+          ],
+          "frame": {
+            "x": 215,
+            "y": 197,
+            "width": 42,
+            "height": 42
+          }
+        },
+        {
+          "inputs": [
+            "cDown"
+          ],
+          "frame": {
+            "x": 215,
+            "y": 276,
+            "width": 42,
+            "height": 42
+          }
+        },
+        {
+          "inputs": [
+            "cLeft"
+          ],
+          "frame": {
+            "x": 177,
+            "y": 236,
+            "width": 42,
+            "height": 42
+          }
+        },
+        {
+          "inputs": [
+            "cRight"
+          ],
+          "frame": {
+            "x": 255,
+            "y": 237,
+            "width": 42,
+            "height": 42
+          }
+        }
+      ]
+    },
+    "landscape": {
+      "mappingSize": {
+        "width": 812,
+        "height": 375
+      },
+      "items": [
+        {
+          "inputs": {
+            "up": "analogStickUp",
+            "down": "analogStickDown",
+            "left": "analogStickLeft",
+            "right": "analogStickRight"
+          },
+          "frame": {
+            "x": 49,
+            "y": 103,
+            "width": 86,
+            "height": 86
+          },
+          "thumbstick": {
+            "name": "thumbstick_landscape.pdf",
+            "width": 78,
+            "height": 78
+          }
+        },
+        {
+          "inputs": {
+            "up": "up",
+            "down": "down",
+            "left": "left",
+            "right": "right"
+          },
+          "frame": {
+            "x": 30,
+            "y": 237,
+            "width": 123,
+            "height": 123
+          }
+        },
+        {
+          "inputs": [
+            "a"
+          ],
+          "frame": {
+            "x": 727,
+            "y": 158,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "b"
+          ],
+          "frame": {
+            "x": 652,
+            "y": 134,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "z"
+          ],
+          "frame": {
+            "x": 710,
+            "y": 86,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "inputs": [
+            "l"
+          ],
+          "frame": {
+            "x": 15,
+            "y": 14,
+            "width": 100,
+            "height": 41
+          }
+        },
+        {
+          "inputs": [
+            "r"
+          ],
+          "frame": {
+            "x": 697,
+            "y": 14,
+            "width": 100,
+            "height": 41
+          }
+        },
+        {
+          "inputs": [
+            "start"
+          ],
+          "frame": {
+            "x": 370,
+            "y": 334,
+            "width": 73,
+            "height": 26
+          }
+        },
+        {
+          "inputs": [
+            "menu"
+          ],
+          "frame": {
+            "x": 370,
+            "y": 15,
+            "width": 73,
+            "height": 26
+          }
+        },
+        {
+          "inputs": [
+            "cUp"
+          ],
+          "frame": {
+            "x": 705,
+            "y": 246,
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "inputs": [
+            "cDown"
+          ],
+          "frame": {
+            "x": 705,
+            "y": 320,
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "inputs": [
+            "cLeft"
+          ],
+          "frame": {
+            "x": 668,
+            "y": 283,
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "inputs": [
+            "cRight"
+          ],
+          "frame": {
+            "x": 742,
+            "y": 283,
+            "width": 40,
+            "height": 40
+          }
+        }
+      ]
+    }
+  }
+}
