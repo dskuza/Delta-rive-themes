@@ -245,6 +245,24 @@
                 "right": 3
               },
               "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "z"
+              ],
+              "frame": {
+                "x": 18.0,
+                "y": 31.0,
+                "width": 52,
+                "height": 22
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "rectangle"
             }
           ]
         },
@@ -479,6 +497,24 @@
                 "y": 5.0,
                 "width": 42,
                 "height": 16
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "z"
+              ],
+              "frame": {
+                "x": 29.0,
+                "y": 20.0,
+                "width": 52,
+                "height": 22
               },
               "extendedEdges": {
                 "top": 3,
@@ -741,6 +777,24 @@
                 "right": 3
               },
               "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "z"
+              ],
+              "frame": {
+                "x": 18.0,
+                "y": 31.0,
+                "width": 52,
+                "height": 22
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "rectangle"
             }
           ],
           "respectsSafeArea": true
@@ -976,6 +1030,24 @@
                 "y": 5.0,
                 "width": 42,
                 "height": 16
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "z"
+              ],
+              "frame": {
+                "x": 29.0,
+                "y": 20.0,
+                "width": 52,
+                "height": 22
               },
               "extendedEdges": {
                 "top": 3,

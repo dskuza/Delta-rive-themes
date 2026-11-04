@@ -302,6 +302,24 @@ class Crystal(Orbit):
             self.gradient(board,['FF14262E','FF0C1C26'],ph/2)
         if portrait:
             self.rect(a,w/2,h/2,w,h,'FF07131E',name='Backdrop')
+        # Both physical Z regions deliberately share the same native input and
+        # view-model property. Allocate the added assembly outside existing IDs.
+        previous_counter=self.counter
+        self.counter=self.material_counter
+        first_added=len(a)
+        zx,zy=(44,42) if portrait else (55,31)
+        items.append(self.button(a,sm,'z',zx,zy,52,22,MINT,'Z'))
+        points=([(zx,zy),(151,zy),(151,93),(187,82),chip,(195,5)] if portrait else
+                [(zx,zy),(161,zy),(161,208),chip,(217,189)])
+        self.signal(a,sm,'zPressed',points,MINT,'Z LEFT')
+        traces.append(dict(name='z',side='left',points=points,color=MINT))
+        # Bring the added artwork above the board without moving animation order.
+        for child in reversed(list(a)[first_added:]):
+            if child.tag in ['Node','Shape','Text']:
+                a.remove(child)
+                a.insert(2,child)
+        self.material_counter=self.counter
+        self.counter=previous_counter
         self.circuits[orientation]=dict(panels=panels,traces=traces)
         rep=dict(assets=dict(resizable=orientation+'.pdf'),mappingSize=dict(width=w,height=h),items=items)
         if not portrait:

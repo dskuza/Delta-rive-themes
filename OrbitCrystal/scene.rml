@@ -4207,7 +4207,292 @@
                 <AnyState x="0" y="-200" id="0:5092" />
                 <ExitState x="800" y="-200" id="0:5093" />
             </StateMachineLayer>
+            <StateMachineLayer name="zPressed" id="0:900071">
+                <AnimationState animationId="0:900044" x="160" y="0" id="0:900072">
+                    <StateTransition stateToId="0:900073" duration="45" id="0:900079">
+                        <TransitionViewModelCondition opValue="equal" id="0:900080">
+                            <TransitionPropertyViewModelComparator id="0:900081">
+                                <BindablePropertyBoolean id="0:900082">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900083" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900084" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900085">
+                            <TransitionPropertyViewModelComparator id="0:900086">
+                                <BindablePropertyBoolean id="0:900087">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900088" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900089" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900074" duration="0" id="0:900090">
+                        <TransitionViewModelCondition opValue="equal" id="0:900091">
+                            <TransitionPropertyViewModelComparator id="0:900092">
+                                <BindablePropertyBoolean id="0:900093">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900094" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900095" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900096">
+                            <TransitionPropertyViewModelComparator id="0:900097">
+                                <BindablePropertyBoolean id="0:900098">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900099" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900100" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900053" x="340" y="-100" id="0:900073">
+                    <StateTransition stateToId="0:900072" duration="110" id="0:900101">
+                        <TransitionViewModelCondition opValue="equal" id="0:900102">
+                            <TransitionPropertyViewModelComparator id="0:900103">
+                                <BindablePropertyBoolean id="0:900104">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900105" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900106" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900074" duration="0" id="0:900107">
+                        <TransitionViewModelCondition opValue="equal" id="0:900108">
+                            <TransitionPropertyViewModelComparator id="0:900109">
+                                <BindablePropertyBoolean id="0:900110">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900111" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900112" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900062" x="520" y="100" id="0:900074">
+                    <StateTransition stateToId="0:900072" duration="0" id="0:900113">
+                        <TransitionViewModelCondition opValue="equal" id="0:900114">
+                            <TransitionPropertyViewModelComparator id="0:900115">
+                                <BindablePropertyBoolean id="0:900116">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900117" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900118" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900073" duration="0" id="0:900119">
+                        <TransitionViewModelCondition opValue="equal" id="0:900120">
+                            <TransitionPropertyViewModelComparator id="0:900121">
+                                <BindablePropertyBoolean id="0:900122">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900123" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900124" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:900075">
+                    <StateTransition stateToId="0:900072" id="0:900076" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:900077" />
+                <ExitState x="780" y="-180" id="0:900078" />
+            </StateMachineLayer>
+            <StateMachineLayer name="Z LEFT / bus" id="0:900198">
+                <AnimationState animationId="0:900166" reset="true" x="180" y="0" id="0:900199">
+                    <StateTransition stateToId="0:900200" duration="0" id="0:900206">
+                        <TransitionViewModelCondition opValue="equal" id="0:900207">
+                            <TransitionPropertyViewModelComparator id="0:900208">
+                                <BindablePropertyBoolean id="0:900209">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900210" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900211" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900212">
+                            <TransitionPropertyViewModelComparator id="0:900213">
+                                <BindablePropertyBoolean id="0:900214">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900215" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900216" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900201" duration="0" id="0:900217">
+                        <TransitionViewModelCondition opValue="equal" id="0:900218">
+                            <TransitionPropertyViewModelComparator id="0:900219">
+                                <BindablePropertyBoolean id="0:900220">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900221" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900222" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900223">
+                            <TransitionPropertyViewModelComparator id="0:900224">
+                                <BindablePropertyBoolean id="0:900225">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900226" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900227" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900176" reset="true" x="360" y="-100" id="0:900200">
+                    <StateTransition stateToId="0:900199" duration="100" enableExitTime="true" exitTimeIsPercetange="true" exitTime="100" id="0:900228">
+                        <TransitionViewModelCondition opValue="equal" id="0:900229">
+                            <TransitionPropertyViewModelComparator id="0:900230">
+                                <BindablePropertyBoolean id="0:900231">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900232" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900233" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900201" duration="0" id="0:900234">
+                        <TransitionViewModelCondition opValue="equal" id="0:900235">
+                            <TransitionPropertyViewModelComparator id="0:900236">
+                                <BindablePropertyBoolean id="0:900237">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900238" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900239" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900240">
+                            <TransitionPropertyViewModelComparator id="0:900241">
+                                <BindablePropertyBoolean id="0:900242">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900243" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900244" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900188" reset="true" x="540" y="100" id="0:900201">
+                    <StateTransition stateToId="0:900199" duration="100" id="0:900245">
+                        <TransitionViewModelCondition opValue="equal" id="0:900246">
+                            <TransitionPropertyViewModelComparator id="0:900247">
+                                <BindablePropertyBoolean id="0:900248">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900249" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900250" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900200" duration="0" id="0:900251">
+                        <TransitionViewModelCondition opValue="equal" id="0:900252">
+                            <TransitionPropertyViewModelComparator id="0:900253">
+                                <BindablePropertyBoolean id="0:900254">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900255" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900256" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900257">
+                            <TransitionPropertyViewModelComparator id="0:900258">
+                                <BindablePropertyBoolean id="0:900259">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900260" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900261" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:900202">
+                    <StateTransition stateToId="0:900199" id="0:900203" />
+                </EntryState>
+                <AnyState x="0" y="-200" id="0:900204" />
+                <ExitState x="800" y="-200" id="0:900205" />
+            </StateMachineLayer>
         </StateMachine>
+        <Node x="44" y="42" name="z / transparent cap" id="0:900021">
+            <Text x="0" y="-1" name="Z" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:900022">
+                <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:900023">
+                    <Fill name="Paint" id="0:900024">
+                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:900025" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:900023" text="Z" name="Text" id="0:900026" />
+            </Text>
+            <Shape x="0" y="0" name="Clear paddle rim" id="0:900027">
+                <Rectangle width="52" height="22" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:900028" />
+                <Stroke name="Paint" thickness="0.75" id="0:900029">
+                    <SolidColor name="Color" colorValue="7197A6B4" id="0:900030" />
+                </Stroke>
+                <Fill name="Transparent material" id="0:900031">
+                    <LinearGradient startX="-10.4" startY="-15.6" endX="13.0" endY="26.0" name="Clear polycarbonate" id="0:900032">
+                        <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900033" />
+                        <GradientStop colorValue="0D737D88" position="0.5" id="0:900034" />
+                        <GradientStop colorValue="1E56616E" position="1.0" id="0:900035" />
+                    </LinearGradient>
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="44" y="42" opacity="0.08" name="z / socket LED" id="0:900036">
+            <Shape x="0" y="0" name="Panel" id="0:900037">
+                <Rectangle width="56" height="26" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:900038" />
+                <Stroke name="Paint" thickness="1.2" id="0:900039">
+                    <SolidColor name="Color" colorValue="FF73F2D0" id="0:900040" />
+                </Stroke>
+                <Stroke name="Glow" thickness="3" id="0:900041">
+                    <SolidColor name="Color" colorValue="FF73F2D0" id="0:900042" />
+                    <Feather name="Vector feather" strength="7" id="0:900043" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <Shape x="44" y="47.94" name="z / contact pad" id="0:900125">
+            <Rectangle width="11.44" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:900126" />
+            <Fill name="Paint" id="0:900127">
+                <SolidColor name="Color" colorValue="FF73F2D0" id="0:900128" />
+            </Fill>
+        </Shape>
+        <Shape x="44" y="42" name="Exposed switch socket" id="0:900129">
+            <Rectangle width="59" height="29" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:900130" />
+            <Fill name="Paint" id="0:900131">
+                <SolidColor name="Color" colorValue="FF0B1B24" id="0:900132" />
+            </Fill>
+        </Shape>
+        <Node name="Z LEFT / signal" opacity="0" id="0:900133">
+            <Shape name="Moving data packet" id="0:900134">
+                <PointsPath isClosed="false" name="Routed path" id="0:900135">
+                    <StraightVertex x="44" y="42" radius="3" id="0:900136" />
+                    <StraightVertex x="151" y="42" radius="3" id="0:900137" />
+                    <StraightVertex x="151" y="93" radius="3" id="0:900138" />
+                    <StraightVertex x="187" y="82" radius="3" id="0:900139" />
+                    <StraightVertex x="195" y="69" radius="3" id="0:900140" />
+                    <StraightVertex x="195" y="5" radius="3" id="0:900141" />
+                </PointsPath>
+                <Stroke thickness="1.65" cap="round" join="round" id="0:900142">
+                    <SolidColor colorValue="FF73F2D0" id="0:900143" />
+                    <TrimPath start="0" end="0.17" name="Packet travel" id="0:900144" />
+                </Stroke>
+            </Shape>
+            <Node opacity="0.2" name="Powered copper" id="0:900145">
+                <Shape name="Copper trace" id="0:900146">
+                    <PointsPath isClosed="false" name="Routed path" id="0:900147">
+                        <StraightVertex x="44" y="42" radius="3" id="0:900148" />
+                        <StraightVertex x="151" y="42" radius="3" id="0:900149" />
+                        <StraightVertex x="151" y="93" radius="3" id="0:900150" />
+                        <StraightVertex x="187" y="82" radius="3" id="0:900151" />
+                        <StraightVertex x="195" y="69" radius="3" id="0:900152" />
+                        <StraightVertex x="195" y="5" radius="3" id="0:900153" />
+                    </PointsPath>
+                    <Stroke thickness="0.8" cap="round" join="round" id="0:900154">
+                        <SolidColor colorValue="FF73F2D0" id="0:900155" />
+                    </Stroke>
+                </Shape>
+            </Node>
+        </Node>
+        <Shape name="Z LEFT / unpowered route" id="0:900156">
+            <PointsPath isClosed="false" name="Routed path" id="0:900157">
+                <StraightVertex x="44" y="42" radius="3" id="0:900158" />
+                <StraightVertex x="151" y="42" radius="3" id="0:900159" />
+                <StraightVertex x="151" y="93" radius="3" id="0:900160" />
+                <StraightVertex x="187" y="82" radius="3" id="0:900161" />
+                <StraightVertex x="195" y="69" radius="3" id="0:900162" />
+                <StraightVertex x="195" y="5" radius="3" id="0:900163" />
+            </PointsPath>
+            <Stroke thickness="0.7" cap="round" join="round" id="0:900164">
+                <SolidColor colorValue="FF29464E" id="0:900165" />
+            </Stroke>
+        </Shape>
         <Node x="116" y="284" name="Transparent analog module" id="0:120">
             <RootBone length="1" name="Continuous XY gimbal" id="0:121" />
             <Node name="Transparent moving cap" id="0:137">
@@ -8047,6 +8332,104 @@
                 <SolidColor name="Color" colorValue="FF07131E" id="0:5161" />
             </Fill>
         </Shape>
+        <LinearAnimation duration="1" name="zPressed Rest" id="0:900044">
+            <KeyedObject objectId="0:900021" id="0:900045">
+                <KeyedProperty propertyKey="16" id="0:900046">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900047" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:900048">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900049" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900036" id="0:900050">
+                <KeyedProperty propertyKey="18" id="0:900051">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:900052" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="zPressed Press" id="0:900053">
+            <KeyedObject objectId="0:900021" id="0:900054">
+                <KeyedProperty propertyKey="16" id="0:900055">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:900056" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:900057">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:900058" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900036" id="0:900059">
+                <KeyedProperty propertyKey="18" id="0:900060">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900061" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="zPressed Still" id="0:900062">
+            <KeyedObject objectId="0:900021" id="0:900063">
+                <KeyedProperty propertyKey="16" id="0:900064">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900065" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:900066">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900067" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900036" id="0:900068">
+                <KeyedProperty propertyKey="18" id="0:900069">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900070" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation name="Z LEFT / idle" duration="48" loopValue="oneShot" id="0:900166">
+            <KeyedObject objectId="0:900133" id="0:900167">
+                <KeyedProperty propertyKey="18" id="0:900168">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900169" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900144" id="0:900170">
+                <KeyedProperty propertyKey="114" id="0:900171">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900172" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900144" id="0:900173">
+                <KeyedProperty propertyKey="115" id="0:900174">
+                    <KeyFrameDouble frame="0" value="0.17" interpolationType="linear" id="0:900175" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation name="Z LEFT / transmitting" duration="48" loopValue="loop" id="0:900176">
+            <KeyedObject objectId="0:900133" id="0:900177">
+                <KeyedProperty propertyKey="18" id="0:900178">
+                    <KeyFrameDouble frame="0" value="1" interpolationType="linear" id="0:900179" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900144" id="0:900180">
+                <KeyedProperty propertyKey="114" id="0:900181">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900182" />
+                    <KeyFrameDouble frame="48" value="0.98" interpolationType="linear" id="0:900183" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900144" id="0:900184">
+                <KeyedProperty propertyKey="115" id="0:900185">
+                    <KeyFrameDouble frame="0" value="0.17" interpolationType="linear" id="0:900186" />
+                    <KeyFrameDouble frame="48" value="1.15" interpolationType="linear" id="0:900187" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation name="Z LEFT / reduced motion" duration="48" loopValue="oneShot" id="0:900188">
+            <KeyedObject objectId="0:900133" id="0:900189">
+                <KeyedProperty propertyKey="18" id="0:900190">
+                    <KeyFrameDouble frame="0" value="0.85" interpolationType="linear" id="0:900191" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900144" id="0:900192">
+                <KeyedProperty propertyKey="114" id="0:900193">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900194" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900144" id="0:900195">
+                <KeyedProperty propertyKey="115" id="0:900196">
+                    <KeyFrameDouble frame="0" value="1" interpolationType="linear" id="0:900197" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
     </Artboard>
     <DataConverterRangeMapper minInput="-1" maxInput="1" minOutput="-27" maxOutput="27" clampLower="true" clampUpper="true" name="stickX mapping" id="0:241" />
     <DataConverterRangeMapper minInput="-1" maxInput="1" minOutput="27" maxOutput="-27" clampLower="true" clampUpper="true" name="stickY mapping" id="0:252" />
@@ -12258,7 +12641,289 @@
                 <AnyState x="0" y="-200" id="0:10279" />
                 <ExitState x="800" y="-200" id="0:10280" />
             </StateMachineLayer>
+            <StateMachineLayer name="zPressed" id="0:900332">
+                <AnimationState animationId="0:900305" x="160" y="0" id="0:900333">
+                    <StateTransition stateToId="0:900334" duration="45" id="0:900340">
+                        <TransitionViewModelCondition opValue="equal" id="0:900341">
+                            <TransitionPropertyViewModelComparator id="0:900342">
+                                <BindablePropertyBoolean id="0:900343">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900344" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900345" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900346">
+                            <TransitionPropertyViewModelComparator id="0:900347">
+                                <BindablePropertyBoolean id="0:900348">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900349" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900350" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900335" duration="0" id="0:900351">
+                        <TransitionViewModelCondition opValue="equal" id="0:900352">
+                            <TransitionPropertyViewModelComparator id="0:900353">
+                                <BindablePropertyBoolean id="0:900354">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900355" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900356" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900357">
+                            <TransitionPropertyViewModelComparator id="0:900358">
+                                <BindablePropertyBoolean id="0:900359">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900360" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900361" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900314" x="340" y="-100" id="0:900334">
+                    <StateTransition stateToId="0:900333" duration="110" id="0:900362">
+                        <TransitionViewModelCondition opValue="equal" id="0:900363">
+                            <TransitionPropertyViewModelComparator id="0:900364">
+                                <BindablePropertyBoolean id="0:900365">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900366" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900367" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900335" duration="0" id="0:900368">
+                        <TransitionViewModelCondition opValue="equal" id="0:900369">
+                            <TransitionPropertyViewModelComparator id="0:900370">
+                                <BindablePropertyBoolean id="0:900371">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900372" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900373" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900323" x="520" y="100" id="0:900335">
+                    <StateTransition stateToId="0:900333" duration="0" id="0:900374">
+                        <TransitionViewModelCondition opValue="equal" id="0:900375">
+                            <TransitionPropertyViewModelComparator id="0:900376">
+                                <BindablePropertyBoolean id="0:900377">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900378" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900379" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900334" duration="0" id="0:900380">
+                        <TransitionViewModelCondition opValue="equal" id="0:900381">
+                            <TransitionPropertyViewModelComparator id="0:900382">
+                                <BindablePropertyBoolean id="0:900383">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900384" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900385" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:900336">
+                    <StateTransition stateToId="0:900333" id="0:900337" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:900338" />
+                <ExitState x="780" y="-180" id="0:900339" />
+            </StateMachineLayer>
+            <StateMachineLayer name="Z LEFT / bus" id="0:900456">
+                <AnimationState animationId="0:900424" reset="true" x="180" y="0" id="0:900457">
+                    <StateTransition stateToId="0:900458" duration="0" id="0:900464">
+                        <TransitionViewModelCondition opValue="equal" id="0:900465">
+                            <TransitionPropertyViewModelComparator id="0:900466">
+                                <BindablePropertyBoolean id="0:900467">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900468" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900469" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900470">
+                            <TransitionPropertyViewModelComparator id="0:900471">
+                                <BindablePropertyBoolean id="0:900472">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900473" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900474" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900459" duration="0" id="0:900475">
+                        <TransitionViewModelCondition opValue="equal" id="0:900476">
+                            <TransitionPropertyViewModelComparator id="0:900477">
+                                <BindablePropertyBoolean id="0:900478">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900479" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900480" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900481">
+                            <TransitionPropertyViewModelComparator id="0:900482">
+                                <BindablePropertyBoolean id="0:900483">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900484" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900485" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900434" reset="true" x="360" y="-100" id="0:900458">
+                    <StateTransition stateToId="0:900457" duration="100" enableExitTime="true" exitTimeIsPercetange="true" exitTime="100" id="0:900486">
+                        <TransitionViewModelCondition opValue="equal" id="0:900487">
+                            <TransitionPropertyViewModelComparator id="0:900488">
+                                <BindablePropertyBoolean id="0:900489">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900490" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900491" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900459" duration="0" id="0:900492">
+                        <TransitionViewModelCondition opValue="equal" id="0:900493">
+                            <TransitionPropertyViewModelComparator id="0:900494">
+                                <BindablePropertyBoolean id="0:900495">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900496" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900497" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900498">
+                            <TransitionPropertyViewModelComparator id="0:900499">
+                                <BindablePropertyBoolean id="0:900500">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900501" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900502" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:900446" reset="true" x="540" y="100" id="0:900459">
+                    <StateTransition stateToId="0:900457" duration="100" id="0:900503">
+                        <TransitionViewModelCondition opValue="equal" id="0:900504">
+                            <TransitionPropertyViewModelComparator id="0:900505">
+                                <BindablePropertyBoolean id="0:900506">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900507" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900508" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:900458" duration="0" id="0:900509">
+                        <TransitionViewModelCondition opValue="equal" id="0:900510">
+                            <TransitionPropertyViewModelComparator id="0:900511">
+                                <BindablePropertyBoolean id="0:900512">
+                                    <DataBindContext sourcePathIds="0:1-0:19" propertyKey="634" id="0:900513" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:900514" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900515">
+                            <TransitionPropertyViewModelComparator id="0:900516">
+                                <BindablePropertyBoolean id="0:900517">
+                                    <DataBindContext sourcePathIds="0:1-0:22" propertyKey="634" id="0:900518" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:900519" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:900460">
+                    <StateTransition stateToId="0:900457" id="0:900461" />
+                </EntryState>
+                <AnyState x="0" y="-200" id="0:900462" />
+                <ExitState x="800" y="-200" id="0:900463" />
+            </StateMachineLayer>
         </StateMachine>
+        <Node x="55" y="31" name="z / transparent cap" id="0:900282">
+            <Text x="0" y="-1" name="Z" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:900283">
+                <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:900284">
+                    <Fill name="Paint" id="0:900285">
+                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:900286" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:900284" text="Z" name="Text" id="0:900287" />
+            </Text>
+            <Shape x="0" y="0" name="Clear paddle rim" id="0:900288">
+                <Rectangle width="52" height="22" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:900289" />
+                <Stroke name="Paint" thickness="0.75" id="0:900290">
+                    <SolidColor name="Color" colorValue="7197A6B4" id="0:900291" />
+                </Stroke>
+                <Fill name="Transparent material" id="0:900292">
+                    <LinearGradient startX="-10.4" startY="-15.6" endX="13.0" endY="26.0" name="Clear polycarbonate" id="0:900293">
+                        <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900294" />
+                        <GradientStop colorValue="0D737D88" position="0.5" id="0:900295" />
+                        <GradientStop colorValue="1E56616E" position="1.0" id="0:900296" />
+                    </LinearGradient>
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="55" y="31" opacity="0.08" name="z / socket LED" id="0:900297">
+            <Shape x="0" y="0" name="Panel" id="0:900298">
+                <Rectangle width="56" height="26" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:900299" />
+                <Stroke name="Paint" thickness="1.2" id="0:900300">
+                    <SolidColor name="Color" colorValue="FF73F2D0" id="0:900301" />
+                </Stroke>
+                <Stroke name="Glow" thickness="3" id="0:900302">
+                    <SolidColor name="Color" colorValue="FF73F2D0" id="0:900303" />
+                    <Feather name="Vector feather" strength="7" id="0:900304" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <Shape x="55" y="36.94" name="z / contact pad" id="0:900386">
+            <Rectangle width="11.44" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:900387" />
+            <Fill name="Paint" id="0:900388">
+                <SolidColor name="Color" colorValue="FF73F2D0" id="0:900389" />
+            </Fill>
+        </Shape>
+        <Shape x="55" y="31" name="Exposed switch socket" id="0:900390">
+            <Rectangle width="59" height="29" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:900391" />
+            <Fill name="Paint" id="0:900392">
+                <SolidColor name="Color" colorValue="FF0B1B24" id="0:900393" />
+            </Fill>
+        </Shape>
+        <Node name="Z LEFT / signal" opacity="0" id="0:900394">
+            <Shape name="Moving data packet" id="0:900395">
+                <PointsPath isClosed="false" name="Routed path" id="0:900396">
+                    <StraightVertex x="55" y="31" radius="3" id="0:900397" />
+                    <StraightVertex x="161" y="31" radius="3" id="0:900398" />
+                    <StraightVertex x="161" y="208" radius="3" id="0:900399" />
+                    <StraightVertex x="180" y="189" radius="3" id="0:900400" />
+                    <StraightVertex x="217" y="189" radius="3" id="0:900401" />
+                </PointsPath>
+                <Stroke thickness="1.65" cap="round" join="round" id="0:900402">
+                    <SolidColor colorValue="FF73F2D0" id="0:900403" />
+                    <TrimPath start="0" end="0.17" name="Packet travel" id="0:900404" />
+                </Stroke>
+            </Shape>
+            <Node opacity="0.2" name="Powered copper" id="0:900405">
+                <Shape name="Copper trace" id="0:900406">
+                    <PointsPath isClosed="false" name="Routed path" id="0:900407">
+                        <StraightVertex x="55" y="31" radius="3" id="0:900408" />
+                        <StraightVertex x="161" y="31" radius="3" id="0:900409" />
+                        <StraightVertex x="161" y="208" radius="3" id="0:900410" />
+                        <StraightVertex x="180" y="189" radius="3" id="0:900411" />
+                        <StraightVertex x="217" y="189" radius="3" id="0:900412" />
+                    </PointsPath>
+                    <Stroke thickness="0.8" cap="round" join="round" id="0:900413">
+                        <SolidColor colorValue="FF73F2D0" id="0:900414" />
+                    </Stroke>
+                </Shape>
+            </Node>
+        </Node>
+        <Shape name="Z LEFT / unpowered route" id="0:900415">
+            <PointsPath isClosed="false" name="Routed path" id="0:900416">
+                <StraightVertex x="55" y="31" radius="3" id="0:900417" />
+                <StraightVertex x="161" y="31" radius="3" id="0:900418" />
+                <StraightVertex x="161" y="208" radius="3" id="0:900419" />
+                <StraightVertex x="180" y="189" radius="3" id="0:900420" />
+                <StraightVertex x="217" y="189" radius="3" id="0:900421" />
+            </PointsPath>
+            <Stroke thickness="0.7" cap="round" join="round" id="0:900422">
+                <SolidColor colorValue="FF29464E" id="0:900423" />
+            </Stroke>
+        </Shape>
         <Node x="111" y="282" name="Transparent analog module" id="0:5175">
             <RootBone length="1" name="Continuous XY gimbal" id="0:5176" />
             <Node name="Transparent moving cap" id="0:5192">
@@ -12527,11 +13192,11 @@
                     <Stroke name="Paint" thickness="0.7" id="0:5409">
                         <SolidColor name="Color" colorValue="748C9AA6" id="0:5410" />
                     </Stroke>
-                    <Fill name="Transparent material" id="0:900021">
-                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900022">
-                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900023" />
-                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900024" />
-                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900025" />
+                    <Fill name="Transparent material" id="0:900262">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900263">
+                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900264" />
+                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900265" />
+                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900266" />
                         </LinearGradient>
                     </Fill>
                 </Shape>
@@ -12556,11 +13221,11 @@
                     <Stroke name="Paint" thickness="0.7" id="0:5493">
                         <SolidColor name="Color" colorValue="748C9AA6" id="0:5494" />
                     </Stroke>
-                    <Fill name="Transparent material" id="0:900026">
-                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900027">
-                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900028" />
-                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900029" />
-                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900030" />
+                    <Fill name="Transparent material" id="0:900267">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900268">
+                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900269" />
+                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900270" />
+                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900271" />
                         </LinearGradient>
                     </Fill>
                 </Shape>
@@ -12585,11 +13250,11 @@
                     <Stroke name="Paint" thickness="0.7" id="0:5577">
                         <SolidColor name="Color" colorValue="748C9AA6" id="0:5578" />
                     </Stroke>
-                    <Fill name="Transparent material" id="0:900031">
-                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900032">
-                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900033" />
-                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900034" />
-                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900035" />
+                    <Fill name="Transparent material" id="0:900272">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900273">
+                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900274" />
+                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900275" />
+                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900276" />
                         </LinearGradient>
                     </Fill>
                 </Shape>
@@ -12614,11 +13279,11 @@
                     <Stroke name="Paint" thickness="0.7" id="0:5661">
                         <SolidColor name="Color" colorValue="748C9AA6" id="0:5662" />
                     </Stroke>
-                    <Fill name="Transparent material" id="0:900036">
-                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900037">
-                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900038" />
-                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900039" />
-                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900040" />
+                    <Fill name="Transparent material" id="0:900277">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900278">
+                            <GradientStop colorValue="54A4ABB4" position="0.0" id="0:900279" />
+                            <GradientStop colorValue="0D737D88" position="0.5" id="0:900280" />
+                            <GradientStop colorValue="1E56616E" position="1.0" id="0:900281" />
                         </LinearGradient>
                     </Fill>
                 </Shape>
@@ -16321,6 +16986,104 @@
                 </LinearGradient>
             </Fill>
         </Shape>
+        <LinearAnimation duration="1" name="zPressed Rest" id="0:900305">
+            <KeyedObject objectId="0:900282" id="0:900306">
+                <KeyedProperty propertyKey="16" id="0:900307">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900308" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:900309">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900310" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900297" id="0:900311">
+                <KeyedProperty propertyKey="18" id="0:900312">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:900313" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="zPressed Press" id="0:900314">
+            <KeyedObject objectId="0:900282" id="0:900315">
+                <KeyedProperty propertyKey="16" id="0:900316">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:900317" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:900318">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:900319" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900297" id="0:900320">
+                <KeyedProperty propertyKey="18" id="0:900321">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900322" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="zPressed Still" id="0:900323">
+            <KeyedObject objectId="0:900282" id="0:900324">
+                <KeyedProperty propertyKey="16" id="0:900325">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900326" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:900327">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900328" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900297" id="0:900329">
+                <KeyedProperty propertyKey="18" id="0:900330">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:900331" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation name="Z LEFT / idle" duration="48" loopValue="oneShot" id="0:900424">
+            <KeyedObject objectId="0:900394" id="0:900425">
+                <KeyedProperty propertyKey="18" id="0:900426">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900427" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900404" id="0:900428">
+                <KeyedProperty propertyKey="114" id="0:900429">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900430" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900404" id="0:900431">
+                <KeyedProperty propertyKey="115" id="0:900432">
+                    <KeyFrameDouble frame="0" value="0.17" interpolationType="linear" id="0:900433" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation name="Z LEFT / transmitting" duration="48" loopValue="loop" id="0:900434">
+            <KeyedObject objectId="0:900394" id="0:900435">
+                <KeyedProperty propertyKey="18" id="0:900436">
+                    <KeyFrameDouble frame="0" value="1" interpolationType="linear" id="0:900437" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900404" id="0:900438">
+                <KeyedProperty propertyKey="114" id="0:900439">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900440" />
+                    <KeyFrameDouble frame="48" value="0.98" interpolationType="linear" id="0:900441" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900404" id="0:900442">
+                <KeyedProperty propertyKey="115" id="0:900443">
+                    <KeyFrameDouble frame="0" value="0.17" interpolationType="linear" id="0:900444" />
+                    <KeyFrameDouble frame="48" value="1.15" interpolationType="linear" id="0:900445" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation name="Z LEFT / reduced motion" duration="48" loopValue="oneShot" id="0:900446">
+            <KeyedObject objectId="0:900394" id="0:900447">
+                <KeyedProperty propertyKey="18" id="0:900448">
+                    <KeyFrameDouble frame="0" value="0.85" interpolationType="linear" id="0:900449" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900404" id="0:900450">
+                <KeyedProperty propertyKey="114" id="0:900451">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="linear" id="0:900452" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:900404" id="0:900453">
+                <KeyedProperty propertyKey="115" id="0:900454">
+                    <KeyFrameDouble frame="0" value="1" interpolationType="linear" id="0:900455" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
     </Artboard>
     <DataConverterRangeMapper minInput="-1" maxInput="1" minOutput="-27" maxOutput="27" clampLower="true" clampUpper="true" name="stickX mapping" id="0:5296" />
     <DataConverterRangeMapper minInput="-1" maxInput="1" minOutput="27" maxOutput="-27" clampLower="true" clampUpper="true" name="stickY mapping" id="0:5307" />
