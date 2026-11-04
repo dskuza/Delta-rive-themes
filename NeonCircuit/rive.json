@@ -17,17 +17,6 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "sticks": [
-        {
-          "up": "up",
-          "down": "down",
-          "left": "left",
-          "right": "right",
-          "x": "stickX",
-          "y": "stickY",
-          "active": "stickActive"
-        }
-      ],
       "reduceMotion": "reduceMotion"
     },
     "iphone-standard-landscape": {
@@ -46,17 +35,6 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "sticks": [
-        {
-          "up": "up",
-          "down": "down",
-          "left": "left",
-          "right": "right",
-          "x": "stickX",
-          "y": "stickY",
-          "active": "stickActive"
-        }
-      ],
       "reduceMotion": "reduceMotion"
     },
     "iphone-edgeToEdge-portrait": {
@@ -75,17 +53,6 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "sticks": [
-        {
-          "up": "up",
-          "down": "down",
-          "left": "left",
-          "right": "right",
-          "x": "stickX",
-          "y": "stickY",
-          "active": "stickActive"
-        }
-      ],
       "reduceMotion": "reduceMotion"
     },
     "iphone-edgeToEdge-landscape": {
@@ -104,17 +71,6 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "sticks": [
-        {
-          "up": "up",
-          "down": "down",
-          "left": "left",
-          "right": "right",
-          "x": "stickX",
-          "y": "stickY",
-          "active": "stickActive"
-        }
-      ],
       "reduceMotion": "reduceMotion"
     }
   }

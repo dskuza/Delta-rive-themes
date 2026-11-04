@@ -14,16 +14,21 @@ def run(*args):
     subprocess.run([str(a) for a in args],cwd=ROOT,check=True)
 
 def main():
-    for name in ['Template','NeonCircuit']:
+    projects = ['Template','NeonCircuit']
+    if (ROOT/'AnalogStickLab'/'scene.rml').exists():
+        projects.append('AnalogStickLab')
+    for name in projects:
         run('rive',ROOT/name,'--verify')
         run('rive',ROOT/name,'--once')
     (ROOT/'build').mkdir(exist_ok=True)
     run('swift','-module-cache-path',ROOT/'build'/'ModuleCache',ROOT/'Tools'/'FallbackArtwork.swift',ROOT)
     (ROOT/'Dist').mkdir(exist_ok=True)
+    if 'AnalogStickLab' in projects:
+        shutil.copy2(ROOT/'AnalogStickLab'/'build'/'AnalogStickLab.riv',ROOT/'Dist'/'AnalogStickLab.riv')
     for name in ['Template','NeonCircuit']:
         project=ROOT/name
         members={'info.json':project/'info.json','rive.json':project/'rive.json',name+'.riv':project/'build'/f'{name}.riv'}
-        for asset in ['portrait.pdf','landscape.pdf','stick.pdf']:
+        for asset in ['portrait.pdf','landscape.pdf']:
             members[asset]=project/'build'/asset
         shutil.copy2(project/'build'/f'{name}.riv',ROOT/'Dist'/f'{name}.riv')
         target=ROOT/'Dist'/f'{name}.deltaskin'

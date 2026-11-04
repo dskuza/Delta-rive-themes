@@ -12,13 +12,14 @@ ROOT = Path(__file__).resolve().parents[1]
 BUTTONS = ['up', 'down', 'left', 'right', 'a', 'b', 'start', 'select', 'menu']
 
 class Scene:
-    def __init__(self, showcase):
+    def __init__(self, showcase, analog=False):
         self.root = ET.Element('Rive', version='1', kind='fragment')
         self.counter = 100
         self.showcase = showcase
+        self.analog = analog
         self.vm, self.instance = '0:1', '0:2'
         self.properties = {n: f'0:{i + 3}' for i, n in enumerate(
-            [b + 'Pressed' for b in BUTTONS] + ['stickActive', 'reduceMotion', 'stickX', 'stickY'])}
+            [b + 'Pressed' for b in BUTTONS] + ['reduceMotion'] + (['stickActive', 'stickX', 'stickY'] if analog else []))}
         self.color = 'FF65E7D4' if showcase else 'FF76A8FF'
         self.font = self.el(self.root, 'FontAsset', file='../Assets/SpaceGrotesk.ttf', name='Space Grotesk').get('id')
 
@@ -119,8 +120,8 @@ class Scene:
         cx,cy=(100,158) if portrait else (105,207)
         items=[]
         if portrait:
-            self.text(a,25,29,'NEON / CIRCUIT' if self.showcase else 'CONTROLLER / TEMPLATE',18,'FFDCE9ED')
-            self.text(a,25,52,'VECTOR INPUT SYSTEM   /   NES',8)
+            self.text(a,25,29,'ANALOG / LAB' if self.analog else ('NEON / CIRCUIT' if self.showcase else 'CONTROLLER / TEMPLATE'),18,'FFDCE9ED')
+            self.text(a,25,52,'CONTINUOUS INPUT   /   X + Y' if self.analog else 'VECTOR INPUT SYSTEM   /   NES',8)
             for i in range(4):self.rect(a,334+i*8,27,3,9,self.color if i<3 else 'FF2B3845',1)
         else:
             self.text(a,29,37,'NEON' if self.showcase else 'VECTOR',15,'FFDCE9ED')
@@ -131,40 +132,68 @@ class Scene:
         sy=265 if portrait else 350
         items += [self.button(a,sm,'select',153 if portrait else 337,sy,48,16,self.color,'SELECT'),self.button(a,sm,'start',233 if portrait else 507,sy,48,16,self.color,'START')]
         items += [self.button(a,sm,'menu',40 if portrait else 422,292 if portrait else 20,34,15,self.color,'MENU')]
-        self.text(a,366 if portrait else 796,305 if portrait else 354,'01 / NES',8,center=True)
-        # Stick cap displacement is data-bound, not a bitmap or scripted drawable.
-        stick=self.el(a,'Node',x=cx,y=cy,name='Stick socket')
-        moving=self.el(stick,'Node',name='Stick cap')
-        for prop,key,out in [('stickX',13,22),('stickY',14,-22)]:
-            conv=self.el(self.root,'DataConverterRangeMapper',minInput=-1,maxInput=1,minOutput=-out,maxOutput=out,clampLower=True,clampUpper=True,name=prop+' travel')
-            self.bind(moving,key,prop,conv.get('id'))
-        self.ellipse(moving,0,0,9,self.color)
-        for i in range(5):self.rect(moving,0,-8+i*4,18 if i in (1,2,3) else 10,0.7,'FF3C4D5A')
-        self.ellipse(moving,0,0,54,'FF283744',1)
-        self.ellipse(moving,0,0,55,'FF17212E')
-        self.ellipse(moving,0,3,58,'FF090F18')
-        tracking=self.el(stick,'Node',opacity=0.06,name='Tracking halo')
-        self.ellipse(tracking,0,0,73,self.color,2)
-        self.ellipse(tracking,0,0,76,self.color,6,12)
-        self.animate(a,sm,'stickActive',[(tracking.get('id'),'glow')])
-        # Four independently lit sectors show diagonals and rotation.
-        for i,name in enumerate(['up','right','down','left']):
-            dx,dy=[(0,-1),(1,0),(0,1),(-1,0)][i]
-            node=self.el(stick,'Node',x=dx*53,y=dy*53,rotation=i*math.pi/2,opacity=0.06,name=name+' light')
-            self.rect(node,0,0,24,3,self.color,1.5)
-            s=self.rect(node,0,0,25,3,self.color,1.5)
-            self.paint(s,self.color,4,9)
-            self.animate(a,sm,name+'Pressed',[(node.get('id'),'glow')])
-        # Tick marks make the control read as a physical, machined component.
-        if self.showcase:
-            for i in range(40):
-                theta=i*math.pi/20
-                n=self.el(stick,'Node',x=math.cos(theta)*65,y=math.sin(theta)*65,rotation=theta,name=f'Index {i:02}')
-                self.rect(n,0,0,5 if i%5==0 else 2,1,'FF50616C' if i%5==0 else 'FF293642')
-        self.ellipse(stick,0,0,157,'FF263541',1)
-        self.ellipse(stick,0,0,148,'FF0A111B')
-        self.text(a,cx,cy+91,'DIRECTION / 360',8,center=True)
-        items.insert(0,{'inputs':dict(up='up',down='down',left='left',right='right'),'frame':{'x':cx-76,'y':cy-76,'width':152,'height':152},'thumbstick':{'name':'stick.pdf','width':56,'height':56}})
+        self.text(a,366 if portrait else 796,305 if portrait else 354,'AXIS / XY' if self.analog else '01 / NES',8,center=True)
+        if self.analog:
+            # Stick cap displacement is data-bound, not a bitmap or scripted drawable.
+            stick=self.el(a,'Node',x=cx,y=cy,name='Stick socket')
+            moving=self.el(stick,'Node',name='Stick cap')
+            for prop,key,out in [('stickX',13,22),('stickY',14,-22)]:
+                conv=self.el(self.root,'DataConverterRangeMapper',minInput=-1,maxInput=1,minOutput=-out,maxOutput=out,clampLower=True,clampUpper=True,name=prop+' travel')
+                self.bind(moving,key,prop,conv.get('id'))
+            self.ellipse(moving,0,0,9,self.color)
+            for i in range(5):self.rect(moving,0,-8+i*4,18 if i in (1,2,3) else 10,0.7,'FF3C4D5A')
+            self.ellipse(moving,0,0,54,'FF283744',1)
+            self.ellipse(moving,0,0,55,'FF17212E')
+            self.ellipse(moving,0,3,58,'FF090F18')
+            tracking=self.el(stick,'Node',opacity=0.06,name='Tracking halo')
+            self.ellipse(tracking,0,0,73,self.color,2)
+            self.ellipse(tracking,0,0,76,self.color,6,12)
+            self.animate(a,sm,'stickActive',[(tracking.get('id'),'glow')])
+            # Four independently lit sectors show diagonals and rotation.
+            for i,name in enumerate(['up','right','down','left']):
+                dx,dy=[(0,-1),(1,0),(0,1),(-1,0)][i]
+                node=self.el(stick,'Node',x=dx*53,y=dy*53,rotation=i*math.pi/2,opacity=0.06,name=name+' light')
+                self.rect(node,0,0,24,3,self.color,1.5)
+                s=self.rect(node,0,0,25,3,self.color,1.5)
+                self.paint(s,self.color,4,9)
+                self.animate(a,sm,name+'Pressed',[(node.get('id'),'glow')])
+            # Tick marks make the control read as a physical, machined component.
+            if self.showcase:
+                for i in range(40):
+                    theta=i*math.pi/20
+                    n=self.el(stick,'Node',x=math.cos(theta)*65,y=math.sin(theta)*65,rotation=theta,name=f'Index {i:02}')
+                    self.rect(n,0,0,5 if i%5==0 else 2,1,'FF50616C' if i%5==0 else 'FF293642')
+            self.ellipse(stick,0,0,157,'FF263541',1)
+            self.ellipse(stick,0,0,148,'FF0A111B')
+            self.text(a,cx,cy+91,'DIRECTION / 360',8,center=True)
+            items.insert(0,{'inputs':dict(up='up',down='down',left='left',right='right'),'frame':{'x':cx-76,'y':cy-76,'width':152,'height':152},'thumbstick':{'name':'stick.pdf','width':56,'height':56}})
+        else:
+            # NES has a digital D-pad. Native DeltaCore D-pad hit testing handles
+            # cardinal directions, diagonal chords, sliding and simultaneous A/B.
+            pad=self.el(a,'Node',x=cx,y=cy,name='NES D-pad')
+            for i,name in enumerate(['up','right','down','left']):
+                dx,dy=[(0,-1),(1,0),(0,1),(-1,0)][i]
+                arm=self.el(pad,'Node',x=dx*40,y=dy*40,rotation=i*math.pi/2,name=name+' arm')
+                arrow=self.el(arm,'Shape',y=-3,name='Engraved direction')
+                self.el(arrow,'Triangle',width=10,height=7,name='Arrow')
+                self.paint(arrow,'FF8196A7')
+                cap=self.rect(arm,0,0,35,44,'FF293746',4)
+                glow=self.el(arm,'Node',opacity=0.06,name=name+' LED')
+                self.rect(glow,0,-18,20,3,self.color,1.5)
+                halo=self.rect(glow,0,-18,20,3,self.color,1.5)
+                self.paint(halo,self.color,5,10)
+                arm.remove(cap); arm.append(cap)
+                self.animate(a,sm,name+'Pressed',[(glow.get('id'),'glow')])
+            self.ellipse(pad,0,0,12,'FF111B28')
+            self.rect(pad,0,0,44,44,'FF293746',3)
+            self.rect(pad,0,2,48,124,'FF080E17',6)
+            self.rect(pad,0,2,124,48,'FF080E17',6)
+            self.text(a,cx,cy+91,'DIGITAL / D-PAD',8,center=True)
+            if self.showcase:
+                for i in range(8):
+                    self.rect(a,cx-30+i*8,cy+110,3,1,self.color if i<4 else 'FF293642')
+            items.insert(0,{'inputs':dict(up='up',down='down',left='left',right='right'),
+                            'frame':{'x':cx-66,'y':cy-66,'width':132,'height':132}})
         # Decorative panel traces are simple vectors, with no baked glow images.
         if self.showcase:
             for i in range(5):
@@ -205,8 +234,16 @@ def generate(name,showcase):
     (path/'info.json').write_text(json.dumps(info,indent=2)+'\n')
     bindings={b:b+'Pressed' for b in BUTTONS}
     manifest={'schemaVersion':1,'representations':{f'iphone-{display}-{orientation}':{'file':name+'.riv','artboard':orientation.title(),'stateMachine':'Controller','viewModel':'Controller','buttons':bindings,'sticks':[dict(up='up',down='down',left='left',right='right',x='stickX',y='stickY',active='stickActive')],'reduceMotion':'reduceMotion'} for display in ['standard','edgeToEdge'] for orientation in reps}}
+    for representation in manifest['representations'].values():
+        representation.pop('sticks')
     (path/'rive.json').write_text(json.dumps(manifest,indent=2)+'\n')
 
 if __name__=='__main__':
     generate('Template',False)
     generate('NeonCircuit',True)
+    path=ROOT/'AnalogStickLab'
+    path.mkdir(exist_ok=True)
+    lab=Scene(True,analog=True)
+    lab.artboard('portrait')
+    (path/'scene.rml').write_text(lab.finish())
+    (path/'rive.yaml').write_text('name: AnalogStickLab\nmain: Portrait\n')

@@ -68,13 +68,18 @@ for name in ["Template", "NeonCircuit"]
             {
                 let f=item["frame"] as! [String:CGFloat]
                 let x=f["x"]!+f["width"]!/2, y=f["y"]!+f["height"]!/2
-                if item["thumbstick"] != nil
+                if item["inputs"] is [String: String]
                 {
-                    circle(context,x,y,154,0x293B46)
-                    circle(context,x,y,150,0x09111A)
-                    for angle in stride(from:0.0,to:Double.pi*2,by:Double.pi/20)
+                    context.setFillColor(color(0x080E17))
+                    context.fill(CGRect(x:x-24,y:y-62,width:48,height:124))
+                    context.fill(CGRect(x:x-62,y:y-24,width:124,height:48))
+                    context.setFillColor(color(0x293746))
+                    context.fill(CGRect(x:x-20,y:y-58,width:40,height:116))
+                    context.fill(CGRect(x:x-58,y:y-20,width:116,height:40))
+                    circle(context,x,y,12,0x111B28)
+                    for (dx,dy) in [(0.0,-40.0),(40.0,0.0),(0.0,40.0),(-40.0,0.0)]
                     {
-                        circle(context,x+CGFloat(cos(angle))*65,y+CGFloat(sin(angle))*65,2,0x50616C)
+                        circle(context,x+dx,y+dy,4,0x8196A7)
                     }
                 }
                 else
@@ -90,10 +95,5 @@ for name in ["Template", "NeonCircuit"]
                 }
             }
         }
-    }
-    generate(project.appendingPathComponent("build/stick.pdf"),width:56,height:56) { context in
-        circle(context,28,28,55,0x293B46)
-        circle(context,28,28,52,0x17212E)
-        circle(context,28,28,8,0x65E7D4)
     }
 }
