@@ -1,0 +1,514 @@
+{
+  "name": "Rive NES Template",
+  "identifier": "com.delta.rive.template.nes",
+  "gameTypeIdentifier": "com.rileytestut.delta.game.nes",
+  "debug": false,
+  "representations": {
+    "iphone": {
+      "standard": {
+        "portrait": {
+          "assets": {
+            "resizable": "portrait.pdf"
+          },
+          "mappingSize": {
+            "width": 390,
+            "height": 330
+          },
+          "items": [
+            {
+              "inputs": {
+                "up": "up",
+                "down": "down",
+                "left": "left",
+                "right": "right"
+              },
+              "frame": {
+                "x": 24,
+                "y": 82,
+                "width": 152,
+                "height": 152
+              },
+              "thumbstick": {
+                "name": "stick.pdf",
+                "width": 56,
+                "height": 56
+              }
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 298.5,
+                "y": 113.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "b"
+              ],
+              "frame": {
+                "x": 225.5,
+                "y": 150.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "select"
+              ],
+              "frame": {
+                "x": 129.0,
+                "y": 257.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "start"
+              ],
+              "frame": {
+                "x": 209.0,
+                "y": 257.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "menu"
+              ],
+              "frame": {
+                "x": 23.0,
+                "y": 284.5,
+                "width": 34,
+                "height": 15
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            }
+          ]
+        },
+        "landscape": {
+          "assets": {
+            "resizable": "landscape.pdf"
+          },
+          "mappingSize": {
+            "width": 844,
+            "height": 390
+          },
+          "items": [
+            {
+              "inputs": {
+                "up": "up",
+                "down": "down",
+                "left": "left",
+                "right": "right"
+              },
+              "frame": {
+                "x": 29,
+                "y": 131,
+                "width": 152,
+                "height": 152
+              },
+              "thumbstick": {
+                "name": "stick.pdf",
+                "width": 56,
+                "height": 56
+              }
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 735.5,
+                "y": 145.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "b"
+              ],
+              "frame": {
+                "x": 664.5,
+                "y": 198.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "select"
+              ],
+              "frame": {
+                "x": 313.0,
+                "y": 342.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "start"
+              ],
+              "frame": {
+                "x": 483.0,
+                "y": 342.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "menu"
+              ],
+              "frame": {
+                "x": 405.0,
+                "y": 12.5,
+                "width": 34,
+                "height": 15
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            }
+          ],
+          "screens": [
+            {
+              "outputFrame": {
+                "x": 218,
+                "y": 40,
+                "width": 408,
+                "height": 306
+              }
+            }
+          ]
+        }
+      },
+      "edgeToEdge": {
+        "portrait": {
+          "assets": {
+            "resizable": "portrait.pdf"
+          },
+          "mappingSize": {
+            "width": 390,
+            "height": 330
+          },
+          "items": [
+            {
+              "inputs": {
+                "up": "up",
+                "down": "down",
+                "left": "left",
+                "right": "right"
+              },
+              "frame": {
+                "x": 24,
+                "y": 82,
+                "width": 152,
+                "height": 152
+              },
+              "thumbstick": {
+                "name": "stick.pdf",
+                "width": 56,
+                "height": 56
+              }
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 298.5,
+                "y": 113.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "b"
+              ],
+              "frame": {
+                "x": 225.5,
+                "y": 150.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "select"
+              ],
+              "frame": {
+                "x": 129.0,
+                "y": 257.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "start"
+              ],
+              "frame": {
+                "x": 209.0,
+                "y": 257.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "menu"
+              ],
+              "frame": {
+                "x": 23.0,
+                "y": 284.5,
+                "width": 34,
+                "height": 15
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            }
+          ]
+        },
+        "landscape": {
+          "assets": {
+            "resizable": "landscape.pdf"
+          },
+          "mappingSize": {
+            "width": 844,
+            "height": 390
+          },
+          "items": [
+            {
+              "inputs": {
+                "up": "up",
+                "down": "down",
+                "left": "left",
+                "right": "right"
+              },
+              "frame": {
+                "x": 29,
+                "y": 131,
+                "width": 152,
+                "height": 152
+              },
+              "thumbstick": {
+                "name": "stick.pdf",
+                "width": 56,
+                "height": 56
+              }
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 735.5,
+                "y": 145.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "b"
+              ],
+              "frame": {
+                "x": 664.5,
+                "y": 198.5,
+                "width": 55,
+                "height": 55
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "select"
+              ],
+              "frame": {
+                "x": 313.0,
+                "y": 342.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "start"
+              ],
+              "frame": {
+                "x": 483.0,
+                "y": 342.0,
+                "width": 48,
+                "height": 16
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            },
+            {
+              "inputs": [
+                "menu"
+              ],
+              "frame": {
+                "x": 405.0,
+                "y": 12.5,
+                "width": 34,
+                "height": 15
+              },
+              "extendedEdges": {
+                "top": 7,
+                "bottom": 7,
+                "left": 7,
+                "right": 7
+              },
+              "mask": "rectangle"
+            }
+          ],
+          "screens": [
+            {
+              "outputFrame": {
+                "x": 218,
+                "y": 40,
+                "width": 408,
+                "height": 306
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
