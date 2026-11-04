@@ -44,8 +44,10 @@ Rive login, or commercial ROM is needed. The **Themes** menu selects the theme,
 toggles animation, and runs a simultaneous-input demonstration.
 Choose **Orbit N64** to open mimi, or launch with the `--orbit` argument.
 
-The preview uses DeltaCore's existing Metal video option. This avoids a legacy
-OpenGL framebuffer crash observed when rotating the simulator.
+The preview uses DeltaCore's Metal video option for bitmap cores. On simulators,
+DeltaCore also resolves OpenGL core frames before presenting them with Metal;
+this avoids a legacy OpenGL drawable crash when rotating N64. The extra frame
+copy applies only to simulator OpenGL cores, not physical devices.
 
 From the repository root:
 
@@ -168,6 +170,9 @@ Changes to the Rive runtime are pinned at **6.29.0**. The companion DeltaCore
 changes are on branch `codex/rive-controller-rendering`; publish that branch and
 make its commits available before sharing the parent repository's submodule
 reference with another checkout.
+N64 homebrew compatibility is on N64DeltaCore's `codex/orbit-homebrew-support`
+branch and its nested Mupen64Plus core's `codex/mimi-homebrew-compatibility`
+branch. Publish those companion branches as well before sharing their references.
 
 Verified locally:
 
@@ -180,6 +185,11 @@ Verified locally:
   metadata/assets, unsupported traits and normalized stick values.
 - Every NES button and D-pad direction, diagonal input and release, switching themes,
   static fallback, portrait/landscape geometry and background/resume.
+- Orbit N64 native touch gestures: fractional analog values, full left/down
+  diagonal, release to center, every digital control, static fallback, rotation
+  and background/resume, with mimi running in the standalone preview.
+- mimi boot and display after the focused PI DMA, cached-code alias and VI
+  framebuffer address fixes; host-side PI/VI register regression checks pass.
 - Simultaneous A/B and diagonal state through the controller receiver mechanism.
 - Rive CLI compilation and rendered idle/pressed/D-pad states; release returns
   pixel-for-pixel to the idle image.

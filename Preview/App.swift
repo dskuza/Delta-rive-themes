@@ -1,12 +1,14 @@
 import UIKit
 import DeltaCore
 import NESDeltaCore
+import N64DeltaCore
 
 @main final class AppDelegate: UIResponder, UIApplicationDelegate
 {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool
     {
         Delta.register(NES.core)
+        Delta.register(N64.core)
         return true
     }
 
@@ -35,11 +37,11 @@ final class PreviewSceneDelegate: UIResponder, UIWindowSceneDelegate
 private struct TestGame: GameProtocol
 {
     let fileURL: URL
-    var type: GameType { .nes }
+    let type: GameType
 }
 
 /// A small, independently buildable preview using the production loader,
-/// renderer, native controller, NES emulator, and diagnostic ROM.
+/// renderer, native controller, and NES/N64 diagnostic ROMs.
 final class PreviewViewController: DeltaCore.GameViewController, GameViewControllerDelegate
 {
     private var coordinator: RiveControllerSkinCoordinator?
@@ -50,17 +52,14 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
     private var presses = [String: Int]()
     private var releases = [String: Int]()
     private var heldInputs = Set<String>()
+    private var peakValues = [String: Double]()
     private var updateTimer: Timer?
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.delegate = self
-        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let rom = documents.appendingPathComponent("input-test.nes")
-        let bundledROM = Bundle.main.url(forResource: "input-test", withExtension: "nes")!
-        try! Data(contentsOf: bundledROM).write(to: rom, options: .atomic)
-        self.game = TestGame(fileURL: rom)
+        if ProcessInfo.processInfo.arguments.contains("--orbit") { self.themeName = "Orbit" }
         self.controllerView.playerIndex = 0
         self.controllerView.accessibilityIdentifier = "controller"
         self.controllerView.isAccessibilityElement = true
@@ -103,6 +102,20 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
 
     private func selectTheme(_ name: String)
     {
+        let type: GameType = name == "Orbit" ? .n64 : .nes
+        if self.game?.type != type
+        {
+            let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let filename = type == .n64 ? "mimi-6126231.z64" : "input-test.nes"
+            let bundledROM = Bundle.main.url(forResource: filename, withExtension: nil)!
+            let rom = documents.appendingPathComponent(filename)
+            try! Data(contentsOf: bundledROM).write(to: rom, options: .atomic)
+            self.game = TestGame(fileURL: rom, type: type)
+            self.presses = [:]
+            self.releases = [:]
+            self.heldInputs = []
+            self.peakValues = [:]
+        }
         self.themeName = name
         let url = Bundle.main.url(forResource: name, withExtension: "deltaskin")!
         self.controllerView.controllerSkin = DeltaCore.ControllerSkin(fileURL: url)
@@ -115,6 +128,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
         self.tools.menu = UIMenu(children: [
             UIAction(title: "Neon Circuit", state: self.themeName == "NeonCircuit" ? .on : .off) { [weak self] _ in self?.selectTheme("NeonCircuit") },
             UIAction(title: "Reusable Template", state: self.themeName == "Template" ? .on : .off) { [weak self] _ in self?.selectTheme("Template") },
+            UIAction(title: "Orbit N64", state: self.themeName == "Orbit" ? .on : .off) { [weak self] _ in self?.selectTheme("Orbit") },
             UIAction(title: "Animate", state: self.animationsEnabled ? .on : .off) { [weak self] _ in
                 guard let self else { return }
                 self.animationsEnabled.toggle()
@@ -131,12 +145,13 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
     {
         // Exercise simultaneous controller state through the same input mapping
         // and emulator receiver as touches. Physical gestures are tested separately.
-        let inputs = ["a", "b", "up", "right"].map {
+        let names = self.themeName == "Orbit" ? ["a", "b", "analogStickUp", "analogStickRight"] : ["a", "b", "up", "right"]
+        let inputs = names.map {
             AnyInput(stringValue: $0, intValue: nil, type: .controller(.controllerSkin))
         }
         Task { [weak self] in
             guard let self else { return }
-            for input in inputs { self.controllerView.activate(input) }
+            for input in inputs { self.controllerView.activate(input, value: input.stringValue.hasPrefix("analog") ? 0.5 : 1) }
             try? await Task.sleep(for: .seconds(4))
             for input in inputs { self.controllerView.deactivate(input) }
         }
@@ -148,15 +163,17 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
         let active = self.controllerView.skinRenderer == nil ? "Static" : "Rive"
         let counts = ["a", "b", "up", "right"].map { "\($0):\(self.presses[$0, default: 0])/\(self.releases[$0, default: 0])" }.joined(separator: " ")
         self.status.text = "\(active) | \(held.isEmpty ? "idle" : held)\n\(counts)"
-        let allCounts = ["a", "b", "up", "down", "left", "right", "start", "select", "menu"].map {
+        let allCounts = ["a", "b", "up", "down", "left", "right", "start", "select", "menu", "cUp", "cDown", "cLeft", "cRight", "l", "r", "z", "analogStickUp", "analogStickDown", "analogStickLeft", "analogStickRight"].map {
             "\($0):\(self.presses[$0, default: 0])/\(self.releases[$0, default: 0])"
         }.joined(separator: " ")
-        self.status.accessibilityValue = "\(allCounts) view=\(self.view.bounds) window=\(self.view.window?.bounds ?? .zero) controller=\(self.controllerView.frame) traits=\(self.controllerView.controllerSkinTraits?.description ?? "none")"
+        let peaks = self.peakValues.sorted { $0.key < $1.key }.map { "\($0.key)Peak=\(String(format: "%.3f", $0.value))" }.joined(separator: " ")
+        self.status.accessibilityValue = "\(allCounts) \(peaks) view=\(self.view.bounds) window=\(self.view.window?.bounds ?? .zero) controller=\(self.controllerView.frame) traits=\(self.controllerView.controllerSkinTraits?.description ?? "none")"
     }
 
     override func gameController(_ gameController: GameController, didActivate input: Input, value: Double)
     {
         super.gameController(gameController, didActivate: input, value: value)
+        self.peakValues[input.stringValue] = max(self.peakValues[input.stringValue, default: 0], value)
         if self.heldInputs.insert(input.stringValue).inserted
         {
             self.presses[input.stringValue, default: 0] += 1

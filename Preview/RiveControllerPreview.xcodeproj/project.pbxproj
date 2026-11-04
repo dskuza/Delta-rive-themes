@@ -8,26 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		027755E4CB00C534EA6FBBF9 /* NeonCircuit.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = AA0A233040BF2069D879501B /* NeonCircuit.deltaskin */; };
+		03BFBB43E509D0963A619A15 /* N64DeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D6E24BC5411AD4F05ECD5E /* N64DeltaCore.framework */; };
 		127A18B3A0003CE9ACCE6B43 /* ControllerThemeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981299BFEAB762309C561D5 /* ControllerThemeUITests.swift */; };
 		157A4F949F7EF7A5B0200582 /* DeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83750D56C0862229C326E0CE /* DeltaCore.framework */; };
 		163827431166A647BBAE3175 /* input-test.nes in Resources */ = {isa = PBXBuildFile; fileRef = C0FE70B3351BD7F3053E7F22 /* input-test.nes */; };
 		179951635F73B99397B61551 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 89BC4A9DBF68ACDEEC7EF8D0 /* RiveRuntime */; };
+		43A22AAFA2160F11F02E65F5 /* LICENSE.mimi in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E733F49ED8B18A1612CF0 /* LICENSE.mimi */; };
+		593076FA0C075093F9E645B8 /* N64DeltaCore_RSP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C26F3267BDBACF3941444D5 /* N64DeltaCore_RSP.framework */; };
+		5DC0C2FA1E963EE2354F58D3 /* N64DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6D6E24BC5411AD4F05ECD5E /* N64DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6977FFB6537CDAA2F1A3987B /* RiveControllerSkinManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B611E6EA9091B9125EF1FC8 /* RiveControllerSkinManifest.swift */; };
 		6ED12F88AC1D3065F7FCD883 /* Template.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = 703FB4B6F84D68AAE44C6AB7 /* Template.deltaskin */; };
+		78A7FEA0956C9C1A71899F92 /* N64DeltaCore_Video.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D43B7578FEDEB4276F1780A /* N64DeltaCore_Video.framework */; };
 		8B6C1DBF73427432DE3B3670 /* NESDeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE18E0666A7F11A0DB4D417 /* NESDeltaCore.framework */; };
+		921E976AD83DA09ACE0DD31C /* N64DeltaCore_RSP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C26F3267BDBACF3941444D5 /* N64DeltaCore_RSP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B56D54054D0342EB3D40C4 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07ACDAA7815B1D01C8E06ED /* ZIPFoundation.framework */; };
 		9333068A4AF6EF8A00798AB4 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83750D56C0862229C326E0CE /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A419E062FEFEBCE271475B7C /* RiveControllerSkinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB4CBB284CD33FCCA7DCF8 /* RiveControllerSkinCoordinator.swift */; };
 		B0308357A735E12EB22BC830 /* NESDeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFE18E0666A7F11A0DB4D417 /* NESDeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B72DC83582C41FACEDC9E55F /* Orbit.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = B9FA9428A8CBA38BFD6B5953 /* Orbit.deltaskin */; };
 		BD1DEA66CFC8CDE9C3F6D845 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9AA5B4B8FC8E797FCBE8B /* App.swift */; };
 		C4567F378609908973F1F662 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18ECB162125A41778C2739 /* Foundation.framework */; };
 		CE7D6D9F5181AA8A777827E2 /* RiveControllerSkinArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7542487A2EEAA771C71CE /* RiveControllerSkinArchive.swift */; };
+		D1E8A52AC85286A80DD5FDD8 /* N64DeltaCore_Video.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D43B7578FEDEB4276F1780A /* N64DeltaCore_Video.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D997D35784EAB51FBA47B906 /* RiveControllerSkinRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976B846D0CB2E95EEDBC922 /* RiveControllerSkinRenderer.swift */; };
 		EB31696C5CA7FB0CC4819676 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18ECB162125A41778C2739 /* Foundation.framework */; };
 		F393655A6E598C275B9225C0 /* ZIPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07ACDAA7815B1D01C8E06ED /* ZIPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF970ED82DBF3A90676706F3 /* mimi-6126231.z64 in Resources */ = {isa = PBXBuildFile; fileRef = 345F8104B0137EA0604F0E94 /* mimi-6126231.z64 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		01C547DF48F20068DA2B3AAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF799674224C09A1009B094F;
+			remoteInfo = Subproject;
+		};
+		0E1C90954569FFAB230AA170 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF79949A224BFDAA009B094F;
+			remoteInfo = Subproject;
+		};
+		1D3CA4793C57F9CF2EDBC6A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF2EF80D224C1BF60032AD78;
+			remoteInfo = Subproject;
+		};
 		209EE8B5AD9916AD63CFD562 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3263B78E633C3E7C86A063B9 /* NESDeltaCore.xcodeproj */;
@@ -49,6 +79,20 @@
 			remoteGlobalIDString = B5850078354D79B5C033C333;
 			remoteInfo = RiveControllerPreview;
 		};
+		5C8CB67B156013A80574541D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF799014224BF59E009B094F;
+			remoteInfo = Subproject;
+		};
+		6E9C8D8E462CC40C864D8DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BF799673224C09A1009B094F;
+			remoteInfo = "N64DeltaCore-RSP";
+		};
 		74C8C26CC40BB57D3C2AB043 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C41B1BC927F9F023890C3249 /* DeltaCore.xcodeproj */;
@@ -62,6 +106,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = BF3C12F220438F3F0079A4B5;
 			remoteInfo = NESDeltaCore;
+		};
+		C5998ECF817B83360605087D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2EF80C224C1BF60032AD78;
+			remoteInfo = "N64DeltaCore-Video";
+		};
+		D5BD14DC381382DA4164E9D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BF799013224BF59E009B094F;
+			remoteInfo = N64DeltaCore;
 		};
 		E8367FFE9754FDB1E9F7E87F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -82,6 +140,9 @@
 				9333068A4AF6EF8A00798AB4 /* DeltaCore.framework in Embed Frameworks */,
 				B0308357A735E12EB22BC830 /* NESDeltaCore.framework in Embed Frameworks */,
 				F393655A6E598C275B9225C0 /* ZIPFoundation.framework in Embed Frameworks */,
+				5DC0C2FA1E963EE2354F58D3 /* N64DeltaCore.framework in Embed Frameworks */,
+				D1E8A52AC85286A80DD5FDD8 /* N64DeltaCore_Video.framework in Embed Frameworks */,
+				921E976AD83DA09ACE0DD31C /* N64DeltaCore_RSP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +154,9 @@
 		19E7542487A2EEAA771C71CE /* RiveControllerSkinArchive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RiveControllerSkinArchive.swift; path = "../../../Delta/Controller Themes/RiveControllerSkinArchive.swift"; sourceTree = "<group>"; };
 		2F18ECB162125A41778C2739 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3263B78E633C3E7C86A063B9 /* NESDeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NESDeltaCore.xcodeproj; path = ../../../Cores/NESDeltaCore/NESDeltaCore.xcodeproj; sourceTree = "<group>"; };
+		345F8104B0137EA0604F0E94 /* mimi-6126231.z64 */ = {isa = PBXFileReference; includeInIndex = 1; name = "mimi-6126231.z64"; path = "../../N64InputTest/mimi-6126231.z64"; sourceTree = "<group>"; };
+		3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = N64DeltaCore.xcodeproj; path = ../../../Cores/N64DeltaCore/N64DeltaCore.xcodeproj; sourceTree = "<group>"; };
+		3E6E733F49ED8B18A1612CF0 /* LICENSE.mimi */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE.mimi; path = ../../N64InputTest/LICENSE.mimi; sourceTree = "<group>"; };
 		703FB4B6F84D68AAE44C6AB7 /* Template.deltaskin */ = {isa = PBXFileReference; includeInIndex = 1; name = Template.deltaskin; path = ../Dist/Template.deltaskin; sourceTree = "<group>"; };
 		86FB4CBB284CD33FCCA7DCF8 /* RiveControllerSkinCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RiveControllerSkinCoordinator.swift; path = "../../../Delta/Controller Themes/RiveControllerSkinCoordinator.swift"; sourceTree = "<group>"; };
 		8711DFB417006FDD5662F78F /* ControllerThemeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllerThemeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +164,7 @@
 		9B611E6EA9091B9125EF1FC8 /* RiveControllerSkinManifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RiveControllerSkinManifest.swift; path = "../../../Delta/Controller Themes/RiveControllerSkinManifest.swift"; sourceTree = "<group>"; };
 		A981299BFEAB762309C561D5 /* ControllerThemeUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ControllerThemeUITests.swift; sourceTree = "<group>"; };
 		AA0A233040BF2069D879501B /* NeonCircuit.deltaskin */ = {isa = PBXFileReference; includeInIndex = 1; name = NeonCircuit.deltaskin; path = ../Dist/NeonCircuit.deltaskin; sourceTree = "<group>"; };
+		B9FA9428A8CBA38BFD6B5953 /* Orbit.deltaskin */ = {isa = PBXFileReference; includeInIndex = 1; name = Orbit.deltaskin; path = ../Dist/Orbit.deltaskin; sourceTree = "<group>"; };
 		C0FE70B3351BD7F3053E7F22 /* input-test.nes */ = {isa = PBXFileReference; includeInIndex = 1; name = "input-test.nes"; path = "../../NESInputTest/input-test.nes"; sourceTree = "<group>"; };
 		C41B1BC927F9F023890C3249 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = ../../../Cores/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		D0F9AA5B4B8FC8E797FCBE8B /* App.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -116,6 +181,9 @@
 				8B6C1DBF73427432DE3B3670 /* NESDeltaCore.framework in Frameworks */,
 				92B56D54054D0342EB3D40C4 /* ZIPFoundation.framework in Frameworks */,
 				179951635F73B99397B61551 /* RiveRuntime in Frameworks */,
+				03BFBB43E509D0963A619A15 /* N64DeltaCore.framework in Frameworks */,
+				78A7FEA0956C9C1A71899F92 /* N64DeltaCore_Video.framework in Frameworks */,
+				593076FA0C075093F9E645B8 /* N64DeltaCore_RSP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +206,10 @@
 				BFE18E0666A7F11A0DB4D417 /* NESDeltaCore.framework */,
 				8883F786712A476220A922A2 /* libNestopia.a */,
 				8711DFB417006FDD5662F78F /* ControllerThemeUITests.xctest */,
+				E6D6E24BC5411AD4F05ECD5E /* N64DeltaCore.framework */,
+				CF32C486E437734D02BC8FFF /* libMupen64Plus.a */,
+				3C26F3267BDBACF3941444D5 /* N64DeltaCore_RSP.framework */,
+				8D43B7578FEDEB4276F1780A /* N64DeltaCore_Video.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +245,7 @@
 				AD1AF5125E450BF5B1535C75 /* Resources */,
 				C41B1BC927F9F023890C3249 /* DeltaCore.xcodeproj */,
 				3263B78E633C3E7C86A063B9 /* NESDeltaCore.xcodeproj */,
+				3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +255,9 @@
 				703FB4B6F84D68AAE44C6AB7 /* Template.deltaskin */,
 				AA0A233040BF2069D879501B /* NeonCircuit.deltaskin */,
 				C0FE70B3351BD7F3053E7F22 /* input-test.nes */,
+				B9FA9428A8CBA38BFD6B5953 /* Orbit.deltaskin */,
+				345F8104B0137EA0604F0E94 /* mimi-6126231.z64 */,
+				3E6E733F49ED8B18A1612CF0 /* LICENSE.mimi */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -229,6 +305,9 @@
 			dependencies = (
 				FF29DBD3340B8D5622A02F20 /* PBXTargetDependency */,
 				ECBAAABCD67C6C53F9C39D50 /* PBXTargetDependency */,
+				61289D990BD08F26ACC23066 /* PBXTargetDependency */,
+				64AA490AC41EF90F55DA1B7E /* PBXTargetDependency */,
+				DF8A7E85B737FE75750231A6 /* PBXTargetDependency */,
 			);
 			name = RiveControllerPreview;
 			packageProductDependencies = (
@@ -272,6 +351,10 @@
 					ProductGroup = 0BF4460C3B46503DF7E1D068 /* Products */;
 					ProjectRef = 3263B78E633C3E7C86A063B9 /* NESDeltaCore.xcodeproj */;
 				},
+				{
+					ProductGroup = 0BF4460C3B46503DF7E1D068 /* Products */;
+					ProjectRef = 3A1F2A09013E9C2D48DBFE74 /* N64DeltaCore.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -282,6 +365,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		3C26F3267BDBACF3941444D5 /* N64DeltaCore_RSP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = N64DeltaCore_RSP.framework;
+			remoteRef = 01C547DF48F20068DA2B3AAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		83750D56C0862229C326E0CE /* DeltaCore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -296,11 +386,32 @@
 			remoteRef = 29A5E17C641AA0BF84A14EA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		8D43B7578FEDEB4276F1780A /* N64DeltaCore_Video.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = N64DeltaCore_Video.framework;
+			remoteRef = 1D3CA4793C57F9CF2EDBC6A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		BFE18E0666A7F11A0DB4D417 /* NESDeltaCore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = NESDeltaCore.framework;
 			remoteRef = 209EE8B5AD9916AD63CFD562 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF32C486E437734D02BC8FFF /* libMupen64Plus.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMupen64Plus.a;
+			remoteRef = 0E1C90954569FFAB230AA170 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6D6E24BC5411AD4F05ECD5E /* N64DeltaCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = N64DeltaCore.framework;
+			remoteRef = 5C8CB67B156013A80574541D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -313,6 +424,9 @@
 				6ED12F88AC1D3065F7FCD883 /* Template.deltaskin in Resources */,
 				027755E4CB00C534EA6FBBF9 /* NeonCircuit.deltaskin in Resources */,
 				163827431166A647BBAE3175 /* input-test.nes in Resources */,
+				B72DC83582C41FACEDC9E55F /* Orbit.deltaskin in Resources */,
+				FF970ED82DBF3A90676706F3 /* mimi-6126231.z64 in Resources */,
+				43A22AAFA2160F11F02E65F5 /* LICENSE.mimi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,11 +463,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		61289D990BD08F26ACC23066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = N64DeltaCore;
+			targetProxy = D5BD14DC381382DA4164E9D8 /* PBXContainerItemProxy */;
+		};
+		64AA490AC41EF90F55DA1B7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "N64DeltaCore-Video";
+			targetProxy = C5998ECF817B83360605087D /* PBXContainerItemProxy */;
+		};
 		B2C51B32E20996C6ABC6598A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RiveControllerPreview;
 			target = B5850078354D79B5C033C333 /* RiveControllerPreview */;
 			targetProxy = 306F0839538BB8E1FF8F259F /* PBXContainerItemProxy */;
+		};
+		DF8A7E85B737FE75750231A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "N64DeltaCore-RSP";
+			targetProxy = 6E9C8D8E462CC40C864D8DAF /* PBXContainerItemProxy */;
 		};
 		ECBAAABCD67C6C53F9C39D50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

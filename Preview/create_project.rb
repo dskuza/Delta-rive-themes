@@ -12,10 +12,10 @@ sources = p.main_group.new_group('Sources')
 app.source_build_phase.add_file_reference(sources.new_file('App.swift'))
 Dir.glob('../../../Delta/Controller Themes/*.swift').sort.each { |path| app.source_build_phase.add_file_reference(sources.new_file(path)) }
 resources = p.main_group.new_group('Resources')
-['../Dist/Template.deltaskin', '../Dist/NeonCircuit.deltaskin', '../../NESInputTest/input-test.nes'].each { |path| app.resources_build_phase.add_file_reference(resources.new_file(path)) }
+['../Dist/Template.deltaskin', '../Dist/NeonCircuit.deltaskin', '../Dist/Orbit.deltaskin', '../../NESInputTest/input-test.nes', '../../N64InputTest/mimi-6126231.z64', '../../N64InputTest/LICENSE.mimi'].each { |path| app.resources_build_phase.add_file_reference(resources.new_file(path)) }
 embed = app.new_copy_files_build_phase('Embed Frameworks')
 embed.dst_subfolder_spec = '10'
-['DeltaCore', 'NESDeltaCore'].each do |name|
+['DeltaCore', 'NESDeltaCore', 'N64DeltaCore'].each do |name|
   path = "../../../Cores/#{name}/#{name}.xcodeproj"
   ref = p.main_group.new_file(path)
   subproject = Xcodeproj::Project.open(path)
@@ -24,6 +24,14 @@ embed.dst_subfolder_spec = '10'
   product = products.children.find { |child| child.path == "#{name}.framework" }
   app.frameworks_build_phase.add_file_reference(product)
   embed.add_file_reference(product).settings = { 'ATTRIBUTES' => ['CodeSignOnCopy', 'RemoveHeadersOnCopy'] }
+  if name == 'N64DeltaCore'
+    ['N64DeltaCore_Video', 'N64DeltaCore_RSP'].each do |plugin|
+      app.add_dependency(subproject.targets.find { |target| target.product_reference.path == "#{plugin}.framework" })
+      product = products.children.find { |child| child.path == "#{plugin}.framework" }
+      app.frameworks_build_phase.add_file_reference(product)
+      embed.add_file_reference(product).settings = { 'ATTRIBUTES' => ['CodeSignOnCopy', 'RemoveHeadersOnCopy'] }
+    end
+  end
 end
 zip = p.frameworks_group.new_file('ZIPFoundation.framework', :built_products)
 app.frameworks_build_phase.add_file_reference(zip)

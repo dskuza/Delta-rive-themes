@@ -102,6 +102,74 @@ final class ControllerThemeUITests: XCTestCase
         self.add(attachment)
     }
 
+    func testOrbitAnalogAndControls()
+    {
+        let app = XCUIApplication()
+        app.launchArguments = ["--orbit"]
+        app.launch()
+        let status = app.staticTexts["inputStatus"]
+        XCTAssertTrue(status.waitForExistence(timeout: 30))
+        self.waitForText("Rive | idle", in: status)
+        let controller = app.descendants(matching: .any)["controller"]
+        let center = self.point(106, 180, width: 390, height: 400, in: controller)
+        // A small physical drag must stay analog, rather than jumping to 1.
+        center.press(forDuration: 0.1,
+                     thenDragTo: self.point(114, 172, width: 390, height: 400, in: controller),
+                     withVelocity: .slow, thenHoldForDuration: 0.2)
+        self.waitForText("Rive | idle", in: status)
+        let values = (status.value as? String ?? "").split(separator: " ")
+        for axis in ["analogStickRight", "analogStickUp"]
+        {
+            let peak = values.first { $0.hasPrefix(axis + "Peak=") }?.split(separator: "=").last.flatMap { Double($0) }
+            XCTAssertNotNil(peak, status.value as? String ?? "")
+            XCTAssertGreaterThan(peak ?? 0, 0.1)
+            XCTAssertLessThan(peak ?? 1, 0.7)
+        }
+        center.press(forDuration: 0.1,
+                     thenDragTo: self.point(65, 221, width: 390, height: 400, in: controller),
+                     withVelocity: .slow, thenHoldForDuration: 0.2)
+        self.waitForText("Rive | idle", in: status)
+        for axis in ["analogStickLeft", "analogStickDown"]
+        {
+            XCTAssertTrue((status.value as? String ?? "").contains(axis + "Peak=1.000"), status.value as? String ?? "")
+        }
+
+        let controls: [(String, CGFloat, CGFloat)] = [
+            ("up",90,298), ("down",90,350), ("left",64,324), ("right",116,324),
+            ("a",323,262), ("b",253,298), ("cUp",307,132), ("cDown",307,198),
+            ("cLeft",274,165), ("cRight",340,165), ("l",44,83), ("r",346,83),
+            ("z",194,88), ("start",199,356), ("menu",40,378)
+        ]
+        for (name, x, y) in controls
+        {
+            self.point(x,y,width:390,height:400,in:controller).tap()
+            XCTAssertTrue((status.value as? String ?? "").contains("\(name):1/1"), name)
+        }
+
+        app.buttons["themeMenu"].tap()
+        app.buttons["Animate"].tap()
+        self.waitForText("Static | idle", in: status)
+        center.press(forDuration: 0.1,
+                     thenDragTo: self.point(140,180,width:390,height:400,in:controller),
+                     withVelocity: .slow, thenHoldForDuration: 0.2)
+        self.waitForText("Static | idle", in: status)
+        XCTAssertTrue((status.value as? String ?? "").contains("analogStickRightPeak=1.000"))
+        app.buttons["themeMenu"].tap()
+        app.buttons["Animate"].tap()
+        self.waitForText("Rive | idle", in: status)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        self.waitForText("Rive | idle", in: status)
+        self.point(779,241,width:844,height:390,in:controller).tap()
+        self.waitForText("a:2/2", in: status)
+        XCUIDevice.shared.press(.home)
+        app.activate()
+        self.waitForText("Rive | idle", in: status)
+        let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        attachment.name = "Orbit N64 analog controller and mimi"
+        attachment.lifetime = .keepAlways
+        self.add(attachment)
+    }
+
     private func point(_ x: CGFloat, _ y: CGFloat, width: CGFloat, height: CGFloat, in element: XCUIElement) -> XCUICoordinate
     {
         return element.coordinate(withNormalizedOffset: CGVector(dx: x / width, dy: y / height))
