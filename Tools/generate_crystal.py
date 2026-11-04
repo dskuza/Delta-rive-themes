@@ -9,13 +9,13 @@ from generate_orbit import Orbit, BUTTONS, DIRECTIONS
 ICE, MINT, BLUE, GREEN, GOLD, RED = ('FFCCD0D5','FF73F2D0','FF4B9CFF',
                                     'FF63D393','FFFFD23C','FFFF5C64')
 
-# Original gray N64 hardware colors, with tinted caps over the visible circuitry.
+# N64 hues use the original clear material's alpha levels, rather than solid caps.
 CAP_COLORS = {
-    'a': ['F24D96E5','D02567BB','EC16428A'],
-    'b': ['F24BB579','D0148649','EC075A30'],
-    'c': ['F2FFE783','E0EBC02F','ECAA8118'],
-    'start': ['F2F27A7F','E0D83844','EC96232F'],
-    'neutral': ['C8C4C8CC','70878E96','A04E5863'],
+    'a': ['544D96E5','0D2567BB','1E16428A'],
+    'b': ['544BB579','0D148649','1E075A30'],
+    'c': ['54FFE783','0DEBC02F','1EAA8118'],
+    'start': ['54F27A7F','0DD83844','1E96232F'],
+    'neutral': ['54A4ABB4','0D737D88','1E56616E'],
 }
 
 
@@ -65,7 +65,7 @@ class Crystal(Orbit):
         # A faint complete route makes source and destination readable while held.
         route=self.el(active,'Node',opacity=.2,name='Powered copper')
         self.path(route,points,color,.8)
-        self.path(artboard,points,'FF44535A',.7,name+' / unpowered route')
+        self.path(artboard,points,'FF29464E',.7,name+' / unpowered route')
         animations=[
             self.timeline(artboard,name+' / idle',[(active,18,[(0,0)]),(trim,114,[(0,0)]),(trim,115,[(0,.17)])]),
             self.timeline(artboard,name+' / transmitting',[
@@ -93,9 +93,9 @@ class Crystal(Orbit):
 
     def glass(self,parent,x,y,w,h,radius=12):
         # Details sit under the shell's translucent highlight, like a clear controller.
-        shell=self.rect(parent,x,y,w,h,'458C939B',radius,.8,name='Clear shell / edge')
-        self.gradient(shell,['4BC4C8CC','147C848D','2A929AA4'],max(w,h)/2)
-        self.rect(parent,x,y,w-4,h-4,'397B848E',max(radius-2,0),.5,name='Inner shell refraction')
+        shell=self.rect(parent,x,y,w,h,'158C939B',radius,.8,name='Clear shell / edge')
+        self.gradient(shell,['37919DA6','0D6B7B85','1D75838F'],max(w,h)/2)
+        self.rect(parent,x,y,w-4,h-4,'167B848E',max(radius-2,0),.5,name='Inner shell refraction')
         return shell
 
     def screw(self,parent,x,y):
@@ -116,18 +116,17 @@ class Crystal(Orbit):
         if name.startswith('c'):
             arrow=self.el(cap,'Shape',rotation=DIRECTIONS.index(name[1:])*math.pi/2,name=name+' arrow')
             self.el(arrow,'Triangle',width=10,height=9)
-            self.paint(arrow,'FF57440A')
+            self.paint(arrow,GOLD)
         else:
             self.text(cap,0,-1,label or name.upper(),22 if name in ('a','b') else
-                      (7 if name=='start' else 9),
-                      'FF29333E' if name in ('l','r','z','menu') else 'FFE3F4F5',True)
+                      (7 if name=='start' else 9),'FFE3F4F5',True)
         palette=CAP_COLORS.get('c' if name.startswith('c') else name,CAP_COLORS['neutral'])
         if round:
-            rim=self.ellipse(cap,0,0,w,'8FCCCED2',.8,name='Clear cap rim')
+            rim=self.ellipse(cap,0,0,w,'7197A6B4',.8,name='Clear cap rim')
             self.gradient(rim,palette,w/2)
-            self.ellipse(cap,-w*.16,-w*.19,w*.42,'33FFFFFF',1,name='Moulded cap highlight')
+            self.ellipse(cap,-w*.16,-w*.19,w*.42,'15FFFFFF',1,name='Moulded cap highlight')
         else:
-            face=self.rect(cap,0,0,w,h,'8FCCCED2',h/2,.75,name='Clear paddle rim')
+            face=self.rect(cap,0,0,w,h,'7197A6B4',h/2,.75,name='Clear paddle rim')
             self.gradient(face,palette,w/2)
         led=self.el(a,'Node',x=x,y=y,opacity=.08,name=name+' / socket LED')
         if round:
@@ -153,8 +152,8 @@ class Crystal(Orbit):
             arm=self.el(pad,'Node',x=dx*26,y=dy*26,rotation=i*math.pi/2,name=name+' cap')
             arrow=self.el(arm,'Shape',y=-2)
             self.el(arrow,'Triangle',width=6,height=5)
-            self.paint(arrow,'FF404752')
-            face=self.rect(arm,0,0,22,29,'A7B7BCC2',3,.7)
+            self.paint(arrow,'FFB2CED4')
+            face=self.rect(arm,0,0,22,29,'748C9AA6',3,.7)
             # Retain the removed inner rectangle's IDs; new material IDs live
             # separately so a palette edit does not renumber the rest of the file.
             self.counter+=4
@@ -162,8 +161,8 @@ class Crystal(Orbit):
             led=self.el(arm,'Node',opacity=.06,name=name+' LED')
             self.rect(led,0,-11,12,2,MINT,1)
             self.animate(a,sm,name+'Pressed',[(led.get('id'),'glow')])
-        self.ellipse(pad,0,0,5,'FF68717C')
-        self.rect(pad,0,0,27,27,'FFA2A8B0',3)
+        self.ellipse(pad,0,0,5,'FFA7B5C0')
+        self.rect(pad,0,0,27,27,'505A6F80',3)
         self.rect(pad,0,1,30,84,'FF0A1B24',5)
         self.rect(pad,0,1,84,30,'FF0A1B24',5)
         return dict(inputs=dict(up='up',down='down',left='left',right='right'),
@@ -182,9 +181,9 @@ class Crystal(Orbit):
         self.el(cap,'TranslationConstraint',targetId=moving.get('id'))
         self.ellipse(cap,0,0,8,'FFDBFBFA',1,name='Thumb center')
         for radius in [13,18]:
-            self.ellipse(cap,0,0,radius*2,'80959DA7',.7,name='Concentric grip')
-        face=self.ellipse(cap,0,0,49,'AFC4CAD0',1,name='Gray thumb cap')
-        self.gradient(face,['C4B8BEC6','8877808D','A04D5867'],25,True)
+            self.ellipse(cap,0,0,radius*2,'438E9FAB',.7,name='Concentric grip')
+        face=self.ellipse(cap,0,0,49,'8FABBDC8',1,name='Gray thumb cap')
+        self.gradient(face,['8C9BA8B5','28657485','36505D70'],25,True)
         self.ellipse(cap,0,3,53,'FF10232E',1,name='Cap refraction')
         contact=self.el(cap,'Node',opacity=.06,name='Cap contact LED')
         self.ellipse(contact,0,0,56,MINT,1.1)
@@ -299,8 +298,8 @@ class Crystal(Orbit):
             traces.append(dict(name='analogStick'+direction,points=points,color=MINT))
         # Main board stays dark enough that the illuminated signals carry the hierarchy.
         for px,py,pw,ph in panels:
-            board=self.rect(a,px,py,pw-9,ph-9,'FF59626C',16,.5,name='PCB edge')
-            self.gradient(board,['FF27323B','FF141E29'],ph/2)
+            board=self.rect(a,px,py,pw-9,ph-9,'FF3A515D',16,.5,name='PCB edge')
+            self.gradient(board,['FF14262E','FF0C1C26'],ph/2)
         if portrait:
             self.rect(a,w/2,h/2,w,h,'FF07131E',name='Backdrop')
         self.circuits[orientation]=dict(panels=panels,traces=traces)
