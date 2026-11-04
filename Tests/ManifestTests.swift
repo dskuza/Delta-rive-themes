@@ -19,6 +19,21 @@ import ZIPFoundation
         precondition(stick.axes(for: ["left": 1, "right": 1]) == (0, 0))
         precondition(stick.axes(for: ["right": .nan, "up": .infinity]) == (0, 0))
         precondition(stick.axes(for: ["right": 3, "down": -2]) == (1, 0))
+        precondition(stick.magnitude == nil)
+        precondition(stick.magnitude(for: [:]) == 0)
+        precondition(stick.magnitude(for: ["right": 0.3, "up": 0.4]) == 0.5)
+        precondition(stick.magnitude(for: ["left": 1, "down": 1]) == 1)
+        precondition(stick.magnitude(for: ["right": .nan, "up": .infinity]) == 0)
+
+        let analogFixture = Data("""
+        {"schemaVersion":1,"representations":{"iphone-standard-portrait":{
+          "file":"Orbit.riv","artboard":"Portrait","stateMachine":"Controller","viewModel":"Controller","buttons":{},
+          "sticks":[{"up":"analogStickUp","down":"analogStickDown","left":"analogStickLeft","right":"analogStickRight",
+                     "x":"stickX","y":"stickY","active":"stickActive","magnitude":"stickMagnitude"}]
+        }}}
+        """.utf8)
+        let analog = try RiveControllerSkinManifest(data: analogFixture)
+        precondition(analog.representations["iphone-standard-portrait"]!.numberPaths == ["stickX", "stickY", "stickMagnitude"])
 
         func rejects(_ data: Data) throws
         {
@@ -33,6 +48,7 @@ import ZIPFoundation
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "Template.riv", with: "../Template.riv").utf8))
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "\"aPressed\"", with: "\"bPressed\"").utf8))
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "\"aPressed\"", with: "\"a//pressed\"").utf8))
+        try rejects(Data(String(data: analogFixture, encoding: .utf8)!.replacingOccurrences(of: "\"magnitude\":\"stickMagnitude\"", with: "\"magnitude\":\"stickX\"").utf8))
 
         let temporary = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: temporary, withIntermediateDirectories: true)

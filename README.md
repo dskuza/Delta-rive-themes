@@ -119,6 +119,8 @@ An optional `rive.json` supplies the animation configuration:
 - `sticks` is optional. Its directional names identify native inputs; numeric
   property paths receive signed X/Y in −1…1, with positive Y pointing up. The
   optional Boolean `active` means nonzero displacement, including diagonal input.
+  An optional numeric `magnitude` path receives the vector length clamped to 0…1,
+  for effects such as glow intensity that increases with stick displacement.
 - `reduceMotion` is an optional Boolean path receiving the system accessibility
   preference. The samples remove button travel in reduced-motion states.
 - The named view model needs an authored default instance. All configured property
