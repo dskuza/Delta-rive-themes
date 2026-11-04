@@ -37,7 +37,7 @@ func generate(_ output: URL, width: CGFloat, height: CGFloat, draw: (CGContext) 
     context.endPDFPage()
     context.closePDF()
 }
-for name in ["Template", "NeonCircuit"]
+for name in ["Template", "NeonCircuit", "Orbit"]
 {
     let project = root.appendingPathComponent(name)
     let info = try JSONSerialization.jsonObject(with: Data(contentsOf: project.appendingPathComponent("info.json"))) as! [String: Any]
@@ -53,7 +53,7 @@ for name in ["Template", "NeonCircuit"]
             if orientation == "portrait"
             {
                 context.fill(CGRect(x:0,y:0,width:w,height:h))
-                label(context, name == "NeonCircuit" ? "NEON / CIRCUIT" : "CONTROLLER / TEMPLATE",25,36,18)
+                label(context, name == "Orbit" ? "O R B I T / N64" : (name == "NeonCircuit" ? "NEON / CIRCUIT" : "CONTROLLER / TEMPLATE"),25,36,18)
             }
             else
             {
@@ -61,15 +61,28 @@ for name in ["Template", "NeonCircuit"]
                 context.fill(CGRect(x:0,y:0,width:210,height:h))
                 context.fill(CGRect(x:w-210,y:0,width:210,height:h))
                 context.fill(CGRect(x:210,y:h-34,width:w-420,height:34))
-                label(context,"NEON / NES",25,40)
+                label(context,name == "Orbit" ? "ORBIT / N64" : "NEON / NES",25,40)
             }
             let items=representation["items"] as! [[String:Any]]
             for item in items
             {
                 let f=item["frame"] as! [String:CGFloat]
                 let x=f["x"]!+f["width"]!/2, y=f["y"]!+f["height"]!/2
-                if item["inputs"] is [String: String]
+                if item["thumbstick"] != nil
                 {
+                    circle(context,x,y,158,0x3B4B68)
+                    circle(context,x,y,156,0x101A2D)
+                    circle(context,x,y,116,0x63E8F1)
+                    circle(context,x,y,114,0x080F20)
+                    // The cap is a separate native thumbstick image, so it can move.
+                }
+                else if item["inputs"] is [String: String]
+                {
+                    let scale = min(f["width"]!, f["height"]!) / 132
+                    context.saveGState()
+                    context.translateBy(x: x, y: y)
+                    context.scaleBy(x: scale, y: scale)
+                    context.translateBy(x: -x, y: -y)
                     context.setFillColor(color(0x080E17))
                     context.fill(CGRect(x:x-24,y:y-62,width:48,height:124))
                     context.fill(CGRect(x:x-62,y:y-24,width:124,height:48))
@@ -81,6 +94,7 @@ for name in ["Template", "NeonCircuit"]
                     {
                         circle(context,x+dx,y+dy,4,0x8196A7)
                     }
+                    context.restoreGState()
                 }
                 else
                 {
@@ -94,6 +108,17 @@ for name in ["Template", "NeonCircuit"]
                     label(context,text,x-(text.count==1 ? 6 : CGFloat(text.count)*3),y+4,text.count==1 ? 18 : 9)
                 }
             }
+        }
+    }
+    if name == "Orbit"
+    {
+        generate(project.appendingPathComponent("build/stick.pdf"), width:51, height:51) { context in
+            circle(context,25.5,25.5,51,0x050B16)
+            circle(context,25.5,24,46,0x455B72)
+            circle(context,25.5,24,44,0x24364B)
+            circle(context,25.5,24,14,0x63E8F1)
+            circle(context,25.5,24,11,0x24364B)
+            circle(context,25.5,24,7,0xD5FFFF)
         }
     }
 }

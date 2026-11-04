@@ -91,7 +91,7 @@ import ZIPFoundation
         }
         catch is RiveControllerSkinManifest.Error {}
 
-        for name in ["Template", "NeonCircuit"]
+        for name in ["Template", "NeonCircuit", "Orbit"]
         {
             let url = root.appendingPathComponent("Dist/\(name).deltaskin")
             try RiveControllerSkinArchive.validate(at: url)
@@ -103,6 +103,10 @@ import ZIPFoundation
             let unsupported = try RiveControllerSkinArchive.load(at: url, traits: "tv-standard-landscape")
             precondition(unsupported == nil)
         }
+        let orbit = try RiveControllerSkinArchive.load(at: root.appendingPathComponent("Dist/Orbit.deltaskin"), traits: "iphone-standard-portrait")!
+        let orbitStick = orbit.representation.sticks!.first!
+        precondition(orbitStick.axes(for: ["analogStickRight":0.25,"analogStickDown":0.5,"right":1]) == (0.25,-0.5))
+        precondition(orbitStick.magnitude == "stickMagnitude")
         print("Passed manifest validation, archive compatibility, malformed assets, and normalized stick input tests.")
     }
 }

@@ -7,12 +7,15 @@ Rive receives control state independently; emulation never waits for animation.
 
 ## Try it
 
-The `Dist` directory contains two importable NES skins and their standalone `.riv`
+The `Dist` directory contains two importable NES skins, an N64 skin, and their standalone `.riv`
 files:
 
 - `Template.deltaskin`: a complete starting point for another theme.
 - `NeonCircuit.deltaskin`: graphite panels, feathered LED glows, a native NES
   D-pad, independent directional lights and reduced-motion press states.
+- `Orbit.deltaskin`: a continuous N64 analog stick with a moving cap and feathered
+  halo, magnitude-driven lighting, independent axis sectors, a separate D-pad,
+  all four C-buttons, A/B/Z/L/R/Start, and native vector fallback artwork.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for NES.
@@ -24,15 +27,22 @@ actually received by the NES emulator, press/release counts in hexadecimal
 (wrapping after FF), and a dot moved by directional input. The NES themes use a proper digital
 D-pad with cardinal and diagonal input. `AnalogStickLab.riv` is a separate
 animation reference for future systems with analog sticks; it is not part of
-the NES controller skins.
+the NES controller skins. Orbit is the complete N64 example built from that idea.
+
+For N64, import `../N64InputTest/mimi-6126231.z64`, select **Orbit N64** for
+portrait and landscape, and open mimi's **live range** view using the D-pad and A.
+Drag Orbit's stick to compare actual emulated X/Y movement with its vector cap
+and glow. Small movements retain fractional values; releasing returns to center.
+mimi's provenance, checksum and credits are in `../N64InputTest/README.md`.
 
 ## Standalone preview
 
 Open `Preview/RiveControllerPreview.xcodeproj` and run **RiveControllerPreview**
 on an iOS 17.4+ simulator. It uses the production loader, renderer, DeltaCore and
-NESDeltaCore, and bundles the diagnostic ROM and both skins. No Delta account,
+NESDeltaCore/N64DeltaCore, and bundles both diagnostic ROMs and all three skins. No Delta account,
 Rive login, or commercial ROM is needed. The **Themes** menu selects the theme,
 toggles animation, and runs a simultaneous-input demonstration.
+Choose **Orbit N64** to open mimi, or launch with the `--orbit` argument.
 
 The preview uses DeltaCore's existing Metal video option. This avoids a legacy
 OpenGL framebuffer crash observed when rotating the simulator.
@@ -69,6 +79,13 @@ coordinate definition. Run it only when changing the generator; it overwrites
 hand edits to those generated files. `build_themes.py` compiles the current RML,
 creates vector PDF fallback artwork, and packages the exports into `Dist`.
 The fallback PDFs preserve a transparent landscape game aperture.
+
+Orbit's coordinate source is `Tools/generate_orbit.py`. To rebuild only Orbit:
+
+```sh
+python3 Extras/RiveControllerThemes/Tools/generate_orbit.py
+python3 Extras/RiveControllerThemes/Tools/build_themes.py Orbit
+```
 
 Examples of local visual checks:
 

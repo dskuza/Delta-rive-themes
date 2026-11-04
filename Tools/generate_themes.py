@@ -12,14 +12,15 @@ ROOT = Path(__file__).resolve().parents[1]
 BUTTONS = ['up', 'down', 'left', 'right', 'a', 'b', 'start', 'select', 'menu']
 
 class Scene:
-    def __init__(self, showcase, analog=False):
+    def __init__(self, showcase, analog=False, buttons=None, numbers=None):
         self.root = ET.Element('Rive', version='1', kind='fragment')
         self.counter = 100
         self.showcase = showcase
         self.analog = analog
         self.vm, self.instance = '0:1', '0:2'
+        self.numbers = numbers if numbers is not None else (['stickX', 'stickY'] if analog else [])
         self.properties = {n: f'0:{i + 3}' for i, n in enumerate(
-            [b + 'Pressed' for b in BUTTONS] + ['reduceMotion'] + (['stickActive', 'stickX', 'stickY'] if analog else []))}
+            [b + 'Pressed' for b in (buttons if buttons is not None else BUTTONS)] + ['reduceMotion'] + (['stickActive'] if analog else []) + self.numbers)}
         self.color = 'FF65E7D4' if showcase else 'FF76A8FF'
         self.font = self.el(self.root, 'FontAsset', file='../Assets/SpaceGrotesk.ttf', name='Space Grotesk').get('id')
 
@@ -215,10 +216,10 @@ class Scene:
     def finish(self):
         vm=self.el(self.root,'ViewModel',id=self.vm,name='Controller',defaultInstanceId=self.instance)
         for name,pid in self.properties.items():
-            self.el(vm,'ViewModelPropertyNumber' if name in ('stickX','stickY') else 'ViewModelPropertyBoolean',name=name,id=pid)
+            self.el(vm,'ViewModelPropertyNumber' if name in self.numbers else 'ViewModelPropertyBoolean',name=name,id=pid)
         instance=self.el(vm,'ViewModelInstance',id=self.instance,name='Default',exports=True)
         for name,pid in self.properties.items():
-            number=name in ('stickX','stickY')
+            number=name in self.numbers
             self.el(instance,'ViewModelInstanceNumber' if number else 'ViewModelInstanceBoolean',viewModelPropertyId=pid,propertyValue=0 if number else False)
         ET.indent(self.root,space='    ')
         return ET.tostring(self.root,encoding='unicode')+'\n'

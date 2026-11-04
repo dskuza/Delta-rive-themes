@@ -8,14 +8,18 @@ from pathlib import Path
 import subprocess
 import shutil
 import zipfile
+import argparse
 ROOT=Path(__file__).resolve().parents[1]
 
 def run(*args):
     subprocess.run([str(a) for a in args],cwd=ROOT,check=True)
 
 def main():
-    projects = ['Template','NeonCircuit']
-    if (ROOT/'AnalogStickLab'/'scene.rml').exists():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('themes', nargs='*', choices=['Template','NeonCircuit','Orbit'])
+    themes = parser.parse_args().themes or ['Template','NeonCircuit','Orbit']
+    projects = themes.copy()
+    if len(themes) == 3 and (ROOT/'AnalogStickLab'/'scene.rml').exists():
         projects.append('AnalogStickLab')
     for name in projects:
         run('rive',ROOT/name,'--verify')
@@ -25,11 +29,13 @@ def main():
     (ROOT/'Dist').mkdir(exist_ok=True)
     if 'AnalogStickLab' in projects:
         shutil.copy2(ROOT/'AnalogStickLab'/'build'/'AnalogStickLab.riv',ROOT/'Dist'/'AnalogStickLab.riv')
-    for name in ['Template','NeonCircuit']:
+    for name in themes:
         project=ROOT/name
         members={'info.json':project/'info.json','rive.json':project/'rive.json',name+'.riv':project/'build'/f'{name}.riv'}
         for asset in ['portrait.pdf','landscape.pdf']:
             members[asset]=project/'build'/asset
+        if name == 'Orbit':
+            members['stick.pdf'] = project/'build'/'stick.pdf'
         shutil.copy2(project/'build'/f'{name}.riv',ROOT/'Dist'/f'{name}.riv')
         target=ROOT/'Dist'/f'{name}.deltaskin'
         with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED) as archive:
