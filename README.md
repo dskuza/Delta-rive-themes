@@ -82,7 +82,8 @@ workspace/
 
 Run `./Tools/setup.sh` to connect the checkouts and resolve dependencies.
 The production renderer, native-input UI tests and emulator preview remain in
-Delta at `Extras/RiveControllerPreview`. See Delta's `Docs/RiveDevelopment.md`.
+Delta at `Extras/RiveControllerPreview`. See `Scripts/setup-rive.sh --help`
+and `Scripts/import-rive-themes.sh --help` in that checkout.
 Theme compilation and pixel tests here do not need the Delta checkout.
 
 ## AI-assisted theme development
@@ -234,7 +235,7 @@ Changes to the Rive runtime are pinned at **6.29.0**. The companion DeltaCore
 changes are published on `dskuza/DeltaCore`’s `rive` branch and pinned by
 `dskuza/Delta`’s `rive` branch. Run `./Tools/setup.sh` to initialize that fork
 and recover the exact N64 homebrew compatibility commits from Delta’s bundled
-Git recovery bundles. See the companion `Docs/RiveDevelopment.md` for details.
+Git recovery bundles. See the companion `Scripts/RiveDependencies/README.md` for details.
 
 Verified locally:
 
