@@ -16,6 +16,9 @@ files:
 - `Orbit.deltaskin`: a continuous N64 analog stick with a moving cap and feathered
   halo, magnitude-driven lighting, independent axis sectors, a separate D-pad,
   all four C-buttons, A/B/Z/L/R/Start, and native vector fallback artwork.
+  Uses the original controller's button order and colors: green B above-left of
+  blue A, yellow vector arrows in the C-button diamond, red Start in the middle,
+  D-pad above the stick, L/R along the top and an accessible Z below the stick.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for NES.

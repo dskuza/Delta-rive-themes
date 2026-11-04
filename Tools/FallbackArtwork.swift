@@ -26,6 +26,20 @@ func circle(_ context: CGContext, _ x: CGFloat, _ y: CGFloat, _ diameter: CGFloa
     context.setFillColor(color(hex))
     context.fillEllipse(in: CGRect(x: x-diameter/2, y: y-diameter/2, width: diameter, height: diameter))
 }
+func arrow(_ context: CGContext, _ x: CGFloat, _ y: CGFloat, _ direction: String, _ hex: UInt32)
+{
+    let turns: [String: CGFloat] = ["Up":0, "Right":1, "Down":2, "Left":3]
+    context.saveGState()
+    context.translateBy(x:x, y:y)
+    context.rotate(by:(turns[direction] ?? 0) * .pi/2)
+    context.setFillColor(color(hex))
+    context.move(to:CGPoint(x:0,y:-6))
+    context.addLine(to:CGPoint(x:-5.5,y:4))
+    context.addLine(to:CGPoint(x:5.5,y:4))
+    context.closePath()
+    context.fillPath()
+    context.restoreGState()
+}
 func generate(_ output: URL, width: CGFloat, height: CGFloat, draw: (CGContext) -> Void)
 {
     var bounds = CGRect(x: 0, y: 0, width: width, height: height)
@@ -90,9 +104,10 @@ for name in ["Template", "NeonCircuit", "Orbit"]
                     context.fill(CGRect(x:x-20,y:y-58,width:40,height:116))
                     context.fill(CGRect(x:x-58,y:y-20,width:116,height:40))
                     circle(context,x,y,12,0x111B28)
-                    for (dx,dy) in [(0.0,-40.0),(40.0,0.0),(0.0,40.0),(-40.0,0.0)]
+                    for (direction,dx,dy) in [("Up",0.0,-40.0),("Right",40.0,0.0),("Down",0.0,40.0),("Left",-40.0,0.0)]
                     {
-                        circle(context,x+dx,y+dy,4,0x8196A7)
+                        if name == "Orbit" { arrow(context,x+dx,y+dy,direction,0xB8C9DD) }
+                        else { circle(context,x+dx,y+dy,4,0x8196A7) }
                     }
                     context.restoreGState()
                 }
@@ -100,12 +115,23 @@ for name in ["Template", "NeonCircuit", "Orbit"]
                 {
                     let inputs=item["inputs"] as! [String]
                     let text=inputs[0].uppercased()
-                    context.setFillColor(color(0x263240))
+                    let input=inputs[0]
+                    let faces: [String: UInt32] = ["a":0x2865C5, "b":0x208556, "start":0xD94C61]
+                    let isC = name == "Orbit" && input.hasPrefix("c")
+                    context.setFillColor(color(name == "Orbit" ? (isC ? 0xDCB33C : faces[input, default:0x28313F]) : 0x263240))
                     context.fillPath(using:.winding) // clear any pending path
                     let bounds=CGRect(x:f["x"]!,y:f["y"]!,width:f["width"]!,height:f["height"]!)
                     context.addPath(CGPath(roundedRect:bounds,cornerWidth:bounds.height/2,cornerHeight:bounds.height/2,transform:nil))
                     context.fillPath()
-                    label(context,text,x-(text.count==1 ? 6 : CGFloat(text.count)*3),y+4,text.count==1 ? 18 : 9)
+                    if isC
+                    {
+                        arrow(context,x,y,String(input.dropFirst()),0x493500)
+                    }
+                    else
+                    {
+                        let size: CGFloat = name == "Orbit" && input == "start" ? 8 : (text.count==1 ? 18 : 9)
+                        label(context,text,x-(text.count==1 ? 6 : CGFloat(text.count)*size*0.3),y+4,size)
+                    }
                 }
             }
         }

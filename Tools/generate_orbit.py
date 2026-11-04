@@ -8,6 +8,8 @@ BUTTONS = ['up', 'down', 'left', 'right', 'analogStickUp', 'analogStickDown',
            'analogStickLeft', 'analogStickRight', 'cUp', 'cDown', 'cLeft', 'cRight',
            'a', 'b', 'l', 'r', 'z', 'start', 'menu']
 CYAN, VIOLET, GOLD = 'FF63E8F1', 'FFB4A0FF', 'FFFFD375'
+BLUE, GREEN, RED = 'FF75ACFF', 'FF7AE6A5', 'FFFF8A8D'
+DIRECTIONS = ['Up', 'Right', 'Down', 'Left']
 
 
 class Orbit(Scene):
@@ -21,6 +23,39 @@ class Orbit(Scene):
                             maxInput=maximum, minOutput=low, maxOutput=high,
                             clampLower=True, clampUpper=True, name=prop+' mapping')
         self.bind(target, key, prop, converter.get('id'))
+
+    def button(self, a, sm, name, x, y, w, h, color, label=None, round=False):
+        """N64 face colors and vector C arrows remain recognizable even at rest."""
+        cap = self.el(a, 'Node', x=x, y=y, name=name+' cap')
+        if name.startswith('c'):
+            direction = name[1:]
+            arrow = self.el(cap, 'Shape', rotation=DIRECTIONS.index(direction)*math.pi/2,
+                            name='C '+direction+' arrow')
+            self.el(arrow, 'Triangle', width=11, height=10)
+            self.paint(arrow, 'FF493500')
+        else:
+            self.text(cap, 0, 0, label or name.upper(),
+                      24 if name in ('a','b') else (8 if name == 'start' else 11),
+                      'FFF5F8FF', True)
+        faces = {'a':'FF2865C5', 'b':'FF208556', 'start':'FFD94C61'}
+        face = 'FFDCB33C' if name.startswith('c') else faces.get(name, 'FF28313F')
+        if round:
+            self.ellipse(cap, 0, 0, w-5, face)
+            self.ellipse(cap, 0, 2, w, 'FF080E19')
+        else:
+            self.rect(cap, 0, 0, w, h, face, h/2)
+            self.rect(cap, 0, 2, w+2, h+2, 'FF080E19', h/2)
+        glow = self.el(a, 'Node', x=x, y=y, opacity=0.06, name=name+' LED')
+        if round:
+            self.ellipse(glow, 0, 0, w+8, color, 2)
+            self.ellipse(glow, 0, 0, w+10, color, 7, 13)
+        else:
+            halo = self.rect(glow, 0, 0, w+7, h+7, color, h/2, 2)
+            self.paint(halo, color, 5, 10)
+        self.animate(a, sm, name+'Pressed', [(glow.get('id'),'glow'), (cap.get('id'),'cap')])
+        return dict(inputs=[name], frame=dict(x=x-w/2,y=y-h/2,width=w,height=h),
+                    extendedEdges=dict(top=3,bottom=3,left=3,right=3),
+                    mask='circle' if round else 'rectangle')
 
     def dpad(self, a, sm, x, y):
         pad = self.el(a, 'Node', x=x, y=y, name='Digital navigation pad')
@@ -99,47 +134,37 @@ class Orbit(Scene):
         sm = self.el(a, 'StateMachine', name='Controller')
         a.set('defaultStateMachineId', sm.get('id'))
         self.text(a, 24, 27, 'O R B I T' if portrait else 'ORBIT', 19, 'FFE1EBFF')
-        self.text(a, 25, 48, 'ANALOG FLIGHT SYSTEM / N64' if portrait else 'FLIGHT / N64', 7)
+        self.text(a, 25, 48, 'NINTENDO 64', 8)
         if portrait:
             self.text(a, 364, 28, '64', 19, VIOLET, True)
-            self.text(a, 106, 272, 'VECTOR / 360', 7, center=True)
-            self.text(a, 307, 223, 'C / NAVIGATION', 7, center=True)
-        items = [self.stick(a, sm, 106 if portrait else 105, 180 if portrait else 173),
-                 self.dpad(a, sm, 90 if portrait else 95, 324 if portrait else 312)]
-        cx, cy = (307,165) if portrait else (745,140)
-        for direction, dx, dy, label in [('Up',0,-33,'▲'),('Down',0,33,'▼'),('Left',-33,0,'◀'),('Right',33,0,'▶')]:
-            # ASCII labels stay within the bundled font's glyph set.
-            label = {'Up':'CU','Down':'CD','Left':'CL','Right':'CR'}[direction]
-            items.append(self.button(a, sm, 'c'+direction, cx+dx, cy+dy, 36, 36, GOLD, label, True))
-        positions = [('a',323,262,56,56,CYAN,'A',True),
-                     ('b',253,298,46,46,VIOLET,'B',True),
-                     ('l',44,83,60,20,VIOLET,'L',False),
-                     ('r',346,83,60,20,VIOLET,'R',False),
-                     ('z',194,88,52,24,'FFFF9F7C','Z',False),
-                     ('start',199,356,52,18,CYAN,'START',False),
+        items = [self.stick(a, sm, 116 if portrait else 111, 284 if portrait else 282),
+                 self.dpad(a, sm, 78 if portrait else 70, 139)]
+        cx, cy = (317,150) if portrait else (755,145)
+        self.text(a, cx, cy, 'C', 12, GOLD, True)
+        for direction, dx, dy in [('Up',0,-29),('Down',0,29),('Left',-29,0),('Right',29,0)]:
+            items.append(self.button(a, sm, 'c'+direction, cx+dx, cy+dy, 32, 32, GOLD, round=True))
+        positions = [('a',267,258,56,56,BLUE,'A',True),
+                     ('b',227,206,46,46,GREEN,'B',True),
+                     ('l',44,78,60,20,VIOLET,'L',False),
+                     ('r',346,78,60,20,VIOLET,'R',False),
+                     ('z',116,378,52,22,VIOLET,'Z',False),
+                     ('start',195,141,34,34,RED,'START',True),
                      ('menu',40,378,38,16,VIOLET,'MENU',False)] if portrait else [
-                     ('a',779,241,52,52,CYAN,'A',True),
-                     ('b',708,275,46,46,VIOLET,'B',True),
+                     ('a',735,260,56,56,BLUE,'A',True),
+                     ('b',687,204,46,46,GREEN,'B',True),
                      ('l',55,65,60,20,VIOLET,'L',False),
-                     ('r',782,49,60,20,VIOLET,'R',False),
-                     ('z',179,347,36,24,'FFFF9F7C','Z',False),
-                     ('start',422,369,52,18,CYAN,'START',False),
-                     ('menu',422,20,38,16,VIOLET,'MENU',False)]
+                     ('r',782,65,60,20,VIOLET,'R',False),
+                     ('z',111,375,52,22,VIOLET,'Z',False),
+                     ('start',422,20,34,34,RED,'START',True),
+                     ('menu',40,375,38,16,VIOLET,'MENU',False)]
         items += [self.button(a, sm, *p) for p in positions]
-        # Button hit extensions must not bleed into adjacent C-buttons or the game.
-        for item in items:
-            if isinstance(item['inputs'], list):
-                item['extendedEdges'] = dict(top=3,bottom=3,left=3,right=3)
         if portrait:
-            for x in range(157,232,8):
-                self.rect(a,x,384,3,1,'FF425375')
             self.rect(a,w/2,2,w,2,CYAN)
             self.rect(a,w/2,h/2,w,h,'FF0E1627')
         else:
             self.rect(a,102,h/2,204,h,'FF0E1627',18)
             self.rect(a,w-102,h/2,204,h,'FF0E1627',18)
             self.rect(a,w/2,17,84,34,'FF0E1627',14)
-            self.rect(a,w/2,h-19,w-408,38,'FF0E1627',14)
         rep = dict(assets=dict(resizable=orientation+'.pdf'), mappingSize=dict(width=w,height=h), items=items)
         if not portrait:
             rep['screens'] = [dict(outputFrame=dict(x=218,y=40,width=408,height=306))]
