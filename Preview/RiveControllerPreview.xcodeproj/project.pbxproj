@@ -23,6 +23,7 @@
 		921E976AD83DA09ACE0DD31C /* N64DeltaCore_RSP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C26F3267BDBACF3941444D5 /* N64DeltaCore_RSP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B56D54054D0342EB3D40C4 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07ACDAA7815B1D01C8E06ED /* ZIPFoundation.framework */; };
 		9333068A4AF6EF8A00798AB4 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83750D56C0862229C326E0CE /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9697D19B63DEA592CA218077 /* OrbitCrystal.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = D48645D87FA8E1337221C6E1 /* OrbitCrystal.deltaskin */; };
 		A419E062FEFEBCE271475B7C /* RiveControllerSkinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB4CBB284CD33FCCA7DCF8 /* RiveControllerSkinCoordinator.swift */; };
 		B0308357A735E12EB22BC830 /* NESDeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFE18E0666A7F11A0DB4D417 /* NESDeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B72DC83582C41FACEDC9E55F /* Orbit.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = B9FA9428A8CBA38BFD6B5953 /* Orbit.deltaskin */; };
@@ -168,6 +169,7 @@
 		C0FE70B3351BD7F3053E7F22 /* input-test.nes */ = {isa = PBXFileReference; includeInIndex = 1; name = "input-test.nes"; path = "../../NESInputTest/input-test.nes"; sourceTree = "<group>"; };
 		C41B1BC927F9F023890C3249 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = ../../../Cores/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		D0F9AA5B4B8FC8E797FCBE8B /* App.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D48645D87FA8E1337221C6E1 /* OrbitCrystal.deltaskin */ = {isa = PBXFileReference; includeInIndex = 1; name = OrbitCrystal.deltaskin; path = ../Dist/OrbitCrystal.deltaskin; sourceTree = "<group>"; };
 		F07ACDAA7815B1D01C8E06ED /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -258,6 +260,7 @@
 				B9FA9428A8CBA38BFD6B5953 /* Orbit.deltaskin */,
 				345F8104B0137EA0604F0E94 /* mimi-6126231.z64 */,
 				3E6E733F49ED8B18A1612CF0 /* LICENSE.mimi */,
+				D48645D87FA8E1337221C6E1 /* OrbitCrystal.deltaskin */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				B72DC83582C41FACEDC9E55F /* Orbit.deltaskin in Resources */,
 				FF970ED82DBF3A90676706F3 /* mimi-6126231.z64 in Resources */,
 				43A22AAFA2160F11F02E65F5 /* LICENSE.mimi in Resources */,
+				9697D19B63DEA592CA218077 /* OrbitCrystal.deltaskin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

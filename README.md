@@ -7,7 +7,7 @@ Rive receives control state independently; emulation never waits for animation.
 
 ## Try it
 
-The `Dist` directory contains two importable NES skins, an N64 skin, and their standalone `.riv`
+The `Dist` directory contains two importable NES skins, two N64 skins, and their standalone `.riv`
 files:
 
 - `Template.deltaskin`: a complete starting point for another theme.
@@ -22,9 +22,16 @@ files:
   Edge-to-edge representations opt into UIKit safe-area layout, keeping artwork,
   native touch targets and the game screen clear of the notch and home indicator
   in portrait and both landscape directions, including static fallback.
+- `OrbitCrystal.deltaskin`: **Orbit: Crystal**, a smoked-clear N64 controller with
+  visible circuit routes and chips, transparent button caps, colored socket LEDs,
+  and moving signal packets from each control toward the game display. The analog
+  module exposes independently moving X/Y sensor rails and a contact LED that
+  lights even when a thumb rests at center. A quick tap's packet finishes traveling
+  after input releases; held controls repeat independently. Reduced Motion uses
+  steady illuminated routes. Both phone orientations respect device safe areas.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
-Controller Themes** under Experimental Features, and select the skin for NES.
+Controller Themes** under Experimental Features, and select the skin for its system.
 Both portrait and landscape are included. Turn the feature off to compare the
 native vector fallback. Existing skins need no changes.
 
@@ -36,7 +43,7 @@ animation reference for future systems with analog sticks; it is not part of
 the NES controller skins. Orbit is the complete N64 example built from that idea.
 
 For N64, import `../N64InputTest/mimi-6126231.z64`, select **Orbit N64** for
-portrait and landscape, and open mimi's **live range** view using the D-pad and A.
+portrait and landscape (or select **Orbit: Crystal**), and open mimi's **live range** view using the D-pad and A.
 Drag Orbit's stick to compare actual emulated X/Y movement with its vector cap
 and glow. Small movements retain fractional values; releasing returns to center.
 mimi's provenance, checksum and credits are in `../N64InputTest/README.md`.
@@ -45,10 +52,11 @@ mimi's provenance, checksum and credits are in `../N64InputTest/README.md`.
 
 Open `Preview/RiveControllerPreview.xcodeproj` and run **RiveControllerPreview**
 on an iOS 17.4+ simulator. It uses the production loader, renderer, DeltaCore and
-NESDeltaCore/N64DeltaCore, and bundles both diagnostic ROMs and all three skins. No Delta account,
+NESDeltaCore/N64DeltaCore, and bundles both diagnostic ROMs and all four skins. No Delta account,
 Rive login, or commercial ROM is needed. The **Themes** menu selects the theme,
 toggles animation, and runs a simultaneous-input demonstration.
 Choose **Orbit N64** to open mimi, or launch with the `--orbit` argument.
+Choose **Orbit: Crystal**, or launch with `--crystal`, for the transparent version.
 
 The preview uses DeltaCore's Metal video option for bitmap cores. On simulators,
 DeltaCore also resolves OpenGL core frames before presenting them with Metal;
@@ -94,6 +102,21 @@ Orbit's coordinate source is `Tools/generate_orbit.py`. To rebuild only Orbit:
 python3 Extras/RiveControllerThemes/Tools/generate_orbit.py
 python3 Extras/RiveControllerThemes/Tools/build_themes.py Orbit
 ```
+
+Crystal's source is `Tools/generate_crystal.py`. Its generated `circuit-layout.json`
+also supplies the native fallback's traces. To rebuild and check its actual rendered effects:
+
+```sh
+python3 Extras/RiveControllerThemes/Tools/generate_crystal.py
+python3 Extras/RiveControllerThemes/Tools/build_themes.py OrbitCrystal
+python3 Extras/RiveControllerThemes/Tests/render_crystal.py
+```
+
+Crystal uses Rive Joysticks to scrub two bone-position pose timelines, a translation
+constraint to attach its cap, and independent state-machine layers for LEDs and
+Trim Path signal packets. These are authored Rive features, without executable
+scripts or account signing. Its effects visualize controller inputs, not emulator
+acknowledgements or game-specific events. The game always receives input immediately.
 
 Examples of local visual checks:
 
@@ -146,6 +169,10 @@ An optional `rive.json` supplies the animation configuration:
   optional Boolean `active` means nonzero displacement, including diagonal input.
   An optional numeric `magnitude` path receives the vector length clamped to 0…1,
   for effects such as glow intensity that increases with stick displacement.
+- A stick's optional `contact` Boolean path receives physical thumb contact,
+  independently of displacement. It can light the cap while input remains zero.
+  Contact is not pressure, is cleared on touch end/cancellation and removal of the
+  native control, and is initialized when an animated renderer attaches.
 - `reduceMotion` is an optional Boolean path receiving the system accessibility
   preference. The samples remove button travel in reduced-motion states.
 - The named view model needs an authored default instance. All configured property
@@ -199,6 +226,10 @@ Verified locally:
 - Orbit N64 native touch gestures: fractional analog values, full left/down
   diagonal, release to center, every digital control, static fallback, rotation
   and background/resume, with mimi running in the standalone preview.
+- Crystal's complete N64 controls, resting contact without movement, simultaneous
+  buttons and analog input, static fallback, and both landscape safe areas.
+- Crystal's rendered pixels: visible XY cap travel, a short tap's complete packet,
+  return to idle, stationary Reduced Motion effects and a transparent game aperture.
 - mimi boot and display after the focused PI DMA, cached-code alias and VI
   framebuffer address fixes; host-side PI/VI register regression checks pass.
 - Simultaneous A/B and diagonal state through the controller receiver mechanism.

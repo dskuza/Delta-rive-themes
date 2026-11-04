@@ -20,6 +20,7 @@ import ZIPFoundation
         precondition(stick.axes(for: ["right": .nan, "up": .infinity]) == (0, 0))
         precondition(stick.axes(for: ["right": 3, "down": -2]) == (1, 0))
         precondition(stick.magnitude == nil)
+        precondition(stick.contact == nil)
         precondition(stick.magnitude(for: [:]) == 0)
         precondition(stick.magnitude(for: ["right": 0.3, "up": 0.4]) == 0.5)
         precondition(stick.magnitude(for: ["left": 1, "down": 1]) == 1)
@@ -29,11 +30,12 @@ import ZIPFoundation
         {"schemaVersion":1,"representations":{"iphone-standard-portrait":{
           "file":"Orbit.riv","artboard":"Portrait","stateMachine":"Controller","viewModel":"Controller","buttons":{},
           "sticks":[{"up":"analogStickUp","down":"analogStickDown","left":"analogStickLeft","right":"analogStickRight",
-                     "x":"stickX","y":"stickY","active":"stickActive","magnitude":"stickMagnitude"}]
+                     "x":"stickX","y":"stickY","active":"stickActive","magnitude":"stickMagnitude","contact":"stickContact"}]
         }}}
         """.utf8)
         let analog = try RiveControllerSkinManifest(data: analogFixture)
         precondition(analog.representations["iphone-standard-portrait"]!.numberPaths == ["stickX", "stickY", "stickMagnitude"])
+        precondition(analog.representations["iphone-standard-portrait"]!.booleanPaths == ["stickActive", "stickContact"])
 
         func rejects(_ data: Data) throws
         {
@@ -49,6 +51,7 @@ import ZIPFoundation
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "\"aPressed\"", with: "\"bPressed\"").utf8))
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "\"aPressed\"", with: "\"a//pressed\"").utf8))
         try rejects(Data(String(data: analogFixture, encoding: .utf8)!.replacingOccurrences(of: "\"magnitude\":\"stickMagnitude\"", with: "\"magnitude\":\"stickX\"").utf8))
+        try rejects(Data(String(data: analogFixture, encoding: .utf8)!.replacingOccurrences(of: "\"contact\":\"stickContact\"", with: "\"contact\":\"stickActive\"").utf8))
 
         let temporary = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: temporary, withIntermediateDirectories: true)
@@ -91,7 +94,7 @@ import ZIPFoundation
         }
         catch is RiveControllerSkinManifest.Error {}
 
-        for name in ["Template", "NeonCircuit", "Orbit"]
+        for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
         {
             let url = root.appendingPathComponent("Dist/\(name).deltaskin")
             try RiveControllerSkinArchive.validate(at: url)
@@ -107,6 +110,8 @@ import ZIPFoundation
         let orbitStick = orbit.representation.sticks!.first!
         precondition(orbitStick.axes(for: ["analogStickRight":0.25,"analogStickDown":0.5,"right":1]) == (0.25,-0.5))
         precondition(orbitStick.magnitude == "stickMagnitude")
+        let crystal = try RiveControllerSkinArchive.load(at: root.appendingPathComponent("Dist/OrbitCrystal.deltaskin"), traits: "iphone-edgeToEdge-landscape")!
+        precondition(crystal.representation.sticks!.first!.contact == "stickContact")
         print("Passed manifest validation, archive compatibility, malformed assets, and normalized stick input tests.")
     }
 }

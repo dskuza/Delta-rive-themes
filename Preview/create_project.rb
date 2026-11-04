@@ -12,7 +12,7 @@ sources = p.main_group.new_group('Sources')
 app.source_build_phase.add_file_reference(sources.new_file('App.swift'))
 Dir.glob('../../../Delta/Controller Themes/*.swift').sort.each { |path| app.source_build_phase.add_file_reference(sources.new_file(path)) }
 resources = p.main_group.new_group('Resources')
-['../Dist/Template.deltaskin', '../Dist/NeonCircuit.deltaskin', '../Dist/Orbit.deltaskin', '../../NESInputTest/input-test.nes', '../../N64InputTest/mimi-6126231.z64', '../../N64InputTest/LICENSE.mimi'].each { |path| app.resources_build_phase.add_file_reference(resources.new_file(path)) }
+['../Dist/Template.deltaskin', '../Dist/NeonCircuit.deltaskin', '../Dist/Orbit.deltaskin', '../Dist/OrbitCrystal.deltaskin', '../../NESInputTest/input-test.nes', '../../N64InputTest/mimi-6126231.z64', '../../N64InputTest/LICENSE.mimi'].each { |path| app.resources_build_phase.add_file_reference(resources.new_file(path)) }
 embed = app.new_copy_files_build_phase('Embed Frameworks')
 embed.dst_subfolder_spec = '10'
 ['DeltaCore', 'NESDeltaCore', 'N64DeltaCore'].each do |name|

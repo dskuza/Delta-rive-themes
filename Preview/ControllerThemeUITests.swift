@@ -104,8 +104,18 @@ final class ControllerThemeUITests: XCTestCase
 
     func testOrbitAnalogAndControls()
     {
+        self.checkN64Theme(argument: "--orbit")
+    }
+
+    func testCrystalAnalogContactAndControls()
+    {
+        self.checkN64Theme(argument: "--crystal")
+    }
+
+    private func checkN64Theme(argument: String)
+    {
         let app = XCUIApplication()
-        app.launchArguments = ["--orbit"]
+        app.launchArguments = [argument]
         app.launch()
         let status = app.staticTexts["inputStatus"]
         XCTAssertTrue(status.waitForExistence(timeout: 30))
@@ -113,6 +123,16 @@ final class ControllerThemeUITests: XCTestCase
         self.waitForValue("safeAreaContainsController=true", in: status)
         let controller = app.descendants(matching: .any)["controller"]
         let center = self.point(116, 284, width: 390, height: 400, in: controller)
+        if argument == "--crystal"
+        {
+            // A resting thumb wakes the socket without introducing any analog input.
+            center.press(forDuration: 1)
+            self.waitForValue("neutralContactObserved=true", in: status)
+            self.waitForValue("contact=false", in: status)
+            self.waitForText("Rive | idle", in: status)
+            XCTAssertFalse((status.value as? String ?? "").contains("analogStickRightPeak="))
+            XCTAssertFalse((status.value as? String ?? "").contains("analogStickUpPeak="))
+        }
         // A small physical drag must stay analog, rather than jumping to 1.
         center.press(forDuration: 0.1,
                      thenDragTo: self.point(124, 276, width: 390, height: 400, in: controller),
@@ -173,7 +193,7 @@ final class ControllerThemeUITests: XCTestCase
             self.point(784,145,width:844,height:390,in:controller).tap()
             self.waitForValue("cRight:\(index+2)/\(index+2)", in: status)
             let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-            attachment.name = "Orbit safe area \(orientation.rawValue)"
+            attachment.name = "\(argument) safe area \(orientation.rawValue)"
             attachment.lifetime = .keepAlways
             self.add(attachment)
         }
@@ -181,6 +201,18 @@ final class ControllerThemeUITests: XCTestCase
         app.activate()
         self.waitForText("Rive | idle", in: status)
         self.waitForValue("safeAreaContainsController=true", in: status)
+        self.waitForValue("contact=false", in: status)
+        if argument == "--crystal"
+        {
+            app.buttons["themeMenu"].tap()
+            app.buttons["Run Input Demo"].tap()
+            self.waitForText("a+analogStickRight+analogStickUp+b", in: status)
+            let active = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            active.name = "Crystal simultaneous LEDs and signal paths"
+            active.lifetime = .keepAlways
+            self.add(active)
+            self.waitForText("Rive | idle", in: status)
+        }
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = "Orbit N64 analog controller and mimi"
         attachment.lifetime = .keepAlways

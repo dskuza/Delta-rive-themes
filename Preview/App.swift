@@ -54,12 +54,14 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
     private var heldInputs = Set<String>()
     private var peakValues = [String: Double]()
     private var updateTimer: Timer?
+    private var neutralContactObserved = false
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.delegate = self
         if ProcessInfo.processInfo.arguments.contains("--orbit") { self.themeName = "Orbit" }
+        if ProcessInfo.processInfo.arguments.contains("--crystal") { self.themeName = "OrbitCrystal" }
         self.controllerView.playerIndex = 0
         self.controllerView.accessibilityIdentifier = "controller"
         self.controllerView.isAccessibilityElement = true
@@ -102,7 +104,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
 
     private func selectTheme(_ name: String)
     {
-        let type: GameType = name == "Orbit" ? .n64 : .nes
+        let type: GameType = name.hasPrefix("Orbit") ? .n64 : .nes
         if self.game?.type != type
         {
             let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -116,6 +118,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
             self.heldInputs = []
             self.peakValues = [:]
         }
+        self.neutralContactObserved = false
         self.themeName = name
         let url = Bundle.main.url(forResource: name, withExtension: "deltaskin")!
         self.controllerView.controllerSkin = DeltaCore.ControllerSkin(fileURL: url)
@@ -129,6 +132,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
             UIAction(title: "Neon Circuit", state: self.themeName == "NeonCircuit" ? .on : .off) { [weak self] _ in self?.selectTheme("NeonCircuit") },
             UIAction(title: "Reusable Template", state: self.themeName == "Template" ? .on : .off) { [weak self] _ in self?.selectTheme("Template") },
             UIAction(title: "Orbit N64", state: self.themeName == "Orbit" ? .on : .off) { [weak self] _ in self?.selectTheme("Orbit") },
+            UIAction(title: "Orbit: Crystal", state: self.themeName == "OrbitCrystal" ? .on : .off) { [weak self] _ in self?.selectTheme("OrbitCrystal") },
             UIAction(title: "Animate", state: self.animationsEnabled ? .on : .off) { [weak self] _ in
                 guard let self else { return }
                 self.animationsEnabled.toggle()
@@ -145,7 +149,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
     {
         // Exercise simultaneous controller state through the same input mapping
         // and emulator receiver as touches. Physical gestures are tested separately.
-        let names = self.themeName == "Orbit" ? ["a", "b", "analogStickUp", "analogStickRight"] : ["a", "b", "up", "right"]
+        let names = self.themeName.hasPrefix("Orbit") ? ["a", "b", "analogStickUp", "analogStickRight"] : ["a", "b", "up", "right"]
         let inputs = names.map {
             AnyInput(stringValue: $0, intValue: nil, type: .controller(.controllerSkin))
         }
@@ -169,7 +173,9 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
         let peaks = self.peakValues.sorted { $0.key < $1.key }.map { "\($0.key)Peak=\(String(format: "%.3f", $0.value))" }.joined(separator: " ")
         let safeFrame = self.view.safeAreaLayoutGuide.layoutFrame
         let isSafe = safeFrame.insetBy(dx: -0.5, dy: -0.5).contains(self.controllerView.frame)
-        self.status.accessibilityValue = "\(allCounts) \(peaks) safeAreaContainsController=\(isSafe) safeFrame=\(safeFrame) view=\(self.view.bounds) window=\(self.view.window?.bounds ?? .zero) controller=\(self.controllerView.frame) traits=\(self.controllerView.controllerSkinTraits?.description ?? "none")"
+        let isContacted = !self.controllerView.contactedInputs.isEmpty
+        if isContacted && self.controllerView.activatedInputs.isEmpty { self.neutralContactObserved = true }
+        self.status.accessibilityValue = "\(allCounts) \(peaks) contact=\(isContacted) neutralContactObserved=\(self.neutralContactObserved) safeAreaContainsController=\(isSafe) safeFrame=\(safeFrame) view=\(self.view.bounds) window=\(self.view.window?.bounds ?? .zero) controller=\(self.controllerView.frame) traits=\(self.controllerView.controllerSkinTraits?.description ?? "none")"
     }
 
     override func gameController(_ gameController: GameController, didActivate input: Input, value: Double)
