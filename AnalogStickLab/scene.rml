@@ -1,0 +1,2049 @@
+<Rive version="1" kind="fragment">
+    <FontAsset file="../Assets/SpaceGrotesk.ttf" name="Space Grotesk" id="0:101" />
+    <Artboard width="390" height="330" name="Portrait" viewModelId="0:1" viewModelInstanceId="0:2" x="0" y="0" id="0:102" styleId="0:103" defaultStateMachineId="0:104">
+        <LayoutComponentStyle name="Artboard Style" id="0:103" />
+        <StateMachine name="Controller" id="0:104">
+            <StateMachineLayer name="aPressed" id="0:182">
+                <AnimationState animationId="0:155" x="160" y="0" id="0:183">
+                    <StateTransition stateToId="0:184" duration="45" id="0:190">
+                        <TransitionViewModelCondition opValue="equal" id="0:191">
+                            <TransitionPropertyViewModelComparator id="0:192">
+                                <BindablePropertyBoolean id="0:193">
+                                    <DataBindContext sourcePathIds="0:1-0:7" propertyKey="634" id="0:194" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:195" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:196">
+                            <TransitionPropertyViewModelComparator id="0:197">
+                                <BindablePropertyBoolean id="0:198">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:199" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:200" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:185" duration="0" id="0:201">
+                        <TransitionViewModelCondition opValue="equal" id="0:202">
+                            <TransitionPropertyViewModelComparator id="0:203">
+                                <BindablePropertyBoolean id="0:204">
+                                    <DataBindContext sourcePathIds="0:1-0:7" propertyKey="634" id="0:205" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:206" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:207">
+                            <TransitionPropertyViewModelComparator id="0:208">
+                                <BindablePropertyBoolean id="0:209">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:210" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:211" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:164" x="340" y="-100" id="0:184">
+                    <StateTransition stateToId="0:183" duration="110" id="0:212">
+                        <TransitionViewModelCondition opValue="equal" id="0:213">
+                            <TransitionPropertyViewModelComparator id="0:214">
+                                <BindablePropertyBoolean id="0:215">
+                                    <DataBindContext sourcePathIds="0:1-0:7" propertyKey="634" id="0:216" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:217" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:185" duration="0" id="0:218">
+                        <TransitionViewModelCondition opValue="equal" id="0:219">
+                            <TransitionPropertyViewModelComparator id="0:220">
+                                <BindablePropertyBoolean id="0:221">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:222" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:223" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:173" x="520" y="100" id="0:185">
+                    <StateTransition stateToId="0:183" duration="0" id="0:224">
+                        <TransitionViewModelCondition opValue="equal" id="0:225">
+                            <TransitionPropertyViewModelComparator id="0:226">
+                                <BindablePropertyBoolean id="0:227">
+                                    <DataBindContext sourcePathIds="0:1-0:7" propertyKey="634" id="0:228" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:229" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:184" duration="0" id="0:230">
+                        <TransitionViewModelCondition opValue="equal" id="0:231">
+                            <TransitionPropertyViewModelComparator id="0:232">
+                                <BindablePropertyBoolean id="0:233">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:234" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:235" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:186">
+                    <StateTransition stateToId="0:183" id="0:187" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:188" />
+                <ExitState x="780" y="-180" id="0:189" />
+            </StateMachineLayer>
+            <StateMachineLayer name="bPressed" id="0:287">
+                <AnimationState animationId="0:260" x="160" y="0" id="0:288">
+                    <StateTransition stateToId="0:289" duration="45" id="0:295">
+                        <TransitionViewModelCondition opValue="equal" id="0:296">
+                            <TransitionPropertyViewModelComparator id="0:297">
+                                <BindablePropertyBoolean id="0:298">
+                                    <DataBindContext sourcePathIds="0:1-0:8" propertyKey="634" id="0:299" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:300" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:301">
+                            <TransitionPropertyViewModelComparator id="0:302">
+                                <BindablePropertyBoolean id="0:303">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:304" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:305" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:290" duration="0" id="0:306">
+                        <TransitionViewModelCondition opValue="equal" id="0:307">
+                            <TransitionPropertyViewModelComparator id="0:308">
+                                <BindablePropertyBoolean id="0:309">
+                                    <DataBindContext sourcePathIds="0:1-0:8" propertyKey="634" id="0:310" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:311" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:312">
+                            <TransitionPropertyViewModelComparator id="0:313">
+                                <BindablePropertyBoolean id="0:314">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:315" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:316" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:269" x="340" y="-100" id="0:289">
+                    <StateTransition stateToId="0:288" duration="110" id="0:317">
+                        <TransitionViewModelCondition opValue="equal" id="0:318">
+                            <TransitionPropertyViewModelComparator id="0:319">
+                                <BindablePropertyBoolean id="0:320">
+                                    <DataBindContext sourcePathIds="0:1-0:8" propertyKey="634" id="0:321" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:322" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:290" duration="0" id="0:323">
+                        <TransitionViewModelCondition opValue="equal" id="0:324">
+                            <TransitionPropertyViewModelComparator id="0:325">
+                                <BindablePropertyBoolean id="0:326">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:327" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:328" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:278" x="520" y="100" id="0:290">
+                    <StateTransition stateToId="0:288" duration="0" id="0:329">
+                        <TransitionViewModelCondition opValue="equal" id="0:330">
+                            <TransitionPropertyViewModelComparator id="0:331">
+                                <BindablePropertyBoolean id="0:332">
+                                    <DataBindContext sourcePathIds="0:1-0:8" propertyKey="634" id="0:333" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:334" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:289" duration="0" id="0:335">
+                        <TransitionViewModelCondition opValue="equal" id="0:336">
+                            <TransitionPropertyViewModelComparator id="0:337">
+                                <BindablePropertyBoolean id="0:338">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:339" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:340" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:291">
+                    <StateTransition stateToId="0:288" id="0:292" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:293" />
+                <ExitState x="780" y="-180" id="0:294" />
+            </StateMachineLayer>
+            <StateMachineLayer name="selectPressed" id="0:390">
+                <AnimationState animationId="0:363" x="160" y="0" id="0:391">
+                    <StateTransition stateToId="0:392" duration="45" id="0:398">
+                        <TransitionViewModelCondition opValue="equal" id="0:399">
+                            <TransitionPropertyViewModelComparator id="0:400">
+                                <BindablePropertyBoolean id="0:401">
+                                    <DataBindContext sourcePathIds="0:1-0:10" propertyKey="634" id="0:402" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:403" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:404">
+                            <TransitionPropertyViewModelComparator id="0:405">
+                                <BindablePropertyBoolean id="0:406">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:407" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:408" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:393" duration="0" id="0:409">
+                        <TransitionViewModelCondition opValue="equal" id="0:410">
+                            <TransitionPropertyViewModelComparator id="0:411">
+                                <BindablePropertyBoolean id="0:412">
+                                    <DataBindContext sourcePathIds="0:1-0:10" propertyKey="634" id="0:413" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:414" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:415">
+                            <TransitionPropertyViewModelComparator id="0:416">
+                                <BindablePropertyBoolean id="0:417">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:418" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:419" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:372" x="340" y="-100" id="0:392">
+                    <StateTransition stateToId="0:391" duration="110" id="0:420">
+                        <TransitionViewModelCondition opValue="equal" id="0:421">
+                            <TransitionPropertyViewModelComparator id="0:422">
+                                <BindablePropertyBoolean id="0:423">
+                                    <DataBindContext sourcePathIds="0:1-0:10" propertyKey="634" id="0:424" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:425" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:393" duration="0" id="0:426">
+                        <TransitionViewModelCondition opValue="equal" id="0:427">
+                            <TransitionPropertyViewModelComparator id="0:428">
+                                <BindablePropertyBoolean id="0:429">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:430" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:431" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:381" x="520" y="100" id="0:393">
+                    <StateTransition stateToId="0:391" duration="0" id="0:432">
+                        <TransitionViewModelCondition opValue="equal" id="0:433">
+                            <TransitionPropertyViewModelComparator id="0:434">
+                                <BindablePropertyBoolean id="0:435">
+                                    <DataBindContext sourcePathIds="0:1-0:10" propertyKey="634" id="0:436" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:437" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:392" duration="0" id="0:438">
+                        <TransitionViewModelCondition opValue="equal" id="0:439">
+                            <TransitionPropertyViewModelComparator id="0:440">
+                                <BindablePropertyBoolean id="0:441">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:442" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:443" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:394">
+                    <StateTransition stateToId="0:391" id="0:395" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:396" />
+                <ExitState x="780" y="-180" id="0:397" />
+            </StateMachineLayer>
+            <StateMachineLayer name="startPressed" id="0:493">
+                <AnimationState animationId="0:466" x="160" y="0" id="0:494">
+                    <StateTransition stateToId="0:495" duration="45" id="0:501">
+                        <TransitionViewModelCondition opValue="equal" id="0:502">
+                            <TransitionPropertyViewModelComparator id="0:503">
+                                <BindablePropertyBoolean id="0:504">
+                                    <DataBindContext sourcePathIds="0:1-0:9" propertyKey="634" id="0:505" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:506" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:507">
+                            <TransitionPropertyViewModelComparator id="0:508">
+                                <BindablePropertyBoolean id="0:509">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:510" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:511" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:496" duration="0" id="0:512">
+                        <TransitionViewModelCondition opValue="equal" id="0:513">
+                            <TransitionPropertyViewModelComparator id="0:514">
+                                <BindablePropertyBoolean id="0:515">
+                                    <DataBindContext sourcePathIds="0:1-0:9" propertyKey="634" id="0:516" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:517" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:518">
+                            <TransitionPropertyViewModelComparator id="0:519">
+                                <BindablePropertyBoolean id="0:520">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:521" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:522" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:475" x="340" y="-100" id="0:495">
+                    <StateTransition stateToId="0:494" duration="110" id="0:523">
+                        <TransitionViewModelCondition opValue="equal" id="0:524">
+                            <TransitionPropertyViewModelComparator id="0:525">
+                                <BindablePropertyBoolean id="0:526">
+                                    <DataBindContext sourcePathIds="0:1-0:9" propertyKey="634" id="0:527" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:528" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:496" duration="0" id="0:529">
+                        <TransitionViewModelCondition opValue="equal" id="0:530">
+                            <TransitionPropertyViewModelComparator id="0:531">
+                                <BindablePropertyBoolean id="0:532">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:533" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:534" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:484" x="520" y="100" id="0:496">
+                    <StateTransition stateToId="0:494" duration="0" id="0:535">
+                        <TransitionViewModelCondition opValue="equal" id="0:536">
+                            <TransitionPropertyViewModelComparator id="0:537">
+                                <BindablePropertyBoolean id="0:538">
+                                    <DataBindContext sourcePathIds="0:1-0:9" propertyKey="634" id="0:539" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:540" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:495" duration="0" id="0:541">
+                        <TransitionViewModelCondition opValue="equal" id="0:542">
+                            <TransitionPropertyViewModelComparator id="0:543">
+                                <BindablePropertyBoolean id="0:544">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:545" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:546" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:497">
+                    <StateTransition stateToId="0:494" id="0:498" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:499" />
+                <ExitState x="780" y="-180" id="0:500" />
+            </StateMachineLayer>
+            <StateMachineLayer name="menuPressed" id="0:596">
+                <AnimationState animationId="0:569" x="160" y="0" id="0:597">
+                    <StateTransition stateToId="0:598" duration="45" id="0:604">
+                        <TransitionViewModelCondition opValue="equal" id="0:605">
+                            <TransitionPropertyViewModelComparator id="0:606">
+                                <BindablePropertyBoolean id="0:607">
+                                    <DataBindContext sourcePathIds="0:1-0:11" propertyKey="634" id="0:608" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:609" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:610">
+                            <TransitionPropertyViewModelComparator id="0:611">
+                                <BindablePropertyBoolean id="0:612">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:613" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:614" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:599" duration="0" id="0:615">
+                        <TransitionViewModelCondition opValue="equal" id="0:616">
+                            <TransitionPropertyViewModelComparator id="0:617">
+                                <BindablePropertyBoolean id="0:618">
+                                    <DataBindContext sourcePathIds="0:1-0:11" propertyKey="634" id="0:619" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:620" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:621">
+                            <TransitionPropertyViewModelComparator id="0:622">
+                                <BindablePropertyBoolean id="0:623">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:624" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:625" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:578" x="340" y="-100" id="0:598">
+                    <StateTransition stateToId="0:597" duration="110" id="0:626">
+                        <TransitionViewModelCondition opValue="equal" id="0:627">
+                            <TransitionPropertyViewModelComparator id="0:628">
+                                <BindablePropertyBoolean id="0:629">
+                                    <DataBindContext sourcePathIds="0:1-0:11" propertyKey="634" id="0:630" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:631" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:599" duration="0" id="0:632">
+                        <TransitionViewModelCondition opValue="equal" id="0:633">
+                            <TransitionPropertyViewModelComparator id="0:634">
+                                <BindablePropertyBoolean id="0:635">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:636" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:637" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:587" x="520" y="100" id="0:599">
+                    <StateTransition stateToId="0:597" duration="0" id="0:638">
+                        <TransitionViewModelCondition opValue="equal" id="0:639">
+                            <TransitionPropertyViewModelComparator id="0:640">
+                                <BindablePropertyBoolean id="0:641">
+                                    <DataBindContext sourcePathIds="0:1-0:11" propertyKey="634" id="0:642" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:643" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:598" duration="0" id="0:644">
+                        <TransitionViewModelCondition opValue="equal" id="0:645">
+                            <TransitionPropertyViewModelComparator id="0:646">
+                                <BindablePropertyBoolean id="0:647">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:648" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:649" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:600">
+                    <StateTransition stateToId="0:597" id="0:601" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:602" />
+                <ExitState x="780" y="-180" id="0:603" />
+            </StateMachineLayer>
+            <StateMachineLayer name="stickActive" id="0:719">
+                <AnimationState animationId="0:707" x="160" y="0" id="0:720">
+                    <StateTransition stateToId="0:721" duration="45" id="0:727">
+                        <TransitionViewModelCondition opValue="equal" id="0:728">
+                            <TransitionPropertyViewModelComparator id="0:729">
+                                <BindablePropertyBoolean id="0:730">
+                                    <DataBindContext sourcePathIds="0:1-0:13" propertyKey="634" id="0:731" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:732" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:733">
+                            <TransitionPropertyViewModelComparator id="0:734">
+                                <BindablePropertyBoolean id="0:735">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:736" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:737" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:722" duration="0" id="0:738">
+                        <TransitionViewModelCondition opValue="equal" id="0:739">
+                            <TransitionPropertyViewModelComparator id="0:740">
+                                <BindablePropertyBoolean id="0:741">
+                                    <DataBindContext sourcePathIds="0:1-0:13" propertyKey="634" id="0:742" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:743" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:744">
+                            <TransitionPropertyViewModelComparator id="0:745">
+                                <BindablePropertyBoolean id="0:746">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:747" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:748" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:711" x="340" y="-100" id="0:721">
+                    <StateTransition stateToId="0:720" duration="110" id="0:749">
+                        <TransitionViewModelCondition opValue="equal" id="0:750">
+                            <TransitionPropertyViewModelComparator id="0:751">
+                                <BindablePropertyBoolean id="0:752">
+                                    <DataBindContext sourcePathIds="0:1-0:13" propertyKey="634" id="0:753" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:754" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:722" duration="0" id="0:755">
+                        <TransitionViewModelCondition opValue="equal" id="0:756">
+                            <TransitionPropertyViewModelComparator id="0:757">
+                                <BindablePropertyBoolean id="0:758">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:759" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:760" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:715" x="520" y="100" id="0:722">
+                    <StateTransition stateToId="0:720" duration="0" id="0:761">
+                        <TransitionViewModelCondition opValue="equal" id="0:762">
+                            <TransitionPropertyViewModelComparator id="0:763">
+                                <BindablePropertyBoolean id="0:764">
+                                    <DataBindContext sourcePathIds="0:1-0:13" propertyKey="634" id="0:765" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:766" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:721" duration="0" id="0:767">
+                        <TransitionViewModelCondition opValue="equal" id="0:768">
+                            <TransitionPropertyViewModelComparator id="0:769">
+                                <BindablePropertyBoolean id="0:770">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:771" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:772" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:723">
+                    <StateTransition stateToId="0:720" id="0:724" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:725" />
+                <ExitState x="780" y="-180" id="0:726" />
+            </StateMachineLayer>
+            <StateMachineLayer name="upPressed" id="0:797">
+                <AnimationState animationId="0:785" x="160" y="0" id="0:798">
+                    <StateTransition stateToId="0:799" duration="45" id="0:805">
+                        <TransitionViewModelCondition opValue="equal" id="0:806">
+                            <TransitionPropertyViewModelComparator id="0:807">
+                                <BindablePropertyBoolean id="0:808">
+                                    <DataBindContext sourcePathIds="0:1-0:3" propertyKey="634" id="0:809" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:810" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:811">
+                            <TransitionPropertyViewModelComparator id="0:812">
+                                <BindablePropertyBoolean id="0:813">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:814" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:815" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:800" duration="0" id="0:816">
+                        <TransitionViewModelCondition opValue="equal" id="0:817">
+                            <TransitionPropertyViewModelComparator id="0:818">
+                                <BindablePropertyBoolean id="0:819">
+                                    <DataBindContext sourcePathIds="0:1-0:3" propertyKey="634" id="0:820" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:821" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:822">
+                            <TransitionPropertyViewModelComparator id="0:823">
+                                <BindablePropertyBoolean id="0:824">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:825" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:826" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:789" x="340" y="-100" id="0:799">
+                    <StateTransition stateToId="0:798" duration="110" id="0:827">
+                        <TransitionViewModelCondition opValue="equal" id="0:828">
+                            <TransitionPropertyViewModelComparator id="0:829">
+                                <BindablePropertyBoolean id="0:830">
+                                    <DataBindContext sourcePathIds="0:1-0:3" propertyKey="634" id="0:831" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:832" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:800" duration="0" id="0:833">
+                        <TransitionViewModelCondition opValue="equal" id="0:834">
+                            <TransitionPropertyViewModelComparator id="0:835">
+                                <BindablePropertyBoolean id="0:836">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:837" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:838" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:793" x="520" y="100" id="0:800">
+                    <StateTransition stateToId="0:798" duration="0" id="0:839">
+                        <TransitionViewModelCondition opValue="equal" id="0:840">
+                            <TransitionPropertyViewModelComparator id="0:841">
+                                <BindablePropertyBoolean id="0:842">
+                                    <DataBindContext sourcePathIds="0:1-0:3" propertyKey="634" id="0:843" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:844" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:799" duration="0" id="0:845">
+                        <TransitionViewModelCondition opValue="equal" id="0:846">
+                            <TransitionPropertyViewModelComparator id="0:847">
+                                <BindablePropertyBoolean id="0:848">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:849" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:850" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:801">
+                    <StateTransition stateToId="0:798" id="0:802" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:803" />
+                <ExitState x="780" y="-180" id="0:804" />
+            </StateMachineLayer>
+            <StateMachineLayer name="rightPressed" id="0:875">
+                <AnimationState animationId="0:863" x="160" y="0" id="0:876">
+                    <StateTransition stateToId="0:877" duration="45" id="0:883">
+                        <TransitionViewModelCondition opValue="equal" id="0:884">
+                            <TransitionPropertyViewModelComparator id="0:885">
+                                <BindablePropertyBoolean id="0:886">
+                                    <DataBindContext sourcePathIds="0:1-0:6" propertyKey="634" id="0:887" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:888" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:889">
+                            <TransitionPropertyViewModelComparator id="0:890">
+                                <BindablePropertyBoolean id="0:891">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:892" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:893" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:878" duration="0" id="0:894">
+                        <TransitionViewModelCondition opValue="equal" id="0:895">
+                            <TransitionPropertyViewModelComparator id="0:896">
+                                <BindablePropertyBoolean id="0:897">
+                                    <DataBindContext sourcePathIds="0:1-0:6" propertyKey="634" id="0:898" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:899" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:900">
+                            <TransitionPropertyViewModelComparator id="0:901">
+                                <BindablePropertyBoolean id="0:902">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:903" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:904" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:867" x="340" y="-100" id="0:877">
+                    <StateTransition stateToId="0:876" duration="110" id="0:905">
+                        <TransitionViewModelCondition opValue="equal" id="0:906">
+                            <TransitionPropertyViewModelComparator id="0:907">
+                                <BindablePropertyBoolean id="0:908">
+                                    <DataBindContext sourcePathIds="0:1-0:6" propertyKey="634" id="0:909" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:910" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:878" duration="0" id="0:911">
+                        <TransitionViewModelCondition opValue="equal" id="0:912">
+                            <TransitionPropertyViewModelComparator id="0:913">
+                                <BindablePropertyBoolean id="0:914">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:915" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:916" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:871" x="520" y="100" id="0:878">
+                    <StateTransition stateToId="0:876" duration="0" id="0:917">
+                        <TransitionViewModelCondition opValue="equal" id="0:918">
+                            <TransitionPropertyViewModelComparator id="0:919">
+                                <BindablePropertyBoolean id="0:920">
+                                    <DataBindContext sourcePathIds="0:1-0:6" propertyKey="634" id="0:921" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:922" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:877" duration="0" id="0:923">
+                        <TransitionViewModelCondition opValue="equal" id="0:924">
+                            <TransitionPropertyViewModelComparator id="0:925">
+                                <BindablePropertyBoolean id="0:926">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:927" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:928" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:879">
+                    <StateTransition stateToId="0:876" id="0:880" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:881" />
+                <ExitState x="780" y="-180" id="0:882" />
+            </StateMachineLayer>
+            <StateMachineLayer name="downPressed" id="0:953">
+                <AnimationState animationId="0:941" x="160" y="0" id="0:954">
+                    <StateTransition stateToId="0:955" duration="45" id="0:961">
+                        <TransitionViewModelCondition opValue="equal" id="0:962">
+                            <TransitionPropertyViewModelComparator id="0:963">
+                                <BindablePropertyBoolean id="0:964">
+                                    <DataBindContext sourcePathIds="0:1-0:4" propertyKey="634" id="0:965" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:966" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:967">
+                            <TransitionPropertyViewModelComparator id="0:968">
+                                <BindablePropertyBoolean id="0:969">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:970" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:971" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:956" duration="0" id="0:972">
+                        <TransitionViewModelCondition opValue="equal" id="0:973">
+                            <TransitionPropertyViewModelComparator id="0:974">
+                                <BindablePropertyBoolean id="0:975">
+                                    <DataBindContext sourcePathIds="0:1-0:4" propertyKey="634" id="0:976" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:977" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:978">
+                            <TransitionPropertyViewModelComparator id="0:979">
+                                <BindablePropertyBoolean id="0:980">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:981" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:982" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:945" x="340" y="-100" id="0:955">
+                    <StateTransition stateToId="0:954" duration="110" id="0:983">
+                        <TransitionViewModelCondition opValue="equal" id="0:984">
+                            <TransitionPropertyViewModelComparator id="0:985">
+                                <BindablePropertyBoolean id="0:986">
+                                    <DataBindContext sourcePathIds="0:1-0:4" propertyKey="634" id="0:987" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:988" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:956" duration="0" id="0:989">
+                        <TransitionViewModelCondition opValue="equal" id="0:990">
+                            <TransitionPropertyViewModelComparator id="0:991">
+                                <BindablePropertyBoolean id="0:992">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:993" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:994" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:949" x="520" y="100" id="0:956">
+                    <StateTransition stateToId="0:954" duration="0" id="0:995">
+                        <TransitionViewModelCondition opValue="equal" id="0:996">
+                            <TransitionPropertyViewModelComparator id="0:997">
+                                <BindablePropertyBoolean id="0:998">
+                                    <DataBindContext sourcePathIds="0:1-0:4" propertyKey="634" id="0:999" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:1000" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:955" duration="0" id="0:1001">
+                        <TransitionViewModelCondition opValue="equal" id="0:1002">
+                            <TransitionPropertyViewModelComparator id="0:1003">
+                                <BindablePropertyBoolean id="0:1004">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:1005" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:1006" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:957">
+                    <StateTransition stateToId="0:954" id="0:958" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:959" />
+                <ExitState x="780" y="-180" id="0:960" />
+            </StateMachineLayer>
+            <StateMachineLayer name="leftPressed" id="0:1031">
+                <AnimationState animationId="0:1019" x="160" y="0" id="0:1032">
+                    <StateTransition stateToId="0:1033" duration="45" id="0:1039">
+                        <TransitionViewModelCondition opValue="equal" id="0:1040">
+                            <TransitionPropertyViewModelComparator id="0:1041">
+                                <BindablePropertyBoolean id="0:1042">
+                                    <DataBindContext sourcePathIds="0:1-0:5" propertyKey="634" id="0:1043" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:1044" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:1045">
+                            <TransitionPropertyViewModelComparator id="0:1046">
+                                <BindablePropertyBoolean id="0:1047">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:1048" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:1049" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:1034" duration="0" id="0:1050">
+                        <TransitionViewModelCondition opValue="equal" id="0:1051">
+                            <TransitionPropertyViewModelComparator id="0:1052">
+                                <BindablePropertyBoolean id="0:1053">
+                                    <DataBindContext sourcePathIds="0:1-0:5" propertyKey="634" id="0:1054" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:1055" />
+                        </TransitionViewModelCondition>
+                        <TransitionViewModelCondition opValue="equal" id="0:1056">
+                            <TransitionPropertyViewModelComparator id="0:1057">
+                                <BindablePropertyBoolean id="0:1058">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:1059" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:1060" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:1023" x="340" y="-100" id="0:1033">
+                    <StateTransition stateToId="0:1032" duration="110" id="0:1061">
+                        <TransitionViewModelCondition opValue="equal" id="0:1062">
+                            <TransitionPropertyViewModelComparator id="0:1063">
+                                <BindablePropertyBoolean id="0:1064">
+                                    <DataBindContext sourcePathIds="0:1-0:5" propertyKey="634" id="0:1065" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:1066" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:1034" duration="0" id="0:1067">
+                        <TransitionViewModelCondition opValue="equal" id="0:1068">
+                            <TransitionPropertyViewModelComparator id="0:1069">
+                                <BindablePropertyBoolean id="0:1070">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:1071" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true" id="0:1072" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState animationId="0:1027" x="520" y="100" id="0:1034">
+                    <StateTransition stateToId="0:1032" duration="0" id="0:1073">
+                        <TransitionViewModelCondition opValue="equal" id="0:1074">
+                            <TransitionPropertyViewModelComparator id="0:1075">
+                                <BindablePropertyBoolean id="0:1076">
+                                    <DataBindContext sourcePathIds="0:1-0:5" propertyKey="634" id="0:1077" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:1078" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                    <StateTransition stateToId="0:1033" duration="0" id="0:1079">
+                        <TransitionViewModelCondition opValue="equal" id="0:1080">
+                            <TransitionPropertyViewModelComparator id="0:1081">
+                                <BindablePropertyBoolean id="0:1082">
+                                    <DataBindContext sourcePathIds="0:1-0:12" propertyKey="634" id="0:1083" />
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false" id="0:1084" />
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <EntryState x="0" y="0" id="0:1035">
+                    <StateTransition stateToId="0:1032" id="0:1036" />
+                </EntryState>
+                <AnyState x="600" y="-180" id="0:1037" />
+                <ExitState x="780" y="-180" id="0:1038" />
+            </StateMachineLayer>
+        </StateMachine>
+        <Text x="25" y="29" name="ANALOG / LAB" originX="0" originY="0.5" sizingValue="autoWidth" id="0:105">
+            <TextStylePaint fontSize="18" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="0" name="Label" id="0:106">
+                <Fill name="Paint" id="0:107">
+                    <SolidColor name="Color" colorValue="FFDCE9ED" id="0:108" />
+                </Fill>
+            </TextStylePaint>
+            <TextValueRun styleId="0:106" text="ANALOG / LAB" name="Text" id="0:109" />
+        </Text>
+        <Text x="25" y="52" name="CONTINUOUS INPUT   /   X + Y" originX="0" originY="0.5" sizingValue="autoWidth" id="0:110">
+            <TextStylePaint fontSize="8" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:111">
+                <Fill name="Paint" id="0:112">
+                    <SolidColor name="Color" colorValue="FF80909F" id="0:113" />
+                </Fill>
+            </TextStylePaint>
+            <TextValueRun styleId="0:111" text="CONTINUOUS INPUT   /   X + Y" name="Text" id="0:114" />
+        </Text>
+        <Shape x="334" y="27" name="Panel" id="0:115">
+            <Rectangle width="3" height="9" originX="0.5" originY="0.5" cornerRadiusTL="1" cornerRadiusTR="1" cornerRadiusBL="1" cornerRadiusBR="1" name="Path" id="0:116" />
+            <Fill name="Paint" id="0:117">
+                <SolidColor name="Color" colorValue="FF65E7D4" id="0:118" />
+            </Fill>
+        </Shape>
+        <Shape x="342" y="27" name="Panel" id="0:119">
+            <Rectangle width="3" height="9" originX="0.5" originY="0.5" cornerRadiusTL="1" cornerRadiusTR="1" cornerRadiusBL="1" cornerRadiusBR="1" name="Path" id="0:120" />
+            <Fill name="Paint" id="0:121">
+                <SolidColor name="Color" colorValue="FF65E7D4" id="0:122" />
+            </Fill>
+        </Shape>
+        <Shape x="350" y="27" name="Panel" id="0:123">
+            <Rectangle width="3" height="9" originX="0.5" originY="0.5" cornerRadiusTL="1" cornerRadiusTR="1" cornerRadiusBL="1" cornerRadiusBR="1" name="Path" id="0:124" />
+            <Fill name="Paint" id="0:125">
+                <SolidColor name="Color" colorValue="FF65E7D4" id="0:126" />
+            </Fill>
+        </Shape>
+        <Shape x="358" y="27" name="Panel" id="0:127">
+            <Rectangle width="3" height="9" originX="0.5" originY="0.5" cornerRadiusTL="1" cornerRadiusTR="1" cornerRadiusBL="1" cornerRadiusBR="1" name="Path" id="0:128" />
+            <Fill name="Paint" id="0:129">
+                <SolidColor name="Color" colorValue="FF2B3845" id="0:130" />
+            </Fill>
+        </Shape>
+        <Node x="326" y="141" name="a cap" id="0:131">
+            <Text x="0" y="0" name="A" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:132">
+                <TextStylePaint fontSize="20" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="0" name="Label" id="0:133">
+                    <Fill name="Paint" id="0:134">
+                        <SolidColor name="Color" colorValue="FFDAE5EF" id="0:135" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:133" text="A" name="Text" id="0:136" />
+            </Text>
+            <Shape x="0" y="0" name="Ring" id="0:137">
+                <Ellipse width="50" height="50" name="Path" id="0:138" />
+                <Fill name="Paint" id="0:139">
+                    <SolidColor name="Color" colorValue="FF28313F" id="0:140" />
+                </Fill>
+            </Shape>
+            <Shape x="0" y="2" name="Ring" id="0:141">
+                <Ellipse width="55" height="55" name="Path" id="0:142" />
+                <Fill name="Paint" id="0:143">
+                    <SolidColor name="Color" colorValue="FF0C111B" id="0:144" />
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="326" y="141" opacity="0.06" name="a LED" id="0:145">
+            <Shape x="0" y="0" name="Ring" id="0:146">
+                <Ellipse width="63" height="63" name="Path" id="0:147" />
+                <Stroke name="Paint" thickness="2" id="0:148">
+                    <SolidColor name="Color" colorValue="FFFF9F66" id="0:149" />
+                </Stroke>
+            </Shape>
+            <Shape x="0" y="0" name="Ring" id="0:150">
+                <Ellipse width="65" height="65" name="Path" id="0:151" />
+                <Stroke name="Glow" thickness="7" id="0:152">
+                    <SolidColor name="Color" colorValue="FFFF9F66" id="0:153" />
+                    <Feather name="Vector feather" strength="13" id="0:154" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <LinearAnimation duration="1" name="aPressed Rest" id="0:155">
+            <KeyedObject objectId="0:145" id="0:156">
+                <KeyedProperty propertyKey="18" id="0:157">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:158" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:131" id="0:159">
+                <KeyedProperty propertyKey="16" id="0:160">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:161" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:162">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:163" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="aPressed Press" id="0:164">
+            <KeyedObject objectId="0:145" id="0:165">
+                <KeyedProperty propertyKey="18" id="0:166">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:167" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:131" id="0:168">
+                <KeyedProperty propertyKey="16" id="0:169">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:170" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:171">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:172" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="aPressed Still" id="0:173">
+            <KeyedObject objectId="0:145" id="0:174">
+                <KeyedProperty propertyKey="18" id="0:175">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:176" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:131" id="0:177">
+                <KeyedProperty propertyKey="16" id="0:178">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:179" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:180">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:181" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <Node x="253" y="178" name="b cap" id="0:236">
+            <Text x="0" y="0" name="B" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:237">
+                <TextStylePaint fontSize="20" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="0" name="Label" id="0:238">
+                    <Fill name="Paint" id="0:239">
+                        <SolidColor name="Color" colorValue="FFDAE5EF" id="0:240" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:238" text="B" name="Text" id="0:241" />
+            </Text>
+            <Shape x="0" y="0" name="Ring" id="0:242">
+                <Ellipse width="50" height="50" name="Path" id="0:243" />
+                <Fill name="Paint" id="0:244">
+                    <SolidColor name="Color" colorValue="FF28313F" id="0:245" />
+                </Fill>
+            </Shape>
+            <Shape x="0" y="2" name="Ring" id="0:246">
+                <Ellipse width="55" height="55" name="Path" id="0:247" />
+                <Fill name="Paint" id="0:248">
+                    <SolidColor name="Color" colorValue="FF0C111B" id="0:249" />
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="253" y="178" opacity="0.06" name="b LED" id="0:250">
+            <Shape x="0" y="0" name="Ring" id="0:251">
+                <Ellipse width="63" height="63" name="Path" id="0:252" />
+                <Stroke name="Paint" thickness="2" id="0:253">
+                    <SolidColor name="Color" colorValue="FFE88BDB" id="0:254" />
+                </Stroke>
+            </Shape>
+            <Shape x="0" y="0" name="Ring" id="0:255">
+                <Ellipse width="65" height="65" name="Path" id="0:256" />
+                <Stroke name="Glow" thickness="7" id="0:257">
+                    <SolidColor name="Color" colorValue="FFE88BDB" id="0:258" />
+                    <Feather name="Vector feather" strength="13" id="0:259" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <LinearAnimation duration="1" name="bPressed Rest" id="0:260">
+            <KeyedObject objectId="0:250" id="0:261">
+                <KeyedProperty propertyKey="18" id="0:262">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:263" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:236" id="0:264">
+                <KeyedProperty propertyKey="16" id="0:265">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:266" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:267">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:268" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="bPressed Press" id="0:269">
+            <KeyedObject objectId="0:250" id="0:270">
+                <KeyedProperty propertyKey="18" id="0:271">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:272" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:236" id="0:273">
+                <KeyedProperty propertyKey="16" id="0:274">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:275" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:276">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:277" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="bPressed Still" id="0:278">
+            <KeyedObject objectId="0:250" id="0:279">
+                <KeyedProperty propertyKey="18" id="0:280">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:281" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:236" id="0:282">
+                <KeyedProperty propertyKey="16" id="0:283">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:284" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:285">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:286" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <Node x="153" y="265" name="select cap" id="0:341">
+            <Text x="0" y="0" name="SELECT" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:342">
+                <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:343">
+                    <Fill name="Paint" id="0:344">
+                        <SolidColor name="Color" colorValue="FFDAE5EF" id="0:345" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:343" text="SELECT" name="Text" id="0:346" />
+            </Text>
+            <Shape x="0" y="0" name="Panel" id="0:347">
+                <Rectangle width="48" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:348" />
+                <Fill name="Paint" id="0:349">
+                    <SolidColor name="Color" colorValue="FF263240" id="0:350" />
+                </Fill>
+            </Shape>
+            <Shape x="0" y="2" name="Panel" id="0:351">
+                <Rectangle width="50" height="18" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:352" />
+                <Fill name="Paint" id="0:353">
+                    <SolidColor name="Color" colorValue="FF090E17" id="0:354" />
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="153" y="265" opacity="0.06" name="select LED" id="0:355">
+            <Shape x="0" y="0" name="Panel" id="0:356">
+                <Rectangle width="55" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:357" />
+                <Stroke name="Paint" thickness="2" id="0:358">
+                    <SolidColor name="Color" colorValue="FF65E7D4" id="0:359" />
+                </Stroke>
+                <Stroke name="Glow" thickness="5" id="0:360">
+                    <SolidColor name="Color" colorValue="FF65E7D4" id="0:361" />
+                    <Feather name="Vector feather" strength="10" id="0:362" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <LinearAnimation duration="1" name="selectPressed Rest" id="0:363">
+            <KeyedObject objectId="0:355" id="0:364">
+                <KeyedProperty propertyKey="18" id="0:365">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:366" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:341" id="0:367">
+                <KeyedProperty propertyKey="16" id="0:368">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:369" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:370">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:371" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="selectPressed Press" id="0:372">
+            <KeyedObject objectId="0:355" id="0:373">
+                <KeyedProperty propertyKey="18" id="0:374">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:375" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:341" id="0:376">
+                <KeyedProperty propertyKey="16" id="0:377">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:378" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:379">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:380" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="selectPressed Still" id="0:381">
+            <KeyedObject objectId="0:355" id="0:382">
+                <KeyedProperty propertyKey="18" id="0:383">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:384" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:341" id="0:385">
+                <KeyedProperty propertyKey="16" id="0:386">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:387" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:388">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:389" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <Node x="233" y="265" name="start cap" id="0:444">
+            <Text x="0" y="0" name="START" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:445">
+                <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:446">
+                    <Fill name="Paint" id="0:447">
+                        <SolidColor name="Color" colorValue="FFDAE5EF" id="0:448" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:446" text="START" name="Text" id="0:449" />
+            </Text>
+            <Shape x="0" y="0" name="Panel" id="0:450">
+                <Rectangle width="48" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:451" />
+                <Fill name="Paint" id="0:452">
+                    <SolidColor name="Color" colorValue="FF263240" id="0:453" />
+                </Fill>
+            </Shape>
+            <Shape x="0" y="2" name="Panel" id="0:454">
+                <Rectangle width="50" height="18" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:455" />
+                <Fill name="Paint" id="0:456">
+                    <SolidColor name="Color" colorValue="FF090E17" id="0:457" />
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="233" y="265" opacity="0.06" name="start LED" id="0:458">
+            <Shape x="0" y="0" name="Panel" id="0:459">
+                <Rectangle width="55" height="23" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:460" />
+                <Stroke name="Paint" thickness="2" id="0:461">
+                    <SolidColor name="Color" colorValue="FF65E7D4" id="0:462" />
+                </Stroke>
+                <Stroke name="Glow" thickness="5" id="0:463">
+                    <SolidColor name="Color" colorValue="FF65E7D4" id="0:464" />
+                    <Feather name="Vector feather" strength="10" id="0:465" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <LinearAnimation duration="1" name="startPressed Rest" id="0:466">
+            <KeyedObject objectId="0:458" id="0:467">
+                <KeyedProperty propertyKey="18" id="0:468">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:469" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:444" id="0:470">
+                <KeyedProperty propertyKey="16" id="0:471">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:472" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:473">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:474" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="startPressed Press" id="0:475">
+            <KeyedObject objectId="0:458" id="0:476">
+                <KeyedProperty propertyKey="18" id="0:477">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:478" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:444" id="0:479">
+                <KeyedProperty propertyKey="16" id="0:480">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:481" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:482">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:483" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="startPressed Still" id="0:484">
+            <KeyedObject objectId="0:458" id="0:485">
+                <KeyedProperty propertyKey="18" id="0:486">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:487" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:444" id="0:488">
+                <KeyedProperty propertyKey="16" id="0:489">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:490" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:491">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:492" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <Node x="40" y="292" name="menu cap" id="0:547">
+            <Text x="0" y="0" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:548">
+                <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:549">
+                    <Fill name="Paint" id="0:550">
+                        <SolidColor name="Color" colorValue="FFDAE5EF" id="0:551" />
+                    </Fill>
+                </TextStylePaint>
+                <TextValueRun styleId="0:549" text="MENU" name="Text" id="0:552" />
+            </Text>
+            <Shape x="0" y="0" name="Panel" id="0:553">
+                <Rectangle width="34" height="15" originX="0.5" originY="0.5" cornerRadiusTL="7.5" cornerRadiusTR="7.5" cornerRadiusBL="7.5" cornerRadiusBR="7.5" name="Path" id="0:554" />
+                <Fill name="Paint" id="0:555">
+                    <SolidColor name="Color" colorValue="FF263240" id="0:556" />
+                </Fill>
+            </Shape>
+            <Shape x="0" y="2" name="Panel" id="0:557">
+                <Rectangle width="36" height="17" originX="0.5" originY="0.5" cornerRadiusTL="7.5" cornerRadiusTR="7.5" cornerRadiusBL="7.5" cornerRadiusBR="7.5" name="Path" id="0:558" />
+                <Fill name="Paint" id="0:559">
+                    <SolidColor name="Color" colorValue="FF090E17" id="0:560" />
+                </Fill>
+            </Shape>
+        </Node>
+        <Node x="40" y="292" opacity="0.06" name="menu LED" id="0:561">
+            <Shape x="0" y="0" name="Panel" id="0:562">
+                <Rectangle width="41" height="22" originX="0.5" originY="0.5" cornerRadiusTL="7.5" cornerRadiusTR="7.5" cornerRadiusBL="7.5" cornerRadiusBR="7.5" name="Path" id="0:563" />
+                <Stroke name="Paint" thickness="2" id="0:564">
+                    <SolidColor name="Color" colorValue="FF65E7D4" id="0:565" />
+                </Stroke>
+                <Stroke name="Glow" thickness="5" id="0:566">
+                    <SolidColor name="Color" colorValue="FF65E7D4" id="0:567" />
+                    <Feather name="Vector feather" strength="10" id="0:568" />
+                </Stroke>
+            </Shape>
+        </Node>
+        <LinearAnimation duration="1" name="menuPressed Rest" id="0:569">
+            <KeyedObject objectId="0:561" id="0:570">
+                <KeyedProperty propertyKey="18" id="0:571">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:572" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:547" id="0:573">
+                <KeyedProperty propertyKey="16" id="0:574">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:575" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:576">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:577" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="menuPressed Press" id="0:578">
+            <KeyedObject objectId="0:561" id="0:579">
+                <KeyedProperty propertyKey="18" id="0:580">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:581" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:547" id="0:582">
+                <KeyedProperty propertyKey="16" id="0:583">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:584" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:585">
+                    <KeyFrameDouble value="0.94" interpolationType="linear" id="0:586" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="menuPressed Still" id="0:587">
+            <KeyedObject objectId="0:561" id="0:588">
+                <KeyedProperty propertyKey="18" id="0:589">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:590" />
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:547" id="0:591">
+                <KeyedProperty propertyKey="16" id="0:592">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:593" />
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17" id="0:594">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:595" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <Text x="366" y="305" name="AXIS / XY" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:650">
+            <TextStylePaint fontSize="8" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:651">
+                <Fill name="Paint" id="0:652">
+                    <SolidColor name="Color" colorValue="FF80909F" id="0:653" />
+                </Fill>
+            </TextStylePaint>
+            <TextValueRun styleId="0:651" text="AXIS / XY" name="Text" id="0:654" />
+        </Text>
+        <Node x="100" y="158" name="Stick socket" id="0:655">
+            <Node name="Stick cap" id="0:656">
+                <DataBindContext sourcePathIds="0:1-0:14" propertyKey="13" converterId="0:657" id="0:658" />
+                <DataBindContext sourcePathIds="0:1-0:15" propertyKey="14" converterId="0:659" id="0:660" />
+                <Shape x="0" y="0" name="Ring" id="0:661">
+                    <Ellipse width="9" height="9" name="Path" id="0:662" />
+                    <Fill name="Paint" id="0:663">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:664" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="-8" name="Panel" id="0:665">
+                    <Rectangle width="10" height="0.7" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:666" />
+                    <Fill name="Paint" id="0:667">
+                        <SolidColor name="Color" colorValue="FF3C4D5A" id="0:668" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="-4" name="Panel" id="0:669">
+                    <Rectangle width="18" height="0.7" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:670" />
+                    <Fill name="Paint" id="0:671">
+                        <SolidColor name="Color" colorValue="FF3C4D5A" id="0:672" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="0" name="Panel" id="0:673">
+                    <Rectangle width="18" height="0.7" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:674" />
+                    <Fill name="Paint" id="0:675">
+                        <SolidColor name="Color" colorValue="FF3C4D5A" id="0:676" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="4" name="Panel" id="0:677">
+                    <Rectangle width="18" height="0.7" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:678" />
+                    <Fill name="Paint" id="0:679">
+                        <SolidColor name="Color" colorValue="FF3C4D5A" id="0:680" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="8" name="Panel" id="0:681">
+                    <Rectangle width="10" height="0.7" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:682" />
+                    <Fill name="Paint" id="0:683">
+                        <SolidColor name="Color" colorValue="FF3C4D5A" id="0:684" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="0" name="Ring" id="0:685">
+                    <Ellipse width="54" height="54" name="Path" id="0:686" />
+                    <Stroke name="Paint" thickness="1" id="0:687">
+                        <SolidColor name="Color" colorValue="FF283744" id="0:688" />
+                    </Stroke>
+                </Shape>
+                <Shape x="0" y="0" name="Ring" id="0:689">
+                    <Ellipse width="55" height="55" name="Path" id="0:690" />
+                    <Fill name="Paint" id="0:691">
+                        <SolidColor name="Color" colorValue="FF17212E" id="0:692" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="3" name="Ring" id="0:693">
+                    <Ellipse width="58" height="58" name="Path" id="0:694" />
+                    <Fill name="Paint" id="0:695">
+                        <SolidColor name="Color" colorValue="FF090F18" id="0:696" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node opacity="0.06" name="Tracking halo" id="0:697">
+                <Shape x="0" y="0" name="Ring" id="0:698">
+                    <Ellipse width="73" height="73" name="Path" id="0:699" />
+                    <Stroke name="Paint" thickness="2" id="0:700">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:701" />
+                    </Stroke>
+                </Shape>
+                <Shape x="0" y="0" name="Ring" id="0:702">
+                    <Ellipse width="76" height="76" name="Path" id="0:703" />
+                    <Stroke name="Glow" thickness="6" id="0:704">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:705" />
+                        <Feather name="Vector feather" strength="12" id="0:706" />
+                    </Stroke>
+                </Shape>
+            </Node>
+            <Node x="0" y="-53" rotation="0.0" opacity="0.06" name="up light" id="0:773">
+                <Shape x="0" y="0" name="Panel" id="0:774">
+                    <Rectangle width="24" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:775" />
+                    <Fill name="Paint" id="0:776">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:777" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="0" name="Panel" id="0:778">
+                    <Rectangle width="25" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:779" />
+                    <Fill name="Paint" id="0:780">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:781" />
+                    </Fill>
+                    <Stroke name="Glow" thickness="4" id="0:782">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:783" />
+                        <Feather name="Vector feather" strength="9" id="0:784" />
+                    </Stroke>
+                </Shape>
+            </Node>
+            <Node x="53" y="0" rotation="1.5707963267948966" opacity="0.06" name="right light" id="0:851">
+                <Shape x="0" y="0" name="Panel" id="0:852">
+                    <Rectangle width="24" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:853" />
+                    <Fill name="Paint" id="0:854">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:855" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="0" name="Panel" id="0:856">
+                    <Rectangle width="25" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:857" />
+                    <Fill name="Paint" id="0:858">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:859" />
+                    </Fill>
+                    <Stroke name="Glow" thickness="4" id="0:860">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:861" />
+                        <Feather name="Vector feather" strength="9" id="0:862" />
+                    </Stroke>
+                </Shape>
+            </Node>
+            <Node x="0" y="53" rotation="3.141592653589793" opacity="0.06" name="down light" id="0:929">
+                <Shape x="0" y="0" name="Panel" id="0:930">
+                    <Rectangle width="24" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:931" />
+                    <Fill name="Paint" id="0:932">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:933" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="0" name="Panel" id="0:934">
+                    <Rectangle width="25" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:935" />
+                    <Fill name="Paint" id="0:936">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:937" />
+                    </Fill>
+                    <Stroke name="Glow" thickness="4" id="0:938">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:939" />
+                        <Feather name="Vector feather" strength="9" id="0:940" />
+                    </Stroke>
+                </Shape>
+            </Node>
+            <Node x="-53" y="0" rotation="4.71238898038469" opacity="0.06" name="left light" id="0:1007">
+                <Shape x="0" y="0" name="Panel" id="0:1008">
+                    <Rectangle width="24" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:1009" />
+                    <Fill name="Paint" id="0:1010">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:1011" />
+                    </Fill>
+                </Shape>
+                <Shape x="0" y="0" name="Panel" id="0:1012">
+                    <Rectangle width="25" height="3" originX="0.5" originY="0.5" cornerRadiusTL="1.5" cornerRadiusTR="1.5" cornerRadiusBL="1.5" cornerRadiusBR="1.5" name="Path" id="0:1013" />
+                    <Fill name="Paint" id="0:1014">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:1015" />
+                    </Fill>
+                    <Stroke name="Glow" thickness="4" id="0:1016">
+                        <SolidColor name="Color" colorValue="FF65E7D4" id="0:1017" />
+                        <Feather name="Vector feather" strength="9" id="0:1018" />
+                    </Stroke>
+                </Shape>
+            </Node>
+            <Node x="65.0" y="0.0" rotation="0.0" name="Index 00" id="0:1085">
+                <Shape x="0" y="0" name="Panel" id="0:1086">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1087" />
+                    <Fill name="Paint" id="0:1088">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1089" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="64.19974213868396" y="10.168240227615007" rotation="0.15707963267948966" name="Index 01" id="0:1090">
+                <Shape x="0" y="0" name="Panel" id="0:1091">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1092" />
+                    <Fill name="Paint" id="0:1093">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1094" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="61.81867355918498" y="20.08610463437158" rotation="0.3141592653589793" name="Index 02" id="0:1095">
+                <Shape x="0" y="0" name="Panel" id="0:1096">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1097" />
+                    <Fill name="Paint" id="0:1098">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1099" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="57.915424072243916" y="29.509382483070542" rotation="0.47123889803846897" name="Index 03" id="0:1100">
+                <Shape x="0" y="0" name="Panel" id="0:1101">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1102" />
+                    <Fill name="Paint" id="0:1103">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1104" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="52.58610463437159" y="38.20604139901075" rotation="0.6283185307179586" name="Index 04" id="0:1105">
+                <Shape x="0" y="0" name="Panel" id="0:1106">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1107" />
+                    <Fill name="Paint" id="0:1108">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1109" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="45.96194077712559" y="45.961940777125584" rotation="0.7853981633974483" name="Index 05" id="0:1110">
+                <Shape x="0" y="0" name="Panel" id="0:1111">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1112" />
+                    <Fill name="Paint" id="0:1113">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1114" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="38.20604139901075" y="52.58610463437159" rotation="0.9424777960769379" name="Index 06" id="0:1115">
+                <Shape x="0" y="0" name="Panel" id="0:1116">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1117" />
+                    <Fill name="Paint" id="0:1118">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1119" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="29.509382483070546" y="57.915424072243916" rotation="1.0995574287564276" name="Index 07" id="0:1120">
+                <Shape x="0" y="0" name="Panel" id="0:1121">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1122" />
+                    <Fill name="Paint" id="0:1123">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1124" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="20.086104634371583" y="61.81867355918498" rotation="1.2566370614359172" name="Index 08" id="0:1125">
+                <Shape x="0" y="0" name="Panel" id="0:1126">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1127" />
+                    <Fill name="Paint" id="0:1128">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1129" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="10.16824022761501" y="64.19974213868396" rotation="1.413716694115407" name="Index 09" id="0:1130">
+                <Shape x="0" y="0" name="Panel" id="0:1131">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1132" />
+                    <Fill name="Paint" id="0:1133">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1134" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="3.980102097228898e-15" y="65.0" rotation="1.5707963267948966" name="Index 10" id="0:1135">
+                <Shape x="0" y="0" name="Panel" id="0:1136">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1137" />
+                    <Fill name="Paint" id="0:1138">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1139" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-10.168240227614989" y="64.19974213868396" rotation="1.727875959474386" name="Index 11" id="0:1140">
+                <Shape x="0" y="0" name="Panel" id="0:1141">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1142" />
+                    <Fill name="Paint" id="0:1143">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1144" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-20.086104634371576" y="61.81867355918499" rotation="1.8849555921538759" name="Index 12" id="0:1145">
+                <Shape x="0" y="0" name="Panel" id="0:1146">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1147" />
+                    <Fill name="Paint" id="0:1148">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1149" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-29.50938248307054" y="57.915424072243916" rotation="2.0420352248333655" name="Index 13" id="0:1150">
+                <Shape x="0" y="0" name="Panel" id="0:1151">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1152" />
+                    <Fill name="Paint" id="0:1153">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1154" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-38.20604139901074" y="52.58610463437159" rotation="2.199114857512855" name="Index 14" id="0:1155">
+                <Shape x="0" y="0" name="Panel" id="0:1156">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1157" />
+                    <Fill name="Paint" id="0:1158">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1159" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-45.961940777125584" y="45.96194077712559" rotation="2.356194490192345" name="Index 15" id="0:1160">
+                <Shape x="0" y="0" name="Panel" id="0:1161">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1162" />
+                    <Fill name="Paint" id="0:1163">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1164" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-52.58610463437158" y="38.20604139901076" rotation="2.5132741228718345" name="Index 16" id="0:1165">
+                <Shape x="0" y="0" name="Panel" id="0:1166">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1167" />
+                    <Fill name="Paint" id="0:1168">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1169" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-57.91542407224391" y="29.509382483070546" rotation="2.670353755551324" name="Index 17" id="0:1170">
+                <Shape x="0" y="0" name="Panel" id="0:1171">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1172" />
+                    <Fill name="Paint" id="0:1173">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1174" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-61.81867355918498" y="20.086104634371587" rotation="2.827433388230814" name="Index 18" id="0:1175">
+                <Shape x="0" y="0" name="Panel" id="0:1176">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1177" />
+                    <Fill name="Paint" id="0:1178">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1179" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-64.19974213868394" y="10.168240227615014" rotation="2.9845130209103035" name="Index 19" id="0:1180">
+                <Shape x="0" y="0" name="Panel" id="0:1181">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1182" />
+                    <Fill name="Paint" id="0:1183">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1184" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-65.0" y="7.960204194457796e-15" rotation="3.141592653589793" name="Index 20" id="0:1185">
+                <Shape x="0" y="0" name="Panel" id="0:1186">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1187" />
+                    <Fill name="Paint" id="0:1188">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1189" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-64.19974213868396" y="-10.168240227614998" rotation="3.2986722862692828" name="Index 21" id="0:1190">
+                <Shape x="0" y="0" name="Panel" id="0:1191">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1192" />
+                    <Fill name="Paint" id="0:1193">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1194" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-61.818673559184994" y="-20.086104634371548" rotation="3.455751918948772" name="Index 22" id="0:1195">
+                <Shape x="0" y="0" name="Panel" id="0:1196">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1197" />
+                    <Fill name="Paint" id="0:1198">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1199" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-57.915424072243916" y="-29.509382483070535" rotation="3.612831551628262" name="Index 23" id="0:1200">
+                <Shape x="0" y="0" name="Panel" id="0:1201">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1202" />
+                    <Fill name="Paint" id="0:1203">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1204" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-52.58610463437159" y="-38.20604139901074" rotation="3.7699111843077517" name="Index 24" id="0:1205">
+                <Shape x="0" y="0" name="Panel" id="0:1206">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1207" />
+                    <Fill name="Paint" id="0:1208">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1209" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-45.9619407771256" y="-45.961940777125584" rotation="3.9269908169872414" name="Index 25" id="0:1210">
+                <Shape x="0" y="0" name="Panel" id="0:1211">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1212" />
+                    <Fill name="Paint" id="0:1213">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1214" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-38.20604139901076" y="-52.58610463437158" rotation="4.084070449666731" name="Index 26" id="0:1215">
+                <Shape x="0" y="0" name="Panel" id="0:1216">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1217" />
+                    <Fill name="Paint" id="0:1218">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1219" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-29.509382483070553" y="-57.91542407224391" rotation="4.241150082346221" name="Index 27" id="0:1220">
+                <Shape x="0" y="0" name="Panel" id="0:1221">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1222" />
+                    <Fill name="Paint" id="0:1223">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1224" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-20.08610463437159" y="-61.81867355918498" rotation="4.39822971502571" name="Index 28" id="0:1225">
+                <Shape x="0" y="0" name="Panel" id="0:1226">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1227" />
+                    <Fill name="Paint" id="0:1228">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1229" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-10.168240227615017" y="-64.19974213868394" rotation="4.5553093477052" name="Index 29" id="0:1230">
+                <Shape x="0" y="0" name="Panel" id="0:1231">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1232" />
+                    <Fill name="Paint" id="0:1233">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1234" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="-1.1940306291686693e-14" y="-65.0" rotation="4.71238898038469" name="Index 30" id="0:1235">
+                <Shape x="0" y="0" name="Panel" id="0:1236">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1237" />
+                    <Fill name="Paint" id="0:1238">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1239" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="10.168240227614994" y="-64.19974213868396" rotation="4.869468613064179" name="Index 31" id="0:1240">
+                <Shape x="0" y="0" name="Panel" id="0:1241">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1242" />
+                    <Fill name="Paint" id="0:1243">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1244" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="20.08610463437157" y="-61.81867355918499" rotation="5.026548245743669" name="Index 32" id="0:1245">
+                <Shape x="0" y="0" name="Panel" id="0:1246">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1247" />
+                    <Fill name="Paint" id="0:1248">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1249" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="29.50938248307053" y="-57.915424072243916" rotation="5.183627878423159" name="Index 33" id="0:1250">
+                <Shape x="0" y="0" name="Panel" id="0:1251">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1252" />
+                    <Fill name="Paint" id="0:1253">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1254" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="38.206041399010736" y="-52.586104634371594" rotation="5.340707511102648" name="Index 34" id="0:1255">
+                <Shape x="0" y="0" name="Panel" id="0:1256">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1257" />
+                    <Fill name="Paint" id="0:1258">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1259" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="45.96194077712558" y="-45.9619407771256" rotation="5.497787143782138" name="Index 35" id="0:1260">
+                <Shape x="0" y="0" name="Panel" id="0:1261">
+                    <Rectangle width="5" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1262" />
+                    <Fill name="Paint" id="0:1263">
+                        <SolidColor name="Color" colorValue="FF50616C" id="0:1264" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="52.58610463437158" y="-38.20604139901077" rotation="5.654866776461628" name="Index 36" id="0:1265">
+                <Shape x="0" y="0" name="Panel" id="0:1266">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1267" />
+                    <Fill name="Paint" id="0:1268">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1269" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="57.91542407224391" y="-29.509382483070553" rotation="5.811946409141117" name="Index 37" id="0:1270">
+                <Shape x="0" y="0" name="Panel" id="0:1271">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1272" />
+                    <Fill name="Paint" id="0:1273">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1274" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="61.81867355918498" y="-20.086104634371598" rotation="5.969026041820607" name="Index 38" id="0:1275">
+                <Shape x="0" y="0" name="Panel" id="0:1276">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1277" />
+                    <Fill name="Paint" id="0:1278">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1279" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Node x="64.19974213868394" y="-10.168240227615023" rotation="6.126105674500097" name="Index 39" id="0:1280">
+                <Shape x="0" y="0" name="Panel" id="0:1281">
+                    <Rectangle width="2" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1282" />
+                    <Fill name="Paint" id="0:1283">
+                        <SolidColor name="Color" colorValue="FF293642" id="0:1284" />
+                    </Fill>
+                </Shape>
+            </Node>
+            <Shape x="0" y="0" name="Ring" id="0:1285">
+                <Ellipse width="157" height="157" name="Path" id="0:1286" />
+                <Stroke name="Paint" thickness="1" id="0:1287">
+                    <SolidColor name="Color" colorValue="FF263541" id="0:1288" />
+                </Stroke>
+            </Shape>
+            <Shape x="0" y="0" name="Ring" id="0:1289">
+                <Ellipse width="148" height="148" name="Path" id="0:1290" />
+                <Fill name="Paint" id="0:1291">
+                    <SolidColor name="Color" colorValue="FF0A111B" id="0:1292" />
+                </Fill>
+            </Shape>
+        </Node>
+        <LinearAnimation duration="1" name="stickActive Rest" id="0:707">
+            <KeyedObject objectId="0:697" id="0:708">
+                <KeyedProperty propertyKey="18" id="0:709">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:710" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="stickActive Press" id="0:711">
+            <KeyedObject objectId="0:697" id="0:712">
+                <KeyedProperty propertyKey="18" id="0:713">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:714" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="stickActive Still" id="0:715">
+            <KeyedObject objectId="0:697" id="0:716">
+                <KeyedProperty propertyKey="18" id="0:717">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:718" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="upPressed Rest" id="0:785">
+            <KeyedObject objectId="0:773" id="0:786">
+                <KeyedProperty propertyKey="18" id="0:787">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:788" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="upPressed Press" id="0:789">
+            <KeyedObject objectId="0:773" id="0:790">
+                <KeyedProperty propertyKey="18" id="0:791">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:792" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="upPressed Still" id="0:793">
+            <KeyedObject objectId="0:773" id="0:794">
+                <KeyedProperty propertyKey="18" id="0:795">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:796" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="rightPressed Rest" id="0:863">
+            <KeyedObject objectId="0:851" id="0:864">
+                <KeyedProperty propertyKey="18" id="0:865">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:866" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="rightPressed Press" id="0:867">
+            <KeyedObject objectId="0:851" id="0:868">
+                <KeyedProperty propertyKey="18" id="0:869">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:870" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="rightPressed Still" id="0:871">
+            <KeyedObject objectId="0:851" id="0:872">
+                <KeyedProperty propertyKey="18" id="0:873">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:874" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="downPressed Rest" id="0:941">
+            <KeyedObject objectId="0:929" id="0:942">
+                <KeyedProperty propertyKey="18" id="0:943">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:944" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="downPressed Press" id="0:945">
+            <KeyedObject objectId="0:929" id="0:946">
+                <KeyedProperty propertyKey="18" id="0:947">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:948" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="downPressed Still" id="0:949">
+            <KeyedObject objectId="0:929" id="0:950">
+                <KeyedProperty propertyKey="18" id="0:951">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:952" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="leftPressed Rest" id="0:1019">
+            <KeyedObject objectId="0:1007" id="0:1020">
+                <KeyedProperty propertyKey="18" id="0:1021">
+                    <KeyFrameDouble value="0.06" interpolationType="linear" id="0:1022" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="leftPressed Press" id="0:1023">
+            <KeyedObject objectId="0:1007" id="0:1024">
+                <KeyedProperty propertyKey="18" id="0:1025">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:1026" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation duration="1" name="leftPressed Still" id="0:1027">
+            <KeyedObject objectId="0:1007" id="0:1028">
+                <KeyedProperty propertyKey="18" id="0:1029">
+                    <KeyFrameDouble value="1" interpolationType="linear" id="0:1030" />
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <Text x="100" y="249" name="DIRECTION / 360" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1293">
+            <TextStylePaint fontSize="8" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1294">
+                <Fill name="Paint" id="0:1295">
+                    <SolidColor name="Color" colorValue="FF80909F" id="0:1296" />
+                </Fill>
+            </TextStylePaint>
+            <TextValueRun styleId="0:1294" text="DIRECTION / 360" name="Text" id="0:1297" />
+        </Text>
+        <Shape x="30" y="78" name="Panel" id="0:1298">
+            <Rectangle width="1" height="10" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1299" />
+            <Fill name="Paint" id="0:1300">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1301" />
+            </Fill>
+        </Shape>
+        <Shape x="360" y="275" name="Panel" id="0:1302">
+            <Rectangle width="1" height="10" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1303" />
+            <Fill name="Paint" id="0:1304">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1305" />
+            </Fill>
+        </Shape>
+        <Shape x="38" y="78" name="Panel" id="0:1306">
+            <Rectangle width="1" height="14" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1307" />
+            <Fill name="Paint" id="0:1308">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1309" />
+            </Fill>
+        </Shape>
+        <Shape x="352" y="275" name="Panel" id="0:1310">
+            <Rectangle width="1" height="14" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1311" />
+            <Fill name="Paint" id="0:1312">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1313" />
+            </Fill>
+        </Shape>
+        <Shape x="46" y="78" name="Panel" id="0:1314">
+            <Rectangle width="1" height="18" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1315" />
+            <Fill name="Paint" id="0:1316">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1317" />
+            </Fill>
+        </Shape>
+        <Shape x="344" y="275" name="Panel" id="0:1318">
+            <Rectangle width="1" height="18" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1319" />
+            <Fill name="Paint" id="0:1320">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1321" />
+            </Fill>
+        </Shape>
+        <Shape x="54" y="78" name="Panel" id="0:1322">
+            <Rectangle width="1" height="22" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1323" />
+            <Fill name="Paint" id="0:1324">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1325" />
+            </Fill>
+        </Shape>
+        <Shape x="336" y="275" name="Panel" id="0:1326">
+            <Rectangle width="1" height="22" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1327" />
+            <Fill name="Paint" id="0:1328">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1329" />
+            </Fill>
+        </Shape>
+        <Shape x="62" y="78" name="Panel" id="0:1330">
+            <Rectangle width="1" height="26" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1331" />
+            <Fill name="Paint" id="0:1332">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1333" />
+            </Fill>
+        </Shape>
+        <Shape x="328" y="275" name="Panel" id="0:1334">
+            <Rectangle width="1" height="26" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1335" />
+            <Fill name="Paint" id="0:1336">
+                <SolidColor name="Color" colorValue="FF263945" id="0:1337" />
+            </Fill>
+        </Shape>
+        <Shape x="195.0" y="329" name="Panel" id="0:1338">
+            <Rectangle width="342" height="1" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1339" />
+            <Fill name="Paint" id="0:1340">
+                <SolidColor name="Color" colorValue="FF26313E" id="0:1341" />
+            </Fill>
+        </Shape>
+        <Shape x="195.0" y="2" name="Panel" id="0:1342">
+            <Rectangle width="390" height="3" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1343" />
+            <Fill name="Paint" id="0:1344">
+                <SolidColor name="Color" colorValue="FF65E7D4" id="0:1345" />
+            </Fill>
+        </Shape>
+        <Shape x="195.0" y="165.0" name="Panel" id="0:1346">
+            <Rectangle width="390" height="330" originX="0.5" originY="0.5" cornerRadiusTL="0" cornerRadiusTR="0" cornerRadiusBL="0" cornerRadiusBR="0" name="Path" id="0:1347" />
+            <Fill name="Paint" id="0:1348">
+                <SolidColor name="Color" colorValue="FF111B28" id="0:1349" />
+            </Fill>
+        </Shape>
+    </Artboard>
+    <DataConverterRangeMapper minInput="-1" maxInput="1" minOutput="-22" maxOutput="22" clampLower="true" clampUpper="true" name="stickX travel" id="0:657" />
+    <DataConverterRangeMapper minInput="-1" maxInput="1" minOutput="22" maxOutput="-22" clampLower="true" clampUpper="true" name="stickY travel" id="0:659" />
+    <ViewModel id="0:1" name="Controller" defaultInstanceId="0:2">
+        <ViewModelPropertyBoolean name="upPressed" id="0:3" />
+        <ViewModelPropertyBoolean name="downPressed" id="0:4" />
+        <ViewModelPropertyBoolean name="leftPressed" id="0:5" />
+        <ViewModelPropertyBoolean name="rightPressed" id="0:6" />
+        <ViewModelPropertyBoolean name="aPressed" id="0:7" />
+        <ViewModelPropertyBoolean name="bPressed" id="0:8" />
+        <ViewModelPropertyBoolean name="startPressed" id="0:9" />
+        <ViewModelPropertyBoolean name="selectPressed" id="0:10" />
+        <ViewModelPropertyBoolean name="menuPressed" id="0:11" />
+        <ViewModelPropertyBoolean name="reduceMotion" id="0:12" />
+        <ViewModelPropertyBoolean name="stickActive" id="0:13" />
+        <ViewModelPropertyNumber name="stickX" id="0:14" />
+        <ViewModelPropertyNumber name="stickY" id="0:15" />
+        <ViewModelInstance id="0:2" name="Default" exports="true">
+            <ViewModelInstanceBoolean viewModelPropertyId="0:3" propertyValue="false" id="0:1350" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:4" propertyValue="false" id="0:1351" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:5" propertyValue="false" id="0:1352" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:6" propertyValue="false" id="0:1353" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:7" propertyValue="false" id="0:1354" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:8" propertyValue="false" id="0:1355" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:9" propertyValue="false" id="0:1356" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:10" propertyValue="false" id="0:1357" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:11" propertyValue="false" id="0:1358" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:12" propertyValue="false" id="0:1359" />
+            <ViewModelInstanceBoolean viewModelPropertyId="0:13" propertyValue="false" id="0:1360" />
+            <ViewModelInstanceNumber viewModelPropertyId="0:14" propertyValue="0" id="0:1361" />
+            <ViewModelInstanceNumber viewModelPropertyId="0:15" propertyValue="0" id="0:1362" />
+        </ViewModelInstance>
+    </ViewModel>
+</Rive>
