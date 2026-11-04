@@ -167,7 +167,9 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
             "\($0):\(self.presses[$0, default: 0])/\(self.releases[$0, default: 0])"
         }.joined(separator: " ")
         let peaks = self.peakValues.sorted { $0.key < $1.key }.map { "\($0.key)Peak=\(String(format: "%.3f", $0.value))" }.joined(separator: " ")
-        self.status.accessibilityValue = "\(allCounts) \(peaks) view=\(self.view.bounds) window=\(self.view.window?.bounds ?? .zero) controller=\(self.controllerView.frame) traits=\(self.controllerView.controllerSkinTraits?.description ?? "none")"
+        let safeFrame = self.view.safeAreaLayoutGuide.layoutFrame
+        let isSafe = safeFrame.insetBy(dx: -0.5, dy: -0.5).contains(self.controllerView.frame)
+        self.status.accessibilityValue = "\(allCounts) \(peaks) safeAreaContainsController=\(isSafe) safeFrame=\(safeFrame) view=\(self.view.bounds) window=\(self.view.window?.bounds ?? .zero) controller=\(self.controllerView.frame) traits=\(self.controllerView.controllerSkinTraits?.description ?? "none")"
     }
 
     override func gameController(_ gameController: GameController, didActivate input: Input, value: Double)

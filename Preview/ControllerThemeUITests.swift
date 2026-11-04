@@ -110,6 +110,7 @@ final class ControllerThemeUITests: XCTestCase
         let status = app.staticTexts["inputStatus"]
         XCTAssertTrue(status.waitForExistence(timeout: 30))
         self.waitForText("Rive | idle", in: status)
+        self.waitForValue("safeAreaContainsController=true", in: status)
         let controller = app.descendants(matching: .any)["controller"]
         let center = self.point(116, 284, width: 390, height: 400, in: controller)
         // A small physical drag must stay analog, rather than jumping to 1.
@@ -149,6 +150,7 @@ final class ControllerThemeUITests: XCTestCase
         app.buttons["themeMenu"].tap()
         app.buttons["Animate"].tap()
         self.waitForText("Static | idle", in: status)
+        self.waitForValue("safeAreaContainsController=true", in: status)
         center.press(forDuration: 0.1,
                      thenDragTo: self.point(150,284,width:390,height:400,in:controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
@@ -157,13 +159,28 @@ final class ControllerThemeUITests: XCTestCase
         app.buttons["themeMenu"].tap()
         app.buttons["Animate"].tap()
         self.waitForText("Rive | idle", in: status)
-        XCUIDevice.shared.orientation = .landscapeLeft
-        self.waitForText("Rive | idle", in: status)
-        self.point(735,260,width:844,height:390,in:controller).tap()
-        self.waitForText("a:2/2", in: status)
+        for (index, orientation) in [UIDeviceOrientation.landscapeLeft, .landscapeRight].enumerated()
+        {
+            XCUIDevice.shared.orientation = orientation
+            self.waitForText("Rive | idle", in: status)
+            self.waitForValue("traits=iphone-edgeToEdge-landscape", in: status)
+            self.waitForValue("safeAreaContainsController=true", in: status)
+            self.point(735,260,width:844,height:390,in:controller).tap()
+            self.waitForText("a:\(index+2)/\(index+2)", in: status)
+            // Exercise both edges when the notch switches sides.
+            self.point(44,139,width:844,height:390,in:controller).tap()
+            self.waitForValue("left:\(index+2)/\(index+2)", in: status)
+            self.point(784,145,width:844,height:390,in:controller).tap()
+            self.waitForValue("cRight:\(index+2)/\(index+2)", in: status)
+            let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            attachment.name = "Orbit safe area \(orientation.rawValue)"
+            attachment.lifetime = .keepAlways
+            self.add(attachment)
+        }
         XCUIDevice.shared.press(.home)
         app.activate()
         self.waitForText("Rive | idle", in: status)
+        self.waitForValue("safeAreaContainsController=true", in: status)
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = "Orbit N64 analog controller and mimi"
         attachment.lifetime = .keepAlways
@@ -180,5 +197,12 @@ final class ControllerThemeUITests: XCTestCase
         let predicate = NSPredicate(format: "label CONTAINS %@", text)
         let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
         XCTAssertEqual(XCTWaiter.wait(for: [expectation], timeout: 20), .completed, element.label)
+    }
+
+    private func waitForValue(_ text: String, in element: XCUIElement)
+    {
+        let predicate = NSPredicate(format: "value CONTAINS %@", text)
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
+        XCTAssertEqual(XCTWaiter.wait(for: [expectation], timeout: 20), .completed, element.value as? String ?? "")
     }
 }
