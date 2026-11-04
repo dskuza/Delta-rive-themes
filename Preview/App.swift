@@ -62,6 +62,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
         self.delegate = self
         if ProcessInfo.processInfo.arguments.contains("--orbit") { self.themeName = "Orbit" }
         if ProcessInfo.processInfo.arguments.contains("--crystal") { self.themeName = "OrbitCrystal" }
+        if ProcessInfo.processInfo.arguments.contains("--crystal-nes") { self.themeName = "CrystalNES" }
         self.controllerView.playerIndex = 0
         self.controllerView.accessibilityIdentifier = "controller"
         self.controllerView.isAccessibilityElement = true
@@ -133,6 +134,7 @@ final class PreviewViewController: DeltaCore.GameViewController, GameViewControl
             UIAction(title: "Reusable Template", state: self.themeName == "Template" ? .on : .off) { [weak self] _ in self?.selectTheme("Template") },
             UIAction(title: "Orbit N64", state: self.themeName == "Orbit" ? .on : .off) { [weak self] _ in self?.selectTheme("Orbit") },
             UIAction(title: "Orbit: Crystal", state: self.themeName == "OrbitCrystal" ? .on : .off) { [weak self] _ in self?.selectTheme("OrbitCrystal") },
+            UIAction(title: "Crystal NES", state: self.themeName == "CrystalNES" ? .on : .off) { [weak self] _ in self?.selectTheme("CrystalNES") },
             UIAction(title: "Animate", state: self.animationsEnabled ? .on : .off) { [weak self] _ in
                 guard let self else { return }
                 self.animationsEnabled.toggle()

@@ -48,17 +48,21 @@ struct Pixels
 }
 
 let root = URL(fileURLWithPath: CommandLine.arguments[1])
+let metadata = try JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: CommandLine.arguments[2]))) as! [String:Any]
+let hasAnalogStick = (metadata["gameTypeIdentifier"] as? String)?.hasSuffix(".n64") == true
 func pixels(_ name: String) -> Pixels { Pixels(root.appendingPathComponent(name + ".png")) }
 let idle = pixels("idle")
-let moved = pixels("moved")
-let origin = idle.thumbCenter(), destination = moved.thumbCenter()
-precondition(abs(destination.x-origin.x-27) < 2, "X pose did not move the visible thumb cap by 27 points")
-precondition(abs(destination.y-origin.y+27) < 2, "Y pose did not move the visible thumb cap by -27 points")
+if hasAnalogStick
+{
+    let moved = pixels("moved")
+    let origin = idle.thumbCenter(), destination = moved.thumbCenter()
+    precondition(abs(destination.x-origin.x-27) < 2, "X pose did not move the visible thumb cap by 27 points")
+    precondition(abs(destination.y-origin.y+27) < 2, "Y pose did not move the visible thumb cap by -27 points")
+}
 precondition(pixels("tapTravel").bytes != idle.bytes, "Tap signal disappeared before reaching the display")
 precondition(pixels("tapSettled").bytes == idle.bytes, "Released controller never returned to its idle artwork")
 precondition(pixels("reducedEarly").bytes == pixels("reducedLate").bytes, "Reduced Motion still contains moving effects")
 let landscape = pixels("landscape")
-let metadata = try JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: CommandLine.arguments[2]))) as! [String:Any]
 let representations = metadata["representations"] as! [String:[String:[String:[String:Any]]]]
 let screens = representations["iphone"]!["edgeToEdge"]!["landscape"]!["screens"] as! [[String:Any]]
 let frame = screens[0]["outputFrame"] as! [String:Int]
@@ -73,4 +77,4 @@ for y in frame["y"]!..<(frame["y"]!+frame["height"]!)
         precondition(Array(landscape.bytes[index..<index+4]) == backdrop, "Artwork appears inside the landscape game aperture")
     }
 }
-print("Passed visible XY cap movement, complete tap pulses, idle recovery, Reduced Motion and transparent game aperture.")
+print("Passed \(hasAnalogStick ? "visible XY cap movement, " : "")complete tap pulses, idle recovery, Reduced Motion and transparent game aperture.")

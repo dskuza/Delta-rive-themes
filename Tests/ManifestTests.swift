@@ -94,7 +94,7 @@ import ZIPFoundation
         }
         catch is RiveControllerSkinManifest.Error {}
 
-        for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
+        for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal", "CrystalNES"]
         {
             let url = root.appendingPathComponent("Dist/\(name).deltaskin")
             try RiveControllerSkinArchive.validate(at: url)

@@ -107,6 +107,70 @@ final class ControllerThemeUITests: XCTestCase
         self.checkN64Theme(argument: "--orbit")
     }
 
+    func testCrystalNESControlsAndSafeAreas()
+    {
+        let app = XCUIApplication()
+        app.launchArguments = ["--crystal-nes"]
+        app.launch()
+        let status = app.staticTexts["inputStatus"]
+        XCTAssertTrue(status.waitForExistence(timeout: 30))
+        self.waitForText("Rive | idle", in: status)
+        self.waitForValue("safeAreaContainsController=true", in: status)
+        let controller = app.descendants(matching: .any)["controller"]
+        let controls: [(String,CGFloat,CGFloat)] = [
+            ("up",83,110), ("down",83,180), ("left",48,145), ("right",118,145),
+            ("b",269,140), ("a",337,140), ("select",169,226), ("start",229,226), ("menu",229,191)
+        ]
+        for (name,x,y) in controls
+        {
+            self.point(x,y,width:390,height:270,in:controller).tap()
+            self.waitForValue("\(name):1/1", in: status)
+        }
+        // The NES cross must produce digital diagonals and release both directions.
+        self.point(83,145,width:390,height:270,in:controller).press(forDuration:0.1,
+            thenDragTo:self.point(116,112,width:390,height:270,in:controller),
+            withVelocity:.slow,thenHoldForDuration:0.2)
+        self.waitForValue("up:2/2", in: status)
+        self.waitForValue("right:2/2", in: status)
+        self.waitForText("Rive | idle", in: status)
+        app.buttons["themeMenu"].tap()
+        app.buttons["Animate"].tap()
+        self.waitForText("Static | idle", in: status)
+        self.point(337,140,width:390,height:270,in:controller).tap()
+        self.waitForValue("a:2/2", in: status)
+        app.buttons["themeMenu"].tap()
+        app.buttons["Animate"].tap()
+        self.waitForText("Rive | idle", in: status)
+        for (index,orientation) in [UIDeviceOrientation.landscapeLeft,.landscapeRight].enumerated()
+        {
+            XCUIDevice.shared.orientation = orientation
+            self.waitForValue("traits=iphone-edgeToEdge-landscape", in: status)
+            self.waitForValue("safeAreaContainsController=true", in: status)
+            for (name,x,y,count) in [("a",777.0,205.0,index+3),("b",690.0,205.0,index+2),
+                                     ("select",390.0,46.0,index+2),("start",454.0,46.0,index+2),
+                                     ("menu",454.0,13.0,index+2)]
+            {
+                self.point(x,y,width:844,height:390,in:controller).tap()
+                self.waitForValue("\(name):\(count)/\(count)", in: status)
+            }
+            let shot = XCTAttachment(screenshot:XCUIScreen.main.screenshot())
+            shot.name = "Crystal NES safe area \(orientation.rawValue)"
+            shot.lifetime = .keepAlways
+            self.add(shot)
+        }
+        XCUIDevice.shared.press(.home)
+        app.activate()
+        self.waitForText("Rive | idle", in: status)
+        app.buttons["themeMenu"].tap()
+        app.buttons["Run Input Demo"].tap()
+        self.waitForText("a+b+right+up", in: status)
+        let active = XCTAttachment(screenshot:XCUIScreen.main.screenshot())
+        active.name = "Crystal NES simultaneous buttons and circuit signals"
+        active.lifetime = .keepAlways
+        self.add(active)
+        self.waitForText("Rive | idle", in: status)
+    }
+
     func testCrystalAnalogContactAndControls()
     {
         self.checkN64Theme(argument: "--crystal")
