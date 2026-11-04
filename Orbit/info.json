@@ -742,7 +742,8 @@
               },
               "mask": "rectangle"
             }
-          ]
+          ],
+          "respectsSafeArea": true
         },
         "landscape": {
           "assets": {
@@ -994,7 +995,8 @@
                 "height": 306
               }
             }
-          ]
+          ],
+          "respectsSafeArea": true
         }
       }
     }

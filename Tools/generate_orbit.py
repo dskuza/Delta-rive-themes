@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Orbit N64: native analog hit testing with a data-bound vector instrument panel."""
+import copy
 import json
 import math
 from generate_themes import ROOT, Scene
@@ -176,11 +177,14 @@ def generate():
     path.mkdir(exist_ok=True)
     scene = Orbit()
     reps = {o:scene.artboard(o) for o in ['portrait','landscape']}
+    edge_reps = copy.deepcopy(reps)
+    for representation in edge_reps.values():
+        representation['respectsSafeArea'] = True
     (path/'scene.rml').write_text(scene.finish())
     (path/'rive.yaml').write_text('name: Orbit\nmain: Portrait\n')
     info = dict(name='Orbit N64', identifier='com.delta.rive.orbit.n64',
                 gameTypeIdentifier='com.rileytestut.delta.game.n64', debug=False,
-                representations=dict(iphone=dict(standard=reps,edgeToEdge=reps)))
+                representations=dict(iphone=dict(standard=reps,edgeToEdge=edge_reps)))
     (path/'info.json').write_text(json.dumps(info,indent=2)+'\n')
     manifest = dict(schemaVersion=1, representations={
         f'iphone-{display}-{orientation}':dict(file='Orbit.riv',artboard=orientation.title(),

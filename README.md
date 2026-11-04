@@ -19,6 +19,9 @@ files:
   Uses the original controller's button order and colors: green B above-left of
   blue A, yellow vector arrows in the C-button diamond, red Start in the middle,
   D-pad above the stick, L/R along the top and an accessible Z below the stick.
+  Edge-to-edge representations opt into UIKit safe-area layout, keeping artwork,
+  native touch targets and the game screen clear of the notch and home indicator
+  in portrait and both landscape directions, including static fallback.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for NES.
@@ -155,6 +158,11 @@ An optional `rive.json` supplies the animation configuration:
   disabled/unsupported animation. A native thumbstick still needs its ordinary
   `thumbstick` asset declaration, even though its artwork is hidden while Rive
   draws the cap.
+- An `info.json` representation can set `"respectsSafeArea": true` to fit the
+  complete controller inside the current UIKit safe-area frame. All native hit
+  targets, fallback artwork, Rive artwork and embedded game screens share that
+  transform; notch padding is not baked into the Rive scene. Omitted/false keeps
+  the existing full-bounds layout. Orbit enables it for `edgeToEdge` only.
 
 The first version covers controller placement on ordinary phone layouts and
 compatible tablet fallbacks. Split-view keyboard controllers use static artwork.
