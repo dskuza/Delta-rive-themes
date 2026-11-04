@@ -4,6 +4,7 @@ import copy
 import json
 import math
 from generate_themes import ROOT
+from default_layout import layout_for
 from generate_orbit import Orbit, BUTTONS, DIRECTIONS
 
 ICE, MINT, BLUE, GREEN, GOLD, RED = ('FFCCD0D5','FF73F2D0','FF4B9CFF',
@@ -215,118 +216,92 @@ class Crystal(Orbit):
                     frame=dict(x=x-72,y=y-72,width=144,height=144),
                     thumbstick=dict(name='stick.pdf',width=53,height=53))
 
+    def placed_pad(self,a,sm,frame):
+        x,y,w,h=frame
+        index=len(a)
+        item=self.dpad(a,sm,x,y)
+        pad=list(a)[index]
+        pad.set('scaleX',str(w/88))
+        pad.set('scaleY',str(h/88))
+        item['frame']=dict(x=x-w/2,y=y-h/2,width=w,height=h)
+        return item
+
+    def placed_stick(self,a,sm,frame):
+        x,y,w,h=frame
+        index=len(a)
+        item=self.stick(a,sm,x,y)
+        # The gimbal and both sensor rails inherit this assembly transform.
+        socket=list(a)[index]
+        socket.set('scaleX',str(w/144))
+        socket.set('scaleY',str(h/144))
+        item['frame']=dict(x=x-w/2,y=y-h/2,width=w,height=h)
+        item['thumbstick']['width']*=w/144
+        item['thumbstick']['height']*=h/144
+        return item
+
     def artboard(self,orientation):
         portrait=orientation=='portrait'
-        w,h=(390,400) if portrait else (844,390)
+        w,h,controls=layout_for('N64',orientation)
         a=self.el(self.root,'Artboard',name=orientation.title(),width=w,height=h,
                   viewModelId=self.vm,viewModelInstanceId=self.instance,x=0 if portrait else 460)
         style=self.el(a,'LayoutComponentStyle')
         a.set('styleId',style.get('id'))
         sm=self.el(a,'StateMachine',name='Controller')
         a.set('defaultStateMachineId',sm.get('id'))
-        # Reserve the former header's IDs to keep generated changes reviewable.
-        self.counter+=15 if portrait else 10
-        items=[self.stick(a,sm,116 if portrait else 111,284 if portrait else 282),
-               self.dpad(a,sm,78 if portrait else 70,139)]
-        cx,cy=(317,150) if portrait else (755,145)
-        self.text(a,cx,cy,'C',9,GOLD,True)
-        buttons=[('c'+d,cx+dx,cy+dy,32,32,GOLD,None,True)
-                 for d,dx,dy in [('Up',0,-29),('Down',0,29),('Left',-29,0),('Right',29,0)]]
-        buttons += [('a',267,258,56,56,BLUE,'A',True),('b',227,206,46,46,GREEN,'B',True),
-                    ('l',44,78,60,20,ICE,'L',False),('r',346,78,60,20,ICE,'R',False),
-                    ('z',346,42,52,22,MINT,'Z',False),('start',195,141,34,34,RED,'START',True),
-                    ('menu',195,108,42,16,ICE,'MENU',False)] if portrait else [
-                    ('a',735,260,56,56,BLUE,'A',True),('b',687,204,46,46,GREEN,'B',True),
-                    ('l',55,65,60,20,ICE,'L',False),('r',782,65,60,20,ICE,'R',False),
-                    ('z',782,31,52,22,MINT,'Z',False),('start',422,44,28,28,RED,'START',True),
-                    ('menu',422,13,42,16,ICE,'MENU',False)]
-        for button in buttons:
-            items.append(self.button(a,sm,*button))
-        # Glass floats above all routed copper, chips and board details.
-        panels=[(195,200,382,392)] if portrait else [(102,195,196,382),(742,195,196,382)]
-        for px,py,pw,ph in panels:
-            self.glass(a,px,py,pw,ph,20)
-        self.glass(a,w/2,33,81,66,16) if not portrait else None
-        chip=(195,69) if portrait else (180,189)
-        self.chip(a,*chip)
-        self.text(a,211,8,'DISPLAY',4.5,'FF789AA5') if portrait else None
-        if not portrait:
-            self.chip(a,664,189)
-        # PCB pads, vias and fasteners supply physical scale through the shell.
+        items=[self.placed_stick(a,sm,controls['stick']),self.placed_pad(a,sm,controls['pad'])]
+        buttons=[]
+        for name in ['cUp','cDown','cLeft','cRight','a','b','l','r','z','start','menu','zLeft']:
+            x,y,bw,bh=controls[name]
+            input_name='z' if name=='zLeft' else name
+            color=GOLD if name.startswith('c') else dict(a=BLUE,b=GREEN,z=MINT,zLeft=MINT,start=RED).get(name,ICE)
+            round=name.startswith('c') or name in ['a','b'] or (portrait and name=='start')
+            buttons.append((input_name,x,y,bw,bh,color,None,round))
+            items.append(self.button(a,sm,*buttons[-1]))
+        panels=[(195,h/2,382,h-8)] if portrait else [(102,195,196,382),(742,195,196,382)]
+        headers=[] if portrait else [(422,25,106,42),(422,367,106,38)]
+        for panel in panels+headers:
+            self.glass(a,*panel,20)
+        chips=[(195,107)] if portrait else [(180,210),(664,210)]
+        for chip in chips:
+            self.chip(a,*chip)
         for px,py,pw,ph in panels:
             for dx in [-pw/2+12,pw/2-12]:
                 for dy in [-ph/2+13,ph/2-13]:
                     self.screw(a,px+dx,py+dy)
             for i in range(8):
-                self.rect(a,px-pw/2+12+i*7,py+ph/2-45,3,5,'FF516D72',.5,name='SMT array')
+                self.rect(a,px-pw/2+12+i*7,py+ph/2-24,3,5,'FF516D72',.5,name='SMT array')
         traces=[]
-        for index,(name,bx,by,bw,bh,color,*_) in enumerate(buttons):
-            if name=='menu':
-                continue
+        def route(name,bx,by,color,index):
             if portrait:
-                lane=159+(index%5)*5
-                if bx>200:
-                    lane=242+(index%4)*5
-                points=[(bx,by),(lane,by),(lane,99+index%3*4),
-                        (chip[0]+(8 if bx>200 else -8),chip[1]+13),chip,(195,5)]
+                lane=159+(index%5)*5 if bx<200 else 211+(index%5)*5
+                points=[(bx,by),(lane,by),(lane,127),chips[0],(195,5)]
+            elif name=='start':
+                points=[(bx,by),(422,347)]
             else:
-                if name=='start':
-                    points=[(bx,by),(422,71)]
-                else:
-                    target=(180,189) if bx<422 else (664,189)
-                    lane=(161+index%4*4) if bx<422 else (680+index%4*4)
-                    points=[(bx,by),(lane,by),(lane,target[1]+19),target,
-                            (217 if bx<422 else 627,189)]
-            self.signal(a,sm,name+'Pressed',points,color,name.upper())
-            receiver=self.el(a,'Node',opacity=.06,name=name+' / display input LED')
-            rx,ry=(178+index*3.3,6) if portrait else ((216,174+index*2.5) if bx<422 else (628,174+index*2.5))
-            self.rect(receiver,rx,ry,1.5 if portrait else 2.5,2.5 if portrait else 1.5,color,.5)
-            self.animate(a,sm,name+'Pressed',[(receiver.get('id'),'glow')])
+                target=chips[0] if bx<422 else chips[1]
+                lane=174+index%4*4 if bx<422 else 658+index%4*4
+                points=[(bx,by),(lane,by),(lane,230),target,(217 if bx<422 else 627,210)]
+            self.signal(a,sm,name+'Pressed',points,color,name.upper()+f' {index}')
             traces.append(dict(name=name,points=points,color=color))
+        for index,(name,bx,by,_,_,color,*_) in enumerate(buttons):
+            if name!='menu':
+                route(name,bx,by,color,index)
+        dx,dy,dw,dh=controls['pad']
         for i,name in enumerate(['up','right','down','left']):
-            dx,dy=[(0,-26),(26,0),(0,26),(-26,0)][i]
-            bx,by=(78 if portrait else 70)+dx,139+dy
-            target=chip
-            lane=143+i*4 if portrait else 143+i*4
-            points=[(bx,by),(lane,by),(lane,93 if portrait else 169),target,
-                    (195,5) if portrait else (217,189)]
-            self.signal(a,sm,name+'Pressed',points,MINT,'DPAD '+name.upper())
-            traces.append(dict(name=name,points=points,color=MINT))
+            ox,oy=[(0,-26),(26,0),(0,26),(-26,0)][i]
+            route(name,dx+ox*dw/88,dy+oy*dh/88,MINT,i+12)
+        sx,sy,_,_=controls['stick']
         for i,direction in enumerate(DIRECTIONS):
-            sx,sy=(116,284) if portrait else (111,282)
-            target=chip
-            points=[(sx,sy),(sx+58+i*3,sy),(sx+58+i*3,100 if portrait else 210),
-                    target,(195,5) if portrait else (217,189)]
-            self.signal(a,sm,'analogStick'+direction+'Pressed',points,MINT,'STICK '+direction.upper())
-            traces.append(dict(name='analogStick'+direction,points=points,color=MINT))
-        # Main board stays dark enough that the illuminated signals carry the hierarchy.
+            route('analogStick'+direction,sx,sy,MINT,i+16)
         for px,py,pw,ph in panels:
             board=self.rect(a,px,py,pw-9,ph-9,'FF3A515D',16,.5,name='PCB edge')
             self.gradient(board,['FF14262E','FF0C1C26'],ph/2)
         if portrait:
             self.rect(a,w/2,h/2,w,h,'FF07131E',name='Backdrop')
-        # Both physical Z regions deliberately share the same native input and
-        # view-model property. Allocate the added assembly outside existing IDs.
-        previous_counter=self.counter
-        self.counter=self.material_counter
-        first_added=len(a)
-        zx,zy=(44,42) if portrait else (55,31)
-        items.append(self.button(a,sm,'z',zx,zy,52,22,MINT,'Z'))
-        points=([(zx,zy),(151,zy),(151,93),(187,82),chip,(195,5)] if portrait else
-                [(zx,zy),(161,zy),(161,208),chip,(217,189)])
-        self.signal(a,sm,'zPressed',points,MINT,'Z LEFT')
-        traces.append(dict(name='z',side='left',points=points,color=MINT))
-        # Bring the added artwork above the board without moving animation order.
-        for child in reversed(list(a)[first_added:]):
-            if child.tag in ['Node','Shape','Text']:
-                a.remove(child)
-                a.insert(2,child)
-        self.material_counter=self.counter
-        self.counter=previous_counter
-        self.circuits[orientation]=dict(panels=panels,traces=traces)
+        self.circuits[orientation]=dict(panels=panels,headers=headers,chips=chips,traces=traces)
         rep=dict(assets=dict(resizable=orientation+'.pdf'),mappingSize=dict(width=w,height=h),items=items)
         if not portrait:
-            rep['screens']=[dict(outputFrame=dict(x=218,y=72,width=408,height=306))]
+            rep['screens']=[dict(outputFrame=dict(x=234,y=53,width=376,height=282))]
         return rep
 
 

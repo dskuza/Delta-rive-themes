@@ -14,8 +14,9 @@ files:
 - `NeonCircuit.deltaskin`: graphite panels, feathered LED glows, a native NES
   D-pad, independent directional lights and reduced-motion press states.
 - `CrystalNES.deltaskin`: the clear circuit-board style adapted to NES, with
-  lightly red-tinted A/B caps, a larger digital cross, and Menu centered above the
-  Select/Start pair. Independent red LED and signal-path effects support diagonal and
+  lightly red-tinted A/B caps and placement derived from Delta’s bundled NES skin.
+  Portrait keeps Menu at the upper right; landscape uses diagonal A/B, bottom
+  Select/Start and top-center Menu. Independent red LED and signal-path effects support diagonal and
   simultaneous input, with steady routes for Reduced Motion. Artwork stays
   unbranded, with safe-area layout and native vector fallback in both orientations.
 - `Orbit.deltaskin`: a continuous N64 analog stick with a moving cap and feathered
@@ -38,10 +39,13 @@ files:
   red Start and neutral gray controls. Low-opacity fills retain the see-through
   material, with brighter colors supplied by the socket LEDs and signal pulses.
   Theme names appear in the skin picker only; the controller artwork is unbranded.
-  Menu sits above Start, with matching Z buttons above L and R in both phone orientations.
+  Placement follows Delta’s bundled N64 skin: stick above the D-pad, C-buttons
+  below A/B, center Start and top Menu. Matching Z buttons remain above L and R.
   Both Z regions send the same N64 input and illuminate together. Native touch
   handling unions held inputs, so lifting one Z leaves it held by the other.
-  Landscape reserves a taller central header for Menu/Start and places the game screen below it.
+  Landscape places Menu above the game screen and Start below it.
+  `Tools/default_layout.py` reads the bundled default archives so the reference
+  positions are explicit; UIKit supplies the notch and home indicator insets.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for its system.

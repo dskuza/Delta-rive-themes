@@ -4,6 +4,7 @@ import copy
 import json
 from generate_themes import ROOT, Scene, BUTTONS
 from generate_crystal import Crystal, CAP_COLORS, ICE, RED
+from default_layout import layout_for
 
 
 class CrystalNES(Crystal):
@@ -16,39 +17,30 @@ class CrystalNES(Crystal):
         self.material_counter=900000
         self.circuits={}
 
-    def digital_pad(self,a,sm,x,y,scale):
-        index=len(a)
-        item=self.dpad(a,sm,x,y)
-        pad=list(a)[index]
-        pad.set('scaleX',str(scale))
-        pad.set('scaleY',str(scale))
-        item['frame']=dict(x=x-44*scale,y=y-44*scale,width=88*scale,height=88*scale)
-        return item
-
     def artboard(self,orientation):
         portrait=orientation=='portrait'
-        w,h=(390,270) if portrait else (844,390)
+        w,h,controls=layout_for('NES',orientation)
         a=self.el(self.root,'Artboard',name=orientation.title(),width=w,height=h,
                   viewModelId=self.vm,viewModelInstanceId=self.instance,x=0 if portrait else 460)
         style=self.el(a,'LayoutComponentStyle')
         a.set('styleId',style.get('id'))
         sm=self.el(a,'StateMachine',name='Controller')
         a.set('defaultStateMachineId',sm.get('id'))
-        dx,dy,scale=(83,145,1.35) if portrait else (101,195,1.5)
-        items=[self.digital_pad(a,sm,dx,dy,scale)]
-        buttons=[('b',269,140,56,56,RED,'B',True),('a',337,140,56,56,RED,'A',True),
-                 ('select',169,226,46,18,ICE,'SELECT',False),('start',229,226,46,18,ICE,'START',False),
-                 ('menu',199,191,42,16,ICE,'MENU',False)] if portrait else [
-                 ('b',690,205,56,56,RED,'B',True),('a',777,205,56,56,RED,'A',True),
-                 ('select',390,46,48,18,ICE,'SELECT',False),('start',454,46,48,18,ICE,'START',False),
-                 ('menu',422,13,42,16,ICE,'MENU',False)]
+        dx,dy,dw,dh=controls['pad']
+        scale=dw/88
+        items=[self.placed_pad(a,sm,controls['pad'])]
+        buttons=[]
+        for name in ['b','a','select','start','menu']:
+            x,y,bw,bh=controls[name]
+            buttons.append((name,x,y,bw,bh,RED if name in ['a','b'] else ICE,name.upper(),name in ['a','b']))
         for button in buttons:
             items.append(self.button(a,sm,*button))
-        panels=[(195,135,382,262)] if portrait else [(102,195,196,382),(742,195,196,382)]
+        panels=[(195,h/2,382,h-8)] if portrait else [(102,195,196,382),(742,195,196,382)]
         for px,py,pw,ph in panels:
             self.glass(a,px,py,pw,ph,20)
-        if not portrait:
-            self.glass(a,422,33,144,66,16)
+        headers=[] if portrait else [(422,25,106,42),(422,367,208,38)]
+        for header in headers:
+            self.glass(a,*header,16)
         chips=[(195,54)] if portrait else [(180,120),(664,120)]
         for cx,cy in chips:
             self.chip(a,cx,cy,system='NES')
@@ -66,7 +58,7 @@ class CrystalNES(Crystal):
                 lane=220+index*6
                 points=[(bx,by),(lane,by),(lane,91+index*4),(203,67),(195,54),(195,5)]
             elif name in ['select','start']:
-                points=[(bx,by),(bx,71)]
+                points=[(bx,by),(bx,347)]
             else:
                 lane=678+index*6
                 points=[(bx,by),(lane,by),(lane,139),(664,120),(627,120)]
@@ -85,10 +77,10 @@ class CrystalNES(Crystal):
             self.gradient(board,['FF14262E','FF0C1C26'],ph/2)
         if portrait:
             self.rect(a,w/2,h/2,w,h,'FF07131E',name='Backdrop')
-        self.circuits[orientation]=dict(panels=panels,traces=traces)
+        self.circuits[orientation]=dict(panels=panels,headers=headers,chips=chips,traces=traces)
         rep=dict(assets=dict(resizable=orientation+'.pdf'),mappingSize=dict(width=w,height=h),items=items)
         if not portrait:
-            rep['screens']=[dict(outputFrame=dict(x=218,y=72,width=408,height=306))]
+            rep['screens']=[dict(outputFrame=dict(x=234,y=53,width=376,height=282))]
         return rep
 
 

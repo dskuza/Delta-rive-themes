@@ -26,15 +26,15 @@ struct Pixels
         self.bytes = bytes
     }
 
-    func thumbCenter() -> CGPoint
+    func thumbCenter(near center: CGPoint) -> CGPoint
     {
         var total = 0.0, xSum = 0.0, ySum = 0.0
-        for y in 230..<335
+        for y in Int(center.y-40)..<Int(center.y+40)
         {
-            for x in 70..<165
+            for x in Int(center.x-40)..<Int(center.x+40)
             {
                 let index = (y * self.width + x) * 4
-                if self.bytes[index] > 160 && self.bytes[index+1] > 190 && self.bytes[index+2] > 190
+                if self.bytes[index] > 130 && self.bytes[index+1] > 160 && self.bytes[index+2] > 165
                 {
                     total += 1
                     xSum += Double(x)
@@ -55,9 +55,14 @@ let idle = pixels("idle")
 if hasAnalogStick
 {
     let moved = pixels("moved")
-    let origin = idle.thumbCenter(), destination = moved.thumbCenter()
-    precondition(abs(destination.x-origin.x-27) < 2, "X pose did not move the visible thumb cap by 27 points")
-    precondition(abs(destination.y-origin.y+27) < 2, "Y pose did not move the visible thumb cap by -27 points")
+    let reps = metadata["representations"] as! [String:[String:[String:[String:Any]]]]
+    let items = reps["iphone"]!["standard"]!["portrait"]!["items"] as! [[String:Any]]
+    let stick = items.first { $0["thumbstick"] != nil }!["frame"] as! [String:Double]
+    let center = CGPoint(x:stick["x"]!+stick["width"]!/2,y:stick["y"]!+stick["height"]!/2)
+    let travel = 27*stick["width"]!/144
+    let origin = idle.thumbCenter(near:center), destination = moved.thumbCenter(near:center)
+    precondition(abs(destination.x-origin.x-travel) < 2, "X pose did not move the visible thumb cap to match the native stick size")
+    precondition(abs(destination.y-origin.y+travel) < 2, "Y pose did not move the visible thumb cap to match the native stick size")
 }
 precondition(pixels("tapTravel").bytes != idle.bytes, "Tap signal disappeared before reaching the display")
 precondition(pixels("tapSettled").bytes == idle.bytes, "Released controller never returned to its idle artwork")

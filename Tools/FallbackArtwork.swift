@@ -80,8 +80,11 @@ for name in themes
                 context.fill(CGRect(x:w-210,y:0,width:210,height:h))
                 if isCrystal
                 {
-                    let headerWidth: CGFloat = isN64 ? 81 : 144
-                    context.fill(CGRect(x:w/2-headerWidth/2,y:0,width:headerWidth,height:66))
+                    let layout = try! JSONSerialization.jsonObject(with: Data(contentsOf: project.appendingPathComponent("circuit-layout.json"))) as! [String: [String: Any]]
+                    for header in layout[orientation]!["headers"] as! [[CGFloat]]
+                    {
+                        context.fill(CGRect(x:header[0]-header[2]/2,y:header[1]-header[3]/2,width:header[2],height:header[3]))
+                    }
                 }
                 else { context.fill(CGRect(x:210,y:h-34,width:w-420,height:34)) }
                 if !isCrystal { label(context,name == "Orbit" ? "ORBIT / N64" : "NEON / NES",25,40) }
@@ -99,7 +102,7 @@ for name in themes
                     context.setLineWidth(0.7)
                     context.strokePath()
                 }
-                let chips: [CGPoint] = orientation == "portrait" ? [CGPoint(x:195,y:isN64 ? 69 : 54)] : [CGPoint(x:180,y:isN64 ? 189 : 120),CGPoint(x:664,y:isN64 ? 189 : 120)]
+                let chips = (layout[orientation]!["chips"] as! [[CGFloat]]).map { CGPoint(x:$0[0],y:$0[1]) }
                 for chip in chips
                 {
                     context.setFillColor(color(0x101F2A))
@@ -114,10 +117,15 @@ for name in themes
                 let x=f["x"]!+f["width"]!/2, y=f["y"]!+f["height"]!/2
                 if item["thumbstick"] != nil
                 {
+                    context.saveGState()
+                    context.translateBy(x:x,y:y)
+                    context.scaleBy(x:f["width"]!/144,y:f["height"]!/144)
+                    context.translateBy(x:-x,y:-y)
                     circle(context,x,y,158,isCrystal ? 0x496B76 : 0x3B4B68)
                     circle(context,x,y,156,isCrystal ? 0x102D34 : 0x101A2D)
                     circle(context,x,y,116,isCrystal ? 0x466F76 : 0x63E8F1)
                     circle(context,x,y,114,isCrystal ? 0x0D222B : 0x080F20)
+                    context.restoreGState()
                     // The cap is a separate native thumbstick image, so it can move.
                 }
                 else if item["inputs"] is [String: String]

@@ -118,17 +118,17 @@ final class ControllerThemeUITests: XCTestCase
         self.waitForValue("safeAreaContainsController=true", in: status)
         let controller = app.descendants(matching: .any)["controller"]
         let controls: [(String,CGFloat,CGFloat)] = [
-            ("up",83,110), ("down",83,180), ("left",48,145), ("right",118,145),
-            ("b",269,140), ("a",337,140), ("select",169,226), ("start",229,226), ("menu",199,191)
+            ("up",101,97), ("down",101,184), ("left",57,141), ("right",144,141),
+            ("b",243,137), ("a",329,137), ("select",155,257), ("start",235,257), ("menu",352,65)
         ]
         for (name,x,y) in controls
         {
-            self.point(x,y,width:390,height:270,in:controller).tap()
+            self.point(x,y,width:390,height:292,in:controller).tap()
             self.waitForValue("\(name):1/1", in: status)
         }
         // The NES cross must produce digital diagonals and release both directions.
-        self.point(83,145,width:390,height:270,in:controller).press(forDuration:0.1,
-            thenDragTo:self.point(116,112,width:390,height:270,in:controller),
+        self.point(101,141,width:390,height:292,in:controller).press(forDuration:0.1,
+            thenDragTo:self.point(141,101,width:390,height:292,in:controller),
             withVelocity:.slow,thenHoldForDuration:0.2)
         self.waitForValue("up:2/2", in: status)
         self.waitForValue("right:2/2", in: status)
@@ -136,7 +136,7 @@ final class ControllerThemeUITests: XCTestCase
         app.buttons["themeMenu"].tap()
         app.buttons["Animate"].tap()
         self.waitForText("Static | idle", in: status)
-        self.point(337,140,width:390,height:270,in:controller).tap()
+        self.point(329,137,width:390,height:292,in:controller).tap()
         self.waitForValue("a:2/2", in: status)
         app.buttons["themeMenu"].tap()
         app.buttons["Animate"].tap()
@@ -146,9 +146,9 @@ final class ControllerThemeUITests: XCTestCase
             XCUIDevice.shared.orientation = orientation
             self.waitForValue("traits=iphone-edgeToEdge-landscape", in: status)
             self.waitForValue("safeAreaContainsController=true", in: status)
-            for (name,x,y,count) in [("a",777.0,205.0,index+3),("b",690.0,205.0,index+2),
-                                     ("select",390.0,46.0,index+2),("start",454.0,46.0,index+2),
-                                     ("menu",422.0,13.0,index+2)]
+            for (name,x,y,count) in [("a",774.0,268.0,index+3),("b",707.0,336.0,index+2),
+                                     ("select",374.0,361.0,index+2),("start",470.0,361.0,index+2),
+                                     ("menu",423.0,29.0,index+2)]
             {
                 self.point(x,y,width:844,height:390,in:controller).tap()
                 self.waitForValue("\(name):\(count)/\(count)", in: status)
@@ -186,7 +186,10 @@ final class ControllerThemeUITests: XCTestCase
         self.waitForText("Rive | idle", in: status)
         self.waitForValue("safeAreaContainsController=true", in: status)
         let controller = app.descendants(matching: .any)["controller"]
-        let center = self.point(116, 284, width: 390, height: 400, in: controller)
+        let crystal = argument == "--crystal"
+        let stickX: CGFloat = crystal ? 91 : 116
+        let stickY: CGFloat = crystal ? 137 : 284
+        let center = self.point(stickX,stickY,width:390,height:400,in:controller)
         if argument == "--crystal"
         {
             // A resting thumb wakes the socket without introducing any analog input.
@@ -199,7 +202,7 @@ final class ControllerThemeUITests: XCTestCase
         }
         // A small physical drag must stay analog, rather than jumping to 1.
         center.press(forDuration: 0.1,
-                     thenDragTo: self.point(124, 276, width: 390, height: 400, in: controller),
+                     thenDragTo: self.point(stickX+8, stickY-8, width: 390, height: 400, in: controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
         self.waitForText("Rive | idle", in: status)
         let values = (status.value as? String ?? "").split(separator: " ")
@@ -211,7 +214,7 @@ final class ControllerThemeUITests: XCTestCase
             XCTAssertLessThan(peak ?? 1, 0.7)
         }
         center.press(forDuration: 0.1,
-                     thenDragTo: self.point(75, 325, width: 390, height: 400, in: controller),
+                     thenDragTo: self.point(stickX-41, stickY+41, width: 390, height: 400, in: controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
         self.waitForText("Rive | idle", in: status)
         for axis in ["analogStickLeft", "analogStickDown"]
@@ -219,7 +222,12 @@ final class ControllerThemeUITests: XCTestCase
             XCTAssertTrue((status.value as? String ?? "").contains(axis + "Peak=1.000"), status.value as? String ?? "")
         }
 
-        let controls: [(String, CGFloat, CGFloat)] = [
+        let controls: [(String, CGFloat, CGFloat)] = crystal ? [
+            ("up",94,268), ("down",94,354), ("left",51,311), ("right",137,311),
+            ("a",335,183), ("b",243,154), ("cUp",288,266), ("cDown",288,362),
+            ("cLeft",241,313), ("cRight",336,314), ("l",58,55), ("r",332,55),
+            ("z",332,18), ("start",195,238), ("menu",194,52)
+        ] : [
             ("up",78,113), ("down",78,165), ("left",52,139), ("right",104,139),
             ("a",267,258), ("b",227,206), ("cUp",317,121), ("cDown",317,179),
             ("cLeft",288,150), ("cRight",346,150), ("l",44,78), ("r",346,78),
@@ -234,7 +242,7 @@ final class ControllerThemeUITests: XCTestCase
         }
         if argument == "--crystal"
         {
-            self.point(44,42,width:390,height:400,in:controller).tap()
+            self.point(58,18,width:390,height:400,in:controller).tap()
             self.waitForValue("z:2/2", in: status)
         }
 
@@ -243,7 +251,7 @@ final class ControllerThemeUITests: XCTestCase
         self.waitForText("Static | idle", in: status)
         self.waitForValue("safeAreaContainsController=true", in: status)
         center.press(forDuration: 0.1,
-                     thenDragTo: self.point(150,284,width:390,height:400,in:controller),
+                     thenDragTo: self.point(stickX+41,stickY,width:390,height:400,in:controller),
                      withVelocity: .slow, thenHoldForDuration: 0.2)
         self.waitForText("Static | idle", in: status)
         XCTAssertTrue((status.value as? String ?? "").contains("analogStickRightPeak=1.000"))
@@ -256,22 +264,22 @@ final class ControllerThemeUITests: XCTestCase
             self.waitForText("Rive | idle", in: status)
             self.waitForValue("traits=iphone-edgeToEdge-landscape", in: status)
             self.waitForValue("safeAreaContainsController=true", in: status)
-            self.point(735,260,width:844,height:390,in:controller).tap()
+            self.point(crystal ? 785 : 735,crystal ? 193 : 260,width:844,height:390,in:controller).tap()
             self.waitForText("a:\(index+2)/\(index+2)", in: status)
             // Exercise both edges when the notch switches sides.
-            self.point(44,139,width:844,height:390,in:controller).tap()
+            self.point(crystal ? 57 : 44,crystal ? 310 : 139,width:844,height:390,in:controller).tap()
             self.waitForValue("left:\(index+2)/\(index+2)", in: status)
-            self.point(784,145,width:844,height:390,in:controller).tap()
+            self.point(crystal ? 792 : 784,crystal ? 315 : 145,width:844,height:390,in:controller).tap()
             self.waitForValue("cRight:\(index+2)/\(index+2)", in: status)
             if argument == "--crystal"
             {
-                self.point(782,31,width:844,height:390,in:controller).tap()
+                self.point(774,22,width:844,height:390,in:controller).tap()
                 self.waitForValue("z:\(index*2+3)/\(index*2+3)", in: status)
-                self.point(55,31,width:844,height:390,in:controller).tap()
+                self.point(70,22,width:844,height:390,in:controller).tap()
                 self.waitForValue("z:\(index*2+4)/\(index*2+4)", in: status)
-                self.point(422,13,width:844,height:390,in:controller).tap()
+                self.point(423,29,width:844,height:390,in:controller).tap()
                 self.waitForValue("menu:\(index+2)/\(index+2)", in: status)
-                self.point(422,44,width:844,height:390,in:controller).tap()
+                self.point(423,361,width:844,height:390,in:controller).tap()
                 self.waitForValue("start:\(index+2)/\(index+2)", in: status)
             }
             let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
