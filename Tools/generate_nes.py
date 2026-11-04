@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Crystal NES: the clear circuit material with the original gray/black/red palette."""
+"""NES: the clear circuit material with the original gray/black/red palette."""
 import copy
 import json
-from generate_themes import ROOT, Scene, BUTTONS
-from generate_crystal import Crystal, CAP_COLORS, ICE, RED
+from controller_scene import ROOT, Scene, NES_BUTTONS as BUTTONS
+from generate_n64 import CircuitController, CAP_COLORS, ICE, RED
 from default_layout import layout_for
 
 
-class CrystalNES(Crystal):
+class NESController(CircuitController):
     cap_colors={**CAP_COLORS,'a':CAP_COLORS['start'],'b':CAP_COLORS['start'],
                 'start':CAP_COLORS['neutral']}
     dpad_led=RED
@@ -85,23 +85,23 @@ class CrystalNES(Crystal):
 
 
 def generate():
-    path=ROOT/'CrystalNES'
+    path=ROOT/'nes'
     path.mkdir(exist_ok=True)
-    scene=CrystalNES()
+    scene=NESController()
     reps={o:scene.artboard(o) for o in ['portrait','landscape']}
     edge=copy.deepcopy(reps)
     for rep in edge.values():
         rep['respectsSafeArea']=True
-    info=dict(name='Crystal NES',identifier='com.delta.rive.crystal.nes',
+    info=dict(name='NES',identifier='com.dskuza.delta.rive.nes',
               gameTypeIdentifier='com.rileytestut.delta.game.nes',debug=False,
               representations=dict(iphone=dict(standard=reps,edgeToEdge=edge)))
     manifest=dict(schemaVersion=1,representations={
-        f'iphone-{display}-{orientation}':dict(file='CrystalNES.riv',artboard=orientation.title(),
+        f'iphone-{display}-{orientation}':dict(file='nes.riv',artboard=orientation.title(),
             stateMachine='Controller',viewModel='Controller',buttons={b:b+'Pressed' for b in BUTTONS},
             reduceMotion='reduceMotion',preview=orientation+'-preview.png')
         for display in ['standard','edgeToEdge'] for orientation in reps})
     (path/'scene.rml').write_text(scene.finish())
-    (path/'rive.yaml').write_text('name: CrystalNES\nmain: Portrait\n')
+    (path/'rive.yaml').write_text('name: nes\nmain: Portrait\n')
     (path/'info.json').write_text(json.dumps(info,indent=2)+'\n')
     (path/'rive.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (path/'circuit-layout.json').write_text(json.dumps(scene.circuits,indent=2)+'\n')

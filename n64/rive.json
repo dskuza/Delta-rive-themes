@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "representations": {
     "iphone-standard-portrait": {
-      "file": "OrbitCrystal.riv",
+      "file": "n64.riv",
       "artboard": "Portrait",
       "stateMachine": "Controller",
       "viewModel": "Controller",
@@ -44,7 +44,7 @@
       "preview": "portrait-preview.png"
     },
     "iphone-standard-landscape": {
-      "file": "OrbitCrystal.riv",
+      "file": "n64.riv",
       "artboard": "Landscape",
       "stateMachine": "Controller",
       "viewModel": "Controller",
@@ -86,7 +86,7 @@
       "preview": "landscape-preview.png"
     },
     "iphone-edgeToEdge-portrait": {
-      "file": "OrbitCrystal.riv",
+      "file": "n64.riv",
       "artboard": "Portrait",
       "stateMachine": "Controller",
       "viewModel": "Controller",
@@ -128,7 +128,7 @@
       "preview": "portrait-preview.png"
     },
     "iphone-edgeToEdge-landscape": {
-      "file": "OrbitCrystal.riv",
+      "file": "n64.riv",
       "artboard": "Landscape",
       "stateMachine": "Controller",
       "viewModel": "Controller",

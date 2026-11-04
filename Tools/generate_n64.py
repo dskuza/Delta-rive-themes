@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Orbit: Crystal — transparent vector shell, visible PCB, live signal traces."""
+"""N64 — transparent vector shell, visible PCB, live signal traces."""
 import copy
 import json
 import math
-from generate_themes import ROOT
+from controller_scene import ROOT
 from default_layout import layout_for
-from generate_orbit import Orbit, BUTTONS, DIRECTIONS
+from controller_scene import AnalogScene, N64_BUTTONS as BUTTONS, DIRECTIONS
 
 ICE, MINT, BLUE, GREEN, GOLD, RED = ('FFCCD0D5','FF73F2D0','FF4B9CFF',
                                     'FF63D393','FFFFD23C','FFFF5C64')
@@ -20,7 +20,7 @@ CAP_COLORS = {
 }
 
 
-class Crystal(Orbit):
+class CircuitController(AnalogScene):
     cap_colors=CAP_COLORS
     dpad_led=MINT
 
@@ -306,25 +306,25 @@ class Crystal(Orbit):
 
 
 def generate():
-    path=ROOT/'OrbitCrystal'
+    path=ROOT/'n64'
     path.mkdir(exist_ok=True)
-    scene=Crystal()
+    scene=CircuitController()
     reps={o:scene.artboard(o) for o in ['portrait','landscape']}
     edge=copy.deepcopy(reps)
     for rep in edge.values():
         rep['respectsSafeArea']=True
-    info=dict(name='Orbit: Crystal',identifier='com.delta.rive.orbit-crystal.n64',
+    info=dict(name='N64',identifier='com.dskuza.delta.rive.n64',
               gameTypeIdentifier='com.rileytestut.delta.game.n64',debug=False,
               representations=dict(iphone=dict(standard=reps,edgeToEdge=edge)))
     manifest=dict(schemaVersion=1,representations={
-        f'iphone-{display}-{orientation}':dict(file='OrbitCrystal.riv',artboard=orientation.title(),
+        f'iphone-{display}-{orientation}':dict(file='n64.riv',artboard=orientation.title(),
             stateMachine='Controller',viewModel='Controller',buttons={b:b+'Pressed' for b in BUTTONS},
             sticks=[dict(up='analogStickUp',down='analogStickDown',left='analogStickLeft',right='analogStickRight',
                          x='stickX',y='stickY',active='stickActive',magnitude='stickMagnitude',contact='stickContact')],
             reduceMotion='reduceMotion',preview=orientation+'-preview.png')
         for display in ['standard','edgeToEdge'] for orientation in reps})
     (path/'scene.rml').write_text(scene.finish())
-    (path/'rive.yaml').write_text('name: OrbitCrystal\nmain: Portrait\n')
+    (path/'rive.yaml').write_text('name: n64\nmain: Portrait\n')
     (path/'info.json').write_text(json.dumps(info,indent=2)+'\n')
     (path/'rive.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (path/'circuit-layout.json').write_text(json.dumps(scene.circuits,indent=2)+'\n')

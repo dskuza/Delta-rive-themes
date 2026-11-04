@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "representations": {
     "iphone-standard-portrait": {
-      "file": "CrystalNES.riv",
+      "file": "nes.riv",
       "artboard": "Portrait",
       "stateMachine": "Controller",
       "viewModel": "Controller",
@@ -21,7 +21,7 @@
       "preview": "portrait-preview.png"
     },
     "iphone-standard-landscape": {
-      "file": "CrystalNES.riv",
+      "file": "nes.riv",
       "artboard": "Landscape",
       "stateMachine": "Controller",
       "viewModel": "Controller",
@@ -40,7 +40,7 @@
       "preview": "landscape-preview.png"
     },
     "iphone-edgeToEdge-portrait": {
-      "file": "CrystalNES.riv",
+      "file": "nes.riv",
       "artboard": "Portrait",
       "stateMachine": "Controller",
       "viewModel": "Controller",
@@ -59,7 +59,7 @@
       "preview": "portrait-preview.png"
     },
     "iphone-edgeToEdge-landscape": {
-      "file": "CrystalNES.riv",
+      "file": "nes.riv",
       "artboard": "Landscape",
       "stateMachine": "Controller",
       "viewModel": "Controller",

@@ -1,6 +1,6 @@
 {
-  "name": "Rive NES Template",
-  "identifier": "com.delta.rive.template.nes",
+  "name": "NES",
+  "identifier": "com.dskuza.delta.rive.nes",
   "gameTypeIdentifier": "com.rileytestut.delta.game.nes",
   "debug": false,
   "representations": {
@@ -12,7 +12,7 @@
           },
           "mappingSize": {
             "width": 390,
-            "height": 330
+            "height": 292
           },
           "items": [
             {
@@ -23,45 +23,45 @@
                 "right": "right"
               },
               "frame": {
-                "x": 34,
-                "y": 92,
-                "width": 132,
-                "height": 132
+                "x": 26.8125,
+                "y": 67.03125,
+                "width": 147.46875,
+                "height": 147.46875
               }
-            },
-            {
-              "inputs": [
-                "a"
-              ],
-              "frame": {
-                "x": 298.5,
-                "y": 113.5,
-                "width": 55,
-                "height": 55
-              },
-              "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
-              },
-              "mask": "circle"
             },
             {
               "inputs": [
                 "b"
               ],
               "frame": {
-                "x": 225.5,
-                "y": 150.5,
-                "width": 55,
-                "height": 55
+                "x": 208.40625,
+                "y": 102.375,
+                "width": 68.25,
+                "height": 68.25
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 294.9375,
+                "y": 102.375,
+                "width": 68.25,
+                "height": 68.25
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "circle"
             },
@@ -70,16 +70,16 @@
                 "select"
               ],
               "frame": {
-                "x": 129.0,
-                "y": 257.0,
-                "width": 48,
-                "height": 16
+                "x": 132.84375,
+                "y": 248.625,
+                "width": 45.09375,
+                "height": 15.84375
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -88,16 +88,16 @@
                 "start"
               ],
               "frame": {
-                "x": 209.0,
-                "y": 257.0,
-                "width": 48,
-                "height": 16
+                "x": 212.0625,
+                "y": 248.625,
+                "width": 45.09375,
+                "height": 15.84375
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -106,16 +106,16 @@
                 "menu"
               ],
               "frame": {
-                "x": 23.0,
-                "y": 284.5,
-                "width": 34,
-                "height": 15
+                "x": 331.21875,
+                "y": 54.59375,
+                "width": 42,
+                "height": 20
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             }
@@ -138,45 +138,45 @@
                 "right": "right"
               },
               "frame": {
-                "x": 39,
-                "y": 141,
-                "width": 132,
-                "height": 132
+                "x": 31.182266009852214,
+                "y": 215.1576354679803,
+                "width": 159.0295566502463,
+                "height": 159.0295566502463
               }
-            },
-            {
-              "inputs": [
-                "a"
-              ],
-              "frame": {
-                "x": 735.5,
-                "y": 145.5,
-                "width": 55,
-                "height": 55
-              },
-              "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
-              },
-              "mask": "circle"
             },
             {
               "inputs": [
                 "b"
               ],
               "frame": {
-                "x": 664.5,
-                "y": 198.5,
-                "width": 55,
-                "height": 55
+                "x": 668.3399014778325,
+                "y": 297.27093596059115,
+                "width": 76.91625615763546,
+                "height": 76.91625615763546
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 735.9014778325123,
+                "y": 229.70935960591132,
+                "width": 76.91625615763546,
+                "height": 76.91625615763546
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "circle"
             },
@@ -185,16 +185,16 @@
                 "select"
               ],
               "frame": {
-                "x": 313.0,
-                "y": 342.0,
-                "width": 48,
-                "height": 16
+                "x": 335.72906403940885,
+                "y": 347.1625615763547,
+                "width": 75.87684729064038,
+                "height": 27.02463054187192
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -203,16 +203,16 @@
                 "start"
               ],
               "frame": {
-                "x": 483.0,
-                "y": 342.0,
-                "width": 48,
-                "height": 16
+                "x": 432.3940886699507,
+                "y": 347.1625615763547,
+                "width": 75.87684729064038,
+                "height": 27.02463054187192
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -221,16 +221,16 @@
                 "menu"
               ],
               "frame": {
-                "x": 405.0,
-                "y": 12.5,
-                "width": 34,
-                "height": 15
+                "x": 384.5197044334975,
+                "y": 16.103448275862068,
+                "width": 76,
+                "height": 26
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             }
@@ -238,10 +238,10 @@
           "screens": [
             {
               "outputFrame": {
-                "x": 218,
-                "y": 40,
-                "width": 408,
-                "height": 306
+                "x": 234,
+                "y": 53,
+                "width": 376,
+                "height": 282
               }
             }
           ]
@@ -254,7 +254,7 @@
           },
           "mappingSize": {
             "width": 390,
-            "height": 330
+            "height": 292
           },
           "items": [
             {
@@ -265,45 +265,45 @@
                 "right": "right"
               },
               "frame": {
-                "x": 34,
-                "y": 92,
-                "width": 132,
-                "height": 132
+                "x": 26.8125,
+                "y": 67.03125,
+                "width": 147.46875,
+                "height": 147.46875
               }
-            },
-            {
-              "inputs": [
-                "a"
-              ],
-              "frame": {
-                "x": 298.5,
-                "y": 113.5,
-                "width": 55,
-                "height": 55
-              },
-              "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
-              },
-              "mask": "circle"
             },
             {
               "inputs": [
                 "b"
               ],
               "frame": {
-                "x": 225.5,
-                "y": 150.5,
-                "width": 55,
-                "height": 55
+                "x": 208.40625,
+                "y": 102.375,
+                "width": 68.25,
+                "height": 68.25
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 294.9375,
+                "y": 102.375,
+                "width": 68.25,
+                "height": 68.25
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "circle"
             },
@@ -312,16 +312,16 @@
                 "select"
               ],
               "frame": {
-                "x": 129.0,
-                "y": 257.0,
-                "width": 48,
-                "height": 16
+                "x": 132.84375,
+                "y": 248.625,
+                "width": 45.09375,
+                "height": 15.84375
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -330,16 +330,16 @@
                 "start"
               ],
               "frame": {
-                "x": 209.0,
-                "y": 257.0,
-                "width": 48,
-                "height": 16
+                "x": 212.0625,
+                "y": 248.625,
+                "width": 45.09375,
+                "height": 15.84375
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -348,20 +348,21 @@
                 "menu"
               ],
               "frame": {
-                "x": 23.0,
-                "y": 284.5,
-                "width": 34,
-                "height": 15
+                "x": 331.21875,
+                "y": 54.59375,
+                "width": 42,
+                "height": 20
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             }
-          ]
+          ],
+          "respectsSafeArea": true
         },
         "landscape": {
           "assets": {
@@ -380,45 +381,45 @@
                 "right": "right"
               },
               "frame": {
-                "x": 39,
-                "y": 141,
-                "width": 132,
-                "height": 132
+                "x": 31.182266009852214,
+                "y": 215.1576354679803,
+                "width": 159.0295566502463,
+                "height": 159.0295566502463
               }
-            },
-            {
-              "inputs": [
-                "a"
-              ],
-              "frame": {
-                "x": 735.5,
-                "y": 145.5,
-                "width": 55,
-                "height": 55
-              },
-              "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
-              },
-              "mask": "circle"
             },
             {
               "inputs": [
                 "b"
               ],
               "frame": {
-                "x": 664.5,
-                "y": 198.5,
-                "width": 55,
-                "height": 55
+                "x": 668.3399014778325,
+                "y": 297.27093596059115,
+                "width": 76.91625615763546,
+                "height": 76.91625615763546
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
+              },
+              "mask": "circle"
+            },
+            {
+              "inputs": [
+                "a"
+              ],
+              "frame": {
+                "x": 735.9014778325123,
+                "y": 229.70935960591132,
+                "width": 76.91625615763546,
+                "height": 76.91625615763546
+              },
+              "extendedEdges": {
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "circle"
             },
@@ -427,16 +428,16 @@
                 "select"
               ],
               "frame": {
-                "x": 313.0,
-                "y": 342.0,
-                "width": 48,
-                "height": 16
+                "x": 335.72906403940885,
+                "y": 347.1625615763547,
+                "width": 75.87684729064038,
+                "height": 27.02463054187192
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -445,16 +446,16 @@
                 "start"
               ],
               "frame": {
-                "x": 483.0,
-                "y": 342.0,
-                "width": 48,
-                "height": 16
+                "x": 432.3940886699507,
+                "y": 347.1625615763547,
+                "width": 75.87684729064038,
+                "height": 27.02463054187192
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             },
@@ -463,16 +464,16 @@
                 "menu"
               ],
               "frame": {
-                "x": 405.0,
-                "y": 12.5,
-                "width": 34,
-                "height": 15
+                "x": 384.5197044334975,
+                "y": 16.103448275862068,
+                "width": 76,
+                "height": 26
               },
               "extendedEdges": {
-                "top": 7,
-                "bottom": 7,
-                "left": 7,
-                "right": 7
+                "top": 3,
+                "bottom": 3,
+                "left": 3,
+                "right": 3
               },
               "mask": "rectangle"
             }
@@ -480,13 +481,14 @@
           "screens": [
             {
               "outputFrame": {
-                "x": 218,
-                "y": 40,
-                "width": 408,
-                "height": 306
+                "x": 234,
+                "y": 53,
+                "width": 376,
+                "height": 282
               }
             }
-          ]
+          ],
+          "respectsSafeArea": true
         }
       }
     }

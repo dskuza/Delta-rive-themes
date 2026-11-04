@@ -1,10 +1,10 @@
-"""Read the saved Delta phone layouts as the placement reference for Crystal.
+"""Read the saved Delta phone layouts as the placement reference for the controllers.
 
 The default edge-to-edge portrait artwork includes 34 points for the home
 indicator. UIKit supplies that inset for these safe-area-aware themes instead.
 """
 import json
-from generate_themes import ROOT
+from controller_scene import ROOT
 
 
 def layout_for(system, orientation):
