@@ -80,7 +80,7 @@ workspace/
   Delta-rive-themes/    # main
 ```
 
-Run `python3 Tools/setup.py` to connect the checkouts and resolve dependencies.
+Run `./Tools/setup.sh` to connect the checkouts and resolve dependencies.
 The production renderer, native-input UI tests and emulator preview remain in
 Delta at `Extras/RiveControllerPreview`. See Delta's `Docs/RiveDevelopment.md`.
 Theme compilation and pixel tests here do not need the Delta checkout.
@@ -284,7 +284,7 @@ ignored by Git. Run `python3 Tools/build_themes.py` to recreate all importable
 skins and their previews. Built files remain available locally for testing and
 release distribution; source `.riv` files outside `Dist/` remain eligible for Git.
 
-Use `python3 Tools/import_simulator.py --device booted --restart` to import built
+Use `./Tools/import_simulator.sh --device booted --restart` to import built
 packages into an installed Delta simulator app. Add `--build` to rebuild first.
 The command uses Delta's normal skin importer; it does not edit the database.
 
