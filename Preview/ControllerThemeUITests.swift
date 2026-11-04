@@ -168,6 +168,11 @@ final class ControllerThemeUITests: XCTestCase
             self.point(x,y,width:390,height:400,in:controller).tap()
             XCTAssertTrue((status.value as? String ?? "").contains("\(name):1/1"), name)
         }
+        if argument == "--crystal"
+        {
+            self.point(44,42,width:390,height:400,in:controller).tap()
+            self.waitForValue("z:2/2", in: status)
+        }
 
         app.buttons["themeMenu"].tap()
         app.buttons["Animate"].tap()
@@ -197,7 +202,9 @@ final class ControllerThemeUITests: XCTestCase
             if argument == "--crystal"
             {
                 self.point(782,31,width:844,height:390,in:controller).tap()
-                self.waitForValue("z:\(index+2)/\(index+2)", in: status)
+                self.waitForValue("z:\(index*2+3)/\(index*2+3)", in: status)
+                self.point(55,31,width:844,height:390,in:controller).tap()
+                self.waitForValue("z:\(index*2+4)/\(index*2+4)", in: status)
                 self.point(422,13,width:844,height:390,in:controller).tap()
                 self.waitForValue("menu:\(index+2)/\(index+2)", in: status)
                 self.point(422,44,width:844,height:390,in:controller).tap()
