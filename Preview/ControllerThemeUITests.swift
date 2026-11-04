@@ -159,7 +159,9 @@ final class ControllerThemeUITests: XCTestCase
             ("up",78,113), ("down",78,165), ("left",52,139), ("right",104,139),
             ("a",267,258), ("b",227,206), ("cUp",317,121), ("cDown",317,179),
             ("cLeft",288,150), ("cRight",346,150), ("l",44,78), ("r",346,78),
-            ("z",116,378), ("start",195,141), ("menu",40,378)
+            ("z",argument == "--crystal" ? 346 : 116,argument == "--crystal" ? 42 : 378),
+            ("start",195,141),
+            ("menu",argument == "--crystal" ? 195 : 40,argument == "--crystal" ? 108 : 378)
         ]
         for (name, x, y) in controls
         {
@@ -192,6 +194,15 @@ final class ControllerThemeUITests: XCTestCase
             self.waitForValue("left:\(index+2)/\(index+2)", in: status)
             self.point(784,145,width:844,height:390,in:controller).tap()
             self.waitForValue("cRight:\(index+2)/\(index+2)", in: status)
+            if argument == "--crystal"
+            {
+                self.point(782,31,width:844,height:390,in:controller).tap()
+                self.waitForValue("z:\(index+2)/\(index+2)", in: status)
+                self.point(422,13,width:844,height:390,in:controller).tap()
+                self.waitForValue("menu:\(index+2)/\(index+2)", in: status)
+                self.point(422,44,width:844,height:390,in:controller).tap()
+                self.waitForValue("start:\(index+2)/\(index+2)", in: status)
+            }
             let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
             attachment.name = "\(argument) safe area \(orientation.rawValue)"
             attachment.lifetime = .keepAlways

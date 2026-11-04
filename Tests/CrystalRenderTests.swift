@@ -58,12 +58,16 @@ precondition(pixels("tapTravel").bytes != idle.bytes, "Tap signal disappeared be
 precondition(pixels("tapSettled").bytes == idle.bytes, "Released controller never returned to its idle artwork")
 precondition(pixels("reducedEarly").bytes == pixels("reducedLate").bytes, "Reduced Motion still contains moving effects")
 let landscape = pixels("landscape")
+let metadata = try JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: CommandLine.arguments[2]))) as! [String:Any]
+let representations = metadata["representations"] as! [String:[String:[String:[String:Any]]]]
+let screens = representations["iphone"]!["edgeToEdge"]!["landscape"]!["screens"] as! [[String:Any]]
+let frame = screens[0]["outputFrame"] as! [String:Int]
 // CLI captures composite onto their preview backdrop. Compare the entire game
 // opening with an unpainted point, then verify live transparency in the UI test.
 let backdrop = Array(landscape.bytes[(20 * landscape.width + 300) * 4..<(20 * landscape.width + 300) * 4 + 4])
-for y in 40..<346
+for y in frame["y"]!..<(frame["y"]!+frame["height"]!)
 {
-    for x in 218..<626
+    for x in frame["x"]!..<(frame["x"]!+frame["width"]!)
     {
         let index = (y * landscape.width + x) * 4
         precondition(Array(landscape.bytes[index..<index+4]) == backdrop, "Artwork appears inside the landscape game aperture")

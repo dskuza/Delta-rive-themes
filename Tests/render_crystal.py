@@ -18,4 +18,4 @@ with tempfile.TemporaryDirectory(prefix='delta-crystal-render-') as temporary:
     render('reducedLate','--data=aPressed=true','--data=reduceMotion=true','--advance=35')
     render('landscape','--artboard=Landscape','--data=aPressed=true','--advance=20')
     subprocess.run(['swift','-module-cache-path',str(ROOT/'build/ModuleCache'),
-                    str(ROOT/'Tests/CrystalRenderTests.swift'),str(target)],check=True)
+                    str(ROOT/'Tests/CrystalRenderTests.swift'),str(target),str(ROOT/'OrbitCrystal/info.json')],check=True)
