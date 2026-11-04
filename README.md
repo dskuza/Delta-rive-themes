@@ -152,6 +152,8 @@ reference with another checkout.
 
 Verified locally:
 
+- Full Delta Debug device build with Xcode 27.2 (27B52), iOS 27.2 SDK,
+  and code signing disabled.
 - DeltaCore device build and standalone preview simulator build.
 - Production parser/archive tests for both sample packages, old skins, invalid
   metadata/assets, unsupported traits and normalized stick values.
@@ -161,9 +163,9 @@ Verified locally:
 - Rive CLI compilation and rendered idle/pressed/D-pad states; release returns
   pixel-for-pixel to the idle image.
 
-Full Delta builds were attempted with both installed toolchains. Xcode 26.5
-failed in the existing app icon asset catalog; Xcode 27 compiled the new Rive
-sources but failed on existing `UIHinge`/`UIHingeInteraction` API references absent
-from its SDK. The standalone preview isolates this work from those app build
-requirements. Physical-device latency, thermals and power consumption still need
-device testing before graduating the feature.
+Use Xcode 27.1 or later for the full Delta app: its existing
+`UIHinge`/`UIHingeInteraction` references require the iOS 27.1 SDK. The full
+build passes with Xcode 27.2. Xcode 26.5 failed in the app icon asset catalog,
+and Xcode 27.0 lacks the required UIKit APIs. The standalone preview also
+builds with Xcode 26.5. Physical-device latency, thermals and power consumption
+still need device testing before graduating the feature.
