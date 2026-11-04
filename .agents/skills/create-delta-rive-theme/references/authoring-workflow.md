@@ -12,10 +12,9 @@ to reuse default controller positions or the samples' panel geometry.
 
 | Example | Editable source of truth | Useful reference |
 | --- | --- | --- |
-| Template / NeonCircuit | `Tools/generate_themes.py` | Digital NES controls, typed model/default instance, Boolean state-machine conditions |
-| Orbit | `Tools/generate_orbit.py` | Native N64 stick, continuous X/Y, magnitude and directional sectors |
-| OrbitCrystal | `Tools/generate_crystal.py` | Clear materials, contact lighting, pose timelines, constraints, routed signal packets |
-| CrystalNES | `Tools/generate_crystal_nes.py` | A digital layout sharing the Crystal material/feedback helpers |
+| `nes/` | `Tools/generate_nes.py` | Digital NES controls and red circuit feedback |
+| `n64/` | `Tools/generate_n64.py` | Continuous N64 stick, contact LEDs, pose timelines, constraints and routed signal packets |
+| Shared authoring | `Tools/controller_scene.py` | RML primitives, typed model/default instance, Boolean conditions and numeric range helpers |
 | Default geometry reference | `Assets/DefaultLayouts.json` and `Tools/default_layout.py` | Optional placement reference; independent of a Delta checkout |
 
 Generated `scene.rml`, `info.json`, `rive.json` and, where used,
@@ -38,7 +37,7 @@ Fonts and other assets may live in `Assets/`; retain their licenses.
    reach and spacing; avoid relying on tiny labels or a hard-coded notch offset.
 2. Declare the Boolean/Number properties the manifest will map. Author the named
    model's default instance. `Scene.finish()` is the existing pattern for this.
-   `Scene.bind()`, `Scene.condition()` and `Orbit.numeric()` show numeric bindings,
+   `Scene.bind()`, `Scene.condition()` and `AnalogScene.numeric()` show numeric bindings,
    typed Boolean transition conditions and range conversion.
 3. Bind each control to independent feedback. A press can change its rim,
    illumination, texture or pose; release must restore a clear idle state. Preserve
@@ -59,7 +58,7 @@ Prefer Rive-native features when they serve the requested style:
 | Vector fills, gradients, strokes and feathering | Clear shells, colored rims, soft socket LEDs without bitmap glows |
 | Independent state-machine layers | Simultaneous A/B, digital diagonals, multiple illuminated controls |
 | Numeric data bindings / range converters | Continuous cap travel, axis rails, magnitude-based intensity |
-| Joysticks with X/Y pose timelines | Two-axis authored motion; Crystal's stick is a working example |
+| Joysticks with X/Y pose timelines | Two-axis authored motion; the N64 stick is a working example |
 | Bones and translation constraints | Related parts following a cap or gimbal without manual duplication |
 | Trim Paths and animation exit times | Traveling signal packets, with a complete short-tap pulse after native release |
 | Native Rive clipping and groups | Isolating effects while keeping an embedded game aperture clear |
@@ -92,16 +91,16 @@ not make these tools discover it automatically:
   orientation-named PDFs/previews, `<ThemeName>.riv`, and `aPressed`/`upPressed`
   preview properties. Adapt those assumptions if your manifest uses other names;
   adding a new allowed name is not enough in that case.
-- `Tools/FallbackArtwork.swift`: add the intended fallback treatment. Its current
-  N64 classification uses an `Orbit` name prefix and its Crystal styling uses
-  exact sample names. A new N64 theme must get analog fallback/cap handling
-  explicitly; do not accidentally render it as NES because of its name. Crystal's
-  fallback also reads `circuit-layout.json`. For custom layouts, update the
-  fallback's panel/header/game-opening geometry rather than keeping sample bounds.
-- The packager currently includes `stick.pdf` only for `Orbit` and `OrbitCrystal`.
-  Package every cap/fallback asset referenced by your new theme's `info.json`.
-- Delta's `Scripts/import-rive-themes.sh` defaults to the five current samples.
-  Pass a new theme name explicitly; extend default selections only if intended.
+- `Tools/FallbackArtwork.swift`: add the intended fallback treatment. It currently
+  draws the two clear controllers, classifies N64 by `gameTypeIdentifier`, and
+  reads `circuit-layout.json` for routes, headers and chips. Extend it for another
+  style or system; custom layouts must update its fallback panel and aperture
+  geometry as well as Rive artwork.
+- The packager includes thumbstick cap assets declared in native `info.json`
+  metadata. Generate every referenced cap PDF; the current N64 fallback emits
+  `stick.pdf`. A new filename needs corresponding fallback generation.
+- Delta's `Scripts/import-rive-themes.sh` defaults to `nes` and `n64`. Pass a
+  new theme name explicitly; extend default selections only if intended.
   `Tools/import_simulator.sh` forwards explicit names to that command.
 - For production integration checks, extend the companion Delta preview's theme
   choices/resources and its relevant tests. Its resources live in the themes repo
@@ -118,10 +117,10 @@ run generators automatically.
 
 ```sh
 # Regenerate only when changing this example's owning generator.
-python3 Tools/generate_crystal_nes.py
-rive CrystalNES --verify
-rive CrystalNES --once
-python3 Tools/build_themes.py CrystalNES
+python3 Tools/generate_nes.py
+rive nes --verify
+rive nes --once
+python3 Tools/build_themes.py nes
 ```
 
 Plain verification/export can run without a graphics session. The current PDF
@@ -134,28 +133,28 @@ Inspect actual idle, pressed, held, released, diagonal and analog frames rather
 than relying only on compilation:
 
 ```sh
-rive CrystalNES --artboard=Portrait --advance=1 \
+rive nes --artboard=Portrait --advance=1 \
   --screenshot=/tmp/controller-idle.png
-rive CrystalNES --data=aPressed=true --data=bPressed=true \
+rive nes --data=aPressed=true --data=bPressed=true \
   --data=upPressed=true --data=rightPressed=true --advance=20 \
   --screenshot=/tmp/controller-chord.png
-rive CrystalNES --data=aPressed=true --advance=6 \
+rive nes --data=aPressed=true --advance=6 \
   --data=aPressed=false --advance=100 --screenshot=/tmp/controller-released.png
-rive OrbitCrystal --data=stickX=0.35 --data=stickY=-0.6 \
+rive n64 --data=stickX=0.35 --data=stickY=-0.6 \
   --data=stickContact=true --advance=10 --screenshot=/tmp/controller-stick.png
-rive OrbitCrystal --data=stickContact=true --advance=10 \
+rive n64 --data=stickContact=true --advance=10 \
   --screenshot=/tmp/controller-center-contact.png
-rive OrbitCrystal --data=aPressed=true --data=reduceMotion=true \
+rive n64 --data=aPressed=true --data=reduceMotion=true \
   --advance=35 --screenshot=/tmp/controller-reduced.png
-rive OrbitCrystal --artboard=Landscape --advance=1 \
+rive n64 --artboard=Landscape --advance=1 \
   --screenshot=/tmp/controller-landscape.png
 ```
 
-The shipped pixel checks are specialized for CrystalNES/OrbitCrystal:
+The shipped pixel checks cover `nes` and `n64`:
 
 ```sh
-python3 Tests/render_crystal.py CrystalNES
-python3 Tests/render_crystal.py OrbitCrystal
+python3 Tests/render_controllers.py nes
+python3 Tests/render_controllers.py n64
 ```
 
 Do not treat those checks as coverage for a new theme automatically. Adapt the
@@ -171,10 +170,10 @@ runtime package contract is independent of the CLI preview; both need to work.
 
 ```sh
 ./Tools/setup.sh
-./Tools/import_simulator.sh CrystalNES OrbitCrystal --device booted --restart
+./Tools/import_simulator.sh nes n64 --device booted --restart
 # Optional diagnostic ROMs, bundled with their provenance in Delta:
-./Tools/import_simulator.sh CrystalNES --device booted --rom nes --restart
-./Tools/import_simulator.sh OrbitCrystal --device booted --rom n64 --restart
+./Tools/import_simulator.sh nes --device booted --rom nes --restart
+./Tools/import_simulator.sh n64 --device booted --rom n64 --restart
 ```
 
 `--restart` ends the running Delta game. Use it when that interruption is within
@@ -197,7 +196,7 @@ For native parser/archive coverage:
 python3 ../Delta/Extras/RiveControllerTests/run_tests.py --themes .
 ```
 
-That runner currently enumerates the five samples; extend it to exercise a new
+That runner currently enumerates the two controller projects; extend it to exercise a new
 package. Add an actual input test or manual emulator check for new layouts:
 
 - Every digital control, diagonal input, A/B chords and sustained holds.

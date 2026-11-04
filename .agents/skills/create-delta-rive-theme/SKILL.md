@@ -7,7 +7,7 @@ description: Create or modify Delta controller themes using Rive, including nati
 
 Create a playable `.deltaskin` package with editable authoring sources. Work from
 the user's system, visual direction and layout requirements. Original layouts
-are supported: default Delta positions, Crystal's clear materials and Orbit's
+are supported: default Delta positions and the current clear circuit-board
 appearance are useful examples, not requirements.
 
 ## Read the relevant contract

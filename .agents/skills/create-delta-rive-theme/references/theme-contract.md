@@ -168,7 +168,7 @@ The named model needs every Boolean and Number referenced below.
 For NES, omit `sticks` and its model properties, omit N64-only buttons, and add
 `select: selectPressed`. The digital examples already provide complete manifests.
 Names such as `analogStickUpPressed` are optional visual-sector Booleans; add
-explicit `buttons` mappings if you use them, as Orbit does.
+explicit `buttons` mappings if you use them, as the `n64` example does.
 
 Representation keys are the resolved native traits' `description`, including
 case: for example `iphone-standard-portrait`, `iphone-standard-landscape`,
