@@ -16,9 +16,9 @@ def run(*args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('themes', nargs='*', choices=['Template','NeonCircuit','Orbit','OrbitCrystal'])
+    parser.add_argument('themes', nargs='*', choices=['Template','NeonCircuit','Orbit','OrbitCrystal','CrystalNES'])
     requested = parser.parse_args().themes
-    themes = requested or ['Template','NeonCircuit','Orbit','OrbitCrystal']
+    themes = requested or ['Template','NeonCircuit','Orbit','OrbitCrystal','CrystalNES']
     projects = themes.copy()
     if not requested and (ROOT/'AnalogStickLab'/'scene.rml').exists():
         projects.append('AnalogStickLab')
@@ -26,7 +26,7 @@ def main():
         run('rive',ROOT/name,'--verify')
         run('rive',ROOT/name,'--once')
     (ROOT/'build').mkdir(exist_ok=True)
-    run('swift','-module-cache-path',ROOT/'build'/'ModuleCache',ROOT/'Tools'/'FallbackArtwork.swift',ROOT)
+    run('swift','-module-cache-path',ROOT/'build'/'ModuleCache',ROOT/'Tools'/'FallbackArtwork.swift',ROOT,*themes)
     (ROOT/'Dist').mkdir(exist_ok=True)
     if 'AnalogStickLab' in projects:
         shutil.copy2(ROOT/'AnalogStickLab'/'build'/'AnalogStickLab.riv',ROOT/'Dist'/'AnalogStickLab.riv')

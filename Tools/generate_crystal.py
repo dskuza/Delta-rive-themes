@@ -20,6 +20,9 @@ CAP_COLORS = {
 
 
 class Crystal(Orbit):
+    cap_colors=CAP_COLORS
+    dpad_led=MINT
+
     def __init__(self):
         super().__init__()
         self.properties['stickContact']='0:99'
@@ -103,9 +106,9 @@ class Crystal(Orbit):
         self.ellipse(parent,x,y,7,'FF8BA5AE',.8,name='Steel screw')
         self.ellipse(parent,x,y,4,'FF263C47',name='Screw recess')
 
-    def chip(self,parent,x,y,label='INPUT'):
+    def chip(self,parent,x,y,label='INPUT',system='N64'):
         self.text(parent,x,y-3,label,6.5,'FFA5C5C8',True)
-        self.text(parent,x,y+6,'N64',5,'FF60838D',True)
+        self.text(parent,x,y+6,system,5,'FF60838D',True)
         self.rect(parent,x,y,31,25,'FF101F2A',3,name='Input encoder')
         for i in range(6):
             for side in [-1,1]:
@@ -120,7 +123,7 @@ class Crystal(Orbit):
         else:
             self.text(cap,0,-1,label or name.upper(),22 if name in ('a','b') else
                       (7 if name=='start' else 9),'FFE3F4F5',True)
-        palette=CAP_COLORS.get('c' if name.startswith('c') else name,CAP_COLORS['neutral'])
+        palette=self.cap_colors.get('c' if name.startswith('c') else name,self.cap_colors['neutral'])
         if round:
             rim=self.ellipse(cap,0,0,w,'7197A6B4',.8,name='Clear cap rim')
             self.gradient(rim,palette,w/2)
@@ -157,9 +160,9 @@ class Crystal(Orbit):
             # Retain the removed inner rectangle's IDs; new material IDs live
             # separately so a palette edit does not renumber the rest of the file.
             self.counter+=4
-            self.gradient(face,CAP_COLORS['neutral'],17,new_ids=True)
+            self.gradient(face,self.cap_colors['neutral'],17,new_ids=True)
             led=self.el(arm,'Node',opacity=.06,name=name+' LED')
-            self.rect(led,0,-11,12,2,MINT,1)
+            self.rect(led,0,-11,12,2,self.dpad_led,1)
             self.animate(a,sm,name+'Pressed',[(led.get('id'),'glow')])
         self.ellipse(pad,0,0,5,'FFA7B5C0')
         self.rect(pad,0,0,27,27,'505A6F80',3)

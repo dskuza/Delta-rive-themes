@@ -7,12 +7,17 @@ Rive receives control state independently; emulation never waits for animation.
 
 ## Try it
 
-The `Dist` directory contains two importable NES skins, two N64 skins, and their standalone `.riv`
+The `Dist` directory contains three importable NES skins, two N64 skins, and their standalone `.riv`
 files:
 
 - `Template.deltaskin`: a complete starting point for another theme.
 - `NeonCircuit.deltaskin`: graphite panels, feathered LED glows, a native NES
   D-pad, independent directional lights and reduced-motion press states.
+- `CrystalNES.deltaskin`: the clear circuit-board style adapted to NES, with
+  lightly red-tinted A/B caps, a larger digital cross, Select/Start, and Menu above
+  Start. Independent red LED and signal-path effects support diagonal and
+  simultaneous input, with steady routes for Reduced Motion. Artwork stays
+  unbranded, with safe-area layout and native vector fallback in both orientations.
 - `Orbit.deltaskin`: a continuous N64 analog stick with a moving cap and feathered
   halo, magnitude-driven lighting, independent axis sectors, a separate D-pad,
   all four C-buttons, A/B/Z/L/R/Start, and native vector fallback artwork.
@@ -60,11 +65,12 @@ mimi's provenance, checksum and credits are in `../N64InputTest/README.md`.
 
 Open `Preview/RiveControllerPreview.xcodeproj` and run **RiveControllerPreview**
 on an iOS 17.4+ simulator. It uses the production loader, renderer, DeltaCore and
-NESDeltaCore/N64DeltaCore, and bundles both diagnostic ROMs and all four skins. No Delta account,
+NESDeltaCore/N64DeltaCore, and bundles both diagnostic ROMs and all five skins. No Delta account,
 Rive login, or commercial ROM is needed. The **Themes** menu selects the theme,
 toggles animation, and runs a simultaneous-input demonstration.
 Choose **Orbit N64** to open mimi, or launch with the `--orbit` argument.
 Choose **Orbit: Crystal**, or launch with `--crystal`, for the transparent version.
+Choose **Crystal NES**, or launch with `--crystal-nes`, for its NES counterpart.
 
 The preview uses DeltaCore's Metal video option for bitmap cores. On simulators,
 DeltaCore also resolves OpenGL core frames before presenting them with Metal;
@@ -125,6 +131,15 @@ constraint to attach its cap, and independent state-machine layers for LEDs and
 Trim Path signal packets. These are authored Rive features, without executable
 scripts or account signing. Its effects visualize controller inputs, not emulator
 acknowledgements or game-specific events. The game always receives input immediately.
+
+The NES counterpart reuses Crystal's material, button and signal authoring helpers,
+with its own digital controls and layout. It has no analog bindings:
+
+```sh
+python3 Extras/RiveControllerThemes/Tools/generate_crystal_nes.py
+python3 Extras/RiveControllerThemes/Tools/build_themes.py CrystalNES
+python3 Extras/RiveControllerThemes/Tests/render_crystal.py CrystalNES
+```
 
 Examples of local visual checks:
 
@@ -238,6 +253,9 @@ Verified locally:
   buttons and analog input, static fallback, and both landscape safe areas.
 - Crystal's rendered pixels: visible XY cap travel, a short tap's complete packet,
   return to idle, stationary Reduced Motion effects and a transparent game aperture.
+- Crystal NES: all nine controls, native digital diagonals, simultaneous A/B and
+  directional input, static fallback, background/resume, and both landscape safe
+  areas. The same rendered-effect checks cover its signal packets and game opening.
 - mimi boot and display after the focused PI DMA, cached-code alias and VI
   framebuffer address fixes; host-side PI/VI register regression checks pass.
 - Simultaneous A/B and diagonal state through the controller receiver mechanism.

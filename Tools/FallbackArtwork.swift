@@ -51,10 +51,12 @@ func generate(_ output: URL, width: CGFloat, height: CGFloat, draw: (CGContext) 
     context.endPDFPage()
     context.closePDF()
 }
-for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
+let themes = CommandLine.arguments.count > 2 ? Array(CommandLine.arguments.dropFirst(2)) : ["Template", "NeonCircuit", "Orbit", "OrbitCrystal", "CrystalNES"]
+for name in themes
 {
     let project = root.appendingPathComponent(name)
-    let isCrystal = name == "OrbitCrystal"
+    try FileManager.default.createDirectory(at:project.appendingPathComponent("build"),withIntermediateDirectories:true)
+    let isCrystal = name == "OrbitCrystal" || name == "CrystalNES"
     let isN64 = name.hasPrefix("Orbit")
     let info = try JSONSerialization.jsonObject(with: Data(contentsOf: project.appendingPathComponent("info.json"))) as! [String: Any]
     let devices = info["representations"] as! [String: Any]
@@ -76,7 +78,11 @@ for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
                 // Do not paint over the emulator's screen.
                 context.fill(CGRect(x:0,y:0,width:210,height:h))
                 context.fill(CGRect(x:w-210,y:0,width:210,height:h))
-                if isCrystal { context.fill(CGRect(x:w/2-40.5,y:0,width:81,height:66)) }
+                if isCrystal
+                {
+                    let headerWidth: CGFloat = isN64 ? 81 : 144
+                    context.fill(CGRect(x:w/2-headerWidth/2,y:0,width:headerWidth,height:66))
+                }
                 else { context.fill(CGRect(x:210,y:h-34,width:w-420,height:34)) }
                 if !isCrystal { label(context,name == "Orbit" ? "ORBIT / N64" : "NEON / NES",25,40) }
             }
@@ -93,12 +99,12 @@ for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
                     context.setLineWidth(0.7)
                     context.strokePath()
                 }
-                let chips: [CGPoint] = orientation == "portrait" ? [CGPoint(x:195,y:69)] : [CGPoint(x:180,y:189),CGPoint(x:664,y:189)]
+                let chips: [CGPoint] = orientation == "portrait" ? [CGPoint(x:195,y:isN64 ? 69 : 54)] : [CGPoint(x:180,y:isN64 ? 189 : 120),CGPoint(x:664,y:isN64 ? 189 : 120)]
                 for chip in chips
                 {
                     context.setFillColor(color(0x101F2A))
                     context.fill(CGRect(x:chip.x-16,y:chip.y-13,width:32,height:26))
-                    label(context,"N64",chip.x-9,chip.y+3,7)
+                    label(context,isN64 ? "N64" : "NES",chip.x-9,chip.y+3,7)
                 }
             }
             let items=representation["items"] as! [[String:Any]]
@@ -140,7 +146,7 @@ for name in ["Template", "NeonCircuit", "Orbit", "OrbitCrystal"]
                     let inputs=item["inputs"] as! [String]
                     let text=inputs[0].uppercased()
                     let input=inputs[0]
-                    let faces: [String: UInt32] = isCrystal ? ["a":0x2567BB, "b":0x148649, "start":0xD83844] : ["a":0x2865C5, "b":0x208556, "start":0xD94C61]
+                    let faces: [String: UInt32] = name == "CrystalNES" ? ["a":0xD83844,"b":0xD83844] : (isCrystal ? ["a":0x2567BB, "b":0x148649, "start":0xD83844] : ["a":0x2865C5, "b":0x208556, "start":0xD94C61])
                     let isC = isN64 && input.hasPrefix("c")
                     context.setFillColor(color(isCrystal ? (isC ? 0xEBC02F : faces[input, default:0x878E96]) : (name == "Orbit" ? (isC ? 0xDCB33C : faces[input, default:0x28313F]) : 0x263240)))
                     if isCrystal { context.setAlpha(0.28) }

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "representations": {
+    "iphone-standard-portrait": {
+      "file": "CrystalNES.riv",
+      "artboard": "Portrait",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "reduceMotion": "reduceMotion"
+    },
+    "iphone-standard-landscape": {
+      "file": "CrystalNES.riv",
+      "artboard": "Landscape",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "reduceMotion": "reduceMotion"
+    },
+    "iphone-edgeToEdge-portrait": {
+      "file": "CrystalNES.riv",
+      "artboard": "Portrait",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "reduceMotion": "reduceMotion"
+    },
+    "iphone-edgeToEdge-landscape": {
+      "file": "CrystalNES.riv",
+      "artboard": "Landscape",
+      "stateMachine": "Controller",
+      "viewModel": "Controller",
+      "buttons": {
+        "up": "upPressed",
+        "down": "downPressed",
+        "left": "leftPressed",
+        "right": "rightPressed",
+        "a": "aPressed",
+        "b": "bPressed",
+        "start": "startPressed",
+        "select": "selectPressed",
+        "menu": "menuPressed"
+      },
+      "reduceMotion": "reduceMotion"
+    }
+  }
+}
