@@ -10,6 +10,12 @@ import ZIPFoundation
         let manifest = try RiveControllerSkinManifest(data: fixture)
         let representation = manifest.representations["iphone-standard-portrait"]!
         precondition(representation.sticks == nil)
+        var oldJSON = try JSONSerialization.jsonObject(with:fixture) as! [String:Any]
+        var oldRepresentations = oldJSON["representations"] as! [String:[String:Any]]
+        for key in oldRepresentations.keys { oldRepresentations[key]!.removeValue(forKey:"preview") }
+        oldJSON["representations"] = oldRepresentations
+        let oldManifest = try RiveControllerSkinManifest(data:JSONSerialization.data(withJSONObject:oldJSON))
+        precondition(oldManifest.representations["iphone-standard-portrait"]!.preview == nil)
         let stick = try JSONDecoder().decode(RiveControllerSkinManifest.Stick.self, from: Data("""
         {"up":"up","down":"down","left":"left","right":"right","x":"stickX","y":"stickY"}
         """.utf8))
@@ -50,6 +56,8 @@ import ZIPFoundation
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "Template.riv", with: "../Template.riv").utf8))
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "\"aPressed\"", with: "\"bPressed\"").utf8))
         try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "\"aPressed\"", with: "\"a//pressed\"").utf8))
+        try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "portrait-preview.png", with: "../portrait-preview.png").utf8))
+        try rejects(Data(String(data: fixture, encoding: .utf8)!.replacingOccurrences(of: "portrait-preview.png", with: "portrait-preview.pdf").utf8))
         try rejects(Data(String(data: analogFixture, encoding: .utf8)!.replacingOccurrences(of: "\"magnitude\":\"stickMagnitude\"", with: "\"magnitude\":\"stickX\"").utf8))
         try rejects(Data(String(data: analogFixture, encoding: .utf8)!.replacingOccurrences(of: "\"contact\":\"stickContact\"", with: "\"contact\":\"stickActive\"").utf8))
 
@@ -72,6 +80,21 @@ import ZIPFoundation
         try RiveControllerSkinArchive.validate(at: legacy)
         let legacyAsset = try RiveControllerSkinArchive.load(at: legacy, traits: "iphone-standard-portrait")
         precondition(legacyAsset == nil)
+        let legacyPreview = try RiveControllerSkinArchive.preview(at: legacy, traits: "iphone-standard-portrait")
+        precondition(legacyPreview == nil)
+        let missingPreview = try archive("missing-preview.deltaskin", members: ["rive.json": fixture])
+        let absentPreview = try RiveControllerSkinArchive.preview(at: missingPreview, traits: "iphone-standard-portrait")
+        precondition(absentPreview == nil)
+        for (name,data) in [("corrupt",Data("BAD!".utf8)),("oversized",Data(repeating:0,count:2*1024*1024+1))]
+        {
+            let url = try archive("\(name)-preview.deltaskin", members: ["rive.json":fixture,"portrait-preview.png":data])
+            do
+            {
+                _ = try RiveControllerSkinArchive.preview(at:url,traits:"iphone-standard-portrait")
+                fatalError("Invalid preview was accepted")
+            }
+            catch is RiveControllerSkinManifest.Error {}
+        }
         let missing = try archive("missing.deltaskin", members: ["rive.json": fixture])
         do
         {
@@ -102,6 +125,8 @@ import ZIPFoundation
             {
                 let asset = try RiveControllerSkinArchive.load(at: url, traits: traits)
                 precondition(asset != nil)
+                let preview = try RiveControllerSkinArchive.preview(at:url,traits:traits)
+                precondition(preview != nil && preview!.count > 1024)
             }
             let unsupported = try RiveControllerSkinArchive.load(at: url, traits: "tv-standard-landscape")
             precondition(unsupported == nil)
@@ -112,6 +137,6 @@ import ZIPFoundation
         precondition(orbitStick.magnitude == "stickMagnitude")
         let crystal = try RiveControllerSkinArchive.load(at: root.appendingPathComponent("Dist/OrbitCrystal.deltaskin"), traits: "iphone-edgeToEdge-landscape")!
         precondition(crystal.representation.sticks!.first!.contact == "stickContact")
-        print("Passed manifest validation, archive compatibility, malformed assets, and normalized stick input tests.")
+        print("Passed manifest validation, archive compatibility, malformed assets, normalized stick input, and rendered preview tests.")
     }
 }

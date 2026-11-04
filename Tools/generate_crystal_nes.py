@@ -98,7 +98,7 @@ def generate():
     manifest=dict(schemaVersion=1,representations={
         f'iphone-{display}-{orientation}':dict(file='CrystalNES.riv',artboard=orientation.title(),
             stateMachine='Controller',viewModel='Controller',buttons={b:b+'Pressed' for b in BUTTONS},
-            reduceMotion='reduceMotion')
+            reduceMotion='reduceMotion',preview=orientation+'-preview.png')
         for display in ['standard','edgeToEdge'] for orientation in reps})
     (path/'scene.rml').write_text(scene.finish())
     (path/'rive.yaml').write_text('name: CrystalNES\nmain: Portrait\n')

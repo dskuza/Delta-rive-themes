@@ -40,7 +40,8 @@
           "contact": "stickContact"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "portrait-preview.png"
     },
     "iphone-standard-landscape": {
       "file": "OrbitCrystal.riv",
@@ -81,7 +82,8 @@
           "contact": "stickContact"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "landscape-preview.png"
     },
     "iphone-edgeToEdge-portrait": {
       "file": "OrbitCrystal.riv",
@@ -122,7 +124,8 @@
           "contact": "stickContact"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "portrait-preview.png"
     },
     "iphone-edgeToEdge-landscape": {
       "file": "OrbitCrystal.riv",
@@ -163,7 +166,8 @@
           "contact": "stickContact"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "landscape-preview.png"
     }
   }
 }

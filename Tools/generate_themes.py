@@ -234,7 +234,7 @@ def generate(name,showcase):
     info={'name':'Neon Circuit NES' if showcase else 'Rive NES Template','identifier':'com.delta.rive.'+name.lower()+'.nes','gameTypeIdentifier':'com.rileytestut.delta.game.nes','debug':False,'representations':{'iphone':{'standard':reps,'edgeToEdge':reps}}}
     (path/'info.json').write_text(json.dumps(info,indent=2)+'\n')
     bindings={b:b+'Pressed' for b in BUTTONS}
-    manifest={'schemaVersion':1,'representations':{f'iphone-{display}-{orientation}':{'file':name+'.riv','artboard':orientation.title(),'stateMachine':'Controller','viewModel':'Controller','buttons':bindings,'sticks':[dict(up='up',down='down',left='left',right='right',x='stickX',y='stickY',active='stickActive')],'reduceMotion':'reduceMotion'} for display in ['standard','edgeToEdge'] for orientation in reps}}
+    manifest={'schemaVersion':1,'representations':{f'iphone-{display}-{orientation}':{'file':name+'.riv','artboard':orientation.title(),'stateMachine':'Controller','viewModel':'Controller','buttons':bindings,'sticks':[dict(up='up',down='down',left='left',right='right',x='stickX',y='stickY',active='stickActive')],'reduceMotion':'reduceMotion','preview':orientation+'-preview.png'} for display in ['standard','edgeToEdge'] for orientation in reps}}
     for representation in manifest['representations'].values():
         representation.pop('sticks')
     (path/'rive.json').write_text(json.dumps(manifest,indent=2)+'\n')

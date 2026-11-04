@@ -190,7 +190,7 @@ def generate():
         f'iphone-{display}-{orientation}':dict(file='Orbit.riv',artboard=orientation.title(),
             stateMachine='Controller',viewModel='Controller',buttons={b:b+'Pressed' for b in BUTTONS},
             sticks=[dict(up='analogStickUp',down='analogStickDown',left='analogStickLeft',right='analogStickRight',
-                         x='stickX',y='stickY',active='stickActive',magnitude='stickMagnitude')],reduceMotion='reduceMotion')
+                         x='stickX',y='stickY',active='stickActive',magnitude='stickMagnitude')],reduceMotion='reduceMotion',preview=orientation+'-preview.png')
         for display in ['standard','edgeToEdge'] for orientation in reps})
     (path/'rive.json').write_text(json.dumps(manifest,indent=2)+'\n')
 

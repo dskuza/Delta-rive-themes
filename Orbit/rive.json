@@ -39,7 +39,8 @@
           "magnitude": "stickMagnitude"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "portrait-preview.png"
     },
     "iphone-standard-landscape": {
       "file": "Orbit.riv",
@@ -79,7 +80,8 @@
           "magnitude": "stickMagnitude"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "landscape-preview.png"
     },
     "iphone-edgeToEdge-portrait": {
       "file": "Orbit.riv",
@@ -119,7 +121,8 @@
           "magnitude": "stickMagnitude"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "portrait-preview.png"
     },
     "iphone-edgeToEdge-landscape": {
       "file": "Orbit.riv",
@@ -159,7 +162,8 @@
           "magnitude": "stickMagnitude"
         }
       ],
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "landscape-preview.png"
     }
   }
 }

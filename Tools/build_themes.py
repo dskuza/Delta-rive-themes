@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build .riv files, native fallback PDFs and importable .deltaskin archives.
 
-Requires macOS, Xcode command-line tools and Rive CLI 1.8.0 or newer.
+Requires macOS with Metal, Xcode command-line tools and Rive CLI 1.8.0 or newer.
 No login is needed: these scenes contain no scripts.
 """
 from pathlib import Path
@@ -33,8 +33,15 @@ def main():
     for name in themes:
         project=ROOT/name
         members={'info.json':project/'info.json','rive.json':project/'rive.json',name+'.riv':project/'build'/f'{name}.riv'}
-        for asset in ['portrait.pdf','landscape.pdf']:
-            members[asset]=project/'build'/asset
+        for orientation in ['portrait','landscape']:
+            # Picker artwork comes from the actual Rive artboard, including the
+            # analog cap and a lit press state, rather than the native fallback.
+            preview=project/'build'/f'{orientation}-preview.png'
+            run('rive',project,'--artboard='+orientation.title(),
+                '--data=aPressed=true','--data=upPressed=true','--advance=20',
+                '--screenshot='+str(preview))
+            members[preview.name]=preview
+            members[orientation+'.pdf']=project/'build'/(orientation+'.pdf')
         if name in ['Orbit','OrbitCrystal']:
             members['stick.pdf'] = project/'build'/'stick.pdf'
         shutil.copy2(project/'build'/f'{name}.riv',ROOT/'Dist'/f'{name}.riv')

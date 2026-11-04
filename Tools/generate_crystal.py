@@ -321,7 +321,7 @@ def generate():
             stateMachine='Controller',viewModel='Controller',buttons={b:b+'Pressed' for b in BUTTONS},
             sticks=[dict(up='analogStickUp',down='analogStickDown',left='analogStickLeft',right='analogStickRight',
                          x='stickX',y='stickY',active='stickActive',magnitude='stickMagnitude',contact='stickContact')],
-            reduceMotion='reduceMotion')
+            reduceMotion='reduceMotion',preview=orientation+'-preview.png')
         for display in ['standard','edgeToEdge'] for orientation in reps})
     (path/'scene.rml').write_text(scene.finish())
     (path/'rive.yaml').write_text('name: OrbitCrystal\nmain: Portrait\n')

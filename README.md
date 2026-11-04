@@ -49,7 +49,9 @@ files:
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for its system.
-Both portrait and landscape are included. Turn the feature off to compare the
+Both portrait and landscape are included. The skin picker uses actual Rive
+artboard renders with lit A and D-pad LEDs, including the analog cap.
+Turn the feature off to compare the
 native vector fallback. Existing skins need no changes.
 
 Import `../NESInputTest/input-test.nes` as the game. Its display shows the inputs
@@ -94,7 +96,7 @@ The preview project can be regenerated with `ruby Preview/create_project.rb`
 
 ## Authoring and rebuilding
 
-Requirements: macOS, Xcode command-line tools, Python 3 and Rive CLI 1.8.0+.
+Requirements: macOS with Metal, Xcode command-line tools, Python 3 and Rive CLI 1.8.0+.
 The ROM additionally needs `cc65` (`brew install cc65`).
 
 ```sh
@@ -276,3 +278,10 @@ still need device testing before graduating the feature.
 To select Xcode for a command without changing the system-wide default, prefix
 `xcodebuild` and `xcrun simctl` commands with
 `DEVELOPER_DIR=/Applications/Xcode-27.2.0.app/Contents/Developer`.
+
+Picker artwork is optional: each `rive.json` representation can name a PNG in
+`preview`. The builder renders `portrait-preview.png` and `landscape-preview.png`
+from the same artboards it packages. Delta uses these images in both skin pickers,
+independently of whether animation is enabled. Older skins, missing images and
+unreadable previews retain the native fallback. Preview extraction stays in memory
+and checks the filename, PNG header, file size and decoded dimensions.

@@ -17,7 +17,8 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "portrait-preview.png"
     },
     "iphone-standard-landscape": {
       "file": "NeonCircuit.riv",
@@ -35,7 +36,8 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "landscape-preview.png"
     },
     "iphone-edgeToEdge-portrait": {
       "file": "NeonCircuit.riv",
@@ -53,7 +55,8 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "portrait-preview.png"
     },
     "iphone-edgeToEdge-landscape": {
       "file": "NeonCircuit.riv",
@@ -71,7 +74,8 @@
         "select": "selectPressed",
         "menu": "menuPressed"
       },
-      "reduceMotion": "reduceMotion"
+      "reduceMotion": "reduceMotion",
+      "preview": "landscape-preview.png"
     }
   }
 }
