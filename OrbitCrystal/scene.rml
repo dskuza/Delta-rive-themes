@@ -4208,30 +4208,6 @@
                 <ExitState x="800" y="-200" id="0:5093" />
             </StateMachineLayer>
         </StateMachine>
-        <Text x="25" y="25" name="ORBIT" originX="0" originY="0.5" sizingValue="autoWidth" id="0:105">
-            <TextStylePaint fontSize="18" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="0" name="Label" id="0:106">
-                <Fill name="Paint" id="0:107">
-                    <SolidColor name="Color" colorValue="FFE0F1F4" id="0:108" />
-                </Fill>
-            </TextStylePaint>
-            <TextValueRun styleId="0:106" text="ORBIT" name="Text" id="0:109" />
-        </Text>
-        <Text x="26" y="44" name="C R Y S T A L   /   N 6 4" originX="0" originY="0.5" sizingValue="autoWidth" id="0:110">
-            <TextStylePaint fontSize="6.5" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:111">
-                <Fill name="Paint" id="0:112">
-                    <SolidColor name="Color" colorValue="FF8BB1BA" id="0:113" />
-                </Fill>
-            </TextStylePaint>
-            <TextValueRun styleId="0:111" text="C R Y S T A L   /   N 6 4" name="Text" id="0:114" />
-        </Text>
-        <Text x="359" y="26" name="64" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:115">
-            <TextStylePaint fontSize="16" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="0" name="Label" id="0:116">
-                <Fill name="Paint" id="0:117">
-                    <SolidColor name="Color" colorValue="FF77A7B5" id="0:118" />
-                </Fill>
-            </TextStylePaint>
-            <TextValueRun styleId="0:116" text="64" name="Text" id="0:119" />
-        </Text>
         <Node x="116" y="284" name="Transparent analog module" id="0:120">
             <RootBone length="1" name="Continuous XY gimbal" id="0:121" />
             <Node name="Transparent moving cap" id="0:137">
@@ -4245,25 +4221,25 @@
                 <Shape x="0" y="0" name="Concentric grip" id="0:143">
                     <Ellipse width="26" height="26" name="Path" id="0:144" />
                     <Stroke name="Paint" thickness="0.7" id="0:145">
-                        <SolidColor name="Color" colorValue="437BABB8" id="0:146" />
+                        <SolidColor name="Color" colorValue="80959DA7" id="0:146" />
                     </Stroke>
                 </Shape>
                 <Shape x="0" y="0" name="Concentric grip" id="0:147">
                     <Ellipse width="36" height="36" name="Path" id="0:148" />
                     <Stroke name="Paint" thickness="0.7" id="0:149">
-                        <SolidColor name="Color" colorValue="437BABB8" id="0:150" />
+                        <SolidColor name="Color" colorValue="80959DA7" id="0:150" />
                     </Stroke>
                 </Shape>
-                <Shape x="0" y="0" name="Clear thumb cap" id="0:151">
+                <Shape x="0" y="0" name="Gray thumb cap" id="0:151">
                     <Ellipse width="49" height="49" name="Path" id="0:152" />
                     <Stroke name="Paint" thickness="1" id="0:153">
-                        <SolidColor name="Color" colorValue="8FABC7D4" id="0:154" />
+                        <SolidColor name="Color" colorValue="AFC4CAD0" id="0:154" />
                     </Stroke>
                     <Fill name="Transparent material" id="0:155">
                         <RadialGradient startX="-10.0" startY="-15.0" endX="12.5" endY="25" name="Clear polycarbonate" id="0:156">
-                            <GradientStop colorValue="8C8CBCC8" position="0.0" id="0:157" />
-                            <GradientStop colorValue="2852778A" position="0.5" id="0:158" />
-                            <GradientStop colorValue="36537591" position="1.0" id="0:159" />
+                            <GradientStop colorValue="C4B8BEC6" position="0.0" id="0:157" />
+                            <GradientStop colorValue="8877808D" position="0.5" id="0:158" />
+                            <GradientStop colorValue="A04D5867" position="1.0" id="0:159" />
                         </RadialGradient>
                     </Fill>
                 </Shape>
@@ -4487,24 +4463,25 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Node x="78" y="139" name="Clear digital cross" id="0:346">
+        <Node x="78" y="139" name="Gray digital cross" id="0:346">
             <Node x="0" y="-26" rotation="0.0" name="up cap" id="0:347">
                 <Shape y="-2" id="0:348">
                     <Triangle width="6" height="5" id="0:349" />
                     <Fill name="Paint" id="0:350">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:351" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:351" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:352">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:353" />
                     <Stroke name="Paint" thickness="0.7" id="0:354">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:355" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:355" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:356">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:357" />
-                    <Fill name="Paint" id="0:358">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:359" />
+                    <Fill name="Transparent material" id="0:900001">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900002">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900003" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900004" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900005" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="up LED" id="0:360">
@@ -4520,19 +4497,20 @@
                 <Shape y="-2" id="0:432">
                     <Triangle width="6" height="5" id="0:433" />
                     <Fill name="Paint" id="0:434">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:435" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:435" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:436">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:437" />
                     <Stroke name="Paint" thickness="0.7" id="0:438">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:439" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:439" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:440">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:441" />
-                    <Fill name="Paint" id="0:442">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:443" />
+                    <Fill name="Transparent material" id="0:900006">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900007">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900008" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900009" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900010" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="right LED" id="0:444">
@@ -4548,19 +4526,20 @@
                 <Shape y="-2" id="0:516">
                     <Triangle width="6" height="5" id="0:517" />
                     <Fill name="Paint" id="0:518">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:519" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:519" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:520">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:521" />
                     <Stroke name="Paint" thickness="0.7" id="0:522">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:523" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:523" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:524">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:525" />
-                    <Fill name="Paint" id="0:526">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:527" />
+                    <Fill name="Transparent material" id="0:900011">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900012">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900013" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900014" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900015" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="down LED" id="0:528">
@@ -4576,19 +4555,20 @@
                 <Shape y="-2" id="0:600">
                     <Triangle width="6" height="5" id="0:601" />
                     <Fill name="Paint" id="0:602">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:603" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:603" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:604">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:605" />
                     <Stroke name="Paint" thickness="0.7" id="0:606">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:607" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:607" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:608">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:609" />
-                    <Fill name="Paint" id="0:610">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:611" />
+                    <Fill name="Transparent material" id="0:900016">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900017">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900018" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900019" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900020" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="left LED" id="0:612">
@@ -4603,13 +4583,13 @@
             <Shape x="0" y="0" name="Ring" id="0:683">
                 <Ellipse width="5" height="5" name="Path" id="0:684" />
                 <Fill name="Paint" id="0:685">
-                    <SolidColor name="Color" colorValue="FFADD3D7" id="0:686" />
+                    <SolidColor name="Color" colorValue="FF68717C" id="0:686" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Panel" id="0:687">
                 <Rectangle width="27" height="27" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:688" />
                 <Fill name="Paint" id="0:689">
-                    <SolidColor name="Color" colorValue="50557D8A" id="0:690" />
+                    <SolidColor name="Color" colorValue="FFA2A8B0" id="0:690" />
                 </Fill>
             </Shape>
             <Shape x="0" y="1" name="Panel" id="0:691">
@@ -4712,7 +4692,7 @@
         <Text x="317" y="150" name="C" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:699">
             <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:700">
                 <Fill name="Paint" id="0:701">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:702" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:702" />
                 </Fill>
             </TextStylePaint>
             <TextValueRun styleId="0:700" text="C" name="Text" id="0:703" />
@@ -4721,26 +4701,26 @@
             <Shape rotation="0.0" name="cUp arrow" id="0:705">
                 <Triangle width="10" height="9" id="0:706" />
                 <Fill name="Paint" id="0:707">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:708" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:708" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:709">
                 <Ellipse width="32" height="32" name="Path" id="0:710" />
                 <Stroke name="Paint" thickness="0.8" id="0:711">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:712" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:712" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:713">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:714">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:715" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:716" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:717" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:715" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:716" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:717" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:718">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:719" />
                 <Stroke name="Paint" thickness="1" id="0:720">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:721" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:721" />
                 </Stroke>
             </Shape>
         </Node>
@@ -4748,13 +4728,13 @@
             <Shape x="0" y="0" name="Ring" id="0:723">
                 <Ellipse width="37" height="37" name="Path" id="0:724" />
                 <Stroke name="Paint" thickness="1.3" id="0:725">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:726" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:726" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:727">
                 <Ellipse width="37" height="37" name="Path" id="0:728" />
                 <Stroke name="Glow" thickness="3" id="0:729">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:730" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:730" />
                     <Feather name="Vector feather" strength="7" id="0:731" />
                 </Stroke>
             </Shape>
@@ -4807,7 +4787,7 @@
         <Shape x="317" y="129.64" name="cUp / contact pad" id="0:813">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:814" />
             <Fill name="Paint" id="0:815">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:816" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:816" />
             </Fill>
         </Shape>
         <Shape x="317" y="121" name="Exposed switch socket" id="0:817">
@@ -4820,26 +4800,26 @@
             <Shape rotation="3.141592653589793" name="cDown arrow" id="0:822">
                 <Triangle width="10" height="9" id="0:823" />
                 <Fill name="Paint" id="0:824">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:825" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:825" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:826">
                 <Ellipse width="32" height="32" name="Path" id="0:827" />
                 <Stroke name="Paint" thickness="0.8" id="0:828">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:829" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:829" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:830">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:831">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:832" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:833" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:834" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:832" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:833" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:834" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:835">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:836" />
                 <Stroke name="Paint" thickness="1" id="0:837">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:838" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:838" />
                 </Stroke>
             </Shape>
         </Node>
@@ -4847,13 +4827,13 @@
             <Shape x="0" y="0" name="Ring" id="0:840">
                 <Ellipse width="37" height="37" name="Path" id="0:841" />
                 <Stroke name="Paint" thickness="1.3" id="0:842">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:843" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:843" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:844">
                 <Ellipse width="37" height="37" name="Path" id="0:845" />
                 <Stroke name="Glow" thickness="3" id="0:846">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:847" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:847" />
                     <Feather name="Vector feather" strength="7" id="0:848" />
                 </Stroke>
             </Shape>
@@ -4906,7 +4886,7 @@
         <Shape x="317" y="187.64" name="cDown / contact pad" id="0:930">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:931" />
             <Fill name="Paint" id="0:932">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:933" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:933" />
             </Fill>
         </Shape>
         <Shape x="317" y="179" name="Exposed switch socket" id="0:934">
@@ -4919,26 +4899,26 @@
             <Shape rotation="4.71238898038469" name="cLeft arrow" id="0:939">
                 <Triangle width="10" height="9" id="0:940" />
                 <Fill name="Paint" id="0:941">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:942" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:942" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:943">
                 <Ellipse width="32" height="32" name="Path" id="0:944" />
                 <Stroke name="Paint" thickness="0.8" id="0:945">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:946" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:946" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:947">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:948">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:949" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:950" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:951" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:949" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:950" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:951" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:952">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:953" />
                 <Stroke name="Paint" thickness="1" id="0:954">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:955" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:955" />
                 </Stroke>
             </Shape>
         </Node>
@@ -4946,13 +4926,13 @@
             <Shape x="0" y="0" name="Ring" id="0:957">
                 <Ellipse width="37" height="37" name="Path" id="0:958" />
                 <Stroke name="Paint" thickness="1.3" id="0:959">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:960" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:960" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:961">
                 <Ellipse width="37" height="37" name="Path" id="0:962" />
                 <Stroke name="Glow" thickness="3" id="0:963">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:964" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:964" />
                     <Feather name="Vector feather" strength="7" id="0:965" />
                 </Stroke>
             </Shape>
@@ -5005,7 +4985,7 @@
         <Shape x="288" y="158.64" name="cLeft / contact pad" id="0:1047">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1048" />
             <Fill name="Paint" id="0:1049">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:1050" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:1050" />
             </Fill>
         </Shape>
         <Shape x="288" y="150" name="Exposed switch socket" id="0:1051">
@@ -5018,26 +4998,26 @@
             <Shape rotation="1.5707963267948966" name="cRight arrow" id="0:1056">
                 <Triangle width="10" height="9" id="0:1057" />
                 <Fill name="Paint" id="0:1058">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:1059" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:1059" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:1060">
                 <Ellipse width="32" height="32" name="Path" id="0:1061" />
                 <Stroke name="Paint" thickness="0.8" id="0:1062">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:1063" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1063" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1064">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:1065">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:1066" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:1067" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1068" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:1066" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:1067" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:1068" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:1069">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:1070" />
                 <Stroke name="Paint" thickness="1" id="0:1071">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:1072" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:1072" />
                 </Stroke>
             </Shape>
         </Node>
@@ -5045,13 +5025,13 @@
             <Shape x="0" y="0" name="Ring" id="0:1074">
                 <Ellipse width="37" height="37" name="Path" id="0:1075" />
                 <Stroke name="Paint" thickness="1.3" id="0:1076">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:1077" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:1077" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:1078">
                 <Ellipse width="37" height="37" name="Path" id="0:1079" />
                 <Stroke name="Glow" thickness="3" id="0:1080">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:1081" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:1081" />
                     <Feather name="Vector feather" strength="7" id="0:1082" />
                 </Stroke>
             </Shape>
@@ -5104,7 +5084,7 @@
         <Shape x="346" y="158.64" name="cRight / contact pad" id="0:1164">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1165" />
             <Fill name="Paint" id="0:1166">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:1167" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:1167" />
             </Fill>
         </Shape>
         <Shape x="346" y="150" name="Exposed switch socket" id="0:1168">
@@ -5125,20 +5105,20 @@
             <Shape x="0" y="0" name="Clear cap rim" id="0:1178">
                 <Ellipse width="56" height="56" name="Path" id="0:1179" />
                 <Stroke name="Paint" thickness="0.8" id="0:1180">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:1181" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1181" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1182">
                     <LinearGradient startX="-11.200000000000001" startY="-16.8" endX="14.0" endY="28.0" name="Clear polycarbonate" id="0:1183">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:1184" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:1185" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1186" />
+                        <GradientStop colorValue="F24D96E5" position="0.0" id="0:1184" />
+                        <GradientStop colorValue="D02567BB" position="0.5" id="0:1185" />
+                        <GradientStop colorValue="EC16428A" position="1.0" id="0:1186" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-8.96" y="-10.64" name="Moulded cap highlight" id="0:1187">
                 <Ellipse width="23.52" height="23.52" name="Path" id="0:1188" />
                 <Stroke name="Paint" thickness="1" id="0:1189">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:1190" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:1190" />
                 </Stroke>
             </Shape>
         </Node>
@@ -5146,13 +5126,13 @@
             <Shape x="0" y="0" name="Ring" id="0:1192">
                 <Ellipse width="61" height="61" name="Path" id="0:1193" />
                 <Stroke name="Paint" thickness="1.3" id="0:1194">
-                    <SolidColor name="Color" colorValue="FF6CBBFF" id="0:1195" />
+                    <SolidColor name="Color" colorValue="FF4B9CFF" id="0:1195" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:1196">
                 <Ellipse width="61" height="61" name="Path" id="0:1197" />
                 <Stroke name="Glow" thickness="3" id="0:1198">
-                    <SolidColor name="Color" colorValue="FF6CBBFF" id="0:1199" />
+                    <SolidColor name="Color" colorValue="FF4B9CFF" id="0:1199" />
                     <Feather name="Vector feather" strength="7" id="0:1200" />
                 </Stroke>
             </Shape>
@@ -5205,7 +5185,7 @@
         <Shape x="267" y="273.12" name="a / contact pad" id="0:1282">
             <Rectangle width="12.32" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1283" />
             <Fill name="Paint" id="0:1284">
-                <SolidColor name="Color" colorValue="FF6CBBFF" id="0:1285" />
+                <SolidColor name="Color" colorValue="FF4B9CFF" id="0:1285" />
             </Fill>
         </Shape>
         <Shape x="267" y="258" name="Exposed switch socket" id="0:1286">
@@ -5226,20 +5206,20 @@
             <Shape x="0" y="0" name="Clear cap rim" id="0:1296">
                 <Ellipse width="46" height="46" name="Path" id="0:1297" />
                 <Stroke name="Paint" thickness="0.8" id="0:1298">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:1299" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1299" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1300">
                     <LinearGradient startX="-9.200000000000001" startY="-13.799999999999999" endX="11.5" endY="23.0" name="Clear polycarbonate" id="0:1301">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:1302" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:1303" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1304" />
+                        <GradientStop colorValue="F24BB579" position="0.0" id="0:1302" />
+                        <GradientStop colorValue="D0148649" position="0.5" id="0:1303" />
+                        <GradientStop colorValue="EC075A30" position="1.0" id="0:1304" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-7.36" y="-8.74" name="Moulded cap highlight" id="0:1305">
                 <Ellipse width="19.32" height="19.32" name="Path" id="0:1306" />
                 <Stroke name="Paint" thickness="1" id="0:1307">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:1308" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:1308" />
                 </Stroke>
             </Shape>
         </Node>
@@ -5247,13 +5227,13 @@
             <Shape x="0" y="0" name="Ring" id="0:1310">
                 <Ellipse width="51" height="51" name="Path" id="0:1311" />
                 <Stroke name="Paint" thickness="1.3" id="0:1312">
-                    <SolidColor name="Color" colorValue="FF76E7AD" id="0:1313" />
+                    <SolidColor name="Color" colorValue="FF63D393" id="0:1313" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:1314">
                 <Ellipse width="51" height="51" name="Path" id="0:1315" />
                 <Stroke name="Glow" thickness="3" id="0:1316">
-                    <SolidColor name="Color" colorValue="FF76E7AD" id="0:1317" />
+                    <SolidColor name="Color" colorValue="FF63D393" id="0:1317" />
                     <Feather name="Vector feather" strength="7" id="0:1318" />
                 </Stroke>
             </Shape>
@@ -5306,7 +5286,7 @@
         <Shape x="227" y="218.42000000000002" name="b / contact pad" id="0:1400">
             <Rectangle width="10.12" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1401" />
             <Fill name="Paint" id="0:1402">
-                <SolidColor name="Color" colorValue="FF76E7AD" id="0:1403" />
+                <SolidColor name="Color" colorValue="FF63D393" id="0:1403" />
             </Fill>
         </Shape>
         <Shape x="227" y="206" name="Exposed switch socket" id="0:1404">
@@ -5319,7 +5299,7 @@
             <Text x="0" y="-1" name="L" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1409">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1410">
                     <Fill name="Paint" id="0:1411">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:1412" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:1412" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:1410" text="L" name="Text" id="0:1413" />
@@ -5327,13 +5307,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:1414">
                 <Rectangle width="60" height="20" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:1415" />
                 <Stroke name="Paint" thickness="0.75" id="0:1416">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:1417" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1417" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1418">
                     <LinearGradient startX="-12.0" startY="-18.0" endX="15.0" endY="30.0" name="Clear polycarbonate" id="0:1419">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:1420" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:1421" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1422" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:1420" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:1421" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:1422" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -5342,10 +5322,10 @@
             <Shape x="0" y="0" name="Panel" id="0:1424">
                 <Rectangle width="64" height="24" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:1425" />
                 <Stroke name="Paint" thickness="1.2" id="0:1426">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1427" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1427" />
                 </Stroke>
                 <Stroke name="Glow" thickness="3" id="0:1428">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1429" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1429" />
                     <Feather name="Vector feather" strength="7" id="0:1430" />
                 </Stroke>
             </Shape>
@@ -5398,7 +5378,7 @@
         <Shape x="44" y="83.4" name="l / contact pad" id="0:1512">
             <Rectangle width="13.2" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1513" />
             <Fill name="Paint" id="0:1514">
-                <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1515" />
+                <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1515" />
             </Fill>
         </Shape>
         <Shape x="44" y="78" name="Exposed switch socket" id="0:1516">
@@ -5411,7 +5391,7 @@
             <Text x="0" y="-1" name="R" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1521">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1522">
                     <Fill name="Paint" id="0:1523">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:1524" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:1524" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:1522" text="R" name="Text" id="0:1525" />
@@ -5419,13 +5399,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:1526">
                 <Rectangle width="60" height="20" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:1527" />
                 <Stroke name="Paint" thickness="0.75" id="0:1528">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:1529" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1529" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1530">
                     <LinearGradient startX="-12.0" startY="-18.0" endX="15.0" endY="30.0" name="Clear polycarbonate" id="0:1531">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:1532" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:1533" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1534" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:1532" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:1533" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:1534" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -5434,10 +5414,10 @@
             <Shape x="0" y="0" name="Panel" id="0:1536">
                 <Rectangle width="64" height="24" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:1537" />
                 <Stroke name="Paint" thickness="1.2" id="0:1538">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1539" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1539" />
                 </Stroke>
                 <Stroke name="Glow" thickness="3" id="0:1540">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1541" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1541" />
                     <Feather name="Vector feather" strength="7" id="0:1542" />
                 </Stroke>
             </Shape>
@@ -5490,7 +5470,7 @@
         <Shape x="346" y="83.4" name="r / contact pad" id="0:1624">
             <Rectangle width="13.2" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1625" />
             <Fill name="Paint" id="0:1626">
-                <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1627" />
+                <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1627" />
             </Fill>
         </Shape>
         <Shape x="346" y="78" name="Exposed switch socket" id="0:1628">
@@ -5503,7 +5483,7 @@
             <Text x="0" y="-1" name="Z" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1633">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1634">
                     <Fill name="Paint" id="0:1635">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:1636" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:1636" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:1634" text="Z" name="Text" id="0:1637" />
@@ -5511,13 +5491,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:1638">
                 <Rectangle width="52" height="22" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:1639" />
                 <Stroke name="Paint" thickness="0.75" id="0:1640">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:1641" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1641" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1642">
                     <LinearGradient startX="-10.4" startY="-15.6" endX="13.0" endY="26.0" name="Clear polycarbonate" id="0:1643">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:1644" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:1645" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1646" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:1644" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:1645" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:1646" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -5603,20 +5583,20 @@
             <Shape x="0" y="0" name="Clear cap rim" id="0:1750">
                 <Ellipse width="34" height="34" name="Path" id="0:1751" />
                 <Stroke name="Paint" thickness="0.8" id="0:1752">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:1753" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1753" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1754">
                     <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17.0" name="Clear polycarbonate" id="0:1755">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:1756" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:1757" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1758" />
+                        <GradientStop colorValue="F2F27A7F" position="0.0" id="0:1756" />
+                        <GradientStop colorValue="E0D83844" position="0.5" id="0:1757" />
+                        <GradientStop colorValue="EC96232F" position="1.0" id="0:1758" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.44" y="-6.46" name="Moulded cap highlight" id="0:1759">
                 <Ellipse width="14.28" height="14.28" name="Path" id="0:1760" />
                 <Stroke name="Paint" thickness="1" id="0:1761">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:1762" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:1762" />
                 </Stroke>
             </Shape>
         </Node>
@@ -5624,13 +5604,13 @@
             <Shape x="0" y="0" name="Ring" id="0:1764">
                 <Ellipse width="39" height="39" name="Path" id="0:1765" />
                 <Stroke name="Paint" thickness="1.3" id="0:1766">
-                    <SolidColor name="Color" colorValue="FFFF8295" id="0:1767" />
+                    <SolidColor name="Color" colorValue="FFFF5C64" id="0:1767" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:1768">
                 <Ellipse width="39" height="39" name="Path" id="0:1769" />
                 <Stroke name="Glow" thickness="3" id="0:1770">
-                    <SolidColor name="Color" colorValue="FFFF8295" id="0:1771" />
+                    <SolidColor name="Color" colorValue="FFFF5C64" id="0:1771" />
                     <Feather name="Vector feather" strength="3" id="0:1772" />
                 </Stroke>
             </Shape>
@@ -5683,7 +5663,7 @@
         <Shape x="195" y="150.18" name="start / contact pad" id="0:1854">
             <Rectangle width="7.48" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1855" />
             <Fill name="Paint" id="0:1856">
-                <SolidColor name="Color" colorValue="FFFF8295" id="0:1857" />
+                <SolidColor name="Color" colorValue="FFFF5C64" id="0:1857" />
             </Fill>
         </Shape>
         <Shape x="195" y="141" name="Exposed switch socket" id="0:1858">
@@ -5696,7 +5676,7 @@
             <Text x="0" y="-1" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1863">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:1864">
                     <Fill name="Paint" id="0:1865">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:1866" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:1866" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:1864" text="MENU" name="Text" id="0:1867" />
@@ -5704,13 +5684,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:1868">
                 <Rectangle width="38" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1869" />
                 <Stroke name="Paint" thickness="0.75" id="0:1870">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:1871" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:1871" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:1872">
                     <LinearGradient startX="-7.6000000000000005" startY="-11.4" endX="9.5" endY="19.0" name="Clear polycarbonate" id="0:1873">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:1874" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:1875" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:1876" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:1874" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:1875" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:1876" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -5719,10 +5699,10 @@
             <Shape x="0" y="0" name="Panel" id="0:1878">
                 <Rectangle width="42" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:1879" />
                 <Stroke name="Paint" thickness="1.2" id="0:1880">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1881" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1881" />
                 </Stroke>
                 <Stroke name="Glow" thickness="3" id="0:1882">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1883" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1883" />
                     <Feather name="Vector feather" strength="7" id="0:1884" />
                 </Stroke>
             </Shape>
@@ -5775,7 +5755,7 @@
         <Shape x="40" y="382.32" name="menu / contact pad" id="0:1966">
             <Rectangle width="8.36" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:1967" />
             <Fill name="Paint" id="0:1968">
-                <SolidColor name="Color" colorValue="FFA4DEEB" id="0:1969" />
+                <SolidColor name="Color" colorValue="FFCCD0D5" id="0:1969" />
             </Fill>
         </Shape>
         <Shape x="40" y="378" name="Exposed switch socket" id="0:1970">
@@ -5787,20 +5767,20 @@
         <Shape x="195" y="200" name="Clear shell / edge" id="0:1974">
             <Rectangle width="382" height="392" originX="0.5" originY="0.5" cornerRadiusTL="20" cornerRadiusTR="20" cornerRadiusBL="20" cornerRadiusBR="20" name="Path" id="0:1975" />
             <Stroke name="Paint" thickness="0.8" id="0:1976">
-                <SolidColor name="Color" colorValue="1548A4B4" id="0:1977" />
+                <SolidColor name="Color" colorValue="458C939B" id="0:1977" />
             </Stroke>
             <Fill name="Transparent material" id="0:1978">
                 <LinearGradient startX="-78.4" startY="-117.6" endX="98.0" endY="196.0" name="Clear polycarbonate" id="0:1979">
-                    <GradientStop colorValue="376BA1AC" position="0.0" id="0:1980" />
-                    <GradientStop colorValue="0D6B9AA3" position="0.5" id="0:1981" />
-                    <GradientStop colorValue="1D6897A3" position="1.0" id="0:1982" />
+                    <GradientStop colorValue="4BC4C8CC" position="0.0" id="0:1980" />
+                    <GradientStop colorValue="147C848D" position="0.5" id="0:1981" />
+                    <GradientStop colorValue="2A929AA4" position="1.0" id="0:1982" />
                 </LinearGradient>
             </Fill>
         </Shape>
         <Shape x="195" y="200" name="Inner shell refraction" id="0:1983">
             <Rectangle width="378" height="388" originX="0.5" originY="0.5" cornerRadiusTL="18" cornerRadiusTR="18" cornerRadiusBL="18" cornerRadiusBR="18" name="Path" id="0:1984" />
             <Stroke name="Paint" thickness="0.5" id="0:1985">
-                <SolidColor name="Color" colorValue="163A6974" id="0:1986" />
+                <SolidColor name="Color" colorValue="397B848E" id="0:1986" />
             </Stroke>
         </Shape>
         <Text x="195" y="66" name="INPUT" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:1987">
@@ -6048,7 +6028,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:2150" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:2151">
-                    <SolidColor colorValue="FFFFD36E" id="0:2152" />
+                    <SolidColor colorValue="FFFFD23C" id="0:2152" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:2153" />
                 </Stroke>
             </Shape>
@@ -6063,7 +6043,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:2162" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:2163">
-                        <SolidColor colorValue="FFFFD36E" id="0:2164" />
+                        <SolidColor colorValue="FFFFD23C" id="0:2164" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6078,7 +6058,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:2172" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:2173">
-                <SolidColor colorValue="FF29464E" id="0:2174" />
+                <SolidColor colorValue="FF44535A" id="0:2174" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CUP / idle" duration="48" loopValue="oneShot" id="0:2175">
@@ -6138,7 +6118,7 @@
             <Shape x="178.0" y="6" name="Panel" id="0:2272">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:2273" />
                 <Fill name="Paint" id="0:2274">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:2275" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:2275" />
                 </Fill>
             </Shape>
         </Node>
@@ -6174,7 +6154,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:2350" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:2351">
-                    <SolidColor colorValue="FFFFD36E" id="0:2352" />
+                    <SolidColor colorValue="FFFFD23C" id="0:2352" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:2353" />
                 </Stroke>
             </Shape>
@@ -6189,7 +6169,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:2362" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:2363">
-                        <SolidColor colorValue="FFFFD36E" id="0:2364" />
+                        <SolidColor colorValue="FFFFD23C" id="0:2364" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6204,7 +6184,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:2372" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:2373">
-                <SolidColor colorValue="FF29464E" id="0:2374" />
+                <SolidColor colorValue="FF44535A" id="0:2374" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CDOWN / idle" duration="48" loopValue="oneShot" id="0:2375">
@@ -6264,7 +6244,7 @@
             <Shape x="181.3" y="6" name="Panel" id="0:2472">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:2473" />
                 <Fill name="Paint" id="0:2474">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:2475" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:2475" />
                 </Fill>
             </Shape>
         </Node>
@@ -6300,7 +6280,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:2550" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:2551">
-                    <SolidColor colorValue="FFFFD36E" id="0:2552" />
+                    <SolidColor colorValue="FFFFD23C" id="0:2552" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:2553" />
                 </Stroke>
             </Shape>
@@ -6315,7 +6295,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:2562" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:2563">
-                        <SolidColor colorValue="FFFFD36E" id="0:2564" />
+                        <SolidColor colorValue="FFFFD23C" id="0:2564" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6330,7 +6310,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:2572" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:2573">
-                <SolidColor colorValue="FF29464E" id="0:2574" />
+                <SolidColor colorValue="FF44535A" id="0:2574" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CLEFT / idle" duration="48" loopValue="oneShot" id="0:2575">
@@ -6390,7 +6370,7 @@
             <Shape x="184.6" y="6" name="Panel" id="0:2672">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:2673" />
                 <Fill name="Paint" id="0:2674">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:2675" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:2675" />
                 </Fill>
             </Shape>
         </Node>
@@ -6426,7 +6406,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:2750" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:2751">
-                    <SolidColor colorValue="FFFFD36E" id="0:2752" />
+                    <SolidColor colorValue="FFFFD23C" id="0:2752" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:2753" />
                 </Stroke>
             </Shape>
@@ -6441,7 +6421,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:2762" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:2763">
-                        <SolidColor colorValue="FFFFD36E" id="0:2764" />
+                        <SolidColor colorValue="FFFFD23C" id="0:2764" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6456,7 +6436,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:2772" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:2773">
-                <SolidColor colorValue="FF29464E" id="0:2774" />
+                <SolidColor colorValue="FF44535A" id="0:2774" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CRIGHT / idle" duration="48" loopValue="oneShot" id="0:2775">
@@ -6516,7 +6496,7 @@
             <Shape x="187.9" y="6" name="Panel" id="0:2872">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:2873" />
                 <Fill name="Paint" id="0:2874">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:2875" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:2875" />
                 </Fill>
             </Shape>
         </Node>
@@ -6552,7 +6532,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:2950" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:2951">
-                    <SolidColor colorValue="FF6CBBFF" id="0:2952" />
+                    <SolidColor colorValue="FF4B9CFF" id="0:2952" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:2953" />
                 </Stroke>
             </Shape>
@@ -6567,7 +6547,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:2962" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:2963">
-                        <SolidColor colorValue="FF6CBBFF" id="0:2964" />
+                        <SolidColor colorValue="FF4B9CFF" id="0:2964" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6582,7 +6562,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:2972" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:2973">
-                <SolidColor colorValue="FF29464E" id="0:2974" />
+                <SolidColor colorValue="FF44535A" id="0:2974" />
             </Stroke>
         </Shape>
         <LinearAnimation name="A / idle" duration="48" loopValue="oneShot" id="0:2975">
@@ -6642,7 +6622,7 @@
             <Shape x="191.2" y="6" name="Panel" id="0:3072">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:3073" />
                 <Fill name="Paint" id="0:3074">
-                    <SolidColor name="Color" colorValue="FF6CBBFF" id="0:3075" />
+                    <SolidColor name="Color" colorValue="FF4B9CFF" id="0:3075" />
                 </Fill>
             </Shape>
         </Node>
@@ -6678,7 +6658,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:3150" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:3151">
-                    <SolidColor colorValue="FF76E7AD" id="0:3152" />
+                    <SolidColor colorValue="FF63D393" id="0:3152" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:3153" />
                 </Stroke>
             </Shape>
@@ -6693,7 +6673,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:3162" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:3163">
-                        <SolidColor colorValue="FF76E7AD" id="0:3164" />
+                        <SolidColor colorValue="FF63D393" id="0:3164" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6708,7 +6688,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:3172" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:3173">
-                <SolidColor colorValue="FF29464E" id="0:3174" />
+                <SolidColor colorValue="FF44535A" id="0:3174" />
             </Stroke>
         </Shape>
         <LinearAnimation name="B / idle" duration="48" loopValue="oneShot" id="0:3175">
@@ -6768,7 +6748,7 @@
             <Shape x="194.5" y="6" name="Panel" id="0:3272">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:3273" />
                 <Fill name="Paint" id="0:3274">
-                    <SolidColor name="Color" colorValue="FF76E7AD" id="0:3275" />
+                    <SolidColor name="Color" colorValue="FF63D393" id="0:3275" />
                 </Fill>
             </Shape>
         </Node>
@@ -6804,7 +6784,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:3350" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:3351">
-                    <SolidColor colorValue="FFA4DEEB" id="0:3352" />
+                    <SolidColor colorValue="FFCCD0D5" id="0:3352" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:3353" />
                 </Stroke>
             </Shape>
@@ -6819,7 +6799,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:3362" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:3363">
-                        <SolidColor colorValue="FFA4DEEB" id="0:3364" />
+                        <SolidColor colorValue="FFCCD0D5" id="0:3364" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6834,7 +6814,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:3372" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:3373">
-                <SolidColor colorValue="FF29464E" id="0:3374" />
+                <SolidColor colorValue="FF44535A" id="0:3374" />
             </Stroke>
         </Shape>
         <LinearAnimation name="L / idle" duration="48" loopValue="oneShot" id="0:3375">
@@ -6894,7 +6874,7 @@
             <Shape x="197.8" y="6" name="Panel" id="0:3472">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:3473" />
                 <Fill name="Paint" id="0:3474">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:3475" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:3475" />
                 </Fill>
             </Shape>
         </Node>
@@ -6930,7 +6910,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:3550" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:3551">
-                    <SolidColor colorValue="FFA4DEEB" id="0:3552" />
+                    <SolidColor colorValue="FFCCD0D5" id="0:3552" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:3553" />
                 </Stroke>
             </Shape>
@@ -6945,7 +6925,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:3562" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:3563">
-                        <SolidColor colorValue="FFA4DEEB" id="0:3564" />
+                        <SolidColor colorValue="FFCCD0D5" id="0:3564" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -6960,7 +6940,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:3572" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:3573">
-                <SolidColor colorValue="FF29464E" id="0:3574" />
+                <SolidColor colorValue="FF44535A" id="0:3574" />
             </Stroke>
         </Shape>
         <LinearAnimation name="R / idle" duration="48" loopValue="oneShot" id="0:3575">
@@ -7020,7 +7000,7 @@
             <Shape x="201.1" y="6" name="Panel" id="0:3672">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:3673" />
                 <Fill name="Paint" id="0:3674">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:3675" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:3675" />
                 </Fill>
             </Shape>
         </Node>
@@ -7086,7 +7066,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:3772" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:3773">
-                <SolidColor colorValue="FF29464E" id="0:3774" />
+                <SolidColor colorValue="FF44535A" id="0:3774" />
             </Stroke>
         </Shape>
         <LinearAnimation name="Z / idle" duration="48" loopValue="oneShot" id="0:3775">
@@ -7182,7 +7162,7 @@
                     <StraightVertex x="195" y="5" radius="3" id="0:3950" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:3951">
-                    <SolidColor colorValue="FFFF8295" id="0:3952" />
+                    <SolidColor colorValue="FFFF5C64" id="0:3952" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:3953" />
                 </Stroke>
             </Shape>
@@ -7197,7 +7177,7 @@
                         <StraightVertex x="195" y="5" radius="3" id="0:3962" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:3963">
-                        <SolidColor colorValue="FFFF8295" id="0:3964" />
+                        <SolidColor colorValue="FFFF5C64" id="0:3964" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -7212,7 +7192,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:3972" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:3973">
-                <SolidColor colorValue="FF29464E" id="0:3974" />
+                <SolidColor colorValue="FF44535A" id="0:3974" />
             </Stroke>
         </Shape>
         <LinearAnimation name="START / idle" duration="48" loopValue="oneShot" id="0:3975">
@@ -7272,7 +7252,7 @@
             <Shape x="207.7" y="6" name="Panel" id="0:4072">
                 <Rectangle width="1.5" height="2.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:4073" />
                 <Fill name="Paint" id="0:4074">
-                    <SolidColor name="Color" colorValue="FFFF8295" id="0:4075" />
+                    <SolidColor name="Color" colorValue="FFFF5C64" id="0:4075" />
                 </Fill>
             </Shape>
         </Node>
@@ -7335,7 +7315,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4169" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4170">
-                <SolidColor colorValue="FF29464E" id="0:4171" />
+                <SolidColor colorValue="FF44535A" id="0:4171" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD UP / idle" duration="48" loopValue="oneShot" id="0:4172">
@@ -7429,7 +7409,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4295" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4296">
-                <SolidColor colorValue="FF29464E" id="0:4297" />
+                <SolidColor colorValue="FF44535A" id="0:4297" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD RIGHT / idle" duration="48" loopValue="oneShot" id="0:4298">
@@ -7523,7 +7503,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4421" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4422">
-                <SolidColor colorValue="FF29464E" id="0:4423" />
+                <SolidColor colorValue="FF44535A" id="0:4423" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD DOWN / idle" duration="48" loopValue="oneShot" id="0:4424">
@@ -7617,7 +7597,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4547" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4548">
-                <SolidColor colorValue="FF29464E" id="0:4549" />
+                <SolidColor colorValue="FF44535A" id="0:4549" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD LEFT / idle" duration="48" loopValue="oneShot" id="0:4550">
@@ -7711,7 +7691,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4673" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4674">
-                <SolidColor colorValue="FF29464E" id="0:4675" />
+                <SolidColor colorValue="FF44535A" id="0:4675" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK UP / idle" duration="48" loopValue="oneShot" id="0:4676">
@@ -7805,7 +7785,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4799" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4800">
-                <SolidColor colorValue="FF29464E" id="0:4801" />
+                <SolidColor colorValue="FF44535A" id="0:4801" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK RIGHT / idle" duration="48" loopValue="oneShot" id="0:4802">
@@ -7899,7 +7879,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:4925" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:4926">
-                <SolidColor colorValue="FF29464E" id="0:4927" />
+                <SolidColor colorValue="FF44535A" id="0:4927" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK DOWN / idle" duration="48" loopValue="oneShot" id="0:4928">
@@ -7993,7 +7973,7 @@
                 <StraightVertex x="195" y="5" radius="3" id="0:5051" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:5052">
-                <SolidColor colorValue="FF29464E" id="0:5053" />
+                <SolidColor colorValue="FF44535A" id="0:5053" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK LEFT / idle" duration="48" loopValue="oneShot" id="0:5054">
@@ -8052,12 +8032,12 @@
         <Shape x="195" y="200" name="PCB edge" id="0:5150">
             <Rectangle width="373" height="383" originX="0.5" originY="0.5" cornerRadiusTL="16" cornerRadiusTR="16" cornerRadiusBL="16" cornerRadiusBR="16" name="Path" id="0:5151" />
             <Stroke name="Paint" thickness="0.5" id="0:5152">
-                <SolidColor name="Color" colorValue="FF315E63" id="0:5153" />
+                <SolidColor name="Color" colorValue="FF59626C" id="0:5153" />
             </Stroke>
             <Fill name="Transparent material" id="0:5154">
                 <LinearGradient startX="-78.4" startY="-117.6" endX="98.0" endY="196.0" name="Clear polycarbonate" id="0:5155">
-                    <GradientStop colorValue="FF102E35" position="0.0" id="0:5156" />
-                    <GradientStop colorValue="FF091D29" position="1.0" id="0:5157" />
+                    <GradientStop colorValue="FF27323B" position="0.0" id="0:5156" />
+                    <GradientStop colorValue="FF141E29" position="1.0" id="0:5157" />
                 </LinearGradient>
             </Fill>
         </Shape>
@@ -12279,22 +12259,6 @@
                 <ExitState x="800" y="-200" id="0:10280" />
             </StateMachineLayer>
         </StateMachine>
-        <Text x="25" y="25" name="ORBIT" originX="0" originY="0.5" sizingValue="autoWidth" id="0:5165">
-            <TextStylePaint fontSize="18" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="0" name="Label" id="0:5166">
-                <Fill name="Paint" id="0:5167">
-                    <SolidColor name="Color" colorValue="FFE0F1F4" id="0:5168" />
-                </Fill>
-            </TextStylePaint>
-            <TextValueRun styleId="0:5166" text="ORBIT" name="Text" id="0:5169" />
-        </Text>
-        <Text x="26" y="44" name="C R Y S T A L   /   N 6 4" originX="0" originY="0.5" sizingValue="autoWidth" id="0:5170">
-            <TextStylePaint fontSize="6.5" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:5171">
-                <Fill name="Paint" id="0:5172">
-                    <SolidColor name="Color" colorValue="FF8BB1BA" id="0:5173" />
-                </Fill>
-            </TextStylePaint>
-            <TextValueRun styleId="0:5171" text="C R Y S T A L   /   N 6 4" name="Text" id="0:5174" />
-        </Text>
         <Node x="111" y="282" name="Transparent analog module" id="0:5175">
             <RootBone length="1" name="Continuous XY gimbal" id="0:5176" />
             <Node name="Transparent moving cap" id="0:5192">
@@ -12308,25 +12272,25 @@
                 <Shape x="0" y="0" name="Concentric grip" id="0:5198">
                     <Ellipse width="26" height="26" name="Path" id="0:5199" />
                     <Stroke name="Paint" thickness="0.7" id="0:5200">
-                        <SolidColor name="Color" colorValue="437BABB8" id="0:5201" />
+                        <SolidColor name="Color" colorValue="80959DA7" id="0:5201" />
                     </Stroke>
                 </Shape>
                 <Shape x="0" y="0" name="Concentric grip" id="0:5202">
                     <Ellipse width="36" height="36" name="Path" id="0:5203" />
                     <Stroke name="Paint" thickness="0.7" id="0:5204">
-                        <SolidColor name="Color" colorValue="437BABB8" id="0:5205" />
+                        <SolidColor name="Color" colorValue="80959DA7" id="0:5205" />
                     </Stroke>
                 </Shape>
-                <Shape x="0" y="0" name="Clear thumb cap" id="0:5206">
+                <Shape x="0" y="0" name="Gray thumb cap" id="0:5206">
                     <Ellipse width="49" height="49" name="Path" id="0:5207" />
                     <Stroke name="Paint" thickness="1" id="0:5208">
-                        <SolidColor name="Color" colorValue="8FABC7D4" id="0:5209" />
+                        <SolidColor name="Color" colorValue="AFC4CAD0" id="0:5209" />
                     </Stroke>
                     <Fill name="Transparent material" id="0:5210">
                         <RadialGradient startX="-10.0" startY="-15.0" endX="12.5" endY="25" name="Clear polycarbonate" id="0:5211">
-                            <GradientStop colorValue="8C8CBCC8" position="0.0" id="0:5212" />
-                            <GradientStop colorValue="2852778A" position="0.5" id="0:5213" />
-                            <GradientStop colorValue="36537591" position="1.0" id="0:5214" />
+                            <GradientStop colorValue="C4B8BEC6" position="0.0" id="0:5212" />
+                            <GradientStop colorValue="8877808D" position="0.5" id="0:5213" />
+                            <GradientStop colorValue="A04D5867" position="1.0" id="0:5214" />
                         </RadialGradient>
                     </Fill>
                 </Shape>
@@ -12550,24 +12514,25 @@
                 </KeyedProperty>
             </KeyedObject>
         </LinearAnimation>
-        <Node x="70" y="139" name="Clear digital cross" id="0:5401">
+        <Node x="70" y="139" name="Gray digital cross" id="0:5401">
             <Node x="0" y="-26" rotation="0.0" name="up cap" id="0:5402">
                 <Shape y="-2" id="0:5403">
                     <Triangle width="6" height="5" id="0:5404" />
                     <Fill name="Paint" id="0:5405">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:5406" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:5406" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:5407">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5408" />
                     <Stroke name="Paint" thickness="0.7" id="0:5409">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:5410" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:5410" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:5411">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5412" />
-                    <Fill name="Paint" id="0:5413">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:5414" />
+                    <Fill name="Transparent material" id="0:900021">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900022">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900023" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900024" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900025" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="up LED" id="0:5415">
@@ -12583,19 +12548,20 @@
                 <Shape y="-2" id="0:5487">
                     <Triangle width="6" height="5" id="0:5488" />
                     <Fill name="Paint" id="0:5489">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:5490" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:5490" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:5491">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5492" />
                     <Stroke name="Paint" thickness="0.7" id="0:5493">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:5494" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:5494" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:5495">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5496" />
-                    <Fill name="Paint" id="0:5497">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:5498" />
+                    <Fill name="Transparent material" id="0:900026">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900027">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900028" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900029" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900030" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="right LED" id="0:5499">
@@ -12611,19 +12577,20 @@
                 <Shape y="-2" id="0:5571">
                     <Triangle width="6" height="5" id="0:5572" />
                     <Fill name="Paint" id="0:5573">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:5574" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:5574" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:5575">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5576" />
                     <Stroke name="Paint" thickness="0.7" id="0:5577">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:5578" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:5578" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:5579">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5580" />
-                    <Fill name="Paint" id="0:5581">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:5582" />
+                    <Fill name="Transparent material" id="0:900031">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900032">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900033" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900034" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900035" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="down LED" id="0:5583">
@@ -12639,19 +12606,20 @@
                 <Shape y="-2" id="0:5655">
                     <Triangle width="6" height="5" id="0:5656" />
                     <Fill name="Paint" id="0:5657">
-                        <SolidColor name="Color" colorValue="FFB2CED4" id="0:5658" />
+                        <SolidColor name="Color" colorValue="FF404752" id="0:5658" />
                     </Fill>
                 </Shape>
                 <Shape x="0" y="0" name="Panel" id="0:5659">
                     <Rectangle width="22" height="29" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5660" />
                     <Stroke name="Paint" thickness="0.7" id="0:5661">
-                        <SolidColor name="Color" colorValue="74759AA7" id="0:5662" />
+                        <SolidColor name="Color" colorValue="A7B7BCC2" id="0:5662" />
                     </Stroke>
-                </Shape>
-                <Shape x="0" y="0" name="Panel" id="0:5663">
-                    <Rectangle width="21" height="28" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5664" />
-                    <Fill name="Paint" id="0:5665">
-                        <SolidColor name="Color" colorValue="205F8A95" id="0:5666" />
+                    <Fill name="Transparent material" id="0:900036">
+                        <LinearGradient startX="-6.800000000000001" startY="-10.2" endX="8.5" endY="17" name="Clear polycarbonate" id="0:900037">
+                            <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:900038" />
+                            <GradientStop colorValue="70878E96" position="0.5" id="0:900039" />
+                            <GradientStop colorValue="A04E5863" position="1.0" id="0:900040" />
+                        </LinearGradient>
                     </Fill>
                 </Shape>
                 <Node opacity="0.06" name="left LED" id="0:5667">
@@ -12666,13 +12634,13 @@
             <Shape x="0" y="0" name="Ring" id="0:5738">
                 <Ellipse width="5" height="5" name="Path" id="0:5739" />
                 <Fill name="Paint" id="0:5740">
-                    <SolidColor name="Color" colorValue="FFADD3D7" id="0:5741" />
+                    <SolidColor name="Color" colorValue="FF68717C" id="0:5741" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Panel" id="0:5742">
                 <Rectangle width="27" height="27" originX="0.5" originY="0.5" cornerRadiusTL="3" cornerRadiusTR="3" cornerRadiusBL="3" cornerRadiusBR="3" name="Path" id="0:5743" />
                 <Fill name="Paint" id="0:5744">
-                    <SolidColor name="Color" colorValue="50557D8A" id="0:5745" />
+                    <SolidColor name="Color" colorValue="FFA2A8B0" id="0:5745" />
                 </Fill>
             </Shape>
             <Shape x="0" y="1" name="Panel" id="0:5746">
@@ -12775,7 +12743,7 @@
         <Text x="755" y="145" name="C" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:5754">
             <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:5755">
                 <Fill name="Paint" id="0:5756">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5757" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:5757" />
                 </Fill>
             </TextStylePaint>
             <TextValueRun styleId="0:5755" text="C" name="Text" id="0:5758" />
@@ -12784,26 +12752,26 @@
             <Shape rotation="0.0" name="cUp arrow" id="0:5760">
                 <Triangle width="10" height="9" id="0:5761" />
                 <Fill name="Paint" id="0:5762">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5763" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:5763" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:5764">
                 <Ellipse width="32" height="32" name="Path" id="0:5765" />
                 <Stroke name="Paint" thickness="0.8" id="0:5766">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:5767" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:5767" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:5768">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:5769">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:5770" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:5771" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:5772" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:5770" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:5771" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:5772" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:5773">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:5774" />
                 <Stroke name="Paint" thickness="1" id="0:5775">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:5776" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:5776" />
                 </Stroke>
             </Shape>
         </Node>
@@ -12811,13 +12779,13 @@
             <Shape x="0" y="0" name="Ring" id="0:5778">
                 <Ellipse width="37" height="37" name="Path" id="0:5779" />
                 <Stroke name="Paint" thickness="1.3" id="0:5780">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5781" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:5781" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:5782">
                 <Ellipse width="37" height="37" name="Path" id="0:5783" />
                 <Stroke name="Glow" thickness="3" id="0:5784">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5785" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:5785" />
                     <Feather name="Vector feather" strength="7" id="0:5786" />
                 </Stroke>
             </Shape>
@@ -12870,7 +12838,7 @@
         <Shape x="755" y="124.64" name="cUp / contact pad" id="0:5868">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:5869" />
             <Fill name="Paint" id="0:5870">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:5871" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:5871" />
             </Fill>
         </Shape>
         <Shape x="755" y="116" name="Exposed switch socket" id="0:5872">
@@ -12883,26 +12851,26 @@
             <Shape rotation="3.141592653589793" name="cDown arrow" id="0:5877">
                 <Triangle width="10" height="9" id="0:5878" />
                 <Fill name="Paint" id="0:5879">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5880" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:5880" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:5881">
                 <Ellipse width="32" height="32" name="Path" id="0:5882" />
                 <Stroke name="Paint" thickness="0.8" id="0:5883">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:5884" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:5884" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:5885">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:5886">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:5887" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:5888" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:5889" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:5887" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:5888" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:5889" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:5890">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:5891" />
                 <Stroke name="Paint" thickness="1" id="0:5892">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:5893" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:5893" />
                 </Stroke>
             </Shape>
         </Node>
@@ -12910,13 +12878,13 @@
             <Shape x="0" y="0" name="Ring" id="0:5895">
                 <Ellipse width="37" height="37" name="Path" id="0:5896" />
                 <Stroke name="Paint" thickness="1.3" id="0:5897">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5898" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:5898" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:5899">
                 <Ellipse width="37" height="37" name="Path" id="0:5900" />
                 <Stroke name="Glow" thickness="3" id="0:5901">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5902" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:5902" />
                     <Feather name="Vector feather" strength="7" id="0:5903" />
                 </Stroke>
             </Shape>
@@ -12969,7 +12937,7 @@
         <Shape x="755" y="182.64" name="cDown / contact pad" id="0:5985">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:5986" />
             <Fill name="Paint" id="0:5987">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:5988" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:5988" />
             </Fill>
         </Shape>
         <Shape x="755" y="174" name="Exposed switch socket" id="0:5989">
@@ -12982,26 +12950,26 @@
             <Shape rotation="4.71238898038469" name="cLeft arrow" id="0:5994">
                 <Triangle width="10" height="9" id="0:5995" />
                 <Fill name="Paint" id="0:5996">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:5997" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:5997" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:5998">
                 <Ellipse width="32" height="32" name="Path" id="0:5999" />
                 <Stroke name="Paint" thickness="0.8" id="0:6000">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:6001" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6001" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6002">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:6003">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:6004" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:6005" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6006" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:6004" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:6005" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:6006" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:6007">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:6008" />
                 <Stroke name="Paint" thickness="1" id="0:6009">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:6010" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:6010" />
                 </Stroke>
             </Shape>
         </Node>
@@ -13009,13 +12977,13 @@
             <Shape x="0" y="0" name="Ring" id="0:6012">
                 <Ellipse width="37" height="37" name="Path" id="0:6013" />
                 <Stroke name="Paint" thickness="1.3" id="0:6014">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:6015" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:6015" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:6016">
                 <Ellipse width="37" height="37" name="Path" id="0:6017" />
                 <Stroke name="Glow" thickness="3" id="0:6018">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:6019" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:6019" />
                     <Feather name="Vector feather" strength="7" id="0:6020" />
                 </Stroke>
             </Shape>
@@ -13068,7 +13036,7 @@
         <Shape x="726" y="153.64" name="cLeft / contact pad" id="0:6102">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6103" />
             <Fill name="Paint" id="0:6104">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:6105" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:6105" />
             </Fill>
         </Shape>
         <Shape x="726" y="145" name="Exposed switch socket" id="0:6106">
@@ -13081,26 +13049,26 @@
             <Shape rotation="1.5707963267948966" name="cRight arrow" id="0:6111">
                 <Triangle width="10" height="9" id="0:6112" />
                 <Fill name="Paint" id="0:6113">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:6114" />
+                    <SolidColor name="Color" colorValue="FF57440A" id="0:6114" />
                 </Fill>
             </Shape>
             <Shape x="0" y="0" name="Clear cap rim" id="0:6115">
                 <Ellipse width="32" height="32" name="Path" id="0:6116" />
                 <Stroke name="Paint" thickness="0.8" id="0:6117">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:6118" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6118" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6119">
                     <LinearGradient startX="-6.4" startY="-9.6" endX="8.0" endY="16.0" name="Clear polycarbonate" id="0:6120">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:6121" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:6122" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6123" />
+                        <GradientStop colorValue="F2FFE783" position="0.0" id="0:6121" />
+                        <GradientStop colorValue="E0EBC02F" position="0.5" id="0:6122" />
+                        <GradientStop colorValue="ECAA8118" position="1.0" id="0:6123" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-5.12" y="-6.08" name="Moulded cap highlight" id="0:6124">
                 <Ellipse width="13.44" height="13.44" name="Path" id="0:6125" />
                 <Stroke name="Paint" thickness="1" id="0:6126">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:6127" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:6127" />
                 </Stroke>
             </Shape>
         </Node>
@@ -13108,13 +13076,13 @@
             <Shape x="0" y="0" name="Ring" id="0:6129">
                 <Ellipse width="37" height="37" name="Path" id="0:6130" />
                 <Stroke name="Paint" thickness="1.3" id="0:6131">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:6132" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:6132" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:6133">
                 <Ellipse width="37" height="37" name="Path" id="0:6134" />
                 <Stroke name="Glow" thickness="3" id="0:6135">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:6136" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:6136" />
                     <Feather name="Vector feather" strength="7" id="0:6137" />
                 </Stroke>
             </Shape>
@@ -13167,7 +13135,7 @@
         <Shape x="784" y="153.64" name="cRight / contact pad" id="0:6219">
             <Rectangle width="7.04" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6220" />
             <Fill name="Paint" id="0:6221">
-                <SolidColor name="Color" colorValue="FFFFD36E" id="0:6222" />
+                <SolidColor name="Color" colorValue="FFFFD23C" id="0:6222" />
             </Fill>
         </Shape>
         <Shape x="784" y="145" name="Exposed switch socket" id="0:6223">
@@ -13188,20 +13156,20 @@
             <Shape x="0" y="0" name="Clear cap rim" id="0:6233">
                 <Ellipse width="56" height="56" name="Path" id="0:6234" />
                 <Stroke name="Paint" thickness="0.8" id="0:6235">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:6236" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6236" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6237">
                     <LinearGradient startX="-11.200000000000001" startY="-16.8" endX="14.0" endY="28.0" name="Clear polycarbonate" id="0:6238">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:6239" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:6240" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6241" />
+                        <GradientStop colorValue="F24D96E5" position="0.0" id="0:6239" />
+                        <GradientStop colorValue="D02567BB" position="0.5" id="0:6240" />
+                        <GradientStop colorValue="EC16428A" position="1.0" id="0:6241" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-8.96" y="-10.64" name="Moulded cap highlight" id="0:6242">
                 <Ellipse width="23.52" height="23.52" name="Path" id="0:6243" />
                 <Stroke name="Paint" thickness="1" id="0:6244">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:6245" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:6245" />
                 </Stroke>
             </Shape>
         </Node>
@@ -13209,13 +13177,13 @@
             <Shape x="0" y="0" name="Ring" id="0:6247">
                 <Ellipse width="61" height="61" name="Path" id="0:6248" />
                 <Stroke name="Paint" thickness="1.3" id="0:6249">
-                    <SolidColor name="Color" colorValue="FF6CBBFF" id="0:6250" />
+                    <SolidColor name="Color" colorValue="FF4B9CFF" id="0:6250" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:6251">
                 <Ellipse width="61" height="61" name="Path" id="0:6252" />
                 <Stroke name="Glow" thickness="3" id="0:6253">
-                    <SolidColor name="Color" colorValue="FF6CBBFF" id="0:6254" />
+                    <SolidColor name="Color" colorValue="FF4B9CFF" id="0:6254" />
                     <Feather name="Vector feather" strength="7" id="0:6255" />
                 </Stroke>
             </Shape>
@@ -13268,7 +13236,7 @@
         <Shape x="735" y="275.12" name="a / contact pad" id="0:6337">
             <Rectangle width="12.32" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6338" />
             <Fill name="Paint" id="0:6339">
-                <SolidColor name="Color" colorValue="FF6CBBFF" id="0:6340" />
+                <SolidColor name="Color" colorValue="FF4B9CFF" id="0:6340" />
             </Fill>
         </Shape>
         <Shape x="735" y="260" name="Exposed switch socket" id="0:6341">
@@ -13289,20 +13257,20 @@
             <Shape x="0" y="0" name="Clear cap rim" id="0:6351">
                 <Ellipse width="46" height="46" name="Path" id="0:6352" />
                 <Stroke name="Paint" thickness="0.8" id="0:6353">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:6354" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6354" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6355">
                     <LinearGradient startX="-9.200000000000001" startY="-13.799999999999999" endX="11.5" endY="23.0" name="Clear polycarbonate" id="0:6356">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:6357" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:6358" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6359" />
+                        <GradientStop colorValue="F24BB579" position="0.0" id="0:6357" />
+                        <GradientStop colorValue="D0148649" position="0.5" id="0:6358" />
+                        <GradientStop colorValue="EC075A30" position="1.0" id="0:6359" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-7.36" y="-8.74" name="Moulded cap highlight" id="0:6360">
                 <Ellipse width="19.32" height="19.32" name="Path" id="0:6361" />
                 <Stroke name="Paint" thickness="1" id="0:6362">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:6363" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:6363" />
                 </Stroke>
             </Shape>
         </Node>
@@ -13310,13 +13278,13 @@
             <Shape x="0" y="0" name="Ring" id="0:6365">
                 <Ellipse width="51" height="51" name="Path" id="0:6366" />
                 <Stroke name="Paint" thickness="1.3" id="0:6367">
-                    <SolidColor name="Color" colorValue="FF76E7AD" id="0:6368" />
+                    <SolidColor name="Color" colorValue="FF63D393" id="0:6368" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:6369">
                 <Ellipse width="51" height="51" name="Path" id="0:6370" />
                 <Stroke name="Glow" thickness="3" id="0:6371">
-                    <SolidColor name="Color" colorValue="FF76E7AD" id="0:6372" />
+                    <SolidColor name="Color" colorValue="FF63D393" id="0:6372" />
                     <Feather name="Vector feather" strength="7" id="0:6373" />
                 </Stroke>
             </Shape>
@@ -13369,7 +13337,7 @@
         <Shape x="687" y="216.42000000000002" name="b / contact pad" id="0:6455">
             <Rectangle width="10.12" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6456" />
             <Fill name="Paint" id="0:6457">
-                <SolidColor name="Color" colorValue="FF76E7AD" id="0:6458" />
+                <SolidColor name="Color" colorValue="FF63D393" id="0:6458" />
             </Fill>
         </Shape>
         <Shape x="687" y="204" name="Exposed switch socket" id="0:6459">
@@ -13382,7 +13350,7 @@
             <Text x="0" y="-1" name="L" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6464">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6465">
                     <Fill name="Paint" id="0:6466">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:6467" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:6467" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:6465" text="L" name="Text" id="0:6468" />
@@ -13390,13 +13358,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:6469">
                 <Rectangle width="60" height="20" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:6470" />
                 <Stroke name="Paint" thickness="0.75" id="0:6471">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:6472" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6472" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6473">
                     <LinearGradient startX="-12.0" startY="-18.0" endX="15.0" endY="30.0" name="Clear polycarbonate" id="0:6474">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:6475" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:6476" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6477" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:6475" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:6476" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:6477" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -13405,10 +13373,10 @@
             <Shape x="0" y="0" name="Panel" id="0:6479">
                 <Rectangle width="64" height="24" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:6480" />
                 <Stroke name="Paint" thickness="1.2" id="0:6481">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6482" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6482" />
                 </Stroke>
                 <Stroke name="Glow" thickness="3" id="0:6483">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6484" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6484" />
                     <Feather name="Vector feather" strength="7" id="0:6485" />
                 </Stroke>
             </Shape>
@@ -13461,7 +13429,7 @@
         <Shape x="55" y="70.4" name="l / contact pad" id="0:6567">
             <Rectangle width="13.2" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6568" />
             <Fill name="Paint" id="0:6569">
-                <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6570" />
+                <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6570" />
             </Fill>
         </Shape>
         <Shape x="55" y="65" name="Exposed switch socket" id="0:6571">
@@ -13474,7 +13442,7 @@
             <Text x="0" y="-1" name="R" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6576">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6577">
                     <Fill name="Paint" id="0:6578">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:6579" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:6579" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:6577" text="R" name="Text" id="0:6580" />
@@ -13482,13 +13450,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:6581">
                 <Rectangle width="60" height="20" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:6582" />
                 <Stroke name="Paint" thickness="0.75" id="0:6583">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:6584" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6584" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6585">
                     <LinearGradient startX="-12.0" startY="-18.0" endX="15.0" endY="30.0" name="Clear polycarbonate" id="0:6586">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:6587" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:6588" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6589" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:6587" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:6588" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:6589" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -13497,10 +13465,10 @@
             <Shape x="0" y="0" name="Panel" id="0:6591">
                 <Rectangle width="64" height="24" originX="0.5" originY="0.5" cornerRadiusTL="10.0" cornerRadiusTR="10.0" cornerRadiusBL="10.0" cornerRadiusBR="10.0" name="Path" id="0:6592" />
                 <Stroke name="Paint" thickness="1.2" id="0:6593">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6594" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6594" />
                 </Stroke>
                 <Stroke name="Glow" thickness="3" id="0:6595">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6596" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6596" />
                     <Feather name="Vector feather" strength="7" id="0:6597" />
                 </Stroke>
             </Shape>
@@ -13553,7 +13521,7 @@
         <Shape x="782" y="70.4" name="r / contact pad" id="0:6679">
             <Rectangle width="13.2" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6680" />
             <Fill name="Paint" id="0:6681">
-                <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6682" />
+                <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6682" />
             </Fill>
         </Shape>
         <Shape x="782" y="65" name="Exposed switch socket" id="0:6683">
@@ -13566,7 +13534,7 @@
             <Text x="0" y="-1" name="Z" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6688">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6689">
                     <Fill name="Paint" id="0:6690">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:6691" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:6691" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:6689" text="Z" name="Text" id="0:6692" />
@@ -13574,13 +13542,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:6693">
                 <Rectangle width="52" height="22" originX="0.5" originY="0.5" cornerRadiusTL="11.0" cornerRadiusTR="11.0" cornerRadiusBL="11.0" cornerRadiusBR="11.0" name="Path" id="0:6694" />
                 <Stroke name="Paint" thickness="0.75" id="0:6695">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:6696" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6696" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6697">
                     <LinearGradient startX="-10.4" startY="-15.6" endX="13.0" endY="26.0" name="Clear polycarbonate" id="0:6698">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:6699" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:6700" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6701" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:6699" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:6700" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:6701" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -13666,20 +13634,20 @@
             <Shape x="0" y="0" name="Clear cap rim" id="0:6805">
                 <Ellipse width="28" height="28" name="Path" id="0:6806" />
                 <Stroke name="Paint" thickness="0.8" id="0:6807">
-                    <SolidColor name="Color" colorValue="7192B8C5" id="0:6808" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6808" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6809">
                     <LinearGradient startX="-5.6000000000000005" startY="-8.4" endX="7.0" endY="14.0" name="Clear polycarbonate" id="0:6810">
-                        <GradientStop colorValue="546D9AA9" position="0.0" id="0:6811" />
-                        <GradientStop colorValue="0D597F94" position="0.5" id="0:6812" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6813" />
+                        <GradientStop colorValue="F2F27A7F" position="0.0" id="0:6811" />
+                        <GradientStop colorValue="E0D83844" position="0.5" id="0:6812" />
+                        <GradientStop colorValue="EC96232F" position="1.0" id="0:6813" />
                     </LinearGradient>
                 </Fill>
             </Shape>
             <Shape x="-4.48" y="-5.32" name="Moulded cap highlight" id="0:6814">
                 <Ellipse width="11.76" height="11.76" name="Path" id="0:6815" />
                 <Stroke name="Paint" thickness="1" id="0:6816">
-                    <SolidColor name="Color" colorValue="1590BCD0" id="0:6817" />
+                    <SolidColor name="Color" colorValue="33FFFFFF" id="0:6817" />
                 </Stroke>
             </Shape>
         </Node>
@@ -13687,13 +13655,13 @@
             <Shape x="0" y="0" name="Ring" id="0:6819">
                 <Ellipse width="33" height="33" name="Path" id="0:6820" />
                 <Stroke name="Paint" thickness="1.3" id="0:6821">
-                    <SolidColor name="Color" colorValue="FFFF8295" id="0:6822" />
+                    <SolidColor name="Color" colorValue="FFFF5C64" id="0:6822" />
                 </Stroke>
             </Shape>
             <Shape x="0" y="0" name="Ring" id="0:6823">
                 <Ellipse width="33" height="33" name="Path" id="0:6824" />
                 <Stroke name="Glow" thickness="3" id="0:6825">
-                    <SolidColor name="Color" colorValue="FFFF8295" id="0:6826" />
+                    <SolidColor name="Color" colorValue="FFFF5C64" id="0:6826" />
                     <Feather name="Vector feather" strength="3" id="0:6827" />
                 </Stroke>
             </Shape>
@@ -13746,7 +13714,7 @@
         <Shape x="422" y="25.560000000000002" name="start / contact pad" id="0:6909">
             <Rectangle width="6.16" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:6910" />
             <Fill name="Paint" id="0:6911">
-                <SolidColor name="Color" colorValue="FFFF8295" id="0:6912" />
+                <SolidColor name="Color" colorValue="FFFF5C64" id="0:6912" />
             </Fill>
         </Shape>
         <Shape x="422" y="18" name="Exposed switch socket" id="0:6913">
@@ -13759,7 +13727,7 @@
             <Text x="0" y="-1" name="MENU" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:6918">
                 <TextStylePaint fontSize="9" fontAssetId="0:101" familyName="Space Grotesk" styleName="Regular" letterSpacing="1.2" name="Label" id="0:6919">
                     <Fill name="Paint" id="0:6920">
-                        <SolidColor name="Color" colorValue="FFE3F4F5" id="0:6921" />
+                        <SolidColor name="Color" colorValue="FF29333E" id="0:6921" />
                     </Fill>
                 </TextStylePaint>
                 <TextValueRun styleId="0:6919" text="MENU" name="Text" id="0:6922" />
@@ -13767,13 +13735,13 @@
             <Shape x="0" y="0" name="Clear paddle rim" id="0:6923">
                 <Rectangle width="38" height="16" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:6924" />
                 <Stroke name="Paint" thickness="0.75" id="0:6925">
-                    <SolidColor name="Color" colorValue="699ABAC5" id="0:6926" />
+                    <SolidColor name="Color" colorValue="8FCCCED2" id="0:6926" />
                 </Stroke>
                 <Fill name="Transparent material" id="0:6927">
                     <LinearGradient startX="-7.6000000000000005" startY="-11.4" endX="9.5" endY="19.0" name="Clear polycarbonate" id="0:6928">
-                        <GradientStop colorValue="426D9AA9" position="0.0" id="0:6929" />
-                        <GradientStop colorValue="10597F94" position="0.5" id="0:6930" />
-                        <GradientStop colorValue="1E56809A" position="1.0" id="0:6931" />
+                        <GradientStop colorValue="C8C4C8CC" position="0.0" id="0:6929" />
+                        <GradientStop colorValue="70878E96" position="0.5" id="0:6930" />
+                        <GradientStop colorValue="A04E5863" position="1.0" id="0:6931" />
                     </LinearGradient>
                 </Fill>
             </Shape>
@@ -13782,10 +13750,10 @@
             <Shape x="0" y="0" name="Panel" id="0:6933">
                 <Rectangle width="42" height="20" originX="0.5" originY="0.5" cornerRadiusTL="8.0" cornerRadiusTR="8.0" cornerRadiusBL="8.0" cornerRadiusBR="8.0" name="Path" id="0:6934" />
                 <Stroke name="Paint" thickness="1.2" id="0:6935">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6936" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6936" />
                 </Stroke>
                 <Stroke name="Glow" thickness="3" id="0:6937">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:6938" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:6938" />
                     <Feather name="Vector feather" strength="7" id="0:6939" />
                 </Stroke>
             </Shape>
@@ -13838,7 +13806,7 @@
         <Shape x="40" y="379.32" name="menu / contact pad" id="0:7021">
             <Rectangle width="8.36" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.7" cornerRadiusTR="0.7" cornerRadiusBL="0.7" cornerRadiusBR="0.7" name="Path" id="0:7022" />
             <Fill name="Paint" id="0:7023">
-                <SolidColor name="Color" colorValue="FFA4DEEB" id="0:7024" />
+                <SolidColor name="Color" colorValue="FFCCD0D5" id="0:7024" />
             </Fill>
         </Shape>
         <Shape x="40" y="375" name="Exposed switch socket" id="0:7025">
@@ -13850,58 +13818,58 @@
         <Shape x="102" y="195" name="Clear shell / edge" id="0:7029">
             <Rectangle width="196" height="382" originX="0.5" originY="0.5" cornerRadiusTL="20" cornerRadiusTR="20" cornerRadiusBL="20" cornerRadiusBR="20" name="Path" id="0:7030" />
             <Stroke name="Paint" thickness="0.8" id="0:7031">
-                <SolidColor name="Color" colorValue="1548A4B4" id="0:7032" />
+                <SolidColor name="Color" colorValue="458C939B" id="0:7032" />
             </Stroke>
             <Fill name="Transparent material" id="0:7033">
                 <LinearGradient startX="-76.4" startY="-114.6" endX="95.5" endY="191.0" name="Clear polycarbonate" id="0:7034">
-                    <GradientStop colorValue="376BA1AC" position="0.0" id="0:7035" />
-                    <GradientStop colorValue="0D6B9AA3" position="0.5" id="0:7036" />
-                    <GradientStop colorValue="1D6897A3" position="1.0" id="0:7037" />
+                    <GradientStop colorValue="4BC4C8CC" position="0.0" id="0:7035" />
+                    <GradientStop colorValue="147C848D" position="0.5" id="0:7036" />
+                    <GradientStop colorValue="2A929AA4" position="1.0" id="0:7037" />
                 </LinearGradient>
             </Fill>
         </Shape>
         <Shape x="102" y="195" name="Inner shell refraction" id="0:7038">
             <Rectangle width="192" height="378" originX="0.5" originY="0.5" cornerRadiusTL="18" cornerRadiusTR="18" cornerRadiusBL="18" cornerRadiusBR="18" name="Path" id="0:7039" />
             <Stroke name="Paint" thickness="0.5" id="0:7040">
-                <SolidColor name="Color" colorValue="163A6974" id="0:7041" />
+                <SolidColor name="Color" colorValue="397B848E" id="0:7041" />
             </Stroke>
         </Shape>
         <Shape x="742" y="195" name="Clear shell / edge" id="0:7042">
             <Rectangle width="196" height="382" originX="0.5" originY="0.5" cornerRadiusTL="20" cornerRadiusTR="20" cornerRadiusBL="20" cornerRadiusBR="20" name="Path" id="0:7043" />
             <Stroke name="Paint" thickness="0.8" id="0:7044">
-                <SolidColor name="Color" colorValue="1548A4B4" id="0:7045" />
+                <SolidColor name="Color" colorValue="458C939B" id="0:7045" />
             </Stroke>
             <Fill name="Transparent material" id="0:7046">
                 <LinearGradient startX="-76.4" startY="-114.6" endX="95.5" endY="191.0" name="Clear polycarbonate" id="0:7047">
-                    <GradientStop colorValue="376BA1AC" position="0.0" id="0:7048" />
-                    <GradientStop colorValue="0D6B9AA3" position="0.5" id="0:7049" />
-                    <GradientStop colorValue="1D6897A3" position="1.0" id="0:7050" />
+                    <GradientStop colorValue="4BC4C8CC" position="0.0" id="0:7048" />
+                    <GradientStop colorValue="147C848D" position="0.5" id="0:7049" />
+                    <GradientStop colorValue="2A929AA4" position="1.0" id="0:7050" />
                 </LinearGradient>
             </Fill>
         </Shape>
         <Shape x="742" y="195" name="Inner shell refraction" id="0:7051">
             <Rectangle width="192" height="378" originX="0.5" originY="0.5" cornerRadiusTL="18" cornerRadiusTR="18" cornerRadiusBL="18" cornerRadiusBR="18" name="Path" id="0:7052" />
             <Stroke name="Paint" thickness="0.5" id="0:7053">
-                <SolidColor name="Color" colorValue="163A6974" id="0:7054" />
+                <SolidColor name="Color" colorValue="397B848E" id="0:7054" />
             </Stroke>
         </Shape>
         <Shape x="422.0" y="20" name="Clear shell / edge" id="0:7055">
             <Rectangle width="81" height="36" originX="0.5" originY="0.5" cornerRadiusTL="16" cornerRadiusTR="16" cornerRadiusBL="16" cornerRadiusBR="16" name="Path" id="0:7056" />
             <Stroke name="Paint" thickness="0.8" id="0:7057">
-                <SolidColor name="Color" colorValue="1548A4B4" id="0:7058" />
+                <SolidColor name="Color" colorValue="458C939B" id="0:7058" />
             </Stroke>
             <Fill name="Transparent material" id="0:7059">
                 <LinearGradient startX="-16.2" startY="-24.3" endX="20.25" endY="40.5" name="Clear polycarbonate" id="0:7060">
-                    <GradientStop colorValue="376BA1AC" position="0.0" id="0:7061" />
-                    <GradientStop colorValue="0D6B9AA3" position="0.5" id="0:7062" />
-                    <GradientStop colorValue="1D6897A3" position="1.0" id="0:7063" />
+                    <GradientStop colorValue="4BC4C8CC" position="0.0" id="0:7061" />
+                    <GradientStop colorValue="147C848D" position="0.5" id="0:7062" />
+                    <GradientStop colorValue="2A929AA4" position="1.0" id="0:7063" />
                 </LinearGradient>
             </Fill>
         </Shape>
         <Shape x="422.0" y="20" name="Inner shell refraction" id="0:7064">
             <Rectangle width="77" height="32" originX="0.5" originY="0.5" cornerRadiusTL="14" cornerRadiusTR="14" cornerRadiusBL="14" cornerRadiusBR="14" name="Path" id="0:7065" />
             <Stroke name="Paint" thickness="0.5" id="0:7066">
-                <SolidColor name="Color" colorValue="163A6974" id="0:7067" />
+                <SolidColor name="Color" colorValue="397B848E" id="0:7067" />
             </Stroke>
         </Shape>
         <Text x="180" y="186" name="INPUT" originX="0.5" originY="0.5" sizingValue="autoWidth" id="0:7068">
@@ -14366,7 +14334,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:7375" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:7376">
-                    <SolidColor colorValue="FFFFD36E" id="0:7377" />
+                    <SolidColor colorValue="FFFFD23C" id="0:7377" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:7378" />
                 </Stroke>
             </Shape>
@@ -14380,7 +14348,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:7386" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:7387">
-                        <SolidColor colorValue="FFFFD36E" id="0:7388" />
+                        <SolidColor colorValue="FFFFD23C" id="0:7388" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -14394,7 +14362,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:7395" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:7396">
-                <SolidColor colorValue="FF29464E" id="0:7397" />
+                <SolidColor colorValue="FF44535A" id="0:7397" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CUP / idle" duration="48" loopValue="oneShot" id="0:7398">
@@ -14454,7 +14422,7 @@
             <Shape x="628" y="174.0" name="Panel" id="0:7495">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:7496" />
                 <Fill name="Paint" id="0:7497">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:7498" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:7498" />
                 </Fill>
             </Shape>
         </Node>
@@ -14489,7 +14457,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:7572" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:7573">
-                    <SolidColor colorValue="FFFFD36E" id="0:7574" />
+                    <SolidColor colorValue="FFFFD23C" id="0:7574" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:7575" />
                 </Stroke>
             </Shape>
@@ -14503,7 +14471,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:7583" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:7584">
-                        <SolidColor colorValue="FFFFD36E" id="0:7585" />
+                        <SolidColor colorValue="FFFFD23C" id="0:7585" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -14517,7 +14485,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:7592" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:7593">
-                <SolidColor colorValue="FF29464E" id="0:7594" />
+                <SolidColor colorValue="FF44535A" id="0:7594" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CDOWN / idle" duration="48" loopValue="oneShot" id="0:7595">
@@ -14577,7 +14545,7 @@
             <Shape x="628" y="176.5" name="Panel" id="0:7692">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:7693" />
                 <Fill name="Paint" id="0:7694">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:7695" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:7695" />
                 </Fill>
             </Shape>
         </Node>
@@ -14612,7 +14580,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:7769" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:7770">
-                    <SolidColor colorValue="FFFFD36E" id="0:7771" />
+                    <SolidColor colorValue="FFFFD23C" id="0:7771" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:7772" />
                 </Stroke>
             </Shape>
@@ -14626,7 +14594,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:7780" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:7781">
-                        <SolidColor colorValue="FFFFD36E" id="0:7782" />
+                        <SolidColor colorValue="FFFFD23C" id="0:7782" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -14640,7 +14608,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:7789" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:7790">
-                <SolidColor colorValue="FF29464E" id="0:7791" />
+                <SolidColor colorValue="FF44535A" id="0:7791" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CLEFT / idle" duration="48" loopValue="oneShot" id="0:7792">
@@ -14700,7 +14668,7 @@
             <Shape x="628" y="179.0" name="Panel" id="0:7889">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:7890" />
                 <Fill name="Paint" id="0:7891">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:7892" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:7892" />
                 </Fill>
             </Shape>
         </Node>
@@ -14735,7 +14703,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:7966" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:7967">
-                    <SolidColor colorValue="FFFFD36E" id="0:7968" />
+                    <SolidColor colorValue="FFFFD23C" id="0:7968" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:7969" />
                 </Stroke>
             </Shape>
@@ -14749,7 +14717,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:7977" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:7978">
-                        <SolidColor colorValue="FFFFD36E" id="0:7979" />
+                        <SolidColor colorValue="FFFFD23C" id="0:7979" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -14763,7 +14731,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:7986" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:7987">
-                <SolidColor colorValue="FF29464E" id="0:7988" />
+                <SolidColor colorValue="FF44535A" id="0:7988" />
             </Stroke>
         </Shape>
         <LinearAnimation name="CRIGHT / idle" duration="48" loopValue="oneShot" id="0:7989">
@@ -14823,7 +14791,7 @@
             <Shape x="628" y="181.5" name="Panel" id="0:8086">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:8087" />
                 <Fill name="Paint" id="0:8088">
-                    <SolidColor name="Color" colorValue="FFFFD36E" id="0:8089" />
+                    <SolidColor name="Color" colorValue="FFFFD23C" id="0:8089" />
                 </Fill>
             </Shape>
         </Node>
@@ -14858,7 +14826,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:8163" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:8164">
-                    <SolidColor colorValue="FF6CBBFF" id="0:8165" />
+                    <SolidColor colorValue="FF4B9CFF" id="0:8165" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:8166" />
                 </Stroke>
             </Shape>
@@ -14872,7 +14840,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:8174" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:8175">
-                        <SolidColor colorValue="FF6CBBFF" id="0:8176" />
+                        <SolidColor colorValue="FF4B9CFF" id="0:8176" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -14886,7 +14854,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:8183" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:8184">
-                <SolidColor colorValue="FF29464E" id="0:8185" />
+                <SolidColor colorValue="FF44535A" id="0:8185" />
             </Stroke>
         </Shape>
         <LinearAnimation name="A / idle" duration="48" loopValue="oneShot" id="0:8186">
@@ -14946,7 +14914,7 @@
             <Shape x="628" y="184.0" name="Panel" id="0:8283">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:8284" />
                 <Fill name="Paint" id="0:8285">
-                    <SolidColor name="Color" colorValue="FF6CBBFF" id="0:8286" />
+                    <SolidColor name="Color" colorValue="FF4B9CFF" id="0:8286" />
                 </Fill>
             </Shape>
         </Node>
@@ -14981,7 +14949,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:8360" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:8361">
-                    <SolidColor colorValue="FF76E7AD" id="0:8362" />
+                    <SolidColor colorValue="FF63D393" id="0:8362" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:8363" />
                 </Stroke>
             </Shape>
@@ -14995,7 +14963,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:8371" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:8372">
-                        <SolidColor colorValue="FF76E7AD" id="0:8373" />
+                        <SolidColor colorValue="FF63D393" id="0:8373" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -15009,7 +14977,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:8380" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:8381">
-                <SolidColor colorValue="FF29464E" id="0:8382" />
+                <SolidColor colorValue="FF44535A" id="0:8382" />
             </Stroke>
         </Shape>
         <LinearAnimation name="B / idle" duration="48" loopValue="oneShot" id="0:8383">
@@ -15069,7 +15037,7 @@
             <Shape x="628" y="186.5" name="Panel" id="0:8480">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:8481" />
                 <Fill name="Paint" id="0:8482">
-                    <SolidColor name="Color" colorValue="FF76E7AD" id="0:8483" />
+                    <SolidColor name="Color" colorValue="FF63D393" id="0:8483" />
                 </Fill>
             </Shape>
         </Node>
@@ -15104,7 +15072,7 @@
                     <StraightVertex x="217" y="189" radius="3" id="0:8557" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:8558">
-                    <SolidColor colorValue="FFA4DEEB" id="0:8559" />
+                    <SolidColor colorValue="FFCCD0D5" id="0:8559" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:8560" />
                 </Stroke>
             </Shape>
@@ -15118,7 +15086,7 @@
                         <StraightVertex x="217" y="189" radius="3" id="0:8568" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:8569">
-                        <SolidColor colorValue="FFA4DEEB" id="0:8570" />
+                        <SolidColor colorValue="FFCCD0D5" id="0:8570" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -15132,7 +15100,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:8577" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:8578">
-                <SolidColor colorValue="FF29464E" id="0:8579" />
+                <SolidColor colorValue="FF44535A" id="0:8579" />
             </Stroke>
         </Shape>
         <LinearAnimation name="L / idle" duration="48" loopValue="oneShot" id="0:8580">
@@ -15192,7 +15160,7 @@
             <Shape x="216" y="189.0" name="Panel" id="0:8677">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:8678" />
                 <Fill name="Paint" id="0:8679">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:8680" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:8680" />
                 </Fill>
             </Shape>
         </Node>
@@ -15227,7 +15195,7 @@
                     <StraightVertex x="627" y="189" radius="3" id="0:8754" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:8755">
-                    <SolidColor colorValue="FFA4DEEB" id="0:8756" />
+                    <SolidColor colorValue="FFCCD0D5" id="0:8756" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:8757" />
                 </Stroke>
             </Shape>
@@ -15241,7 +15209,7 @@
                         <StraightVertex x="627" y="189" radius="3" id="0:8765" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:8766">
-                        <SolidColor colorValue="FFA4DEEB" id="0:8767" />
+                        <SolidColor colorValue="FFCCD0D5" id="0:8767" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -15255,7 +15223,7 @@
                 <StraightVertex x="627" y="189" radius="3" id="0:8774" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:8775">
-                <SolidColor colorValue="FF29464E" id="0:8776" />
+                <SolidColor colorValue="FF44535A" id="0:8776" />
             </Stroke>
         </Shape>
         <LinearAnimation name="R / idle" duration="48" loopValue="oneShot" id="0:8777">
@@ -15315,7 +15283,7 @@
             <Shape x="628" y="191.5" name="Panel" id="0:8874">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:8875" />
                 <Fill name="Paint" id="0:8876">
-                    <SolidColor name="Color" colorValue="FFA4DEEB" id="0:8877" />
+                    <SolidColor name="Color" colorValue="FFCCD0D5" id="0:8877" />
                 </Fill>
             </Shape>
         </Node>
@@ -15378,7 +15346,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:8971" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:8972">
-                <SolidColor colorValue="FF29464E" id="0:8973" />
+                <SolidColor colorValue="FF44535A" id="0:8973" />
             </Stroke>
         </Shape>
         <LinearAnimation name="Z / idle" duration="48" loopValue="oneShot" id="0:8974">
@@ -15470,7 +15438,7 @@
                     <StraightVertex x="422" y="39" radius="3" id="0:9145" />
                 </PointsPath>
                 <Stroke thickness="1.65" cap="round" join="round" id="0:9146">
-                    <SolidColor colorValue="FFFF8295" id="0:9147" />
+                    <SolidColor colorValue="FFFF5C64" id="0:9147" />
                     <TrimPath start="0" end="0.17" name="Packet travel" id="0:9148" />
                 </Stroke>
             </Shape>
@@ -15481,7 +15449,7 @@
                         <StraightVertex x="422" y="39" radius="3" id="0:9153" />
                     </PointsPath>
                     <Stroke thickness="0.8" cap="round" join="round" id="0:9154">
-                        <SolidColor colorValue="FFFF8295" id="0:9155" />
+                        <SolidColor colorValue="FFFF5C64" id="0:9155" />
                     </Stroke>
                 </Shape>
             </Node>
@@ -15492,7 +15460,7 @@
                 <StraightVertex x="422" y="39" radius="3" id="0:9159" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9160">
-                <SolidColor colorValue="FF29464E" id="0:9161" />
+                <SolidColor colorValue="FF44535A" id="0:9161" />
             </Stroke>
         </Shape>
         <LinearAnimation name="START / idle" duration="48" loopValue="oneShot" id="0:9162">
@@ -15552,7 +15520,7 @@
             <Shape x="628" y="196.5" name="Panel" id="0:9259">
                 <Rectangle width="2.5" height="1.5" originX="0.5" originY="0.5" cornerRadiusTL="0.5" cornerRadiusTR="0.5" cornerRadiusBL="0.5" cornerRadiusBR="0.5" name="Path" id="0:9260" />
                 <Fill name="Paint" id="0:9261">
-                    <SolidColor name="Color" colorValue="FFFF8295" id="0:9262" />
+                    <SolidColor name="Color" colorValue="FFFF5C64" id="0:9262" />
                 </Fill>
             </Shape>
         </Node>
@@ -15615,7 +15583,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:9356" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9357">
-                <SolidColor colorValue="FF29464E" id="0:9358" />
+                <SolidColor colorValue="FF44535A" id="0:9358" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD UP / idle" duration="48" loopValue="oneShot" id="0:9359">
@@ -15709,7 +15677,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:9482" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9483">
-                <SolidColor colorValue="FF29464E" id="0:9484" />
+                <SolidColor colorValue="FF44535A" id="0:9484" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD RIGHT / idle" duration="48" loopValue="oneShot" id="0:9485">
@@ -15803,7 +15771,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:9608" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9609">
-                <SolidColor colorValue="FF29464E" id="0:9610" />
+                <SolidColor colorValue="FF44535A" id="0:9610" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD DOWN / idle" duration="48" loopValue="oneShot" id="0:9611">
@@ -15897,7 +15865,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:9734" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9735">
-                <SolidColor colorValue="FF29464E" id="0:9736" />
+                <SolidColor colorValue="FF44535A" id="0:9736" />
             </Stroke>
         </Shape>
         <LinearAnimation name="DPAD LEFT / idle" duration="48" loopValue="oneShot" id="0:9737">
@@ -15991,7 +15959,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:9860" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9861">
-                <SolidColor colorValue="FF29464E" id="0:9862" />
+                <SolidColor colorValue="FF44535A" id="0:9862" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK UP / idle" duration="48" loopValue="oneShot" id="0:9863">
@@ -16085,7 +16053,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:9986" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:9987">
-                <SolidColor colorValue="FF29464E" id="0:9988" />
+                <SolidColor colorValue="FF44535A" id="0:9988" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK RIGHT / idle" duration="48" loopValue="oneShot" id="0:9989">
@@ -16179,7 +16147,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:10112" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:10113">
-                <SolidColor colorValue="FF29464E" id="0:10114" />
+                <SolidColor colorValue="FF44535A" id="0:10114" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK DOWN / idle" duration="48" loopValue="oneShot" id="0:10115">
@@ -16273,7 +16241,7 @@
                 <StraightVertex x="217" y="189" radius="3" id="0:10238" />
             </PointsPath>
             <Stroke thickness="0.7" cap="round" join="round" id="0:10239">
-                <SolidColor colorValue="FF29464E" id="0:10240" />
+                <SolidColor colorValue="FF44535A" id="0:10240" />
             </Stroke>
         </Shape>
         <LinearAnimation name="STICK LEFT / idle" duration="48" loopValue="oneShot" id="0:10241">
@@ -16332,24 +16300,24 @@
         <Shape x="102" y="195" name="PCB edge" id="0:10337">
             <Rectangle width="187" height="373" originX="0.5" originY="0.5" cornerRadiusTL="16" cornerRadiusTR="16" cornerRadiusBL="16" cornerRadiusBR="16" name="Path" id="0:10338" />
             <Stroke name="Paint" thickness="0.5" id="0:10339">
-                <SolidColor name="Color" colorValue="FF315E63" id="0:10340" />
+                <SolidColor name="Color" colorValue="FF59626C" id="0:10340" />
             </Stroke>
             <Fill name="Transparent material" id="0:10341">
                 <LinearGradient startX="-76.4" startY="-114.6" endX="95.5" endY="191.0" name="Clear polycarbonate" id="0:10342">
-                    <GradientStop colorValue="FF102E35" position="0.0" id="0:10343" />
-                    <GradientStop colorValue="FF091D29" position="1.0" id="0:10344" />
+                    <GradientStop colorValue="FF27323B" position="0.0" id="0:10343" />
+                    <GradientStop colorValue="FF141E29" position="1.0" id="0:10344" />
                 </LinearGradient>
             </Fill>
         </Shape>
         <Shape x="742" y="195" name="PCB edge" id="0:10345">
             <Rectangle width="187" height="373" originX="0.5" originY="0.5" cornerRadiusTL="16" cornerRadiusTR="16" cornerRadiusBL="16" cornerRadiusBR="16" name="Path" id="0:10346" />
             <Stroke name="Paint" thickness="0.5" id="0:10347">
-                <SolidColor name="Color" colorValue="FF315E63" id="0:10348" />
+                <SolidColor name="Color" colorValue="FF59626C" id="0:10348" />
             </Stroke>
             <Fill name="Transparent material" id="0:10349">
                 <LinearGradient startX="-76.4" startY="-114.6" endX="95.5" endY="191.0" name="Clear polycarbonate" id="0:10350">
-                    <GradientStop colorValue="FF102E35" position="0.0" id="0:10351" />
-                    <GradientStop colorValue="FF091D29" position="1.0" id="0:10352" />
+                    <GradientStop colorValue="FF27323B" position="0.0" id="0:10351" />
+                    <GradientStop colorValue="FF141E29" position="1.0" id="0:10352" />
                 </LinearGradient>
             </Fill>
         </Shape>

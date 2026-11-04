@@ -6,8 +6,17 @@ import math
 from generate_themes import ROOT
 from generate_orbit import Orbit, BUTTONS, DIRECTIONS
 
-ICE, MINT, BLUE, GREEN, GOLD, RED = ('FFA4DEEB','FF73F2D0','FF6CBBFF',
-                                    'FF76E7AD','FFFFD36E','FFFF8295')
+ICE, MINT, BLUE, GREEN, GOLD, RED = ('FFCCD0D5','FF73F2D0','FF4B9CFF',
+                                    'FF63D393','FFFFD23C','FFFF5C64')
+
+# Original gray N64 hardware colors, with tinted caps over the visible circuitry.
+CAP_COLORS = {
+    'a': ['F24D96E5','D02567BB','EC16428A'],
+    'b': ['F24BB579','D0148649','EC075A30'],
+    'c': ['F2FFE783','E0EBC02F','ECAA8118'],
+    'start': ['F2F27A7F','E0D83844','EC96232F'],
+    'neutral': ['C8C4C8CC','70878E96','A04E5863'],
+}
 
 
 class Crystal(Orbit):
@@ -15,14 +24,20 @@ class Crystal(Orbit):
         super().__init__()
         self.properties['stickContact']='0:99'
         self.circuits={}
+        self.material_counter=900000
 
-    def gradient(self, shape, colors, extent, radial=False):
-        paint=self.el(shape,'Fill',name='Transparent material')
-        grad=self.el(paint,'RadialGradient' if radial else 'LinearGradient',
+    def gradient(self, shape, colors, extent, radial=False, new_ids=False):
+        def element(parent,tag,**attrs):
+            if new_ids:
+                self.material_counter+=1
+                attrs['id']=f'0:{self.material_counter}'
+            return self.el(parent,tag,**attrs)
+        paint=element(shape,'Fill',name='Transparent material')
+        grad=element(paint,'RadialGradient' if radial else 'LinearGradient',
                      startX=-extent*.4,startY=-extent*.6,endX=extent*.5,endY=extent,
                      name='Clear polycarbonate')
         for i,color in enumerate(colors):
-            self.el(grad,'GradientStop',colorValue=color,position=i/(len(colors)-1))
+            element(grad,'GradientStop',colorValue=color,position=i/(len(colors)-1))
 
     def path(self, parent, points, color, width=1, name='Copper trace'):
         shape=self.el(parent,'Shape',name=name)
@@ -50,7 +65,7 @@ class Crystal(Orbit):
         # A faint complete route makes source and destination readable while held.
         route=self.el(active,'Node',opacity=.2,name='Powered copper')
         self.path(route,points,color,.8)
-        self.path(artboard,points,'FF29464E',.7,name+' / unpowered route')
+        self.path(artboard,points,'FF44535A',.7,name+' / unpowered route')
         animations=[
             self.timeline(artboard,name+' / idle',[(active,18,[(0,0)]),(trim,114,[(0,0)]),(trim,115,[(0,.17)])]),
             self.timeline(artboard,name+' / transmitting',[
@@ -78,9 +93,9 @@ class Crystal(Orbit):
 
     def glass(self,parent,x,y,w,h,radius=12):
         # Details sit under the shell's translucent highlight, like a clear controller.
-        shell=self.rect(parent,x,y,w,h,'1548A4B4',radius,.8,name='Clear shell / edge')
-        self.gradient(shell,['376BA1AC','0D6B9AA3','1D6897A3'],max(w,h)/2)
-        self.rect(parent,x,y,w-4,h-4,'163A6974',max(radius-2,0),.5,name='Inner shell refraction')
+        shell=self.rect(parent,x,y,w,h,'458C939B',radius,.8,name='Clear shell / edge')
+        self.gradient(shell,['4BC4C8CC','147C848D','2A929AA4'],max(w,h)/2)
+        self.rect(parent,x,y,w-4,h-4,'397B848E',max(radius-2,0),.5,name='Inner shell refraction')
         return shell
 
     def screw(self,parent,x,y):
@@ -101,17 +116,19 @@ class Crystal(Orbit):
         if name.startswith('c'):
             arrow=self.el(cap,'Shape',rotation=DIRECTIONS.index(name[1:])*math.pi/2,name=name+' arrow')
             self.el(arrow,'Triangle',width=10,height=9)
-            self.paint(arrow,GOLD)
+            self.paint(arrow,'FF57440A')
         else:
             self.text(cap,0,-1,label or name.upper(),22 if name in ('a','b') else
-                      (7 if name=='start' else 9),'FFE3F4F5',True)
+                      (7 if name=='start' else 9),
+                      'FF29333E' if name in ('l','r','z','menu') else 'FFE3F4F5',True)
+        palette=CAP_COLORS.get('c' if name.startswith('c') else name,CAP_COLORS['neutral'])
         if round:
-            rim=self.ellipse(cap,0,0,w,'7192B8C5',.8,name='Clear cap rim')
-            self.gradient(rim,['546D9AA9','0D597F94','1E56809A'],w/2)
-            self.ellipse(cap,-w*.16,-w*.19,w*.42,'1590BCD0',1,name='Moulded cap highlight')
+            rim=self.ellipse(cap,0,0,w,'8FCCCED2',.8,name='Clear cap rim')
+            self.gradient(rim,palette,w/2)
+            self.ellipse(cap,-w*.16,-w*.19,w*.42,'33FFFFFF',1,name='Moulded cap highlight')
         else:
-            face=self.rect(cap,0,0,w,h,'699ABAC5',h/2,.75,name='Clear paddle rim')
-            self.gradient(face,['426D9AA9','10597F94','1E56809A'],w/2)
+            face=self.rect(cap,0,0,w,h,'8FCCCED2',h/2,.75,name='Clear paddle rim')
+            self.gradient(face,palette,w/2)
         led=self.el(a,'Node',x=x,y=y,opacity=.08,name=name+' / socket LED')
         if round:
             self.ellipse(led,0,0,w+5,color,1.3)
@@ -130,20 +147,23 @@ class Crystal(Orbit):
                     extendedEdges=dict(top=3,bottom=3,left=3,right=3),mask='circle' if round else 'rectangle')
 
     def dpad(self,a,sm,x,y):
-        pad=self.el(a,'Node',x=x,y=y,name='Clear digital cross')
+        pad=self.el(a,'Node',x=x,y=y,name='Gray digital cross')
         for i,name in enumerate(['up','right','down','left']):
             dx,dy=[(0,-1),(1,0),(0,1),(-1,0)][i]
             arm=self.el(pad,'Node',x=dx*26,y=dy*26,rotation=i*math.pi/2,name=name+' cap')
             arrow=self.el(arm,'Shape',y=-2)
             self.el(arrow,'Triangle',width=6,height=5)
-            self.paint(arrow,'FFB2CED4')
-            self.rect(arm,0,0,22,29,'74759AA7',3,.7)
-            self.rect(arm,0,0,21,28,'205F8A95',3)
+            self.paint(arrow,'FF404752')
+            face=self.rect(arm,0,0,22,29,'A7B7BCC2',3,.7)
+            # Retain the removed inner rectangle's IDs; new material IDs live
+            # separately so a palette edit does not renumber the rest of the file.
+            self.counter+=4
+            self.gradient(face,CAP_COLORS['neutral'],17,new_ids=True)
             led=self.el(arm,'Node',opacity=.06,name=name+' LED')
             self.rect(led,0,-11,12,2,MINT,1)
             self.animate(a,sm,name+'Pressed',[(led.get('id'),'glow')])
-        self.ellipse(pad,0,0,5,'FFADD3D7')
-        self.rect(pad,0,0,27,27,'50557D8A',3)
+        self.ellipse(pad,0,0,5,'FF68717C')
+        self.rect(pad,0,0,27,27,'FFA2A8B0',3)
         self.rect(pad,0,1,30,84,'FF0A1B24',5)
         self.rect(pad,0,1,84,30,'FF0A1B24',5)
         return dict(inputs=dict(up='up',down='down',left='left',right='right'),
@@ -162,9 +182,9 @@ class Crystal(Orbit):
         self.el(cap,'TranslationConstraint',targetId=moving.get('id'))
         self.ellipse(cap,0,0,8,'FFDBFBFA',1,name='Thumb center')
         for radius in [13,18]:
-            self.ellipse(cap,0,0,radius*2,'437BABB8',.7,name='Concentric grip')
-        face=self.ellipse(cap,0,0,49,'8FABC7D4',1,name='Clear thumb cap')
-        self.gradient(face,['8C8CBCC8','2852778A','36537591'],25,True)
+            self.ellipse(cap,0,0,radius*2,'80959DA7',.7,name='Concentric grip')
+        face=self.ellipse(cap,0,0,49,'AFC4CAD0',1,name='Gray thumb cap')
+        self.gradient(face,['C4B8BEC6','8877808D','A04D5867'],25,True)
         self.ellipse(cap,0,3,53,'FF10232E',1,name='Cap refraction')
         contact=self.el(cap,'Node',opacity=.06,name='Cap contact LED')
         self.ellipse(contact,0,0,56,MINT,1.1)
@@ -202,10 +222,8 @@ class Crystal(Orbit):
         a.set('styleId',style.get('id'))
         sm=self.el(a,'StateMachine',name='Controller')
         a.set('defaultStateMachineId',sm.get('id'))
-        self.text(a,25,25,'ORBIT',18,'FFE0F1F4')
-        self.text(a,26,44,'C R Y S T A L   /   N 6 4',6.5,'FF8BB1BA')
-        if portrait:
-            self.text(a,359,26,'64',16,'FF77A7B5',True)
+        # Reserve the former header's IDs to keep generated changes reviewable.
+        self.counter+=15 if portrait else 10
         items=[self.stick(a,sm,116 if portrait else 111,284 if portrait else 282),
                self.dpad(a,sm,78 if portrait else 70,139)]
         cx,cy=(317,150) if portrait else (755,145)
@@ -281,8 +299,8 @@ class Crystal(Orbit):
             traces.append(dict(name='analogStick'+direction,points=points,color=MINT))
         # Main board stays dark enough that the illuminated signals carry the hierarchy.
         for px,py,pw,ph in panels:
-            board=self.rect(a,px,py,pw-9,ph-9,'FF315E63',16,.5,name='PCB edge')
-            self.gradient(board,['FF102E35','FF091D29'],ph/2)
+            board=self.rect(a,px,py,pw-9,ph-9,'FF59626C',16,.5,name='PCB edge')
+            self.gradient(board,['FF27323B','FF141E29'],ph/2)
         if portrait:
             self.rect(a,w/2,h/2,w,h,'FF07131E',name='Backdrop')
         self.circuits[orientation]=dict(panels=panels,traces=traces)

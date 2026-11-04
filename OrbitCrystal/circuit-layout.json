@@ -37,7 +37,7 @@
             5
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "cDown",
@@ -67,7 +67,7 @@
             5
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "cLeft",
@@ -97,7 +97,7 @@
             5
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "cRight",
@@ -127,7 +127,7 @@
             5
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "a",
@@ -157,7 +157,7 @@
             5
           ]
         ],
-        "color": "FF6CBBFF"
+        "color": "FF4B9CFF"
       },
       {
         "name": "b",
@@ -187,7 +187,7 @@
             5
           ]
         ],
-        "color": "FF76E7AD"
+        "color": "FF63D393"
       },
       {
         "name": "l",
@@ -217,7 +217,7 @@
             5
           ]
         ],
-        "color": "FFA4DEEB"
+        "color": "FFCCD0D5"
       },
       {
         "name": "r",
@@ -247,7 +247,7 @@
             5
           ]
         ],
-        "color": "FFA4DEEB"
+        "color": "FFCCD0D5"
       },
       {
         "name": "z",
@@ -307,7 +307,7 @@
             5
           ]
         ],
-        "color": "FFFF8295"
+        "color": "FFFF5C64"
       },
       {
         "name": "up",
@@ -559,7 +559,7 @@
             189
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "cDown",
@@ -585,7 +585,7 @@
             189
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "cLeft",
@@ -611,7 +611,7 @@
             189
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "cRight",
@@ -637,7 +637,7 @@
             189
           ]
         ],
-        "color": "FFFFD36E"
+        "color": "FFFFD23C"
       },
       {
         "name": "a",
@@ -663,7 +663,7 @@
             189
           ]
         ],
-        "color": "FF6CBBFF"
+        "color": "FF4B9CFF"
       },
       {
         "name": "b",
@@ -689,7 +689,7 @@
             189
           ]
         ],
-        "color": "FF76E7AD"
+        "color": "FF63D393"
       },
       {
         "name": "l",
@@ -715,7 +715,7 @@
             189
           ]
         ],
-        "color": "FFA4DEEB"
+        "color": "FFCCD0D5"
       },
       {
         "name": "r",
@@ -741,7 +741,7 @@
             189
           ]
         ],
-        "color": "FFA4DEEB"
+        "color": "FFCCD0D5"
       },
       {
         "name": "z",
@@ -781,7 +781,7 @@
             39
           ]
         ],
-        "color": "FFFF8295"
+        "color": "FFFF5C64"
       },
       {
         "name": "up",

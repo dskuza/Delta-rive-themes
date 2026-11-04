@@ -29,6 +29,9 @@ files:
   lights even when a thumb rests at center. A quick tap's packet finishes traveling
   after input releases; held controls repeat independently. Reduced Motion uses
   steady illuminated routes. Both phone orientations respect device safe areas.
+  Original N64 colors remain visible at rest: blue A, green B, yellow C buttons,
+  red Start, gray D-pad, stick and shoulder controls, and a neutral gray shell.
+  Theme names appear in the skin picker only; the controller artwork is unbranded.
 
 Import a `.deltaskin` through Delta's usual skin import flow, enable **Rive
 Controller Themes** under Experimental Features, and select the skin for its system.
